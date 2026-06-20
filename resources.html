@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI ROI Calculator and Resources, Jimi Ige</title>
+<meta name="description" content="Free, transparent tools for governing and proving AI value: an adoption-adjusted AI ROI calculator and an AI governance readiness audit.">
+<style>
+
+
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/14c68554.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/cc92c1b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/033f7596.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/033f7596.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/0126f1f7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/bf9e9553.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/8b2cdb31.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7eb836be.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/2ff67739.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
+  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
+    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
+  ::selection{background:#2f4a63;color:#fff;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
+  .rule{height:1px;background:rgba(25,30,46,0.14);}
+  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
+  .glass{background:rgba(255,255,255,0.42);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
+  .hero-grid{display:grid;grid-template-columns:1.62fr 1fr;gap:60px;align-items:start;}
+  .practice-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
+  .cred-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;}
+  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .bridge{display:grid;grid-template-columns:1fr 44px 1.3fr 44px 1fr;align-items:center;}
+  .bridge .conn{text-align:center;color:#9a958c;font-size:22px;}
+  @media(max-width:820px){.bridge{grid-template-columns:1fr;gap:14px;}.bridge .conn{display:none;}}
+  .nav-toggle{display:none;}
+  @media(max-width:920px){
+    .hero-grid,.practice-grid,.cred-grid,.contact-grid,.speak-grid{grid-template-columns:1fr;gap:34px;}
+    .nav-links{display:none;}
+    .nav-toggle{display:flex;}
+  }
+  @media(max-width:680px){
+    .wrap{padding:0 22px;}
+    .hero-h1{font-size:38px !important;}
+  }
+</style>
+
+
+<style>
+  .cin{margin-bottom:15px;}
+  .cin label{display:block;font-size:13.5px;color:#3c372f;margin-bottom:6px;}
+  .cin input{width:100%;background:rgba(255,255,255,0.7);border:1px solid rgba(25,30,46,0.18);border-radius:3px;padding:11px 12px;font-family:var(--font-mono,'IBM Plex Mono',monospace);font-size:15px;color:#191510;outline:none;}
+  .cin input:focus{border-color:var(--accent,#2f4a63);}
+  @media(max-width:820px){.calc-grid{grid-template-columns:1fr !important;}}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;position:relative;overflow-x:hidden;">
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;"><div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,var(--accent,#2f4a63) 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div><div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div></div>
+  <div style="position:relative;z-index:1;">
+<nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
+      <a href="/#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
+        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige</span>
+        <span class="meta" style="color:var(--accent,#2f4a63);">AI Governance &amp; Transformation</span>
+      </a>
+      <div class="nav-links" style="align-items:center;gap:30px;display:flex;">
+        <a href="/#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
+        <a href="/#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
+        <a href="/#credentials" class="meta" style="text-decoration:none;color:#4a443d;">Background</a>
+        <a href="/#speaking" class="meta" style="text-decoration:none;color:#4a443d;">Insights</a>
+        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;" style-hover="background:var(--accent,#2f4a63);color:#fff;border-color:var(--accent,#2f4a63);">Let's connect →</a>
+      </div>
+      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" style="display:none;">
+      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
+        <a href="/#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
+        <a href="/#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
+        <a href="/#credentials" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Background</a>
+        <a href="/#speaking" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Insights</a>
+        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:54px 0 26px;">
+    <div class="wrap">
+      <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:14px;">Free tool</div>
+      <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(34px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:780px;">The real AI ROI calculator.</h1>
+      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:700px;">Most AI business cases assume value starts on day one. It does not. This models the adoption ramp, the value you actually realize, and the first-quarter friction, so you see the gap between the ROI you were promised and the ROI you get. Edit every assumption. Nothing is hidden.</p>
+    </div>
+  </section>
+
+  <section style="padding:8px 0 56px;">
+    <div class="wrap">
+      <div class="calc-grid" style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:26px;align-items:start;">
+        <div class="glass" style="border-radius:3px;padding:28px 30px;">
+          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:18px;">Your inputs</div>
+          <div class="cin"><label>Users in scope</label><input id="users" type="number" value="1000" min="1"></div>
+          <div class="cin"><label>Fully loaded cost per hour (USD)</label><input id="rate" type="number" value="75" min="1"></div>
+          <div class="cin"><label>Hours per week saved per adopting user, at full ramp</label><input id="hrs" type="number" value="2" min="0" step="0.5"></div>
+          <div class="cin"><label>Annual program cost, licenses plus enablement (USD)</label><input id="cost" type="number" value="420000" min="0" step="1000"></div>
+          <div class="cin"><label>Adoption rate, percent who actually use it in workflow</label><input id="adopt" type="number" value="55" min="0" max="100"></div>
+          <div class="cin"><label>Value realization, percent of saved time that becomes real value</label><input id="real" type="number" value="50" min="0" max="100"></div>
+          <div class="cin"><label>Months to reach full adoption</label><input id="ramp" type="number" value="9" min="1" max="24"></div>
+        </div>
+        <div class="glass" style="border-radius:3px;padding:28px 30px;">
+          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:18px;">Year one, modeled</div>
+          <div style="display:flex;flex-wrap:wrap;gap:22px 44px;margin-bottom:22px;">
+            <div><div class="meta">Adoption-adjusted net value</div><div id="adjusted" style="font-family:var(--font-display,'Spectral',serif);font-size:40px;color:#120f0b;line-height:1.05;">$0</div></div>
+            <div><div class="meta">Payback</div><div id="payback" style="font-family:var(--font-display,'Spectral',serif);font-size:40px;color:#120f0b;line-height:1.05;">--</div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:16px 44px;margin-bottom:22px;">
+            <div><div class="meta">Naive case, day-one full value</div><div id="naive" style="font-size:19px;color:#6f685d;">$0</div></div>
+            <div><div class="meta">The adoption gap</div><div id="gap" style="font-size:19px;color:var(--accent,#2f4a63);font-weight:600;">$0</div></div>
+          </div>
+          <div class="meta" style="margin-bottom:8px;">Cumulative net value, month by month</div>
+          <svg id="chart" viewBox="0 0 520 200" style="width:100%;height:auto;display:block;"></svg>
+          <p style="font-size:13px;line-height:1.55;color:#6f685d;margin:14px 0 0;">An estimate, not a quote. The adoption gap is not fixed. It is what your adoption and governance program captures or forfeits.</p>
+          <a href="/#contact" class="meta" style="display:inline-block;margin-top:16px;text-decoration:none;color:#fff;background:var(--accent,#2f4a63);padding:12px 22px;border-radius:2px;" style-hover="background:var(--accent-deep,#21364a);">Run this on your real numbers &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:6px 0 72px;">
+    <div class="wrap">
+      <div class="glass" style="border-radius:3px;padding:26px 30px;border-left:3px solid var(--accent,#2f4a63);">
+        <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:10px;">Next, in progress</div>
+        <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;margin:0 0 8px;color:#120f0b;">AI governance readiness audit</h3>
+        <p style="font-size:15px;line-height:1.6;color:#3c372f;margin:0;max-width:760px;">A scored self-assessment across the governance domains that decide whether an AI program is defensible, from agent identity and human oversight to audit trail and regulatory alignment, with a prioritized gap list. Coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+<footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span></span>
+      <span class="meta" style="color:#8a8378;">AI Governance &amp; Transformation · Washington, D.C. · © 2026</span>
+    </div>
+  </footer>
+  </div>
+</div>
+<script>
+  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
+  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
+  document.querySelectorAll('[style-hover]').forEach(function(el){
+    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
+    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
+    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
+  });
+  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
+</script>
+<script>
+(function(){
+  var ids=['users','rate','hrs','cost','adopt','real','ramp'];
+  function val(id){return parseFloat(document.getElementById(id).value)||0;}
+  function fmt(n){var s=n<0?'-':'';n=Math.abs(n);
+    if(n>=1e6)return s+'$'+(n/1e6).toFixed(2)+'M';
+    if(n>=1e3)return s+'$'+(n/1e3).toFixed(0)+'K';
+    return s+'$'+n.toFixed(0);}
+  function compute(){
+    var users=val('users'),rate=val('rate'),hrs=val('hrs'),cost=val('cost'),
+        adopt=val('adopt')/100,real=val('real')/100,ramp=Math.max(1,val('ramp'));
+    var fullPerUserMo=hrs*4.33*rate*real;
+    var naivePerUserMo=hrs*4.33*rate;
+    var monthlyCost=cost/12;
+    var dip=[0.5,0.75,0.9];
+    var cum=0,cumNaive=0,series=[],payback=null;
+    for(var m=1;m<=12;m++){
+      var frac=adopt*Math.min(1,m/ramp);
+      var d=m<=3?dip[m-1]:1;
+      var net=users*frac*fullPerUserMo*d - monthlyCost;
+      cum+=net;series.push(cum);
+      if(payback===null&&cum>=0)payback=m;
+      cumNaive+=users*naivePerUserMo - monthlyCost;
+    }
+    document.getElementById('adjusted').textContent=fmt(cum);
+    document.getElementById('naive').textContent=fmt(cumNaive);
+    document.getElementById('gap').textContent=fmt(cumNaive-cum);
+    document.getElementById('payback').textContent=payback?('Mo '+payback):'>12mo';
+    draw(series,payback);
+  }
+  function draw(series,payback){
+    var w=520,h=200,pad=26;
+    var mn=Math.min(0,Math.min.apply(null,series)),mx=Math.max.apply(null,series),rg=(mx-mn)||1;
+    function x(i){return pad+i*(w-2*pad)/11;}
+    function y(v){return h-pad-(v-mn)*(h-2*pad)/rg;}
+    var z=y(0),pts=series.map(function(v,i){return x(i)+','+y(v);}).join(' '),s='';
+    s+='<line x1="'+pad+'" y1="'+z+'" x2="'+(w-pad)+'" y2="'+z+'" stroke="rgba(25,30,46,0.28)" stroke-width="1" stroke-dasharray="3 3"/>';
+    s+='<polyline points="'+pts+'" fill="none" stroke="#2f4a63" stroke-width="2.5"/>';
+    series.forEach(function(v,i){s+='<circle cx="'+x(i)+'" cy="'+y(v)+'" r="2.5" fill="#2f4a63"/>';});
+    if(payback)s+='<circle cx="'+x(payback-1)+'" cy="'+z+'" r="4.5" fill="none" stroke="#2f4a63" stroke-width="2"/>';
+    document.getElementById('chart').innerHTML=s;
+  }
+  ids.forEach(function(id){document.getElementById(id).addEventListener('input',compute);});
+  compute();
+})();
+</script>
+</body></html>
