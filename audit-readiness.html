@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Audit Readiness Scorecard, Jimi Ige</title>
+<meta name="description" content="A free red/amber/green AI audit readiness scorecard against CMMC Level 2, NIST 800-171, and ISO 42001. Score your readiness and get the prioritized gap list to close before your assessor arrives. No email wall.">
+<meta property="og:title" content="AI Audit Readiness Scorecard, Jimi Ige">
+<meta property="og:description" content="Score your CMMC / NIST 800-171 / ISO 42001 audit readiness and get the prioritized gap list before the 3PAO arrives.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url("assets/14c68554.woff2") format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url("assets/cc92c1b3.woff2") format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
+@font-face{font-family:'Spectral';font-style:italic;font-weight:400;font-display:swap;src:url("assets/0126f1f7.woff2") format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:300;font-display:swap;src:url("assets/bf9e9553.woff2") format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:400;font-display:swap;src:url("assets/8b2cdb31.woff2") format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:500;font-display:swap;src:url("assets/7eb836be.woff2") format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:600;font-display:swap;src:url("assets/2ff67739.woff2") format('woff2');}
+</style>
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
+  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
+    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
+  ::selection{background:#2f4a63;color:#fff;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
+  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
+  .glass{background:rgba(255,255,255,0.42);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
+  .nav-toggle{display:none;}
+  @media(max-width:920px){.nav-links{display:none;}.nav-toggle{display:flex;}}
+  @media(max-width:680px){.wrap{padding:0 22px;}}
+  .assess-grid{display:grid;grid-template-columns:1.35fr 0.9fr;gap:26px;align-items:start;}
+  @media(max-width:960px){.assess-grid{grid-template-columns:1fr;}#results{position:static !important;}}
+  .fcard{border-radius:3px;padding:22px 26px;margin-bottom:18px;}
+  .qrow{padding:13px 0;border-top:1px solid rgba(25,30,46,0.10);}
+  .qrow:first-of-type{border-top:none;}
+  .qtext{font-size:14.5px;line-height:1.5;color:#3c372f;margin-bottom:9px;}
+  .scale{display:flex;gap:6px;}
+  .rbtn{flex:1;text-align:center;padding:7px 4px;font-size:12px;color:#6f685d;background:rgba(255,255,255,0.55);border:1px solid rgba(25,30,46,0.16);border-radius:3px;cursor:pointer;user-select:none;transition:background .12s,color .12s,border-color .12s;}
+  .rbtn:hover{border-color:#2f4a63;}
+  .rbtn.on-r{background:#a83f35;color:#fff;border-color:#a83f35;}
+  .rbtn.on-y{background:#8a6a2e;color:#fff;border-color:#8a6a2e;}
+  .rbtn.on-g{background:#3f7757;color:#fff;border-color:#3f7757;}
+  .dbar{height:8px;display:flex;border-radius:4px;overflow:hidden;margin-top:5px;background:rgba(25,30,46,0.08);}
+  .dbar > span{height:100%;transition:width .25s ease;}
+  .frow{margin-bottom:12px;}
+  .gapitem{padding:8px 0 8px 12px;border-left:3px solid #a83f35;margin-bottom:8px;}
+  .gapitem.y{border-left-color:#8a6a2e;}
+  @media print{
+    nav,.qcol,.noprint,[aria-hidden="true"]{display:none !important;}
+    body{background:#fff !important;}
+    .glass{box-shadow:none !important;border:1px solid #ccc !important;background:#fff !important;backdrop-filter:none !important;}
+    .assess-grid{grid-template-columns:1fr !important;}
+  }
+</style>
+</head>
+<body>
+<div style="min-height:100vh;position:relative;overflow-x:hidden;">
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;"><div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,#2f4a63 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div><div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div></div>
+  <div style="position:relative;z-index:1;">
+<nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
+      <a href="/#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
+        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige</span>
+        <span class="meta" style="color:#2f4a63;">AI Governance &amp; Transformation</span>
+      </a>
+      <div class="nav-links" style="align-items:center;gap:30px;display:flex;">
+        <a href="/#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
+        <a href="/#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
+        <a href="/#credentials" class="meta" style="text-decoration:none;color:#4a443d;">Background</a>
+        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;">Let's connect →</a>
+      </div>
+      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" style="display:none;">
+      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
+        <a href="/#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
+        <a href="/#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
+        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:54px 0 22px;">
+    <div class="wrap">
+      <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Free tool</div>
+      <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(34px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:820px;">Audit readiness, before the assessor arrives.</h1>
+      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:730px;">A control-by-control readiness check against <strong style="font-weight:600;">CMMC Level&nbsp;2 / NIST&nbsp;800-171</strong> and <strong style="font-weight:600;">ISO&nbsp;42001</strong>, AI systems in scope. Mark where each control honestly stands; you get a red / amber / green readiness profile and the prioritized gap list to take to leadership. No email wall, nothing hidden.</p>
+    </div>
+  </section>
+
+  <section style="padding:6px 0 60px;">
+    <div class="wrap">
+      <div class="assess-grid">
+        <div class="qcol">
+          <div class="glass" style="border-radius:3px;padding:16px 26px;margin-bottom:18px;">
+            <div class="meta" style="color:#2f4a63;margin-bottom:6px;">How to mark each control</div>
+            <div style="font-size:13.5px;line-height:1.55;color:#3c372f;">
+              <strong style="font-weight:600;color:#a83f35;">Not started</strong> &middot;
+              <strong style="font-weight:600;color:#8a6a2e;">In progress</strong> &middot;
+              <strong style="font-weight:600;color:#3f7757;">Met, evidenced</strong> — assessors score evidence, not intent.
+            </div>
+          </div>
+          <div id="questions"></div>
+        </div>
+
+        <div class="glass" id="results" style="border-radius:3px;padding:28px 30px;position:sticky;top:84px;">
+          <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Your readiness</div>
+          <div id="bandName" style="font-family:var(--font-display,'Spectral',serif);font-size:34px;color:#a83f35;line-height:1.05;">Not assessment-ready</div>
+          <div id="bandPct" class="meta" style="margin:6px 0 2px;">0% ready · 0 of 18 controls evidenced</div>
+          <div id="counts" style="font-size:13px;color:#6f685d;margin-top:2px;"></div>
+
+          <div class="meta" style="margin:20px 0 10px;">By control domain</div>
+          <div id="dbars"></div>
+
+          <div class="meta" style="margin:18px 0 8px;color:#a83f35;" id="gapHead">Close before your assessor arrives</div>
+          <div id="gaps"></div>
+
+          <div id="bench" style="font-size:13px;line-height:1.55;color:#6f685d;margin:12px 0 0;"></div>
+
+          <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="noprint" style="display:block;text-align:center;margin-top:20px;text-decoration:none;color:#fff;background:#2f4a63;padding:13px 22px;border-radius:2px;font-size:15px;font-weight:500;" style-hover="background:#21364a;">Get a second read before your assessment &rarr;</a>
+          <button onclick="window.print()" class="noprint" style="display:block;width:100%;margin-top:10px;text-decoration:none;color:#15212e;background:transparent;border:1px solid rgba(25,30,46,0.32);padding:11px 22px;border-radius:2px;font-size:14px;font-family:inherit;cursor:pointer;">Download / print readiness summary</button>
+          <p class="meta" style="font-size:12px;color:#8a8378;margin:12px 0 0;line-height:1.5;">A self-assessment, not a formal gap assessment. Reds and ambers are the findings to close.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:6px 0 72px;">
+    <div class="wrap">
+      <a href="maturity-assessment.html" style="text-decoration:none;color:inherit;display:block;">
+        <div class="glass" style="border-radius:3px;padding:24px 30px;border-left:3px solid #2f4a63;" style-hover="background:rgba(255,255,255,0.55);">
+          <div class="meta" style="color:#2f4a63;margin-bottom:8px;">Also free</div>
+          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;margin:0 0 8px;color:#120f0b;">AI governance maturity assessment &rarr;</h3>
+          <p style="font-size:15px;line-height:1.6;color:#3c372f;margin:0;max-width:760px;">Audit readiness is the floor. See where your broader AI governance stands against the NIST AI RMF, mapped to ISO 42001.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+<footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span></span>
+      <span class="meta" style="color:#8a8378;">AI Governance &amp; Transformation · Washington, D.C. · © 2026</span>
+    </div>
+  </footer>
+  </div>
+</div>
+<script>
+  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
+  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
+  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
+</script>
+<script>
+(function(){
+  var DOMAINS=[
+    {key:'access',name:'Access & identity',sub:'CMMC AC / IA',
+     items:['Multi-factor authentication is enforced for all privileged and remote access.',
+            'Access follows least privilege and is reviewed on a defined cadence.',
+            'AI systems, agents, and service accounts have managed, auditable identities.']},
+    {key:'data',name:'Data protection & boundaries',sub:'CMMC SC / MP',
+     items:['CUI and sensitive data are encrypted at rest and in transit.',
+            'Data flows into AI and SaaS tools (prompts, outputs, training data) are mapped and controlled.',
+            'Boundary protection and data-loss prevention cover AI-assisted channels.']},
+    {key:'config',name:'Configuration & inventory',sub:'CMMC CM',
+     items:['A complete inventory of systems exists, including AI/ML systems and high-impact use cases.',
+            'Secure baseline configurations are defined and enforced.',
+            'Changes follow documented change control with approval and rollback.']},
+    {key:'audit',name:'Audit, logging & monitoring',sub:'CMMC AU / SI',
+     items:['Security-relevant events are logged across systems, including AI usage.',
+            'Logs are retained per policy and protected from tampering.',
+            'Monitoring detects anomalies, misuse, and AI-specific incidents.']},
+    {key:'incident',name:'Incident response & continuity',sub:'CMMC IR',
+     items:['A documented incident-response plan exists and has been exercised.',
+            'AI-specific incidents (model failure, data leakage, misuse) are in scope.',
+            'Reporting timelines, including DFARS 72-hour, are understood and rehearsed.']},
+    {key:'governance',name:'Governance, risk & assessment',sub:'NIST 800-171 RA/CA + ISO 42001',
+     items:['Risk assessments are current and documented (System Security Plan, POA&M).',
+            'Third-party and vendor AI is risk-assessed before use.',
+            'An AI management system aligned to ISO 42001 governs AI controls and evidence.']}
+  ];
+  var STATES=[{k:'r',label:'Not started'},{k:'y',label:'In progress'},{k:'g',label:'Met, evidenced'}];
+  var VAL={r:0,y:1,g:2};
+  var COL={r:'#a83f35',y:'#8a6a2e',g:'#3f7757'};
+  var status=DOMAINS.map(function(d){return d.items.map(function(){return 'r';});});
+
+  function buildScale(di,ii){
+    var wrap=document.createElement('div');wrap.className='scale';
+    STATES.forEach(function(st){
+      var b=document.createElement('div');b.className='rbtn'+(st.k==='r'?' on-r':'');b.textContent=st.label;
+      b.setAttribute('role','button');b.setAttribute('aria-label',st.label);
+      b.onclick=function(){
+        status[di][ii]=st.k;
+        var sibs=wrap.children;for(var k=0;k<sibs.length;k++){sibs[k].className='rbtn'+(STATES[k].k===st.k?(' on-'+st.k):'');}
+        compute();
+      };
+      wrap.appendChild(b);
+    });
+    return wrap;
+  }
+  function build(){
+    var host=document.getElementById('questions');
+    DOMAINS.forEach(function(d,di){
+      var card=document.createElement('div');card.className='glass fcard';
+      var head=document.createElement('div');
+      head.innerHTML='<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;"><div style="font-family:var(--font-display,\'Spectral\',serif);font-weight:500;font-size:19px;color:#120f0b;">'+d.name+'</div><div class="meta" id="dpct-'+d.key+'" style="color:#2f4a63;">0%</div></div><div class="meta" style="margin:2px 0 6px;">'+d.sub+'</div>';
+      card.appendChild(head);
+      d.items.forEach(function(q,ii){
+        var row=document.createElement('div');row.className='qrow';
+        var t=document.createElement('div');t.className='qtext';t.textContent=q;
+        row.appendChild(t);row.appendChild(buildScale(di,ii));
+        card.appendChild(row);
+      });
+      host.appendChild(card);
+    });
+  }
+  function compute(){
+    var totPts=0,totMax=0,nR=0,nY=0,nG=0;
+    DOMAINS.forEach(function(d,di){
+      var cR=0,cY=0,cG=0,pts=0;
+      status[di].forEach(function(s){pts+=VAL[s];if(s==='r')cR++;else if(s==='y')cY++;else cG++;});
+      var max=d.items.length*2;totPts+=pts;totMax+=max;nR+=cR;nY+=cY;nG+=cG;
+      var pct=Math.round(pts/max*100);
+      var el=document.getElementById('dpct-'+d.key);if(el)el.textContent=pct+'%';
+      d._cR=cR;d._cY=cY;d._cG=cG;d._pct=pct;
+    });
+    var overall=Math.round(totPts/totMax*100);
+    var band,bcol;
+    if(overall<50){band='Not assessment-ready';bcol='#a83f35';}
+    else if(overall<80){band='Approaching readiness';bcol='#8a6a2e';}
+    else{band='Assessment-ready';bcol='#3f7757';}
+    document.getElementById('bandName').textContent=band;
+    document.getElementById('bandName').style.color=bcol;
+    document.getElementById('bandPct').textContent=overall+'% ready · '+nG+' of 18 controls evidenced';
+    document.getElementById('counts').innerHTML='<span style="color:#3f7757;font-weight:600;">'+nG+' met</span> · <span style="color:#8a6a2e;font-weight:600;">'+nY+' in progress</span> · <span style="color:#a83f35;font-weight:600;">'+nR+' not started</span>';
+
+    var bars='';
+    DOMAINS.forEach(function(d){
+      var t=d.items.length;
+      bars+='<div class="frow"><div style="display:flex;justify-content:space-between;font-size:13px;color:#3c372f;"><span>'+d.name+'</span><span class="meta" style="color:#6f685d;">'+d._pct+'%</span></div><div class="dbar">'
+        +'<span style="width:'+(d._cR/t*100)+'%;background:'+COL.r+'"></span>'
+        +'<span style="width:'+(d._cY/t*100)+'%;background:'+COL.y+'"></span>'
+        +'<span style="width:'+(d._cG/t*100)+'%;background:'+COL.g+'"></span></div></div>';
+    });
+    document.getElementById('dbars').innerHTML=bars;
+
+    var gaps=[];
+    DOMAINS.forEach(function(d,di){d.items.forEach(function(it,ii){if(status[di][ii]==='r')gaps.push({sev:'r',d:d.name,t:it});});});
+    DOMAINS.forEach(function(d,di){d.items.forEach(function(it,ii){if(status[di][ii]==='y')gaps.push({sev:'y',d:d.name,t:it});});});
+    var head=document.getElementById('gapHead'),box=document.getElementById('gaps');
+    if(gaps.length===0){
+      head.textContent='No open findings';head.style.color='#3f7757';
+      box.innerHTML='<p style="font-size:13.5px;line-height:1.6;color:#3c372f;margin:0;">Every control is marked met with evidence. Keep the evidence current and re-run this before each assessment cycle.</p>';
+    }else{
+      head.textContent='Close before your assessor arrives ('+gaps.length+')';head.style.color='#a83f35';
+      var show=gaps.slice(0,6),html='';
+      show.forEach(function(g){html+='<div class="gapitem'+(g.sev==='y'?' y':'')+'"><div style="font-size:13px;line-height:1.45;color:#191510;">'+g.t+'</div><div class="meta" style="font-size:12px;color:#8a8378;margin-top:2px;">'+g.d+(g.sev==='y'?' · in progress':' · not started')+'</div></div>';});
+      if(gaps.length>6)html+='<div class="meta" style="font-size:12.5px;color:#6f685d;margin-top:2px;">+ '+(gaps.length-6)+' more open '+(gaps.length-6===1?'item':'items')+'</div>';
+      box.innerHTML=html;
+    }
+
+    var b;
+    if(overall>=80)b='A CMMC Level 2 assessment scores controls pass/fail on evidence — a 3PAO gives no partial credit. You are in range; the work now is keeping evidence current.';
+    else b='A CMMC Level 2 assessment scores controls pass/fail on evidence — a 3PAO gives no partial credit. Every red and amber above is a finding to close before they arrive.';
+    document.getElementById('bench').textContent=b;
+  }
+  build();compute();
+  document.querySelectorAll('[style-hover]').forEach(function(el){
+    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
+    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
+    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
+  });
+})();
+</script>
+</body></html>
