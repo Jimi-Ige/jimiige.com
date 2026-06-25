@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Adoption Scorecard, Jimi Ige</title>
+<meta name="description" content="An interactive instrument that measures enterprise AI adoption across six dimensions, places you on a five-stage adoption ladder, and surfaces the plays to run first.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<style>
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/14c68554.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/cc92c1b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/033f7596.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/033f7596.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/0126f1f7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/bf9e9553.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/8b2cdb31.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7eb836be.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/2ff67739.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent,#2f4a63);outline-offset:3px;border-radius:2px;}
+</style>
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
+  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
+    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
+  ::selection{background:#2f4a63;color:#fff;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
+  .rule{height:1px;background:rgba(25,30,46,0.14);}
+  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
+  .glass{background:rgba(255,255,255,0.52);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
+  .hero-grid{display:grid;grid-template-columns:1.62fr 1fr;gap:60px;align-items:center;}
+  .practice-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
+  .cred-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;}
+  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .bridge{display:grid;grid-template-columns:1fr 44px 1.3fr 44px 1fr;align-items:center;}
+  .bridge .conn{text-align:center;color:#9a958c;font-size:22px;}
+  @media(max-width:820px){.bridge{grid-template-columns:1fr;gap:14px;}.bridge .conn{display:none;}}
+  .nav-toggle{display:none;}.nav-links{display:flex;align-items:center;gap:30px;}
+  @media(max-width:920px){
+    .hero-grid,.practice-grid,.cred-grid,.contact-grid,.speak-grid{grid-template-columns:1fr;gap:34px;}
+    .nav-links{display:none;}
+    .nav-toggle{display:flex;}
+  }
+  @media(max-width:680px){
+    .wrap{padding:0 22px;}
+    .hero-h1{font-size:38px !important;} section h2{font-size:30px !important;line-height:1.16 !important;} header#top h2{font-size:28px !important;line-height:1.2 !important;}
+  }
+</style>
+
+
+<style>
+  .sc-layout{display:flex;gap:36px;align-items:flex-start;}
+  .sc-main{flex:1;min-width:0;}
+  .sc-rail{width:330px;flex-shrink:0;position:sticky;top:18px;}
+  .sc-card{background:var(--accent,#2f4a63);color:#fff;border-radius:4px;padding:22px 22px 18px;text-align:center;}
+  .sc-num{font-family:var(--font-display,'Spectral',serif);font-size:52px;line-height:1;font-weight:400;}
+  .sc-of{font-size:13px;opacity:0.8;margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;}
+  .sc-word{font-size:13.5px;margin-top:10px;opacity:0.95;}
+  .sc-heat{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:16px 0 4px;}
+  .heat-cell{aspect-ratio:1/1;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#3c372f;background:#c7cdd4;}
+  .sc-heat-cap{font-size:11px;color:#6f685d;text-align:center;margin-bottom:18px;}
+  .sc-sect{margin-top:18px;}
+  .sc-sect h3{font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#191510;margin:0 0 8px;}
+  ol.focus,ol.plays{list-style:none;margin:0;padding:0;font-size:12.5px;line-height:1.45;}
+  ol.focus li{display:flex;align-items:center;gap:9px;padding:6px 0;border-top:1px solid rgba(25,30,46,0.1);color:#3c372f;}
+  ol.focus li:first-child{border-top:none;}
+  .f-m{display:inline-flex;width:22px;height:22px;flex-shrink:0;border-radius:3px;color:#fff;font-size:12px;font-weight:700;align-items:center;justify-content:center;}
+  ol.plays li{padding:6px 0;border-top:1px solid rgba(25,30,46,0.1);color:#3c372f;}
+  ol.plays li:first-child{border-top:none;}
+  .p-dim{display:inline-block;font-size:10px;font-weight:700;color:var(--accent,#2f4a63);text-transform:uppercase;letter-spacing:0.04em;}
+  .muted{color:#6f685d;font-style:italic;}
+  .sc-reset{margin-top:20px;width:100%;font-family:inherit;font-size:13px;padding:10px;cursor:pointer;background:transparent;border:1px solid rgba(25,30,46,0.22);border-radius:3px;color:#3c372f;}
+  .sc-reset:hover{border-color:var(--accent,#2f4a63);color:var(--accent,#2f4a63);}
+  .dim-sec{margin-bottom:30px;border:1px solid rgba(25,30,46,0.12);border-radius:4px;background:rgba(255,255,255,0.55);overflow:hidden;}
+  .dim-head{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline;justify-content:space-between;padding:15px 18px;background:rgba(47,74,99,0.06);border-bottom:1px solid rgba(25,30,46,0.1);}
+  .dim-head h2{font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:20px;margin:0;color:#120f0b;}
+  .dim-badge{font-size:12px;font-weight:600;padding:5px 11px;border-radius:3px;background:#e7eaee;color:#6f685d;white-space:nowrap;}
+  .dim-def{font-size:13px;color:#6f685d;margin:0;padding:12px 18px 4px;line-height:1.5;}
+  .sig{padding:14px 18px;border-top:1px solid rgba(25,30,46,0.08);display:flex;flex-wrap:wrap;gap:12px 18px;align-items:flex-start;justify-content:space-between;}
+  .sig-main{flex:1;min-width:260px;}
+  .sig-id{display:inline-block;font-weight:700;color:var(--accent,#2f4a63);font-size:13px;margin-right:8px;}
+  .sig-stmt{font-size:14px;color:#120f0b;line-height:1.5;}
+  .sig-how{display:block;font-size:12px;color:#6f685d;margin-top:5px;line-height:1.5;}
+  .sig-how b{font-weight:600;color:#8a7a52;}
+  .seg{display:inline-flex;border:1px solid rgba(25,30,46,0.18);border-radius:3px;overflow:hidden;flex-shrink:0;align-self:flex-start;}
+  .seg button{font-family:inherit;font-size:12.5px;padding:8px 13px;background:#fff;border:none;border-right:1px solid rgba(25,30,46,0.12);cursor:pointer;color:#3c372f;}
+  .seg button:last-child{border-right:none;}
+  .seg button:hover{background:rgba(47,74,99,0.07);}
+  .seg button.on[data-on="Met"]{background:#2f7d4f;color:#fff;}
+  .seg button.on[data-on="Partial"]{background:#c98a1a;color:#fff;}
+  .seg button.on[data-on="Gap"]{background:#b23b3b;color:#fff;}
+  .seg button.on[data-on="N/A"]{background:#8a8f96;color:#fff;}
+  @media (max-width:900px){ .sc-layout{flex-direction:column;} .sc-rail{position:static;width:100%;order:-1;} .sc-heat{grid-template-columns:repeat(6,1fr);} }
+</style>
+</head>
+<body>
+<div style="min-height:100vh;position:relative;overflow-x:hidden;">
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;"><div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,var(--accent,#2f4a63) 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div><div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div></div>
+<div style="position:relative;z-index:1;">
+<nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
+      <a href="/#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
+        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige LLC</span>
+        <span class="meta" style="color:var(--accent,#2f4a63);">AI Governance &amp; Transformation</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
+        <a href="/#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
+        
+        <a href="/#speaking" class="meta" style="text-decoration:none;color:#4a443d;">Insights</a>
+        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;" style-hover="background:var(--accent,#2f4a63);color:#fff;border-color:var(--accent,#2f4a63);">Let's connect →</a>
+      </div>
+      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" style="display:none;">
+      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
+        <a href="/#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
+        <a href="/#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
+        
+        <a href="/#speaking" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Insights</a>
+        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
+      </div>
+    </div>
+  </nav>
+  <section style="padding:54px 0 14px;">
+    <div class="wrap">
+      <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:14px;">Instrument</div>
+      <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(32px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:860px;">AI Adoption Scorecard</h1>
+      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:780px;">A license is not adoption, and usage is not value. Rate your adoption signals across six dimensions and see where you sit on the adoption ladder, which dimensions are holding you back, and the plays to run first. This is the measurement layer of the adoption playbook, the published methodology. Nothing you enter leaves your browser.</p>
+    </div>
+  </section>
+  <section style="padding:8px 0 60px;">
+    <div class="wrap">
+      <div class="sc-layout">
+        <div class="sc-main"><section class="dim-sec" data-dim="1"><div class="dim-head"><h2>1. Reach</h2><span class="dim-badge" data-badge="1">Not scored</span></div><p class="dim-def">Of the people who should be using it, how many actively are.</p><div class="sig"><div class="sig-main"><span class="sig-id">R1</span><span class="sig-stmt">The intended-user population is defined and active usage against it is tracked.</span><span class="sig-how"><b>How to read:</b> You can name who should use it and show who does.</span></div><div class="seg" data-sig="R1"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">R2</span><span class="sig-stmt">Active usage is broad, not concentrated in one team or a few enthusiasts.</span><span class="sig-how"><b>How to read:</b> Usage is distributed across the roles in scope.</span></div><div class="seg" data-sig="R2"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">R3</span><span class="sig-stmt">Activation is trending up, not flat or decaying after launch.</span><span class="sig-how"><b>How to read:</b> A usage trend line, not a launch-week spike.</span></div><div class="seg" data-sig="R3"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">R4</span><span class="sig-stmt">Lapsed users are identified and re-engaged.</span><span class="sig-how"><b>How to read:</b> A defined path for people who stopped using it.</span></div><div class="seg" data-sig="R4"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div></section><section class="dim-sec" data-dim="2"><div class="dim-head"><h2>2. Depth</h2><span class="dim-badge" data-badge="2">Not scored</span></div><p class="dim-def">How often, and across how many real use cases.</p><div class="sig"><div class="sig-main"><span class="sig-id">D1</span><span class="sig-stmt">Regular users return on a recurring cadence, not one and done.</span><span class="sig-how"><b>How to read:</b> Repeat-use metrics, not first-use counts.</span></div><div class="seg" data-sig="D1"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">D2</span><span class="sig-stmt">Users apply it across several distinct use cases, not a single task.</span><span class="sig-how"><b>How to read:</b> A spread of use cases per active user.</span></div><div class="seg" data-sig="D2"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">D3</span><span class="sig-stmt">A maintained library of validated use cases exists for each role.</span><span class="sig-how"><b>How to read:</b> Persona-based use-case content people can reach.</span></div><div class="seg" data-sig="D3"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">D4</span><span class="sig-stmt">Usage depth is measured, not assumed.</span><span class="sig-how"><b>How to read:</b> Instrumentation for frequency and breadth of use.</span></div><div class="seg" data-sig="D4"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div></section><section class="dim-sec" data-dim="3"><div class="dim-head"><h2>3. Proficiency</h2><span class="dim-badge" data-badge="3">Not scored</span></div><p class="dim-def">Whether users are skilled, past basic use.</p><div class="sig"><div class="sig-main"><span class="sig-id">P1</span><span class="sig-stmt">Enablement is role- or persona-based, not one generic training.</span><span class="sig-how"><b>How to read:</b> Training mapped to what each role does.</span></div><div class="seg" data-sig="P1"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">P2</span><span class="sig-stmt">Users use the tool well, not just at the surface.</span><span class="sig-how"><b>How to read:</b> Evidence of skilled use, not only logins.</span></div><div class="seg" data-sig="P2"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">P3</span><span class="sig-stmt">Champions or power users support each team.</span><span class="sig-how"><b>How to read:</b> Named champions with coverage across teams.</span></div><div class="seg" data-sig="P3"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">P4</span><span class="sig-stmt">Capability is assessed, not assumed from attendance.</span><span class="sig-how"><b>How to read:</b> A skills check, not a sign-in sheet.</span></div><div class="seg" data-sig="P4"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div></section><section class="dim-sec" data-dim="4"><div class="dim-head"><h2>4. Workflow Integration</h2><span class="dim-badge" data-badge="4">Not scored</span></div><p class="dim-def">Whether it has changed how work gets done, or just been tried.</p><div class="sig"><div class="sig-main"><span class="sig-id">W1</span><span class="sig-stmt">The tool is embedded in standard workflows or procedures, not a side experiment.</span><span class="sig-how"><b>How to read:</b> It appears in the documented way work is done.</span></div><div class="seg" data-sig="W1"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">W2</span><span class="sig-stmt">It has displaced a slower prior method, not just added a step.</span><span class="sig-how"><b>How to read:</b> An old step retired, not a new one bolted on.</span></div><div class="seg" data-sig="W2"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">W3</span><span class="sig-stmt">Integration points are owned by the business, not only by IT.</span><span class="sig-how"><b>How to read:</b> A business owner for each workflow it touches.</span></div><div class="seg" data-sig="W3"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">W4</span><span class="sig-stmt">Friction that blocks daily use is actively removed.</span><span class="sig-how"><b>How to read:</b> A running list of friction points being cleared.</span></div><div class="seg" data-sig="W4"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div></section><section class="dim-sec" data-dim="5"><div class="dim-head"><h2>5. Value Realization</h2><span class="dim-badge" data-badge="5">Not scored</span></div><p class="dim-def">Whether measurable outcomes are showing up.</p><div class="sig"><div class="sig-main"><span class="sig-id">V1</span><span class="sig-stmt">Each priority use case has a defined value metric (time, quality, cycle, or cost).</span><span class="sig-how"><b>How to read:</b> A metric per use case, set before scaling.</span></div><div class="seg" data-sig="V1"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">V2</span><span class="sig-stmt">Outcomes are measured against a baseline, not estimated.</span><span class="sig-how"><b>How to read:</b> A before number to compare against.</span></div><div class="seg" data-sig="V2"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">V3</span><span class="sig-stmt">The value curve is tracked over time, not claimed once.</span><span class="sig-how"><b>How to read:</b> The adoption value curve, measured across periods.</span></div><div class="seg" data-sig="V3"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">V4</span><span class="sig-stmt">Realized value is reported to leadership on a cadence.</span><span class="sig-how"><b>How to read:</b> A recurring value report, not a one-time deck.</span></div><div class="seg" data-sig="V4"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div></section><section class="dim-sec" data-dim="6"><div class="dim-head"><h2>6. Governed Adoption</h2><span class="dim-badge" data-badge="6">Not scored</span></div><p class="dim-def">Whether usage is happening inside the guardrails.</p><div class="sig"><div class="sig-main"><span class="sig-id">G1</span><span class="sig-stmt">Usage runs on sanctioned tools, and shadow AI is detected and reduced.</span><span class="sig-how"><b>How to read:</b> A sanctioned-vs-shadow usage picture that is improving.</span></div><div class="seg" data-sig="G1"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">G2</span><span class="sig-stmt">Use is policy-aware: the acceptable-use standard is understood and applied.</span><span class="sig-how"><b>How to read:</b> Evidence people know and follow the rules of use.</span></div><div class="seg" data-sig="G2"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">G3</span><span class="sig-stmt">Adoption data and governance data are connected.</span><span class="sig-how"><b>How to read:</b> You can see governed usage, not just usage.</span></div><div class="seg" data-sig="G3"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div><div class="sig"><div class="sig-main"><span class="sig-id">G4</span><span class="sig-stmt">Oversight and audit coverage scale with usage.</span><span class="sig-how"><b>How to read:</b> Controls keep pace as adoption grows.</span></div><div class="seg" data-sig="G4"><button data-v="Met">Met</button><button data-v="Partial">Partial</button><button data-v="Gap">Gap</button><button data-v="N/A">N/A</button></div></div></section></div>
+        <aside class="sc-rail">
+          <div class="sc-card"><div class="sc-num" id="overallNum">--</div><div class="sc-of">Adoption posture, of 5</div><div class="sc-word" id="overallWord">Not yet scored</div></div>
+          <div class="sc-heat" id="heat"><span class="heat-cell" data-dim="1" title="1. Reach">1</span><span class="heat-cell" data-dim="2" title="2. Depth">2</span><span class="heat-cell" data-dim="3" title="3. Proficiency">3</span><span class="heat-cell" data-dim="4" title="4. Workflow Integration">4</span><span class="heat-cell" data-dim="5" title="5. Value Realization">5</span><span class="heat-cell" data-dim="6" title="6. Governed Adoption">6</span></div>
+          <div class="sc-heat-cap">Six dimensions, Latent (1) to Compounding (5)</div>
+          <div class="sc-sect"><h3>Focus dimensions</h3><ol class="focus" id="focus"><li class="muted">Score the signals to see your focus areas.</li></ol></div>
+          <div class="sc-sect"><h3>Start here, plays</h3><ol class="plays" id="plays"><li class="muted">Plays appear once you have a score.</li></ol></div>
+          <button class="sc-reset" id="reset">Reset all</button>
+        </aside>
+      </div>
+      <p class="meta" style="color:#6f685d;margin:26px 0 0;line-height:1.6;max-width:900px;">v1 draft: dimensions, signals, and thresholds are a working model validated per engagement, not a published standard. This playbook is an independent synthesis. It references and maps to recognized frameworks and does not reproduce their content. ADKAR and Prosci are trademarks of Prosci, Inc. PMBOK is a trademark of the Project Management Institute, Inc. The Kirkpatrick Model is a trademark of Kirkpatrick Partners, LLC. The AI Adoption Maturity Model is a work of the Carnegie Mellon University Software Engineering Institute and Accenture. Microsoft, Microsoft 365 Copilot, and Adoption Score are trademarks of the Microsoft group of companies. This work is not affiliated with, endorsed by, or sponsored by any of them.</p>
+    </div>
+  </section>
+<footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span><a href="https://www.linkedin.com/in/jimi-ige/" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#6f685d;" style-hover="color:#2f4a63;">LinkedIn</a></span>
+      <span class="meta" style="color:#6f685d;">AI Governance &amp; Transformation · Washington, D.C. · © 2026 Jimi Ige LLC</span>
+    </div>
+  </footer>
+  </div>
+</div>
+<script>
+  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
+  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
+  document.querySelectorAll('[style-hover]').forEach(function(el){
+    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
+    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
+    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
+  });
+  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
+</script>
+<script>
+(function(){
+  var DATA = {"dims": [{"id": 1, "name": "Reach", "signals": ["R1", "R2", "R3", "R4"]}, {"id": 2, "name": "Depth", "signals": ["D1", "D2", "D3", "D4"]}, {"id": 3, "name": "Proficiency", "signals": ["P1", "P2", "P3", "P4"]}, {"id": 4, "name": "Workflow Integration", "signals": ["W1", "W2", "W3", "W4"]}, {"id": 5, "name": "Value Realization", "signals": ["V1", "V2", "V3", "V4"]}, {"id": 6, "name": "Governed Adoption", "signals": ["G1", "G2", "G3", "G4"]}], "stages": [{"l": 1, "name": "Latent"}, {"l": 2, "name": "Piloting"}, {"l": 3, "name": "Expanding"}, {"l": 4, "name": "Embedded"}, {"l": 5, "name": "Compounding"}], "plays": [{"phase": "Baseline", "text": "Run the adoption scorecard to set a baseline stage per dimension.", "dims": [1, 2, 3, 4, 5, 6]}, {"phase": "Baseline", "text": "Define the intended-user population and instrument active usage.", "dims": [1]}, {"phase": "Baseline", "text": "Set a value metric for every priority use case before you scale.", "dims": [5]}, {"phase": "Baseline", "text": "Inventory sanctioned tools and surface shadow AI.", "dims": [6]}, {"phase": "Enable", "text": "Set a leadership narrative and visible sponsorship for why this matters.", "dims": [1, 3]}, {"phase": "Enable", "text": "Build persona-based use-case libraries so each role sees its own win.", "dims": [2]}, {"phase": "Enable", "text": "Deliver role-based enablement and name a champion for each team.", "dims": [3]}, {"phase": "Enable", "text": "Make access and onboarding frictionless.", "dims": [1]}, {"phase": "Drive", "text": "Embed the tool in standard workflows and procedures.", "dims": [4]}, {"phase": "Drive", "text": "Remove the top friction points that block daily use.", "dims": [4]}, {"phase": "Drive", "text": "Use nudges and reinforcement to turn a trial into a habit.", "dims": [2]}, {"phase": "Drive", "text": "Cross from early adopters to the broad majority on purpose.", "dims": [1, 2]}, {"phase": "Sustain", "text": "Run a measurement cadence on leading and lagging indicators.", "dims": [1, 2, 3, 4, 5, 6]}, {"phase": "Sustain", "text": "Track realized value against the baseline and report it to leadership.", "dims": [5]}, {"phase": "Sustain", "text": "Connect adoption data to governance data so usage stays inside the guardrails.", "dims": [6]}, {"phase": "Sustain", "text": "Stand up a center of excellence to keep improving.", "dims": [1, 2, 3, 4, 5, 6]}]};
+  var DIMS = DATA.dims, PLAYS = DATA.plays;
+  var SNAME = {}; DATA.stages.forEach(function(s){ SNAME[s.l]=s.name; });
+  var MCOL = {1:'#c0392b',2:'#d97b2b',3:'#caa011',4:'#5b9d5b',5:'#2f7d4f'};
+  var PTS = {Met:2, Partial:1, Gap:0};
+  var state = {};
+  function bucket(p){ if(p<0.2)return 1; if(p<0.4)return 2; if(p<0.6)return 3; if(p<0.8)return 4; return 5; }
+  function dimStats(d){
+    var pts=0, scored=0, gaps=0;
+    d.signals.forEach(function(id){ var v=state[id];
+      if(v==='Met'||v==='Partial'||v==='Gap'){ pts+=PTS[v]; scored++; if(v==='Gap') gaps++; } });
+    var pct = scored>0 ? pts/(2*scored) : null;
+    return {pct:pct, stage:(pct===null?null:bucket(pct)), scored:scored, gaps:gaps};
+  }
+  function recompute(){
+    var stages=[], info=[];
+    DIMS.forEach(function(d){
+      var s=dimStats(d); info.push({d:d,s:s});
+      if(s.stage!==null) stages.push(s.stage);
+      var badge=document.querySelector('[data-badge="'+d.id+'"]');
+      if(badge){ if(s.stage===null){ badge.textContent='Not scored'; badge.style.background='#e7eaee'; badge.style.color='#6f685d'; }
+        else { badge.textContent=s.stage+' '+SNAME[s.stage]+', '+Math.round(s.pct*100)+'%'; badge.style.background=MCOL[s.stage]; badge.style.color='#fff'; } }
+      var cell=document.querySelector('.heat-cell[data-dim="'+d.id+'"]');
+      if(cell){ if(s.stage===null){ cell.style.background='#c7cdd4'; cell.style.color='#3c372f'; cell.title=d.id+'. '+d.name+', not scored'; }
+        else { cell.style.background=MCOL[s.stage]; cell.style.color='#fff'; cell.title=d.id+'. '+d.name+', '+s.stage+' '+SNAME[s.stage]; } }
+    });
+    var on=document.getElementById('overallNum'), ow=document.getElementById('overallWord');
+    if(stages.length===0){ on.textContent='--'; ow.textContent='Not yet scored'; }
+    else { var avg=stages.reduce(function(a,b){return a+b;},0)/stages.length;
+      on.textContent=(Math.round(avg*10)/10).toFixed(1);
+      ow.textContent=SNAME[Math.round(avg)]+', '+stages.length+' of '+DIMS.length+' dimensions scored'; }
+    var scored=info.filter(function(x){return x.s.stage!==null;});
+    var fo=document.getElementById('focus'); fo.innerHTML='';
+    var focusDims=[];
+    if(scored.length===0){ fo.innerHTML='<li class="muted">Score the signals to see your focus areas.</li>'; }
+    else { scored.sort(function(a,b){return a.s.stage-b.s.stage;});
+      var pick=scored.filter(function(x){return x.s.stage<=3;}); if(pick.length===0) pick=scored.slice(0,2);
+      pick.forEach(function(x){ focusDims.push(x.d.id);
+        var li=document.createElement('li'); li.innerHTML='<span class="f-m" style="background:'+MCOL[x.s.stage]+'">'+x.s.stage+'</span> '+x.d.id+'. '+x.d.name; fo.appendChild(li); }); }
+    var pl=document.getElementById('plays'); pl.innerHTML='';
+    if(focusDims.length===0){ pl.innerHTML='<li class="muted">Plays appear once you have a score.</li>'; }
+    else { var seen={}, n=0;
+      PLAYS.forEach(function(p){ if(n>=4) return; var hit=p.dims.some(function(x){return focusDims.indexOf(x)>=0;});
+        if(hit && !seen[p.text]){ seen[p.text]=1; n++; var li=document.createElement('li');
+          li.innerHTML='<span class="p-dim">'+p.phase+'</span><br>'+p.text; pl.appendChild(li); } });
+      if(n===0){ pl.innerHTML='<li class="muted">No matching plays.</li>'; } }
+  }
+  [].slice.call(document.querySelectorAll('.seg')).forEach(function(seg){
+    var sid=seg.getAttribute('data-sig');
+    [].slice.call(seg.querySelectorAll('button')).forEach(function(b){
+      b.addEventListener('click', function(){ var v=b.getAttribute('data-v');
+        if(state[sid]===v) delete state[sid]; else state[sid]=v;
+        [].slice.call(seg.querySelectorAll('button')).forEach(function(x){ var sel=(state[sid]===x.getAttribute('data-v'));
+          x.classList.toggle('on', sel); if(sel) x.setAttribute('data-on', x.getAttribute('data-v')); else x.removeAttribute('data-on'); });
+        recompute(); });
+    });
+  });
+  document.getElementById('reset').addEventListener('click', function(){ state={};
+    [].slice.call(document.querySelectorAll('.seg button')).forEach(function(x){ x.classList.remove('on'); x.removeAttribute('data-on'); });
+    recompute(); });
+  recompute();
+})();
+</script>
+</body></html>
