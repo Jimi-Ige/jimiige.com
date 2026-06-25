@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Governance Control Crosswalk, Jimi Ige</title>
+<meta name="description" content="A control crosswalk mapping AI governance to the business pain it solves and across NIST AI RMF, ISO 42001, SOC 2, ISO 27001, NIST 800-171 / CMMC, and privacy, with the tooling that enforces each control.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<style>
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/14c68554.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/cc92c1b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/50c8f5cc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/033f7596.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/033f7596.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/0d687185.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/7c950dda.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/0126f1f7.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/bf9e9553.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/8b2cdb31.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7eb836be.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/2ff67739.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent,#2f4a63);outline-offset:3px;border-radius:2px;}
+</style>
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
+  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
+    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
+  ::selection{background:#2f4a63;color:#fff;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
+  .rule{height:1px;background:rgba(25,30,46,0.14);}
+  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
+  .glass{background:rgba(255,255,255,0.52);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
+  .hero-grid{display:grid;grid-template-columns:1.62fr 1fr;gap:60px;align-items:center;}
+  .practice-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
+  .cred-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;}
+  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .bridge{display:grid;grid-template-columns:1fr 44px 1.3fr 44px 1fr;align-items:center;}
+  .bridge .conn{text-align:center;color:#9a958c;font-size:22px;}
+  @media(max-width:820px){.bridge{grid-template-columns:1fr;gap:14px;}.bridge .conn{display:none;}}
+  .nav-toggle{display:none;}.nav-links{display:flex;align-items:center;gap:30px;}
+  @media(max-width:920px){
+    .hero-grid,.practice-grid,.cred-grid,.contact-grid,.speak-grid{grid-template-columns:1fr;gap:34px;}
+    .nav-links{display:none;}
+    .nav-toggle{display:flex;}
+  }
+  @media(max-width:680px){
+    .wrap{padding:0 22px;}
+    .hero-h1{font-size:38px !important;} section h2{font-size:30px !important;line-height:1.16 !important;} header#top h2{font-size:28px !important;line-height:1.2 !important;}
+  }
+</style>
+
+
+<style>
+  .xw-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin-bottom:20px;}
+  .xw-seg{display:inline-flex;border:1px solid rgba(25,30,46,0.18);border-radius:3px;overflow:hidden;}
+  .xw-seg button{font-family:inherit;font-size:13.5px;padding:9px 16px;background:transparent;border:none;cursor:pointer;color:#3c372f;border-right:1px solid rgba(25,30,46,0.12);}
+  .xw-seg button:last-child{border-right:none;}
+  .xw-seg button.active{background:var(--accent,#2f4a63);color:#fff;}
+  .xw-search{flex:1;min-width:200px;max-width:300px;background:rgba(255,255,255,0.7);border:1px solid rgba(25,30,46,0.18);border-radius:3px;padding:10px 12px;font-family:inherit;font-size:14px;color:#191510;outline:none;}
+  .xw-search:focus{border-color:var(--accent,#2f4a63);}
+  .xw-count{font-size:13px;color:#6f685d;}
+  .xw-wrap{overflow-x:auto;border:1px solid rgba(25,30,46,0.12);border-radius:3px;background:rgba(255,255,255,0.55);}
+  table.xw{border-collapse:collapse;width:100%;min-width:1180px;font-size:12.5px;line-height:1.5;}
+  table.xw th{background:var(--accent,#2f4a63);color:#fff;font-weight:600;text-align:left;padding:11px 12px;position:sticky;top:0;font-size:11px;letter-spacing:0.03em;text-transform:uppercase;vertical-align:bottom;}
+  table.xw th.spine{background:#24405a;}
+  table.xw th.pain{background:#8a5a23;}
+  table.xw td{padding:12px 12px;border-top:1px solid rgba(25,30,46,0.1);color:#3c372f;vertical-align:top;}
+  table.xw td.spine{background:rgba(47,74,99,0.05);}
+  table.xw td.pain{background:rgba(186,117,23,0.08);color:#120f0b;min-width:210px;}
+  table.xw tr:hover td{background:rgba(47,74,99,0.04);}
+  table.xw tr:hover td.pain{background:rgba(186,117,23,0.13);}
+  table.xw tr:hover td.spine{background:rgba(47,74,99,0.08);}
+  table.xw .dom{font-weight:600;color:#120f0b;font-size:13.5px;display:block;min-width:150px;}
+  table.xw td.obj{color:#6f685d;font-size:12px;min-width:170px;}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;position:relative;overflow-x:hidden;">
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;"><div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,var(--accent,#2f4a63) 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div><div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div></div>
+<div style="position:relative;z-index:1;">
+<nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
+      <a href="/#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
+        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige LLC</span>
+        <span class="meta" style="color:var(--accent,#2f4a63);">AI Governance &amp; Transformation</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
+        <a href="/#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
+        
+        <a href="/#speaking" class="meta" style="text-decoration:none;color:#4a443d;">Insights</a>
+        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;" style-hover="background:var(--accent,#2f4a63);color:#fff;border-color:var(--accent,#2f4a63);">Let's connect →</a>
+      </div>
+      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" style="display:none;">
+      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
+        <a href="/#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
+        <a href="/#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
+        
+        <a href="/#speaking" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Insights</a>
+        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
+      </div>
+    </div>
+  </nav>
+  <section style="padding:54px 0 22px;">
+    <div class="wrap">
+      <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:14px;">Framework</div>
+      <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(34px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:820px;">AI Governance Control Crosswalk</h1>
+      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:760px;">One control program, mapped across every regime in play. The amber column reads it in plain English, the pain and the trigger an executive feels. The AI spine, NIST AI RMF and ISO 42001, is constant; the compliance regime flexes. Pick your view below.</p>
+    </div>
+  </section>
+
+  <section style="padding:0 0 56px;">
+    <div class="wrap">
+      <div class="xw-controls">
+        <span class="meta" style="color:#191510;">View:</span>
+        <span class="xw-seg" role="group" aria-label="Compliance regime view">
+          <button data-mode="commercial">Commercial</button><button data-mode="federal">Federal &amp; DIB</button><button data-mode="both">Both</button>
+        </span>
+        <input id="xwSearch" class="xw-search" type="search" placeholder="Filter domains, pains, controls, tools...">
+        <span id="xwCount" class="xw-count"></span>
+      </div>
+      <div class="xw-wrap">
+        <table class="xw"><thead><tr><th>Control domain</th><th class="pain">Why it matters</th><th>What good looks like</th><th class="spine">NIST AI RMF</th><th class="spine">ISO/IEC 42001</th><th class="col-commercial">SOC 2 / ISO 27001</th><th class="col-federal">NIST 800-171 / CMMC</th><th>Privacy</th><th>Enforced in</th></tr></thead><tbody>
+        <tr><td><span class="dom">1. Governance, Accountability &amp; Policy</span></td><td class="pain">No one owns your AI. When the board or a regulator asks who's accountable and what your rules are, you have no answer, and your projects stall waiting for someone to say yes.</td><td class="obj">Named AI owner + oversight body, an approved AI policy &amp; acceptable-use standard, and decision rights (RACI) for AI.</td><td class="spine">GOVERN 1-4 (policy, accountability, roles, culture)</td><td class="spine">Cl.5 Leadership; A.2 AI policy; A.3 Internal org &amp; roles</td><td class="col-commercial">SOC 2 CC1 (control environment); ISO 27001 A.5.1-5.4</td><td class="col-federal">No standalone family; carried by the SSP + org policy. CMMC L2 assessment expects documented governance.</td><td>NIST PF GOVERN-P; ISO 27701 s.6 (PIMS leadership)</td><td>Policy of record in Purview / ServiceNow IRM; posture tracked in Compliance Manager</td></tr>
+        <tr><td><span class="dom">2. AI System &amp; Agent Inventory + Risk Classification</span></td><td class="pain">You can't say how many AI tools and agents you're running, or which are risky. Shadow AI is already in your environment, and the next security review wants the inventory you don't have.</td><td class="obj">Live inventory of every AI system and agent (owner, data access, tool access, risk tier) on a defined risk-classification scheme.</td><td class="spine">MAP 1-5 (context, categorization, risk)</td><td class="spine">A.4 AI system resources; A.5 AI system impact assessment</td><td class="col-commercial">SOC 2 CC3 (risk assessment); ISO 27001 A.5.9 (asset inventory)</td><td class="col-federal">3.11 Risk Assessment; 3.4 Config Mgmt (inventory); CMMC L2 RA/CM</td><td>NIST PF IDENTIFY-P; ISO 27701 (PII inventory / RoPA)</td><td>Purview Data Map + AI Hub inventory; ServiceNow CMDB; Vanta asset inventory</td></tr>
+        <tr><td><span class="dom">3. Data Governance &amp; Privacy</span></td><td class="pain">Your AI surfaces the wrong data to the wrong person. One slip and you're sending a breach notice, paying a fine, or losing a regulated client.</td><td class="obj">Data minimization, quality &amp; classification for AI; privacy-by-design; PII handling and data-sharing controls.</td><td class="spine">MAP 2 (data); MEASURE 2 (data quality); GOVERN 1.2</td><td class="spine">A.7 Data for AI systems</td><td class="col-commercial">SOC 2 Confidentiality + Privacy (P-series); ISO 27001 A.5.34 (PII), A.8.10-8.12</td><td class="col-federal">3.1 / 3.13 (CUI protection &amp; boundary); 3.8 Media Protection; CMMC L2 AC/SC/MP</td><td>ISO 27701 PIMS / GDPR; NIST PF CONTROL-P &amp; PROTECT-P; PIA/PTA (federal)</td><td>Purview Info Protection (sensitivity labels) + DLP + DSPM for AI; OneTrust for privacy ops</td></tr>
+        <tr><td><span class="dom">4. Identity &amp; Access Governance, incl. agents (your Domain 1)</span></td><td class="pain">One of your agents quietly gains access it shouldn't have, or a shadow agent runs in your environment unseen. Now you've got an actor in your systems you can't track.</td><td class="obj">Unique non-human identity per agent, least-privilege + just-in-time scoping, no privilege drift; agent identity events audited separately.</td><td class="spine">MANAGE 1-2; GOVERN 1.5</td><td class="spine">A.9 Use of AI systems; A.4 resources</td><td class="col-commercial">SOC 2 CC6.1-6.3 (logical access); ISO 27001 A.5.15-5.18, A.8.2 (privileged), A.8.5 (auth)</td><td class="col-federal">3.1 Access Control; 3.5 Identification &amp; Authentication; CMMC L2 AC/IA</td><td>ISO 27701 (access to PII); NIST PF PR.AC</td><td>Entra ID workload/agent identities; Purview; ServiceNow access mgmt</td></tr>
+        <tr><td><span class="dom">5. Human Oversight &amp; Decision Rights (your Domain 2)</span></td><td class="pain">Your AI made a consequential call (a denial, a price, a clinical flag) with no human check, and now you're explaining to a regulator why no one was in the loop.</td><td class="obj">Oversight tier (autonomous / advisory / required) designed into the workflow at each material decision; override rates tracked.</td><td class="spine">GOVERN 1.2; MANAGE 1.3 &amp; 2.3 (human oversight, override)</td><td class="spine">A.9.2 Human oversight; A.6 lifecycle</td><td class="col-commercial">Generic governance only (SOC 2 CC5 / ISO 27001 A.5.4); no control for human oversight of AI decisions</td><td class="col-federal">No direct control (design-level); supports 3.1 (authorized actions only)</td><td>GDPR Art.22 (automated decisions); ISO 27701; NIST PF CONTROL-P</td><td>Approval gates in Power Platform / ServiceNow; Copilot Studio guardrails</td></tr>
+        <tr><td><span class="dom">6. AI / Agent Security &amp; Tool-Use, MCP (your Domain 3)</span></td><td class="pain">A prompt injection or a rogue tool call turns your AI into a data-exfiltration path, a new attack surface you haven't covered yet.</td><td class="obj">Deny-by-default tool/MCP allowlist per agent; tool calls logged as security events; output validation; prompt-injection red-teaming.</td><td class="spine">MEASURE 2 (security / robustness); MANAGE 2 (risk treatment)</td><td class="spine">A.6 lifecycle (secure dev/op); A.10 third-party components</td><td class="col-commercial">SOC 2 CC6.6-6.8, CC7 (operations); ISO 27001 A.8.7-8.9, A.8.16, A.8.23, A.8.26</td><td class="col-federal">3.13 System &amp; Comms Protection; 3.14 System &amp; Info Integrity; CMMC L2 SC/SI</td><td>Exfiltration controls protect PII (ISO 27701); NIST PF PROTECT-P</td><td>Purview DLP + DSPM for AI; Defender for Cloud Apps; API gateway / MCP allowlist; Azure AI Content Safety</td></tr>
+        <tr><td><span class="dom">7. Audit Trail, Logging &amp; Explainability (your Domain 4)</span></td><td class="pain">An auditor asks why your AI did that, and you can't reconstruct it. A routine decision becomes a finding you can't close.</td><td class="obj">Full reasoning trace (not just I/O) for consequential decisions, immutable &amp; tamper-evident, navigable by a non-technical compliance officer.</td><td class="spine">MEASURE 1 &amp; 3; MANAGE 4 (documentation, transparency)</td><td class="spine">A.6 lifecycle records; A.8 information for interested parties</td><td class="col-commercial">SOC 2 CC4, CC7.2-7.3 (monitoring); ISO 27001 A.8.15 (logging), A.8.16 (monitoring)</td><td class="col-federal">3.3 Audit &amp; Accountability; CMMC L2 AU</td><td>Records of processing (ISO 27701 / GDPR Art.30); NIST PF</td><td>Purview Audit + eDiscovery; Microsoft Sentinel (immutable); Azure Monitor; ServiceNow</td></tr>
+        <tr><td><span class="dom">8. Monitoring: Bias, Fairness &amp; Performance (your Domain 6)</span></td><td class="pain">Your AI is quietly biased or drifting on decisions about real people, and you find out from a complaint, a headline, or a lawsuit.</td><td class="obj">Fairness metrics set pre-deployment; disparate-impact + drift monitored on a cadence (tool-inherited bias included); review thresholds defined.</td><td class="spine">MEASURE 2 (fairness, bias, performance) &amp; 4 (feedback)</td><td class="spine">A.6 performance evaluation; Cl.9 monitoring</td><td class="col-commercial">Monitoring only (SOC 2 CC4 / ISO 27001 A.8.16); no fairness control</td><td class="col-federal">No direct control (not a security regime); flag the gap to leadership</td><td>Disparate impact on individuals (NIST PF); ISO 27701</td><td>Azure ML / AI Foundry responsible-AI dashboards &amp; evals; Credo AI / Holistic AI (model governance)</td></tr>
+        <tr><td><span class="dom">9. Incident Response &amp; Resilience, autonomous failures (your Domain 5)</span></td><td class="pain">Your agent goes off the rails at machine speed and you have no kill switch. Your IR team has never seen this and can't stop it.</td><td class="obj">Documented kill switch per agent (who / when / in-flight handling); IR trained on agent architecture; tabletops; governance-failure post-mortems.</td><td class="spine">MANAGE 2.4, 3, 4 (response, recovery, incidents)</td><td class="spine">A.6 operation; Cl.10 nonconformity &amp; improvement</td><td class="col-commercial">SOC 2 CC7.3-7.5 (incident); ISO 27001 A.5.24-5.28 (incident), A.5.29-5.30 (continuity)</td><td class="col-federal">3.6 Incident Response; CMMC L2 IR</td><td>Breach notification (ISO 27701 / GDPR Art.33-34); NIST PF</td><td>Sentinel + Defender (SOAR / kill-switch automation); agent disable controls; ServiceNow IR</td></tr>
+        <tr><td><span class="dom">10. Regulatory Alignment &amp; Third-Party / Supply Chain (your Domain 7)</span></td><td class="pain">You're suddenly in scope for the EU AI Act, CMMC, or HIPAA, or your vendor's model fails and it's your problem. Your deal stays blocked until you prove compliance.</td><td class="obj">Each deployment mapped to applicable regimes (EU AI Act tier, HIPAA, CMMC/CUI, federal AI transparency); model &amp; tool vendors risk-reviewed; compliance is a deployment prerequisite.</td><td class="spine">GOVERN 3 &amp; 4 (legal/regulatory, third party); MAP 4 (legal)</td><td class="spine">A.10 Third-party &amp; supplier; A.5 impact; Cl.4 context</td><td class="col-commercial">SOC 2 CC9 (vendor risk); ISO 27001 A.5.19-5.23 (supplier), A.5.31 (legal)</td><td class="col-federal">3.12 Security Assessment; 3.16/3.17 (r3 supply chain); CMMC L2 + SPRS score; flow-down to subs</td><td>Cross-border transfers &amp; DPAs (ISO 27701 / GDPR); NIST PF</td><td>Compliance Manager (regime templates); OneTrust (vendor/AI risk); ServiceNow VRM; eMASS / SPRS (federal)</td></tr>
+        </tbody></table>
+      </div>
+      <p class="meta" style="color:#6f685d;margin:16px 0 0;line-height:1.6;max-width:900px;">The amber column is the plain-English pain and trigger for leadership; the shaded columns are the constant AI spine. v1 draft: technical mappings are at the control-family / criteria level; exact sub-control IDs are validated per engagement. Two domains, human oversight and fairness (rows 5 and 8), sit outside every security regime, not SOC 2, ISO 27001, CMMC, or 800-171. They exist only in the AI spine. That gap is the case for AI governance as its own discipline.</p>
+      <a href="/#contact" class="meta" style="display:inline-block;margin-top:22px;text-decoration:none;color:#fff;background:var(--accent,#2f4a63);padding:13px 26px;border-radius:2px;" style-hover="background:var(--accent-deep,#21364a);">Run this against your environment &rarr;</a>
+    </div>
+  </section>
+<footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span><a href="https://www.linkedin.com/in/jimi-ige/" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#6f685d;" style-hover="color:#2f4a63;">LinkedIn</a></span>
+      <span class="meta" style="color:#6f685d;">AI Governance &amp; Transformation · Washington, D.C. · © 2026 Jimi Ige LLC</span>
+    </div>
+  </footer>
+  </div>
+</div>
+<script>
+  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
+  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
+  document.querySelectorAll('[style-hover]').forEach(function(el){
+    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
+    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
+    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
+  });
+  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
+</script>
+<script>
+(function(){
+  var seg=[].slice.call(document.querySelectorAll('.xw-seg button'));
+  var rows=[].slice.call(document.querySelectorAll('table.xw tbody tr'));
+  var search=document.getElementById('xwSearch'), count=document.getElementById('xwCount');
+  function setMode(m){
+    seg.forEach(function(b){b.classList.toggle('active',b.getAttribute('data-mode')===m);});
+    [].slice.call(document.querySelectorAll('.col-commercial')).forEach(function(e){e.style.display=(m==='federal')?'none':'';});
+    [].slice.call(document.querySelectorAll('.col-federal')).forEach(function(e){e.style.display=(m==='commercial')?'none':'';});
+  }
+  function filter(){
+    var q=(search.value||'').toLowerCase(),n=0;
+    rows.forEach(function(r){var ok=r.textContent.toLowerCase().indexOf(q)>=0;r.style.display=ok?'':'none';if(ok)n++;});
+    count.textContent=n+' of '+rows.length+' domains';
+  }
+  seg.forEach(function(b){b.addEventListener('click',function(){setMode(b.getAttribute('data-mode'));});});
+  search.addEventListener('input',filter);
+  setMode('both'); filter();
+})();
+</script>
+</body></html>
