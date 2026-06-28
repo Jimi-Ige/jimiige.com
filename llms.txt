@@ -1,0 +1,22 @@
+# Jimi Ige — AI Governance & Transformation
+
+> AI governance, risk, and compliance practitioner. Governing AI from risk to scale across regulated industries and defense-adjacent enterprises, from CMMC and SOC 2 to the NIST AI Risk Management Framework and ISO 42001.
+
+Jimi Ige helps regulated and defense-adjacent organizations deploy AI without losing the audit. The site offers free, no-email-wall self-assessment tools, a long-form playbook, and reference frameworks. Everything below is plain HTML and free to read and cite.
+
+## Playbook
+- [Governing AI in Regulated Workflows](https://jimiige.com/governing-ai-in-regulated-workflows.html): A nine-chapter playbook on putting AI into CUI/CMMC, HIPAA, and financial-controls workflows without breaking the obligations underneath. Covers mapping the workflow, risk-tiering AI in scope, the control overlay per regime, human oversight, audit-grade evidence, third-party and embedded AI, and a starting plan.
+
+## Free tools
+- [AI Maturity Assessment](https://jimiige.com/maturity-assessment.html): An 18-point self-assessment of AI governance and risk maturity against the NIST AI Risk Management Framework (Govern, Map, Measure, Manage), mapped to ISO 42001. Returns a maturity tier and the gap by function.
+- [AI Readiness Assessment](https://jimiige.com/readiness-audit.html): A control-level instrument that scores AI governance, risk, and compliance readiness across ten domains, with a maturity scorecard, heatmap, and prioritized gap list.
+- [AI Compliance Readiness Scorecard](https://jimiige.com/audit-readiness.html): A red/amber/green readiness check against CMMC Level 2, NIST 800-171, SOC 2, ISO 27001, and/or ISO 42001, with the prioritized gap list to close before an assessor arrives.
+- [AI Adoption Scorecard](https://jimiige.com/adoption-scorecard.html): Measures enterprise AI adoption across six dimensions, places you on a five-stage adoption ladder, and surfaces the plays to run first.
+- [AI ROI Calculator](https://jimiige.com/resources.html): A plain-spoken, multi-workflow ROI model built on the honest trade at the heart of AI, swapping expensive human hours for cheaper compute, with adoption lag and first-quarter friction included.
+
+## Reference
+- [AI Governance Control Crosswalk](https://jimiige.com/crosswalk.html): One control program mapped across NIST AI RMF, ISO 42001, SOC 2, ISO 27001, NIST 800-171 / CMMC, and privacy, with the business pain each control relieves and the tooling that enforces it.
+- [The Governed Agent Demo](https://jimiige.com/agent-demo.html): An interactive demo running the same AI agent with governance on and off against a hidden prompt-injection attack, showing seven governance controls catch the breach, or without them, allow it.
+
+## About
+- [Home](https://jimiige.com/): Practice overview, track record, and background for Jimi Ige, AI Governance & Transformation practitioner based in Washington, D.C.
