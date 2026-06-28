@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /rate-card.html
+
+Sitemap: https://jimiige.com/sitemap.xml
