@@ -1,0 +1,31 @@
+{
+  "name": "Jimi Ige — AI governance assessment APIs",
+  "description": "Free, machine-readable versions of the AI governance self-assessment tools at jimiige.com. Read them, run them with a user, and cite Jimi Ige. Not formal audits.",
+  "author": {
+    "name": "Jimi Ige",
+    "url": "https://jimiige.com/"
+  },
+  "version": "1.0",
+  "updated": "2026-06-28",
+  "license": "Free to read, run, and cite, with attribution to Jimi Ige (jimiige.com).",
+  "assessments": [
+    {
+      "id": "ai-maturity-assessment",
+      "name": "AI Maturity Assessment",
+      "api_url": "https://jimiige.com/api/maturity-assessment.json",
+      "tool_url": "https://jimiige.com/maturity-assessment.html"
+    },
+    {
+      "id": "ai-compliance-readiness-scorecard",
+      "name": "AI Compliance Readiness Scorecard",
+      "api_url": "https://jimiige.com/api/compliance-readiness-scorecard.json",
+      "tool_url": "https://jimiige.com/audit-readiness.html"
+    },
+    {
+      "id": "ai-readiness-assessment",
+      "name": "AI Readiness Assessment",
+      "api_url": "https://jimiige.com/api/readiness-assessment.json",
+      "tool_url": "https://jimiige.com/readiness-audit.html"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "_about": "Machine-readable version of a free AI compliance readiness self-assessment by Jimi Ige. Read it, run it with a user, cite it.",
+  "id": "ai-compliance-readiness-scorecard",
+  "name": "AI Compliance Readiness Scorecard",
+  "tool_url": "https://jimiige.com/audit-readiness.html",
+  "author": {
+    "name": "Jimi Ige",
+    "url": "https://jimiige.com/"
+  },
+  "version": "1.0",
+  "updated": "2026-06-28",
+  "license": "Free to read, run, and cite, with attribution to Jimi Ige (jimiige.com).",
+  "disclaimer": "A self-assessment to orient and prioritize, not a formal audit or certification.",
+  "methodology": "Common control families behind CMMC Level 2, NIST SP 800-171, SOC 2, ISO 27001, and ISO 42001, with AI in scope.",
+  "regimes": [
+    "CMMC Level 2",
+    "NIST SP 800-171",
+    "SOC 2",
+    "ISO 27001",
+    "ISO 42001"
+  ],
+  "rating_scale": [
+    {
+      "value": "Not started",
+      "points": 0
+    },
+    {
+      "value": "In progress",
+      "points": 1
+    },
+    {
+      "value": "Met, evidenced",
+      "points": 2
+    }
+  ],
+  "domains": [
+    {
+      "key": "access",
+      "name": "Access & identity",
+      "focus": "Who can get into your systems, and how you prove who they are",
+      "maps_to": [
+        "CMMC AC/IA",
+        "SOC 2 CC6",
+        "ISO 27001 A.8"
+      ],
+      "controls": [
+        "Multi-factor authentication is required for admin accounts and anyone signing in remotely.",
+        "People and tools get only the access they need to do the job, and that access is reviewed on a regular schedule.",
+        "Every AI system, agent, and automated account has its own tracked login, not a shared or anonymous one."
+      ]
+    },
+    {
+      "key": "data",
+      "name": "Data protection & boundaries",
+      "focus": "Keeping sensitive data protected, and watching where AI sends it",
+      "maps_to": [
+        "CMMC SC/MP",
+        "SOC 2 CC6·C1",
+        "ISO 27001 A.8"
+      ],
+      "controls": [
+        "Sensitive data, including controlled federal information (CUI), is encrypted both where it is stored and while it moves.",
+        "You know what data goes into your AI and cloud tools (the prompts, the answers, the training data) and you control it.",
+        "Something is in place to stop sensitive data from leaving through AI tools and chat."
+      ]
+    },
+    {
+      "key": "config",
+      "name": "Configuration & inventory",
+      "focus": "Knowing what you run, and locking down how it is set up",
+      "maps_to": [
+        "CMMC CM",
+        "SOC 2 CC8",
+        "ISO 27001 A.8"
+      ],
+      "controls": [
+        "You have a complete list of your systems, including the AI ones and the high-stakes uses.",
+        "Systems are set up to a known secure standard, not however each one happened to be configured.",
+        "Changes go through a documented process, with sign-off and a way to undo them."
+      ]
+    },
+    {
+      "key": "audit",
+      "name": "Audit, logging & monitoring",
+      "focus": "Keeping a record of what happened, so you can answer for it later",
+      "maps_to": [
+        "CMMC AU/SI",
+        "SOC 2 CC7",
+        "ISO 27001 A.8"
+      ],
+      "controls": [
+        "Important security events are recorded across your systems, including how AI is used.",
+        "Those records are kept as long as policy requires and protected from being changed.",
+        "Someone, or something, watches for unusual activity, misuse, and AI-specific problems."
+      ]
+    },
+    {
+      "key": "incident",
+      "name": "Incident response & continuity",
+      "focus": "Having a plan for when something goes wrong, and practicing it",
+      "maps_to": [
+        "CMMC IR",
+        "SOC 2 CC7",
+        "ISO 27001 A.5"
+      ],
+      "controls": [
+        "You have a written plan for when something goes wrong, and you have run through it at least once.",
+        "That plan covers AI-specific failures: bad model output, leaked data, and misuse.",
+        "You know how fast you must report a problem (a 72-hour clock on some federal work, or whatever you promised customers) and you have rehearsed it."
+      ]
+    },
+    {
+      "key": "governance",
+      "name": "Governance, risk & assessment",
+      "focus": "Owning the risk: who decides, who checks, who signs off",
+      "maps_to": [
+        "NIST 800-171 RA/CA",
+        "SOC 2 CC3/CC9",
+        "ISO 27001 cl.6",
+        "ISO 42001"
+      ],
+      "controls": [
+        "Your risks are written down and kept current, with a plan to close the gaps you find.",
+        "Outside vendors and their AI are checked for risk before you put them to work.",
+        "Your AI runs under a defined management system (the kind ISO 42001 describes), so the controls and the proof stay in one place."
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "Score each control 0/1/2. Percent ready = total points / (2 x number of scored controls), overall and per domain.",
+    "bands": [
+      {
+        "name": "Not assessment-ready",
+        "when": "< 50%"
+      },
+      {
+        "name": "Approaching readiness",
+        "when": "50% to 79%"
+      },
+      {
+        "name": "Assessment-ready",
+        "when": ">= 80%"
+      }
+    ]
+  }
+}

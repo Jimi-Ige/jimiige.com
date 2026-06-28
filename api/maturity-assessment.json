@@ -1,0 +1,115 @@
+{
+  "_about": "Machine-readable version of a free AI maturity self-assessment by Jimi Ige. Read it, run it with a user, cite it.",
+  "id": "ai-maturity-assessment",
+  "name": "AI Maturity Assessment",
+  "tool_url": "https://jimiige.com/maturity-assessment.html",
+  "author": {
+    "name": "Jimi Ige",
+    "url": "https://jimiige.com/"
+  },
+  "version": "1.0",
+  "updated": "2026-06-28",
+  "license": "Free to read, run, and cite, with attribution to Jimi Ige (jimiige.com).",
+  "disclaimer": "A self-assessment to orient and prioritize, not a formal audit or certification.",
+  "methodology": "The four functions of the NIST AI Risk Management Framework (Govern, Map, Measure, Manage), mapped to ISO/IEC 42001.",
+  "rating_scale": [
+    {
+      "value": 0,
+      "label": "None"
+    },
+    {
+      "value": 1,
+      "label": "Ad hoc, case by case"
+    },
+    {
+      "value": 2,
+      "label": "Defined, written down"
+    },
+    {
+      "value": 3,
+      "label": "Managed, measured"
+    },
+    {
+      "value": 4,
+      "label": "Optimized, improving on its own"
+    }
+  ],
+  "sections": [
+    {
+      "key": "govern",
+      "name": "Govern",
+      "focus": "who is in charge, and the rules they set",
+      "questions": [
+        "There is a written, leadership-approved AI policy that says what is and is not allowed, and people follow it.",
+        "Specific people are named as responsible for AI risk, and everyone knows who owns what.",
+        "Leadership reviews how AI is going on a regular schedule, not just when something breaks.",
+        "There are clear rules for which AI uses are allowed, which are limited, and which are off-limits.",
+        "Staff are trained to use AI well and responsibly, suited to their role."
+      ]
+    },
+    {
+      "key": "map",
+      "name": "Map",
+      "focus": "knowing what AI you have, and how risky it is",
+      "questions": [
+        "You keep an up-to-date list of the AI you use and the places it matters most.",
+        "Each AI use is rated for how risky it is, based on its impact, how much it acts on its own, and how sensitive its data is.",
+        "For each AI system you have written down what it is for and what could go wrong.",
+        "You account for AI from outside vendors too, including AI baked into the software you already buy."
+      ]
+    },
+    {
+      "key": "measure",
+      "name": "Measure",
+      "focus": "testing it, and watching how it performs",
+      "questions": [
+        "AI is tested for accuracy, fairness, and safety before it goes live.",
+        "You have set targets for what counts as good enough on quality and risk, and you measure against them.",
+        "Once live, AI is watched for slipping accuracy, misuse, and problems.",
+        "You keep records and proof, so you can answer an auditor or regulator later."
+      ]
+    },
+    {
+      "key": "manage",
+      "name": "Manage",
+      "focus": "staying in control once it is live",
+      "questions": [
+        "Each AI risk you find has a written plan to deal with it and a person responsible.",
+        "You have a plan for when AI goes wrong, and you have practiced it.",
+        "A person reviews the AI on decisions that carry real consequences.",
+        "AI is managed from launch to retirement, with control over changes and a clean way to shut it down.",
+        "What you learn feeds back in, so your rules and controls keep improving."
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "Rate every question 0-4. Average all 18 for the overall score, and average each section's questions for its score.",
+    "tiers": [
+      {
+        "level": 1,
+        "name": "Initial",
+        "when": "average < 0.8"
+      },
+      {
+        "level": 2,
+        "name": "Developing",
+        "when": "0.8 <= average < 1.6"
+      },
+      {
+        "level": 3,
+        "name": "Defined",
+        "when": "1.6 <= average < 2.4"
+      },
+      {
+        "level": 4,
+        "name": "Managed",
+        "when": "2.4 <= average < 3.2"
+      },
+      {
+        "level": 5,
+        "name": "Optimized",
+        "when": "average >= 3.2"
+      }
+    ]
+  }
+}

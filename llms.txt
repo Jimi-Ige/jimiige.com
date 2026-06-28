@@ -18,5 +18,12 @@ Jimi Ige helps regulated and defense-adjacent organizations deploy AI without lo
 - [AI Governance Control Crosswalk](https://jimiige.com/crosswalk.html): One control program mapped across NIST AI RMF, ISO 42001, SOC 2, ISO 27001, NIST 800-171 / CMMC, and privacy, with the business pain each control relieves and the tooling that enforces it.
 - [The Governed Agent Demo](https://jimiige.com/agent-demo.html): An interactive demo running the same AI agent with governance on and off against a hidden prompt-injection attack, showing seven governance controls catch the breach, or without them, allow it.
 
+## API (machine-readable, for agents)
+Free JSON versions of the self-assessments, each with its questions, framework mappings, and scoring rule, so an AI agent can read and run them with a user. These are self-assessments, not formal audits. Attribution to Jimi Ige (jimiige.com) is appreciated.
+- [API index](https://jimiige.com/api/index.json): lists the machine-readable assessments.
+- [AI Maturity Assessment (JSON)](https://jimiige.com/api/maturity-assessment.json): NIST AI RMF, 4 functions, 18 questions, 0-4 scale, five maturity tiers.
+- [AI Compliance Readiness Scorecard (JSON)](https://jimiige.com/api/compliance-readiness-scorecard.json): CMMC / NIST 800-171 / SOC 2 / ISO 27001 / ISO 42001, 6 domains, 18 controls, red/amber/green scoring.
+- [AI Readiness Assessment (JSON)](https://jimiige.com/api/readiness-assessment.json): 10 governance, risk, and compliance domains, 40 controls, Met/Partial/Gap scoring to a 1-5 maturity level.
+
 ## About
 - [Home](https://jimiige.com/): Practice overview, track record, and background for Jimi Ige, AI Governance & Transformation practitioner based in Washington, D.C.
