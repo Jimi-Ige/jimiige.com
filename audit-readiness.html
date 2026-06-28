@@ -109,7 +109,7 @@
             <div style="font-size:13.5px;line-height:1.55;color:#3c372f;">
               <strong style="font-weight:600;color:#a83f35;">Not started</strong> &middot;
               <strong style="font-weight:600;color:#8a6a2e;">In progress</strong> &middot;
-              <strong style="font-weight:600;color:#3f7757;">Met, evidenced</strong> — assessors score evidence, not intent.
+              <strong style="font-weight:600;color:#3f7757;">Met, evidenced</strong>. Assessors score evidence, not intent.
             </div>
           </div>
           <div id="questions"></div>
@@ -142,8 +142,8 @@
       <a href="maturity-assessment.html" style="text-decoration:none;color:inherit;display:block;">
         <div class="glass" style="border-radius:3px;padding:24px 30px;border-left:3px solid #2f4a63;" style-hover="background:rgba(255,255,255,0.55);">
           <div class="meta" style="color:#2f4a63;margin-bottom:8px;">Also free</div>
-          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;margin:0 0 8px;color:#120f0b;">AI governance maturity assessment &rarr;</h3>
-          <p style="font-size:15px;line-height:1.6;color:#3c372f;margin:0;max-width:760px;">Audit readiness is the floor. See where your broader AI governance stands against the NIST AI RMF, mapped to ISO 42001.</p>
+          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;margin:0 0 8px;color:#120f0b;">AI maturity assessment &rarr;</h3>
+          <p style="font-size:15px;line-height:1.6;color:#3c372f;margin:0;max-width:760px;">Audit readiness is the floor. See where your broader AI program stands against the NIST AI RMF, mapped to ISO 42001.</p>
         </div>
       </a>
     </div>
@@ -271,8 +271,8 @@
     }
 
     var b;
-    if(overall>=80)b='A CMMC Level 2 assessment scores controls pass/fail on evidence — a 3PAO gives no partial credit. You are in range; the work now is keeping evidence current.';
-    else b='A CMMC Level 2 assessment scores controls pass/fail on evidence — a 3PAO gives no partial credit. Every red and amber above is a finding to close before they arrive.';
+    if(overall>=80)b='A CMMC Level 2 assessment scores controls pass/fail on evidence. A 3PAO gives no partial credit. You are in range; the work now is keeping evidence current.';
+    else b='A CMMC Level 2 assessment scores controls pass/fail on evidence. A 3PAO gives no partial credit. Every red and amber above is a finding to close before they arrive.';
     document.getElementById('bench').textContent=b;
   }
   build();compute();
