@@ -121,7 +121,13 @@
               <strong style="font-weight:600;">4</strong> Optimized, improving on its own
             </div>
           </div>
-          <div id="questions"></div>
+          <div id="questions">
+<!-- Static content for crawlers and no-JS; the interactive scorer replaces this when JS runs. -->
+<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Govern</h2><div class="meta" style="margin:2px 0 10px;">who is in charge, and the rules they set</div><div class="qrow"><div class="qtext">There is a written, leadership-approved AI policy that says what is and is not allowed, and people follow it.</div></div><div class="qrow"><div class="qtext">Specific people are named as responsible for AI risk, and everyone knows who owns what.</div></div><div class="qrow"><div class="qtext">Leadership reviews how AI is going on a regular schedule, not just when something breaks.</div></div><div class="qrow"><div class="qtext">There are clear rules for which AI uses are allowed, which are limited, and which are off-limits.</div></div><div class="qrow"><div class="qtext">Staff are trained to use AI well and responsibly, suited to their role.</div></div></div>
+<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Map</h2><div class="meta" style="margin:2px 0 10px;">knowing what AI you have, and how risky it is</div><div class="qrow"><div class="qtext">You keep an up-to-date list of the AI you use and the places it matters most.</div></div><div class="qrow"><div class="qtext">Each AI use is rated for how risky it is, based on its impact, how much it acts on its own, and how sensitive its data is.</div></div><div class="qrow"><div class="qtext">For each AI system you have written down what it is for and what could go wrong.</div></div><div class="qrow"><div class="qtext">You account for AI from outside vendors too, including AI baked into the software you already buy.</div></div></div>
+<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Measure</h2><div class="meta" style="margin:2px 0 10px;">testing it, and watching how it performs</div><div class="qrow"><div class="qtext">AI is tested for accuracy, fairness, and safety before it goes live.</div></div><div class="qrow"><div class="qtext">You have set targets for what counts as good enough on quality and risk, and you measure against them.</div></div><div class="qrow"><div class="qtext">Once live, AI is watched for slipping accuracy, misuse, and problems.</div></div><div class="qrow"><div class="qtext">You keep records and proof, so you can answer an auditor or regulator later.</div></div></div>
+<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Manage</h2><div class="meta" style="margin:2px 0 10px;">staying in control once it is live</div><div class="qrow"><div class="qtext">Each AI risk you find has a written plan to deal with it and a person responsible.</div></div><div class="qrow"><div class="qtext">You have a plan for when AI goes wrong, and you have practiced it.</div></div><div class="qrow"><div class="qtext">A person reviews the AI on decisions that carry real consequences.</div></div><div class="qrow"><div class="qtext">AI is managed from launch to retirement, with control over changes and a clean way to shut it down.</div></div><div class="qrow"><div class="qtext">What you learn feeds back in, so your rules and controls keep improving.</div></div></div>
+</div>
         </div>
 
         <div class="glass" id="results" style="border-radius:3px;padding:28px 30px;position:sticky;top:84px;">
@@ -226,7 +232,7 @@
     return wrap;
   }
   function build(){
-    var host=document.getElementById('questions');
+    var host=document.getElementById('questions');host.innerHTML='';
     FUNCTIONS.forEach(function(f,fi){
       var card=document.createElement('div');card.className='glass fcard';
       var head=document.createElement('div');
