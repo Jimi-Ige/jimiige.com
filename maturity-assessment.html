@@ -92,7 +92,7 @@
     <div class="wrap">
       <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Free tool</div>
       <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(34px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:820px;">Where your AI program really stands.</h1>
-      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:720px;">An 18-point self-assessment against the four functions of the <strong style="font-weight:600;">NIST AI RMF</strong>, mapped to <strong style="font-weight:600;">ISO&nbsp;42001</strong>. No email wall, nothing hidden. Set each statement to where you honestly are and your maturity tier updates live, with the gap broken out by function. About five minutes.</p>
+      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:720px;">Eighteen plain questions about how your organization handles AI, grouped the way the US government's AI risk framework (the <strong style="font-weight:600;">NIST AI RMF</strong>) groups them and mapped to the international standard <strong style="font-weight:600;">ISO&nbsp;42001</strong>. No email wall, nothing hidden. Rate each one honestly; your maturity level updates live and your weakest area is called out, so you know what to fix first. About five minutes.</p>
     </div>
   </section>
 
@@ -104,10 +104,10 @@
             <div class="meta" style="color:#2f4a63;margin-bottom:6px;">Rating scale</div>
             <div style="font-size:13.5px;line-height:1.55;color:#3c372f;">
               <strong style="font-weight:600;">0</strong> None &middot;
-              <strong style="font-weight:600;">1</strong> Ad hoc &middot;
-              <strong style="font-weight:600;">2</strong> Defined &middot;
-              <strong style="font-weight:600;">3</strong> Managed &middot;
-              <strong style="font-weight:600;">4</strong> Optimized
+              <strong style="font-weight:600;">1</strong> Ad hoc, case by case &middot;
+              <strong style="font-weight:600;">2</strong> Defined, written down &middot;
+              <strong style="font-weight:600;">3</strong> Managed, measured &middot;
+              <strong style="font-weight:600;">4</strong> Optimized, improving on its own
             </div>
           </div>
           <div id="questions"></div>
@@ -161,32 +161,32 @@
 <script>
 (function(){
   var FUNCTIONS=[
-    {key:'govern',name:'Govern',sub:'policy, accountability & oversight',
-     advice:'stand up a board-approved AI policy, a named accountable owner, and a leadership review cadence',
-     qs:['A board-approved AI policy and acceptable-use standard is documented and enforced.',
-         'Accountability for AI risk is assigned to named roles with a clear RACI.',
-         'Leadership reviews AI risk and posture on a defined cadence.',
-         'A documented risk appetite governs which AI use cases are allowed, restricted, or prohibited.',
-         'Staff receive role-based AI literacy and responsible-use training.']},
-    {key:'map',name:'Map',sub:'inventory & risk context',
-     advice:'build a live AI use-case inventory and a risk-tiering rubric that includes third-party and embedded AI',
-     qs:['A current inventory of AI/ML systems and high-impact use cases is maintained.',
-         'AI use cases are classified by risk tier across impact, autonomy, and data sensitivity.',
-         'The context, intended use, and potential harms of each AI system are documented.',
-         'Third-party and vendor AI, including AI embedded in SaaS, is identified and assessed.']},
-    {key:'measure',name:'Measure',sub:'testing, metrics & monitoring',
-     advice:'define pre-deployment testing, acceptance metrics, and production monitoring with retained evidence',
-     qs:['AI systems are tested for performance, bias, and safety before deployment.',
-         'Defined metrics and acceptance thresholds exist for AI quality and risk.',
-         'Deployed AI is monitored for drift, misuse, and incidents in production.',
-         'Evidence and documentation are retained to support audit and regulatory review.']},
-    {key:'manage',name:'Manage',sub:'response, oversight & lifecycle',
-     advice:'formalize AI incident response, human-in-the-loop controls, and lifecycle and change management',
-     qs:['Identified AI risks have documented treatment plans and assigned owners.',
-         'An AI incident response process exists and has been exercised.',
-         'Human oversight is defined for consequential AI-assisted decisions.',
-         'AI systems follow a managed lifecycle including change control and decommissioning.',
-         'Findings feed a continuous-improvement loop that updates policy and controls.']}
+    {key:'govern',name:'Govern',sub:'who is in charge, and the rules they set',
+     advice:'put a leadership-approved AI policy in place, name one person accountable, and set a regular leadership review',
+     qs:['There is a written, leadership-approved AI policy that says what is and is not allowed, and people follow it.',
+         'Specific people are named as responsible for AI risk, and everyone knows who owns what.',
+         'Leadership reviews how AI is going on a regular schedule, not just when something breaks.',
+         'There are clear rules for which AI uses are allowed, which are limited, and which are off-limits.',
+         'Staff are trained to use AI well and responsibly, suited to their role.']},
+    {key:'map',name:'Map',sub:'knowing what AI you have, and how risky it is',
+     advice:'build an up-to-date list of where you use AI and a simple way to rate how risky each is, vendors included',
+     qs:['You keep an up-to-date list of the AI you use and the places it matters most.',
+         'Each AI use is rated for how risky it is, based on its impact, how much it acts on its own, and how sensitive its data is.',
+         'For each AI system you have written down what it is for and what could go wrong.',
+         'You account for AI from outside vendors too, including AI baked into the software you already buy.']},
+    {key:'measure',name:'Measure',sub:'testing it, and watching how it performs',
+     advice:'test AI before it goes live, set targets for what counts as good enough, and keep watching it once it is running',
+     qs:['AI is tested for accuracy, fairness, and safety before it goes live.',
+         'You have set targets for what counts as good enough on quality and risk, and you measure against them.',
+         'Once live, AI is watched for slipping accuracy, misuse, and problems.',
+         'You keep records and proof, so you can answer an auditor or regulator later.']},
+    {key:'manage',name:'Manage',sub:'staying in control once it is live',
+     advice:'write down how you respond when AI goes wrong, keep a person in the loop on big decisions, and manage AI from launch to retirement',
+     qs:['Each AI risk you find has a written plan to deal with it and a person responsible.',
+         'You have a plan for when AI goes wrong, and you have practiced it.',
+         'A person reviews the AI on decisions that carry real consequences.',
+         'AI is managed from launch to retirement, with control over changes and a clean way to shut it down.',
+         'What you learn feeds back in, so your rules and controls keep improving.']}
   ];
   var TIERS=[{n:1,name:'Initial'},{n:2,name:'Developing'},{n:3,name:'Defined'},{n:4,name:'Managed'},{n:5,name:'Optimized'}];
   function tierFor(avg){
@@ -220,7 +220,7 @@
     FUNCTIONS.forEach(function(f,fi){
       var card=document.createElement('div');card.className='glass fcard';
       var head=document.createElement('div');
-      head.innerHTML='<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;"><div style="font-family:var(--font-display,\'Spectral\',serif);font-weight:500;font-size:19px;color:#120f0b;">'+f.name+'</div><div class="meta" id="favg-'+f.key+'" style="color:#2f4a63;">Level 1</div></div><div class="meta" style="margin:2px 0 6px;">RMF function &middot; '+f.sub+'</div>';
+      head.innerHTML='<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;"><div style="font-family:var(--font-display,\'Spectral\',serif);font-weight:500;font-size:19px;color:#120f0b;">'+f.name+'</div><div class="meta" id="favg-'+f.key+'" style="color:#2f4a63;">Level 1</div></div><div class="meta" style="margin:2px 0 6px;">'+f.sub+'</div>';
       card.appendChild(head);
       f.qs.forEach(function(q,qi){
         var row=document.createElement('div');row.className='qrow';
@@ -256,16 +256,16 @@
     for(var k=0;k<fAvg.length;k++){if(fAvg[k]<fAvg[minI])minI=k;if(fAvg[k]>fAvg[maxI])maxI=k;}
     var narr;
     if(fAvg[minI]===fAvg[maxI]){
-      narr='Your functions are even right now. As you answer honestly, the weakest one will surface here with the highest-leverage next step.';
+      narr='Your four areas are even right now. As you answer honestly, the weakest one will surface here with the most useful next step.';
     }else{
       narr='Strongest area: <strong style="font-weight:600;">'+FUNCTIONS[maxI].name+'</strong> (Level '+tierFor(fAvg[maxI]).n+'). Biggest gap: <strong style="font-weight:600;">'+FUNCTIONS[minI].name+'</strong> (Level '+tierFor(fAvg[minI]).n+'). The typical next move is to '+FUNCTIONS[minI].advice+'.';
     }
     document.getElementById('narrative').innerHTML=narr;
 
     var b;
-    if(t.n>3)b='Regulated-sector organizations typically operate around Level 3 (Defined). You are above that benchmark. The work now is sustaining and proving it.';
-    else if(t.n===3)b='Regulated-sector organizations typically operate around Level 3 (Defined). You are at that benchmark. The gap to Managed is where audit-readiness lives.';
-    else b='Regulated-sector organizations typically operate around Level 3 (Defined). You are below that benchmark. Closing it is what makes an AI program defensible.';
+    if(t.n>3)b='Most organizations in regulated industries sit around Level 3 (Defined). You are above that mark. The work now is keeping it up and proving it.';
+    else if(t.n===3)b='Most organizations in regulated industries sit around Level 3 (Defined). You are at that mark. Closing the gap to the next level is what gets you ready for an outside audit.';
+    else b='Most organizations in regulated industries sit around Level 3 (Defined). You are below that mark. Closing the gap is what lets you stand behind your AI when someone asks hard questions.';
     document.getElementById('bench').textContent=b;
   }
   build();compute();
