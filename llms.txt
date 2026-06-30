@@ -1,8 +1,18 @@
-# Jimi Ige — AI Governance & Transformation
+# Jimi Ige — AI Governance, Deployment & Adoption
 
-> AI governance, risk, and compliance practitioner. Governing AI from risk to scale across regulated industries and defense-adjacent enterprises, from CMMC and SOC 2 to the NIST AI Risk Management Framework and ISO 42001.
+> AI governance, deployment, and adoption for regulated and defense-adjacent enterprises. When a deal stalls on a customer's AI security review, auditors flag AI in scope, or a federal RFP requires AI governance documentation that doesn't exist yet, there is a specific playbook. Frameworks span CMMC, NIST 800-171, SOC 2, ISO 27001, the NIST AI Risk Management Framework, and ISO 42001.
 
-Jimi Ige helps regulated and defense-adjacent organizations deploy AI without losing the audit. The site offers free, no-email-wall self-assessment tools, a long-form playbook, and reference frameworks. Everything below is plain HTML and free to read and cite.
+Jimi Ige helps regulated and defense-adjacent organizations govern, deploy, and adopt AI without losing the audit. The site offers free, no-email-wall self-assessment tools, a long-form playbook, and reference frameworks. Everything below is plain HTML and free to read and cite.
+
+**When AI governance suddenly matters** — the moments that typically force the issue:
+- An enterprise customer sends an AI vendor security questionnaire nobody can answer
+- Auditors flag AI systems in scope with no supporting documentation
+- A federal RFP requires AI governance artifacts that don't exist yet
+- An M&A target uses AI with no governance structure as close approaches
+- A cyber insurer asks about AI controls at renewal
+- The board asks about AI risk and nobody gives a credible answer
+- AI was deployed months ago and adoption is flat
+- An AI policy exists but nothing enforces it in practice
 
 ## Playbook
 - [Governing AI in Regulated Workflows](https://jimiige.com/governing-ai-in-regulated-workflows.html): A nine-chapter playbook on putting AI into CUI/CMMC, HIPAA, and financial-controls workflows without breaking the obligations underneath. Covers mapping the workflow, risk-tiering AI in scope, the control overlay per regime, human oversight, audit-grade evidence, third-party and embedded AI, and a starting plan.
@@ -26,4 +36,4 @@ Free JSON versions of the self-assessments, each with its questions, framework m
 - [AI Readiness Assessment (JSON)](https://jimiige.com/api/readiness-assessment.json): 10 governance, risk, and compliance domains, 40 controls, Met/Partial/Gap scoring to a 1-5 maturity level.
 
 ## About
-- [Home](https://jimiige.com/): Practice overview, track record, and background for Jimi Ige, AI Governance & Transformation practitioner based in Washington, D.C.
+- [Home](https://jimiige.com/): Practice overview, track record, and background for Jimi Ige, AI Governance, Deployment & Adoption practitioner based in Washington, D.C.
