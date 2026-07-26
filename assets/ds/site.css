@@ -1871,6 +1871,60 @@ body[data-guidance="off"] .gloss {
   margin-top: var(--space-3);
 }
 
+/* The folder: a card as a manila file, tab and all. Same paper family as the
+   flags — a document that gets flagged also gets filed — but a different
+   structure: a flag is stuck on, a folder contains. The tab carries the file
+   number and merges into the body, so the two read as one cut of card stock. */
+.card--folder {
+  position: relative;
+  margin-top: 38px;
+  background: rgba(176, 141, 87, 0.12);
+  border-color: transparent;
+  transition: background-color var(--dur-instant) var(--ease-standard);
+}
+
+.card--folder > .card-head + .card-body {
+  border-top-color: rgba(27, 36, 48, 0.1);
+}
+
+.card--folder .card-n {
+  position: absolute;
+  top: -38px;
+  left: 0;
+  height: 38px;
+  min-width: 84px;
+  padding: 0 var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  background: rgba(176, 141, 87, 0.12);
+  font-size: var(--size-display-4);
+  transition: background-color var(--dur-instant) var(--ease-standard);
+}
+
+.card--folder:hover,
+.card--folder:hover .card-n {
+  background: rgba(176, 141, 87, 0.18);
+}
+
+/* copper-600 measures 3.99:1 on the manila surface and fails AA; the deeper
+   copper-700 clears it at 5.79. Applies to the tab numeral and to any inline
+   link sitting on the folder. */
+.card--folder .card-n,
+.card--folder .btn--ghost {
+  color: var(--copper-700);
+}
+
+.card--folder .btn--ghost:hover {
+  color: var(--copper-600);
+  box-shadow: inset 0 -1px 0 var(--copper-600);
+}
+
+@media (max-width: 599.98px) {
+  .card--folder .card-n {
+    min-width: 68px;
+  }
+}
+
 /* The note skin: a card set as an aside stuck onto the page — the same brass
    paper and adhesive strip as the flags. For cross-sell notes, not content. */
 .card--note {
