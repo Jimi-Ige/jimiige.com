@@ -21,139 +21,142 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/ds/styles.css">
+<link rel="stylesheet" href="assets/ds/site.css">
+<script src="assets/ds/ds.js" defer></script>
 <style>
-@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url("assets/14c68554.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url("assets/cc92c1b3.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:italic;font-weight:400;font-display:swap;src:url("assets/0126f1f7.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:300;font-display:swap;src:url("assets/bf9e9553.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:400;font-display:swap;src:url("assets/8b2cdb31.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:500;font-display:swap;src:url("assets/7eb836be.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:600;font-display:swap;src:url("assets/2ff67739.woff2") format('woff2');}
-</style>
-<style>
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;scroll-padding-top:80px;}
-  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
-    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
-  ::selection{background:#2f4a63;color:#fff;}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
-  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
-  .glass{background:rgba(255,255,255,0.42);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
-  .nav-toggle{display:none;}
-  @media(max-width:920px){.nav-links{display:none;}.nav-toggle{display:flex;}}
-  @media(max-width:680px){.wrap{padding:0 22px;}}
-  .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;}
-  @media(max-width:880px){.demo-grid{grid-template-columns:1fr;}}
-  .chip{display:inline-block;font-size:12.5px;font-family:var(--font-mono,'IBM Plex Mono',monospace);color:#3c372f;background:rgba(255,255,255,0.6);border:1px solid rgba(25,30,46,0.16);border-radius:3px;padding:7px 11px;margin:0 7px 8px 0;cursor:pointer;line-height:1.3;transition:border-color .12s;}
-  .chip:hover{border-color:#2f4a63;}
-  .chip.benign{border-color:rgba(63,119,87,0.45);color:#2f5742;}
-  #prompt{width:100%;min-height:78px;background:rgba(255,255,255,0.72);border:1px solid rgba(25,30,46,0.18);border-radius:3px;padding:12px 13px;font-family:var(--font-mono,'IBM Plex Mono',monospace);font-size:14px;color:#191510;outline:none;resize:vertical;line-height:1.5;}
-  #prompt:focus{border-color:#2f4a63;}
-  .sendbtn{margin-top:12px;background:#2f4a63;color:#fff;border:none;font-family:inherit;font-size:15px;font-weight:500;padding:12px 24px;border-radius:2px;cursor:pointer;}
-  .sendbtn:hover{background:#21364a;}
-  .verdict{display:flex;align-items:baseline;gap:12px;padding:14px 18px;border-radius:3px;margin-bottom:18px;}
-  .verdict.block{background:rgba(168,63,53,0.10);border-left:3px solid #a83f35;}
-  .verdict.allow{background:rgba(63,119,87,0.10);border-left:3px solid #3f7757;}
-  .vlabel{font-family:var(--font-display,'Spectral',serif);font-size:22px;line-height:1.1;}
-  .ctrl{padding:11px 0;border-top:1px solid rgba(25,30,46,0.10);display:flex;gap:12px;align-items:flex-start;}
-  .ctrl:first-of-type{border-top:none;}
-  .ctrl .dot{width:9px;height:9px;border-radius:50%;margin-top:6px;flex-shrink:0;background:rgba(25,30,46,0.16);}
-  .ctrl.fired .dot{background:#a83f35;}
-  .ctrl.passed .dot{background:#3f7757;}
-  .ctrl .cname{font-size:14px;color:#191510;font-weight:500;}
-  .ctrl .cmap{font-size:11.5px;color:#8a8378;font-family:var(--font-mono,'IBM Plex Mono',monospace);margin-top:2px;}
-  .ctrl .cwhy{font-size:13px;color:#3c372f;line-height:1.45;margin-top:5px;}
+  .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); align-items: start; }
+  @media (max-width: 880px) { .demo-grid { grid-template-columns: 1fr; } }
+
+  .chip { margin: 0 6px 6px 0; height: auto; padding: 6px var(--space-2); white-space: normal;
+    line-height: 1.35; text-align: left; cursor: pointer; }
+  .chip:hover { border-color: var(--copper-600); }
+  /* the benign example is a severity reading, so it carries the risk scale */
+  .chip.benign { border-color: var(--risk-low); color: var(--risk-low-text); }
+
+  #prompt { min-height: 78px; }
+
+  /* the verdict reads as a log line: the kind colour sits on the top rule */
+  .verdict { display: flex; align-items: baseline; gap: var(--space-2); flex-wrap: wrap;
+    padding: var(--space-3); margin-bottom: var(--space-3); border: var(--border-default); }
+  .verdict--block { background: var(--risk-high-fill); border-top: 2px solid var(--risk-high); }
+  .verdict--allow { background: var(--risk-low-fill); border-top: 2px solid var(--risk-low); }
+  .vlabel { font-family: var(--font-serif); font-size: var(--size-display-4); line-height: 1.1;
+    letter-spacing: var(--track-display); }
+  .verdict--block .vlabel { color: var(--risk-high-text); }
+  .verdict--allow .vlabel { color: var(--risk-low-text); }
+
+  .ctrl { padding: var(--space-2) 0; border-top: var(--border-hairline); display: flex;
+    gap: var(--space-2); align-items: flex-start; }
+  .ctrl:first-of-type { border-top: none; }
+  /* square, because nothing in this system is round */
+  .ctrl .dot { width: 8px; height: 8px; margin-top: 7px; flex-shrink: 0; background: var(--rule-strong); }
+  .ctrl.fired .dot { background: var(--risk-high); }
+  .ctrl.passed .dot { background: var(--risk-low); }
+  .ctrl .cname { font-family: var(--font-mono); font-size: var(--size-prose-sm); color: var(--text-display); }
+  .ctrl .cmap { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 0;
+    color: var(--text-muted); margin-top: 2px; }
+  .ctrl .cwhy { font-family: var(--font-mono); font-size: var(--size-prose-sm);
+    line-height: var(--lh-prose); color: var(--text-body); margin-top: 4px; }
 </style>
 </head>
 <body>
-<div style="min-height:100vh;position:relative;overflow-x:hidden;">
-<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;"><div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,#2f4a63 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div><div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div></div>
-  <div style="position:relative;z-index:1;">
-<nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
-      <a href="/#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
-        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige</span>
-        <span class="meta" style="color:#2f4a63;">AI Governance, Deployment &amp; Adoption</span>
+
+<div class="doc">
+
+  <nav class="sitenav">
+    <div class="sitenav-inner">
+      <a href="/#top" class="wordmark">
+        <span class="wordmark-name">Jimi Ige</span>
+        <span class="wordmark-practice">AI Governance, Deployment &amp; Adoption</span>
       </a>
-      <div class="nav-links" style="align-items:center;gap:30px;display:flex;">
-        <a href="/#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
-        <a href="/#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
-        <a href="/#credentials" class="meta" style="text-decoration:none;color:#4a443d;">Background</a>
-        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
-        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;">Let's connect →</a>
+      <div class="nav-links">
+        <a href="/#practice" class="nav-link">Practice</a>
+        <a href="/#evidence" class="nav-link">Track record</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Book a conversation</a>
       </div>
-      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-      </button>
+      <button class="nav-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <div id="mobile-menu" style="display:none;">
-      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
-        <a href="/#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
-        <a href="/#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
-        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
-        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
-      </div>
+    <!-- production's mobile drawer omits "Background"; preserved as-is -->
+    <div class="nav-menu" id="nav-menu" data-open="false">
+      <a href="/#practice">Practice</a>
+      <a href="/#evidence">Track record</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener">Book a conversation</a>
     </div>
   </nav>
 
-  <section style="padding:54px 0 22px;">
-    <div class="wrap">
-      <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Live demo</div>
-      <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(34px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:820px;">Watch the controls catch a prompt injection.</h1>
-      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:720px;">Fire a real prompt injection at an AI assistant that has governance controls in place — pick an attack or write your own — and watch the controls catch it in real time, each one mapped to the <strong style="font-weight:600;">NIST AI RMF</strong> and <strong style="font-weight:600;">ISO&nbsp;42001</strong>. It all runs in your browser; nothing is sent anywhere.</p>
+  <main>
+
+    <div class="rail" aria-hidden="true">
+      <div class="rail-nums"></div>
+      <span class="rail-rule rail-rule--a"></span>
+      <span class="rail-rule rail-rule--b"></span>
     </div>
-  </section>
 
-  <section style="padding:6px 0 56px;">
-    <div class="wrap">
-      <div class="demo-grid">
-        <div class="glass" style="border-radius:3px;padding:24px 26px;">
-          <div class="meta" style="color:#2f4a63;margin-bottom:12px;">Message to the AI assistant</div>
-          <textarea id="prompt" placeholder="Type a message — or pick an attack below."></textarea>
-          <button class="sendbtn" onclick="runDemo()">Send to the assistant &rarr;</button>
-          <div class="meta" style="margin:22px 0 10px;">Or try one of these</div>
-          <div id="chips"></div>
-          <p class="meta" style="font-size:11.5px;color:#8a8378;margin:10px 0 0;line-height:1.5;">Runs entirely in your browser. Nothing is sent or stored.</p>
-        </div>
+    <section class="band band--flush">
+      <div class="band-inner page-head">
+        <span class="eyebrow eyebrow--accent">Live demo</span>
+        <h1 class="display-1">Watch the controls catch a prompt injection.</h1>
+        <p class="prose">Fire a real prompt injection at an AI assistant that has governance controls in place &mdash; pick an attack or write your own &mdash; and watch the controls catch it in real time, each one mapped to the <strong>NIST AI RMF</strong> and <strong>ISO&nbsp;42001</strong>. It all runs in your browser; nothing is sent anywhere.</p>
+      </div>
+    </section>
 
-        <div class="glass" style="border-radius:3px;padding:24px 26px;">
-          <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Governance control layer</div>
-          <div id="result"><p style="font-size:14.5px;line-height:1.6;color:#6f685d;margin:6px 0 0;">Send a message and the controls below will evaluate it before the assistant acts — allowing legitimate use and blocking attempts to override instructions, extract data, or skip oversight.</p></div>
+    <section class="band">
+      <div class="band-inner">
+        <div class="demo-grid">
+
+          <section class="card">
+            <div class="card-body">
+              <span class="eyebrow eyebrow--accent">Message to the AI assistant</span>
+              <textarea id="prompt" class="input" placeholder="Type a message &mdash; or pick an attack below."></textarea>
+              <div class="row"><button class="btn btn--primary" type="button" onclick="runDemo()">Send to the assistant &rarr;</button></div>
+              <span class="eyebrow">Or try one of these</span>
+              <div id="chips"></div>
+              <p class="mono-sm">Runs entirely in your browser. Nothing is sent or stored.</p>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-body">
+              <span class="eyebrow eyebrow--accent">Governance control layer</span>
+              <div id="result"><p class="prose-sm">Send a message and the controls below will evaluate it before the assistant acts &mdash; allowing legitimate use and blocking attempts to override instructions, extract data, or skip oversight.</p></div>
+            </div>
+          </section>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section style="padding:6px 0 72px;">
-    <div class="wrap">
-      <a href="audit-readiness.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="glass" style="border-radius:3px;padding:24px 30px;border-left:3px solid #2f4a63;" style-hover="background:rgba(255,255,255,0.55);">
-          <div class="meta" style="color:#2f4a63;margin-bottom:8px;">Also free</div>
-          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;margin:0 0 8px;color:#120f0b;">Where do your own controls stand? &rarr;</h3>
-          <p style="font-size:15px;line-height:1.6;color:#3c372f;margin:0;max-width:760px;">A demo is one control catching one attack. The audit-readiness scorecard shows where your whole control set stands against CMMC, NIST 800-171, and ISO 42001.</p>
-        </div>
-      </a>
-    </div>
-  </section>
+    <section class="band">
+      <div class="band-inner">
+        <a href="audit-readiness.html" class="card">
+          <div class="card-head">
+            <div class="card-headings">
+              <span class="eyebrow">Also free</span>
+              <h3 class="card-title">Where do your own controls stand? &rarr;</h3>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="prose-sm">A demo is one control catching one attack. The audit-readiness scorecard shows where your whole control set stands against CMMC, NIST 800-171, and ISO 42001.</p>
+          </div>
+        </a>
+      </div>
+    </section>
 
-<footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span></span>
-      <span class="meta" style="color:#8a8378;">AI Governance, Deployment &amp; Adoption · Washington, D.C. · © 2026</span>
-    </div>
-  </footer>
-  </div>
+  </main>
 </div>
-<script>
-  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
-  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
-  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
-</script>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span class="row" style="gap:var(--space-4);">
+      <span class="foot-name">Jimi Ige</span>
+    </span>
+    <span class="foot-meta">AI Governance, Deployment &amp; Adoption &middot; Washington, D.C. &middot; &copy; 2026</span>
+  </div>
+</footer>
+
 <script>
 (function(){
   var CONTROLS=[
@@ -186,7 +189,7 @@
     var host=document.getElementById('chips');
     EXAMPLES.forEach(function(ex){
       var c=document.createElement('span');
-      c.className='chip'+(ex.benign?' benign':'');
+      c.className='tag chip'+(ex.benign?' benign':'');
       c.textContent=(ex.benign?'✓ ':'')+ex.t;
       c.onclick=function(){document.getElementById('prompt').value=ex.t;runDemo();};
       host.appendChild(c);
@@ -196,16 +199,16 @@
   window.runDemo=function(){
     var text=(document.getElementById('prompt').value||'').trim();
     var box=document.getElementById('result');
-    if(!text){box.innerHTML='<p style="font-size:14px;color:#a83f35;margin:6px 0 0;">Type a message or pick one above first.</p>';return;}
+    if(!text){box.innerHTML='<p class="prose-sm" style="color:var(--risk-high-text);">Type a message or pick one above first.</p>';return;}
     var fired=[];
     CONTROLS.forEach(function(c){if(c.test.test(text))fired.push(c);});
     var blocked=fired.length>0;
 
     var html='';
     if(blocked){
-      html+='<div class="verdict block"><span class="vlabel" style="color:#a83f35;">Blocked</span><span style="font-size:13.5px;color:#3c372f;line-height:1.4;">The assistant won’t act on this. '+fired.length+' control'+(fired.length>1?'s':'')+' fired — the assistant returns a refusal, not a response.</span></div>';
+      html+='<div class="verdict verdict--block"><span class="vlabel">Blocked</span><span class="prose-sm">The assistant won’t act on this. '+fired.length+' control'+(fired.length>1?'s':'')+' fired — the assistant returns a refusal, not a response.</span></div>';
     }else{
-      html+='<div class="verdict allow"><span class="vlabel" style="color:#3f7757;">Allowed</span><span style="font-size:13.5px;color:#3c372f;line-height:1.4;">No control triggered. A governed assistant handles this normally — controls let legitimate work through.</span></div>';
+      html+='<div class="verdict verdict--allow"><span class="vlabel">Allowed</span><span class="prose-sm">No control triggered. A governed assistant handles this normally — controls let legitimate work through.</span></div>';
     }
 
     CONTROLS.forEach(function(c){
@@ -213,16 +216,11 @@
       html+='<div class="ctrl '+(hit?'fired':'passed')+'"><div class="dot"></div><div><div class="cname">'+c.name+(hit?'  ·  fired':'  ·  clear')+'</div><div class="cmap">'+c.map+'</div>'+(hit?'<div class="cwhy">'+c.why+'</div>':'')+'</div></div>';
     });
 
-    html+='<p class="meta" style="font-size:11.5px;color:#8a8378;margin:16px 0 0;line-height:1.5;">Illustrative. A production guardrail stack is layered and tuned, but the principle is exactly this: controls evaluate every input before the model acts, and each maps back to a framework you can show an assessor.</p>';
+    html+='<p class="mono-sm" style="margin-top:var(--space-3);">Illustrative. A production guardrail stack is layered and tuned, but the principle is exactly this: controls evaluate every input before the model acts, and each maps back to a framework you can show an assessor.</p>';
     box.innerHTML=html;
   };
 
   buildChips();
-  document.querySelectorAll('[style-hover]').forEach(function(el){
-    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
-    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
-    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
-  });
 })();
 </script>
 </body></html>

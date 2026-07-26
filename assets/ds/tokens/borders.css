@@ -1,0 +1,26 @@
+:root {
+  /* Nothing in this system is rounded. Corners are square because the
+     register is legal instrument / engineering drawing, not consumer app. */
+  --radius-none: 0px;
+  --radius-hair: 2px; /* the only exception: dense inline chips */
+
+  --border-hairline: 1px solid var(--rule-hairline);
+  --border-default: 1px solid var(--rule-border);
+  --border-strong: 1px solid var(--rule-strong);
+  --border-accent: 1px solid var(--rule-accent);
+  --border-heavy: 2px solid var(--ink-800);
+
+  /* Elevation is ink, not blur. One overlay shadow, used only for modals. */
+  --shadow-none: none;
+  --shadow-panel: 0 1px 0 rgba(27, 36, 48, 0.06);
+  --shadow-overlay: 0 24px 48px -16px rgba(20, 32, 46, 0.32);
+  --focus-shadow: 0 0 0 2px var(--cream-200), 0 0 0 3px var(--copper-600);
+
+  /* Blueprint grid, as a reusable background */
+  --grid-pattern: repeating-linear-gradient(
+      to right,
+      var(--rule-hairline) 0 1px,
+      transparent 1px 132px
+    ),
+    repeating-linear-gradient(to bottom, var(--rule-hairline) 0 1px, transparent 1px 66px);
+}

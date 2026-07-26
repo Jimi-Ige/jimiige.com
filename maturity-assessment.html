@@ -21,159 +21,155 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/ds/styles.css">
+<link rel="stylesheet" href="assets/ds/site.css">
+<script src="assets/ds/ds.js" defer></script>
 <style>
-@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url("assets/14c68554.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url("assets/cc92c1b3.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("assets/50c8f5cc.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:italic;font-weight:400;font-display:swap;src:url("assets/0126f1f7.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:300;font-display:swap;src:url("assets/bf9e9553.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:400;font-display:swap;src:url("assets/8b2cdb31.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:500;font-display:swap;src:url("assets/7eb836be.woff2") format('woff2');}
-@font-face{font-family:'Spectral';font-style:normal;font-weight:600;font-display:swap;src:url("assets/2ff67739.woff2") format('woff2');}
-</style>
-<style>
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;scroll-padding-top:80px;}
-  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
-    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
-  ::selection{background:#2f4a63;color:#fff;}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
-  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
-  .glass{background:rgba(255,255,255,0.42);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
-  .nav-toggle{display:none;}
-  @media(max-width:920px){.nav-links{display:none;}.nav-toggle{display:flex;}}
-  @media(max-width:680px){.wrap{padding:0 22px;}}
-  .assess-grid{display:grid;grid-template-columns:1.35fr 0.9fr;gap:26px;align-items:start;}
-  @media(max-width:960px){.assess-grid{grid-template-columns:1fr;}#results{position:static !important;}}
-  .fcard{border-radius:3px;padding:22px 26px;margin-bottom:18px;}
-  .qrow{padding:13px 0;border-top:1px solid rgba(25,30,46,0.10);}
-  .qrow:first-of-type{border-top:none;}
-  .qtext{font-size:14.5px;line-height:1.5;color:#3c372f;margin-bottom:9px;}
-  .scale{display:flex;gap:6px;}
-  .sbtn{flex:1;text-align:center;padding:7px 0;font-size:12.5px;font-family:var(--font-mono,'IBM Plex Mono',monospace);color:#6f685d;background:rgba(255,255,255,0.55);border:1px solid rgba(25,30,46,0.16);border-radius:3px;cursor:pointer;user-select:none;transition:background .12s,color .12s,border-color .12s;}
-  .sbtn:hover{border-color:var(--accent,#2f4a63);}
-  .sbtn.on{background:#2f4a63;color:#fff;border-color:#2f4a63;}
-  .fbar{height:7px;background:rgba(25,30,46,0.10);border-radius:4px;overflow:hidden;margin-top:4px;}
-  .fbar > i{display:block;height:100%;width:0;background:#2f4a63;border-radius:4px;transition:width .25s ease;}
-  .frow{margin-bottom:12px;}
-  @media print{
-    nav,.qcol,.noprint,[aria-hidden="true"]{display:none !important;}
-    body{background:#fff !important;}
-    .glass{box-shadow:none !important;border:1px solid #ccc !important;background:#fff !important;backdrop-filter:none !important;}
-    .assess-grid{grid-template-columns:1fr !important;}
+  /* The score card carries two readouts, a numeric level and its tier name;
+     the system's card has one verdict slot, so the name is set here at
+     display-4 in the only copper legible on ink. */
+  #tierName { font-family: var(--font-mono); font-size: var(--size-display-4);
+    line-height: var(--lh-display); letter-spacing: var(--track-display);
+    color: var(--accent-on-inverse); }
+
+  /* the rail's print action spans the rail */
+  #results .btn { width: 100%; }
+
+  @media print {
+    .sitenav, .qcol, .noprint, [aria-hidden="true"] { display: none !important; }
+    body, .doc, .band, .card, .score-card, .sitefoot { background: #fff !important; }
+    .card, .score-card { box-shadow: none !important; border: 1px solid #ccc !important; }
+    .instrument-layout { display: block !important; }
+    .instrument-rail { position: static !important; width: auto !important; }
+    .score-value, #tierName, .foot-name { color: #000 !important; }
+    .score-denom, .score-card .eyebrow, .foot-meta { color: #444 !important; }
   }
 </style>
 </head>
 <body>
-<div style="min-height:100vh;position:relative;overflow-x:hidden;">
-<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;"><div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,#2f4a63 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div><div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div></div>
-  <div style="position:relative;z-index:1;">
-<nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
-      <a href="/#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
-        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige</span>
-        <span class="meta" style="color:#2f4a63;">AI Governance, Deployment &amp; Adoption</span>
+
+<div class="doc">
+
+  <nav class="sitenav">
+    <div class="sitenav-inner">
+      <a href="/#top" class="wordmark">
+        <span class="wordmark-name">Jimi Ige</span>
+        <span class="wordmark-practice">AI Governance, Deployment &amp; Adoption</span>
       </a>
-      <div class="nav-links" style="align-items:center;gap:30px;display:flex;">
-        <a href="/#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
-        <a href="/#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
-        <a href="/#credentials" class="meta" style="text-decoration:none;color:#4a443d;">Background</a>
-        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
-        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;">Let's connect →</a>
+      <div class="nav-links">
+        <a href="/#practice" class="nav-link">Practice</a>
+        <a href="/#evidence" class="nav-link">Track record</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Book a conversation</a>
       </div>
-      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-      </button>
+      <button class="nav-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <div id="mobile-menu" style="display:none;">
-      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
-        <a href="/#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
-        <a href="/#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
-        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
-        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
-      </div>
+    <!-- production's mobile drawer omits "Background"; preserved as-is -->
+    <div class="nav-menu" id="nav-menu" data-open="false">
+      <a href="/#practice">Practice</a>
+      <a href="/#evidence">Track record</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener">Book a conversation</a>
     </div>
   </nav>
 
-  <section style="padding:54px 0 22px;">
-    <div class="wrap">
-      <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Free tool</div>
-      <h1 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:clamp(34px,5vw,46px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#120f0b;max-width:820px;">Where your AI program really stands.</h1>
-      <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:720px;">Eighteen plain questions about how your organization handles AI, grouped the way the US government's AI risk framework (the <strong style="font-weight:600;">NIST AI RMF</strong>) groups them and mapped to the international standard <strong style="font-weight:600;">ISO&nbsp;42001</strong>. No email wall, nothing hidden. Rate each one honestly; your maturity level updates live and your weakest area is called out, so you know what to fix first. About five minutes.</p>
+  <main>
+
+    <div class="rail" aria-hidden="true">
+      <div class="rail-nums"></div>
+      <span class="rail-rule rail-rule--a"></span>
+      <span class="rail-rule rail-rule--b"></span>
     </div>
-  </section>
 
-  <section style="padding:6px 0 60px;">
-    <div class="wrap">
-      <div class="assess-grid">
-        <div class="qcol">
-          <div class="glass" style="border-radius:3px;padding:16px 26px;margin-bottom:18px;">
-            <div class="meta" style="color:#2f4a63;margin-bottom:6px;">Rating scale</div>
-            <div style="font-size:13.5px;line-height:1.55;color:#3c372f;">
-              <strong style="font-weight:600;">0</strong> None &middot;
-              <strong style="font-weight:600;">1</strong> Ad hoc, case by case &middot;
-              <strong style="font-weight:600;">2</strong> Defined, written down &middot;
-              <strong style="font-weight:600;">3</strong> Managed, measured &middot;
-              <strong style="font-weight:600;">4</strong> Optimized, improving on its own
-            </div>
-          </div>
-          <div id="questions">
+    <section class="band band--flush">
+      <div class="band-inner page-head">
+        <span class="eyebrow eyebrow--accent">Free tool</span>
+        <h1 class="display-1">Where your AI program really stands.</h1>
+        <p class="prose">Eighteen plain questions about how your organization handles AI, grouped the way the US government's AI risk framework (the <strong>NIST AI RMF</strong>) groups them and mapped to the international standard <strong>ISO&nbsp;42001</strong>. No email wall, nothing hidden. Rate each one honestly; your maturity level updates live and your weakest area is called out, so you know what to fix first. About five minutes.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <div class="instrument-layout">
+
+          <div class="instrument-main qcol stack">
+            <section class="card">
+              <div class="card-body">
+                <span class="eyebrow eyebrow--accent">Rating scale</span>
+                <p class="prose-sm prose-wide">
+                  <strong>0</strong> None &middot;
+                  <strong>1</strong> Ad hoc, case by case &middot;
+                  <strong>2</strong> Defined, written down &middot;
+                  <strong>3</strong> Managed, measured &middot;
+                  <strong>4</strong> Optimized, improving on its own
+                </p>
+              </div>
+            </section>
+            <div id="questions" class="stack">
 <!-- Static content for crawlers and no-JS; the interactive scorer replaces this when JS runs. -->
-<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Govern</h2><div class="meta" style="margin:2px 0 10px;">who is in charge, and the rules they set</div><div class="qrow"><div class="qtext">There is a written, leadership-approved AI policy that says what is and is not allowed, and people follow it.</div></div><div class="qrow"><div class="qtext">Specific people are named as responsible for AI risk, and everyone knows who owns what.</div></div><div class="qrow"><div class="qtext">Leadership reviews how AI is going on a regular schedule, not just when something breaks.</div></div><div class="qrow"><div class="qtext">There are clear rules for which AI uses are allowed, which are limited, and which are off-limits.</div></div><div class="qrow"><div class="qtext">Staff are trained to use AI well and responsibly, suited to their role.</div></div></div>
-<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Map</h2><div class="meta" style="margin:2px 0 10px;">knowing what AI you have, and how risky it is</div><div class="qrow"><div class="qtext">You keep an up-to-date list of the AI you use and the places it matters most.</div></div><div class="qrow"><div class="qtext">Each AI use is rated for how risky it is, based on its impact, how much it acts on its own, and how sensitive its data is.</div></div><div class="qrow"><div class="qtext">For each AI system you have written down what it is for and what could go wrong.</div></div><div class="qrow"><div class="qtext">You account for AI from outside vendors too, including AI baked into the software you already buy.</div></div></div>
-<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Measure</h2><div class="meta" style="margin:2px 0 10px;">testing it, and watching how it performs</div><div class="qrow"><div class="qtext">AI is tested for accuracy, fairness, and safety before it goes live.</div></div><div class="qrow"><div class="qtext">You have set targets for what counts as good enough on quality and risk, and you measure against them.</div></div><div class="qrow"><div class="qtext">Once live, AI is watched for slipping accuracy, misuse, and problems.</div></div><div class="qrow"><div class="qtext">You keep records and proof, so you can answer an auditor or regulator later.</div></div></div>
-<div class="glass fcard"><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:19px;color:#120f0b;margin:0;">Manage</h2><div class="meta" style="margin:2px 0 10px;">staying in control once it is live</div><div class="qrow"><div class="qtext">Each AI risk you find has a written plan to deal with it and a person responsible.</div></div><div class="qrow"><div class="qtext">You have a plan for when AI goes wrong, and you have practiced it.</div></div><div class="qrow"><div class="qtext">A person reviews the AI on decisions that carry real consequences.</div></div><div class="qrow"><div class="qtext">AI is managed from launch to retirement, with control over changes and a clean way to shut it down.</div></div><div class="qrow"><div class="qtext">What you learn feeds back in, so your rules and controls keep improving.</div></div></div>
+<section class="card"><div class="card-head"><div class="card-headings"><h2 class="card-title">Govern</h2><span class="scored-note">who is in charge, and the rules they set</span></div></div><div class="card-body"><div class="scored-row"><div class="scored-main"><div class="scored-stmt">There is a written, leadership-approved AI policy that says what is and is not allowed, and people follow it.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">Specific people are named as responsible for AI risk, and everyone knows who owns what.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">Leadership reviews how AI is going on a regular schedule, not just when something breaks.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">There are clear rules for which AI uses are allowed, which are limited, and which are off-limits.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">Staff are trained to use AI well and responsibly, suited to their role.</div></div></div></div></section>
+<section class="card"><div class="card-head"><div class="card-headings"><h2 class="card-title">Map</h2><span class="scored-note">knowing what AI you have, and how risky it is</span></div></div><div class="card-body"><div class="scored-row"><div class="scored-main"><div class="scored-stmt">You keep an up-to-date list of the AI you use and the places it matters most.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">Each AI use is rated for how risky it is, based on its impact, how much it acts on its own, and how sensitive its data is.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">For each AI system you have written down what it is for and what could go wrong.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">You account for AI from outside vendors too, including AI baked into the software you already buy.</div></div></div></div></section>
+<section class="card"><div class="card-head"><div class="card-headings"><h2 class="card-title">Measure</h2><span class="scored-note">testing it, and watching how it performs</span></div></div><div class="card-body"><div class="scored-row"><div class="scored-main"><div class="scored-stmt">AI is tested for accuracy, fairness, and safety before it goes live.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">You have set targets for what counts as good enough on quality and risk, and you measure against them.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">Once live, AI is watched for slipping accuracy, misuse, and problems.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">You keep records and proof, so you can answer an auditor or regulator later.</div></div></div></div></section>
+<section class="card"><div class="card-head"><div class="card-headings"><h2 class="card-title">Manage</h2><span class="scored-note">staying in control once it is live</span></div></div><div class="card-body"><div class="scored-row"><div class="scored-main"><div class="scored-stmt">Each AI risk you find has a written plan to deal with it and a person responsible.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">You have a plan for when AI goes wrong, and you have practiced it.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">A person reviews the AI on decisions that carry real consequences.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">AI is managed from launch to retirement, with control over changes and a clean way to shut it down.</div></div></div><div class="scored-row"><div class="scored-main"><div class="scored-stmt">What you learn feeds back in, so your rules and controls keep improving.</div></div></div></div></section>
 </div>
-        </div>
+          </div>
 
-        <div class="glass" id="results" style="border-radius:3px;padding:28px 30px;position:sticky;top:84px;">
-          <div class="meta" style="color:#2f4a63;margin-bottom:14px;">Your result</div>
-          <div id="tierNum" style="font-family:var(--font-display,'Spectral',serif);font-size:46px;color:#120f0b;line-height:1;">Level 1</div>
-          <div id="tierName" style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:22px;color:#2f4a63;margin:3px 0 5px;">Initial</div>
-          <div id="tierScore" class="meta">0.0 / 4.0 average &middot; 0 of 18 answered</div>
+          <div class="instrument-rail" id="results">
+            <section class="card">
+              <div class="card-body">
 
-          <div class="meta" style="margin:20px 0 10px;">By function</div>
-          <div id="fbars"></div>
+                <div class="score-card">
+                  <span class="eyebrow">Your result</span>
+                  <div id="tierNum" class="score-value">Level 1</div>
+                  <div id="tierName">Initial</div>
+                  <div id="tierScore" class="score-denom">0.0 / 4.0 average &middot; 0 of 18 answered</div>
+                </div>
 
-          <div id="narrative" style="font-size:13.5px;line-height:1.62;color:#3c372f;margin:16px 0 0;"></div>
-          <div id="bench" style="font-size:13px;line-height:1.55;color:#6f685d;margin:10px 0 0;"></div>
+                <span class="eyebrow">By function</span>
+                <div id="fbars" class="stack-tight"></div>
 
-          <button onclick="window.print()" class="noprint" style="display:block;width:100%;margin-top:20px;text-decoration:none;color:#15212e;background:transparent;border:1px solid rgba(25,30,46,0.32);padding:11px 22px;border-radius:2px;font-size:14px;font-family:inherit;cursor:pointer;">Download / print summary</button>
-          <p class="meta" style="font-size:12px;color:#8a8378;margin:12px 0 0;line-height:1.5;">An honest self-assessment, not an audit. The gap is what a governance program closes.</p><p style="font-size:13px;color:#3c372f;margin:10px 0 0;line-height:1.55;">The AI readiness assessment a consulting firm bills <strong style="font-weight:600;">$5,000–$15,000</strong> for — yours, free.</p><p style="font-size:11px;color:#9a948a;margin:3px 0 0;line-height:1.4;">Market rate across 2026 pricing guides.</p>
+                <div id="narrative" class="prose-sm prose-wide"></div>
+                <div id="bench" class="scored-note"></div>
+
+                <button type="button" onclick="window.print()" class="btn btn--secondary noprint">Download / print summary</button>
+                <p class="mono-sm">An honest self-assessment, not an audit. The gap is what a governance program closes.</p><p class="prose-sm prose-wide">The AI readiness assessment a consulting firm bills <strong>$5,000&ndash;$15,000</strong> for &mdash; yours, free.</p><p class="mono-sm">Market rate across 2026 pricing guides.</p>
+              </div>
+            </section>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section style="padding:6px 0 72px;">
-    <div class="wrap">
-      <a href="resources.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="glass" style="border-radius:3px;padding:24px 30px;border-left:3px solid #2f4a63;" style-hover="background:rgba(255,255,255,0.55);">
-          <div class="meta" style="color:#2f4a63;margin-bottom:8px;">Also free</div>
-          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;margin:0 0 8px;color:#120f0b;">The real AI ROI calculator &rarr;</h3>
-          <p style="font-size:15px;line-height:1.6;color:#3c372f;margin:0;max-width:760px;">Once you know where your AI program stands, model what it is really worth, adoption lag and first-quarter friction included.</p>
-        </div>
-      </a>
-    </div>
-  </section>
+    <section class="band">
+      <div class="band-inner">
+        <a href="resources.html" class="card">
+          <div class="card-head">
+            <div class="card-headings">
+              <span class="eyebrow">Also free</span>
+              <h3 class="card-title">The real AI ROI calculator &rarr;</h3>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="prose-sm">Once you know where your AI program stands, model what it is really worth, adoption lag and first-quarter friction included.</p>
+          </div>
+        </a>
+      </div>
+    </section>
 
-<footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span></span>
-      <span class="meta" style="color:#8a8378;">AI Governance, Deployment &amp; Adoption · Washington, D.C. · © 2026</span>
-    </div>
-  </footer>
-  </div>
+  </main>
 </div>
-<script>
-  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
-  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
-  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
-</script>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span class="row" style="gap:var(--space-4);">
+      <span class="foot-name">Jimi Ige</span>
+    </span>
+    <span class="foot-meta">AI Governance, Deployment &amp; Adoption · Washington, D.C. · © 2026</span>
+  </div>
+</footer>
+
 <script>
 (function(){
   var FUNCTIONS=[
@@ -217,13 +213,21 @@
 
   function buildScale(fi,qi){
     var wrap=document.createElement('div');wrap.className='scale';
+    wrap.setAttribute('role','group');wrap.setAttribute('aria-label','Rate this statement, 0 to 4');
     for(var v=0;v<=4;v++){
       (function(v){
-        var b=document.createElement('div');b.className='sbtn'+(v===0?' on':'');b.textContent=v;
-        b.setAttribute('role','button');b.setAttribute('aria-label','Rate '+v);
+        /* .scale-btn.on is copper, not a risk tone — maturity is not severity */
+        var b=document.createElement('button');b.type='button';
+        b.className='scale-btn'+(v===0?' on':'');b.textContent=v;
+        b.setAttribute('aria-label','Rate '+v);
+        b.setAttribute('aria-pressed',v===0?'true':'false');
         b.onclick=function(){
           scores[fi][qi]=v;answered[fi][qi]=true;
-          var sibs=wrap.children;for(var k=0;k<sibs.length;k++)sibs[k].className='sbtn'+(k===v?' on':'');
+          var sibs=wrap.children;
+          for(var k=0;k<sibs.length;k++){
+            sibs[k].className='scale-btn'+(k===v?' on':'');
+            sibs[k].setAttribute('aria-pressed',k===v?'true':'false');
+          }
           compute();
         };
         wrap.appendChild(b);
@@ -234,16 +238,20 @@
   function build(){
     var host=document.getElementById('questions');host.innerHTML='';
     FUNCTIONS.forEach(function(f,fi){
-      var card=document.createElement('div');card.className='glass fcard';
-      var head=document.createElement('div');
-      head.innerHTML='<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;"><div style="font-family:var(--font-display,\'Spectral\',serif);font-weight:500;font-size:19px;color:#120f0b;">'+f.name+'</div><div class="meta" id="favg-'+f.key+'" style="color:#2f4a63;">Level 1</div></div><div class="meta" style="margin:2px 0 6px;">'+f.sub+'</div>';
+      var card=document.createElement('section');card.className='card';
+      var head=document.createElement('div');head.className='card-head';
+      head.innerHTML='<div class="card-headings"><h2 class="card-title">'+f.name+'</h2><span class="scored-note">'+f.sub+'</span></div><span class="card-meta" id="favg-'+f.key+'">Level 1</span>';
       card.appendChild(head);
+      var body=document.createElement('div');body.className='card-body';
       f.qs.forEach(function(q,qi){
-        var row=document.createElement('div');row.className='qrow';
-        var t=document.createElement('div');t.className='qtext';t.textContent=q;
-        row.appendChild(t);row.appendChild(buildScale(fi,qi));
-        card.appendChild(row);
+        var row=document.createElement('div');row.className='scored-row';
+        var main=document.createElement('div');main.className='scored-main';
+        var t=document.createElement('div');t.className='scored-stmt';t.textContent=q;
+        main.appendChild(t);
+        row.appendChild(main);row.appendChild(buildScale(fi,qi));
+        body.appendChild(row);
       });
+      card.appendChild(body);
       host.appendChild(card);
     });
   }
@@ -261,10 +269,13 @@
     document.getElementById('tierName').textContent=t.name;
     document.getElementById('tierScore').textContent=overall.toFixed(1)+' / 4.0 average · '+nAns+' of 18 answered';
 
+    /* the per-function readout is a maturity meter: copper segments, never the
+       risk scale, and its own tier wording rather than jiDS.meterHTML's */
     var bars='';
     FUNCTIONS.forEach(function(f,fi){
-      var pct=Math.round(fAvg[fi]/4*100);
-      bars+='<div class="frow"><div style="display:flex;justify-content:space-between;font-size:13px;color:#3c372f;"><span>'+f.name+'</span><span class="meta" style="color:#6f685d;">Level '+tierFor(fAvg[fi]).n+'</span></div><div class="fbar"><i style="width:'+pct+'%"></i></div></div>';
+      var lvl=tierFor(fAvg[fi]).n,segs='';
+      for(var s=1;s<=5;s++){segs+='<span class="meter-seg'+(s<=lvl?' meter-seg--on':'')+'"></span>';}
+      bars+='<div class="meter"><div class="meter-head"><span class="meter-label">'+f.name+'</span><span class="meter-count">Level '+lvl+'</span></div><div class="meter-track">'+segs+'</div></div>';
     });
     document.getElementById('fbars').innerHTML=bars;
 
@@ -274,7 +285,7 @@
     if(fAvg[minI]===fAvg[maxI]){
       narr='Your four areas are even right now. As you answer honestly, the weakest one will surface here with the most useful next step.';
     }else{
-      narr='Strongest area: <strong style="font-weight:600;">'+FUNCTIONS[maxI].name+'</strong> (Level '+tierFor(fAvg[maxI]).n+'). Biggest gap: <strong style="font-weight:600;">'+FUNCTIONS[minI].name+'</strong> (Level '+tierFor(fAvg[minI]).n+'). The typical next move is to '+FUNCTIONS[minI].advice+'.';
+      narr='Strongest area: <strong>'+FUNCTIONS[maxI].name+'</strong> (Level '+tierFor(fAvg[maxI]).n+'). Biggest gap: <strong>'+FUNCTIONS[minI].name+'</strong> (Level '+tierFor(fAvg[minI]).n+'). The typical next move is to '+FUNCTIONS[minI].advice+'.';
     }
     document.getElementById('narrative').innerHTML=narr;
 
@@ -285,11 +296,6 @@
     document.getElementById('bench').textContent=b;
   }
   build();compute();
-  document.querySelectorAll('[style-hover]').forEach(function(el){
-    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
-    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
-    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
-  });
 })();
 </script>
 </body></html>

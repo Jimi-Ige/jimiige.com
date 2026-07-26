@@ -22,484 +22,455 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<style>
-
-/* latin */
-@font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/14c68554.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/cc92c1b3.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/50c8f5cc.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/50c8f5cc.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/50c8f5cc.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/033f7596.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/033f7596.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/0d687185.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/0d687185.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/0d687185.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Schibsted Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/7c950dda.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Schibsted Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/7c950dda.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Schibsted Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/7c950dda.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Schibsted Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/7c950dda.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Spectral';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/0126f1f7.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("assets/bf9e9553.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/8b2cdb31.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/7eb836be.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/2ff67739.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent,#2f4a63);outline-offset:3px;border-radius:2px;}
-</style>
-<style>
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;scroll-padding-top:80px;}
-  body{margin:0;color:#191510;font-family:var(--font-body,'IBM Plex Sans',sans-serif);-webkit-font-smoothing:antialiased;
-    background:linear-gradient(168deg,#eef1f6 0%,#eaedf3 50%,#efeaf1 100%);background-attachment:fixed;}
-  ::selection{background:#2f4a63;color:#fff;}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;width:100%;}
-  .rule{height:1px;background:rgba(25,30,46,0.14);}
-  .meta{font-size:15px;letter-spacing:0;color:#6f685d;font-weight:500;}
-  .glass{background:rgba(255,255,255,0.52);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.6);box-shadow:0 18px 50px -22px rgba(24,34,56,0.34),inset 0 1px 0 rgba(255,255,255,0.7);}
-  .hero-grid{display:grid;grid-template-columns:1.62fr 1fr;gap:60px;align-items:center;}
-  .practice-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
-  .cred-grid{display:grid;grid-template-columns:0.82fr 1.55fr;gap:60px;align-items:start;}
-  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;}
-  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-  .moments-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;}
-  .bridge{display:grid;grid-template-columns:1fr 44px 1.3fr 44px 1fr;align-items:center;}
-  .bridge .conn{text-align:center;color:#9a958c;font-size:22px;}
-  @media(max-width:820px){.bridge{grid-template-columns:1fr;gap:14px;}.bridge .conn{display:none;}}
-  .nav-toggle{display:none;}.nav-links{display:flex;align-items:center;gap:30px;}
-  @media(max-width:920px){
-    .hero-grid,.practice-grid,.cred-grid,.contact-grid,.speak-grid,.moments-grid{grid-template-columns:1fr;gap:34px;}
-    .nav-links{display:none;}
-    .nav-toggle{display:flex;}
-  }
-  @media(max-width:680px){
-    .wrap{padding:0 22px;}
-    .hero-h1{font-size:38px !important;} section h2{font-size:30px !important;line-height:1.16 !important;} header#top h2{font-size:28px !important;line-height:1.2 !important;}
-  }
-</style>
+<link rel="stylesheet" href="assets/ds/styles.css">
+<link rel="stylesheet" href="assets/ds/site.css">
+<script src="assets/ds/ds.js" defer></script>
 
 </head>
 <body>
 
-<div style="min-height:100vh;position:relative;overflow-x:hidden;">
+<div class="doc">
 
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;">
-    <div style="position:absolute;top:-240px;right:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at center,var(--accent,#2f4a63) 0%,rgba(47,74,99,0) 70%);opacity:0.15;filter:blur(30px);"></div>
-    <div style="position:absolute;bottom:-360px;left:-260px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle at center,#3a4a7a 0%,rgba(58,74,122,0) 72%);opacity:0.10;filter:blur(34px);"></div>
-  </div>
-
-  <div style="position:relative;z-index:1;">
-
-  <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.62);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 24px -16px rgba(24,34,56,0.4);">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:66px;">
-      <a href="#top" style="text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:14px;">
-        <span style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:20px;letter-spacing:0.01em;">Jimi Ige LLC</span>
-        <span class="meta" style="color:var(--accent,#2f4a63);">AI Governance, Deployment &amp; Adoption</span>
+  <nav class="sitenav">
+    <div class="sitenav-inner">
+      <a href="#top" class="wordmark">
+        <span class="wordmark-name">Jimi Ige LLC</span>
+        <span class="wordmark-practice">AI Governance, Deployment &amp; Adoption</span>
       </a>
       <div class="nav-links">
-        <a href="#practice" class="meta" style="text-decoration:none;color:#4a443d;">Practice</a>
-        <a href="#evidence" class="meta" style="text-decoration:none;color:#4a443d;">Track record</a>
-        
-        <a href="#speaking" class="meta" style="text-decoration:none;color:#4a443d;">Insights</a>
-        <a href="resources.html" class="meta" style="text-decoration:none;color:#4a443d;">Resources</a>
-        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;border:1px solid rgba(25,30,46,0.32);padding:9px 16px;border-radius:2px;" style-hover="background:var(--accent,#2f4a63);color:#fff;border-color:var(--accent,#2f4a63);">Let's connect →</a>
+        <a href="#practice" class="nav-link">Practice</a>
+        <a href="#evidence" class="nav-link">Track record</a>
+        <a href="#speaking" class="nav-link">Insights</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Book a conversation</a>
       </div>
-      <button class="nav-toggle" onclick="dcToggleMenu()" aria-label="Menu" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);border-radius:2px;width:42px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
-        <span style="width:18px;height:1.5px;background:#191510;display:block;"></span>
+      <button class="nav-toggle" type="button" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
-    <div id="mobile-menu" style="display:none;">
-      <div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 22px 20px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.5);">
-        <a href="#practice" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Practice</a>
-        <a href="#evidence" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Track record</a>
-        
-        <a href="#speaking" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Insights</a>
-        <a href="resources.html" onclick="dcCloseMenu()" class="meta" style="text-decoration:none;color:#191510;font-size:15px;padding:13px 0;border-bottom:1px solid rgba(25,30,46,0.1);">Resources</a>
-        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#15212e;padding:13px 0;">Let's connect →</a>
-      </div>
+    <div class="nav-menu" id="nav-menu" data-open="false">
+      <a href="#practice">Practice</a>
+      <a href="#evidence">Track record</a>
+      <a href="#speaking">Insights</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener">Book a conversation</a>
     </div>
   </nav>
 
-  <header id="top" style="padding:54px 0 70px;">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:18px;font-size:18px;">The AI governance gap shows up at exactly the wrong moment.</div>
-          <h1 class="hero-h1" style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:62px;line-height:1.04;letter-spacing:-0.015em;margin:0 0 30px;color:#120f0b;text-wrap:balance;">Move fast when the stakes are high.</h1>
-          <p style="font-size:18.5px;line-height:1.6;color:#3c372f;margin:0 0 16px;max-width:560px;">Your best deal is stuck behind a customer's AI security review. Your auditors raised AI systems in scope and nobody knows how to respond. Your federal RFP has AI governance requirements that don't exist in your documentation yet. Your M&amp;A target uses AI and you don't know what liability you're acquiring. Your board wants answers nobody in the room can give.</p>
-          <p style="font-size:18.5px;line-height:1.6;color:#3c372f;margin:0 0 38px;max-width:560px;">These are solvable. The practice covers all three lanes — governance, deployment, and adoption — because that is the only way to clear the problem completely and keep it clear.</p>
-        <div style="max-width:600px;margin-top:18px;">
-        
-        <h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:34px;line-height:1.14;letter-spacing:-0.01em;margin:0 0 18px;color:#120f0b;">Governance is the mechanism. The outcome is AI that ships, scales, and survives the audit.</h2>
-        <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0 0 26px;max-width:600px;">Speed without control is a liability. Control without speed is a brake. Most advisors give you one. The value is a single operating model that does both, where the controls are what let you say yes faster.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;"><span style="display:inline-block;font-size:13px;color:#3c372f;background:rgba(255,255,255,0.6);border:1px solid rgba(25,30,46,0.14);border-radius:2px;padding:7px 14px;">CMMC</span><span style="display:inline-block;font-size:13px;color:#3c372f;background:rgba(255,255,255,0.6);border:1px solid rgba(25,30,46,0.14);border-radius:2px;padding:7px 14px;">NIST 800-171</span><span style="display:inline-block;font-size:13px;color:#3c372f;background:rgba(255,255,255,0.6);border:1px solid rgba(25,30,46,0.14);border-radius:2px;padding:7px 14px;">SOC 2</span><span style="display:inline-block;font-size:13px;color:#3c372f;background:rgba(255,255,255,0.6);border:1px solid rgba(25,30,46,0.14);border-radius:2px;padding:7px 14px;">ISO 27001</span><span style="display:inline-block;font-size:13px;color:#3c372f;background:rgba(255,255,255,0.6);border:1px solid rgba(25,30,46,0.14);border-radius:2px;padding:7px 14px;">ISO 42001</span></div>
-        <p style="font-size:15px;line-height:1.55;color:#3c372f;margin:0;max-width:600px;">Rarely one regime. The right combination clears the stalled deal, wins the federal work, and gets value from the AI you already paid for.</p>
-      </div>
-          
+  <main>
+
+    <!-- one continuous pleading margin for the whole document: the double
+         copper rule at the banner's x=58/64 and line numbers stepping 36px,
+         unbroken from the top of the hero to the footer -->
+    <div class="rail" aria-hidden="true">
+      <div class="rail-nums"></div>
+      <span class="rail-rule rail-rule--a"></span>
+      <span class="rail-rule rail-rule--b"></span>
+    </div>
+
+    <header id="top">
+
+      <!-- The banner, reproduced at its own geometry: canvas 1584 x 396, every
+           coordinate literal. See assets/ds/site.css section 4. -->
+      <div class="hero">
+        <div class="hero-canvas">
+          <span class="hero-grid" aria-hidden="true"></span>
+
+          <h1 class="hero-h1">Move fast when<br>the <em>stakes</em> are high.</h1>
+          <span class="hero-rule" aria-hidden="true"></span>
+          <p class="hero-lede">Safely unlock <em class="stress">time, focus, and revenue</em> with intelligent workflows in high-stakes environments.</p>
+
+
+          <div class="hero-matrix" aria-hidden="true">
+            <span class="hero-cell hero-cell--severe"   style="--x:1464;--y:30"></span>
+            <span class="hero-cell hero-cell--high"     style="--x:1368;--y:30"></span>
+            <span class="hero-cell hero-cell--high"     style="--x:1464;--y:78"></span>
+            <span class="hero-cell hero-cell--moderate" style="--x:1272;--y:30"></span>
+            <span class="hero-cell hero-cell--moderate" style="--x:1368;--y:78"></span>
+            <span class="hero-cell hero-cell--moderate" style="--x:1464;--y:126"></span>
+            <span class="hero-cell hero-cell--low"      style="--x:1176;--y:30"></span>
+            <span class="hero-cell hero-cell--low"      style="--x:1272;--y:78"></span>
+            <span class="hero-cell hero-cell--low"      style="--x:1368;--y:126"></span>
+            <span class="hero-cell hero-cell--low"      style="--x:1464;--y:174"></span>
+            <span class="hero-axis hero-axis--x">LIKELIHOOD&nbsp;→</span>
+            <span class="hero-axis hero-axis--y">IMPACT&nbsp;→</span>
+          </div>
         </div>
-        <div>
-          <div style="position:relative;">
-            <div style="position:absolute;inset:18px -16px -16px 18px;background:linear-gradient(150deg,var(--accent,#2f4a63),#1b2a3a);border-radius:3px;"></div>
-            <div style="position:relative;background:#fbfaf7;border:1px solid rgba(255,255,255,0.8);border-radius:3px;padding:10px;box-shadow:0 26px 60px -28px rgba(20,30,46,0.45);">
-              <img src="assets/portrait.jpg" alt="Jimi Ige" style="width:100%;display:block;border-radius:2px;filter:grayscale(0.18) contrast(1.03);"><div class="glass" style="position:absolute;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,0.66);border-radius:2px;padding:11px 18px;font-family:var(--font-display,'Spectral',serif);font-size:20px;font-weight:500;color:#120f0b;letter-spacing:0.01em;">Jimi Ige</div>
+      </div>
+
+      <section class="band band--flush band--tight">
+        <div class="band-inner">
+          <div class="hero-proof">
+
+            <figure class="portrait" style="margin:0;">
+              <img src="assets/portrait.jpg" alt="Jimi Ige">
+              <figcaption class="portrait-caption">Jimi Ige</figcaption>
+            </figure>
+
+            <div class="credstack">
+                <div class="credstack-groups">
+                  <div class="credstack-group">
+                    <span class="eyebrow">Trusted By</span>
+                    <p>Microsoft · Freddie Mac · Capital One · Accenture · Deloitte · U.S. federal agencies</p>
+                  </div>
+                  <div class="credstack-group">
+                    <span class="eyebrow">Certifications</span>
+                    <p>CISSP · CISM · CRISC · ISO 27001 Lead Implementer · PMP · PMI-ACP · Prosci</p>
+                  </div>
+                  <div class="credstack-group">
+                    <span class="eyebrow">DoD 8140 Baseline</span>
+                    <p>IAT III · IAM III · IASAE II</p>
+                  </div>
+                  <div class="credstack-group">
+                    <span class="eyebrow">Education</span>
+                    <p>M.P.A., Indiana (O'Neill) · B.A., Washington University<br>Georgetown SCS Certificate in AI Governance &amp; Compliance</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="stack hero-act">
+              <div class="stack-tight">
+                <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--primary">Book a conversation</a>
+                <a href="maturity-assessment.html" class="btn btn--secondary">Take the free maturity assessment&nbsp;→</a>
+              </div>
+              <div class="row-tags">
+                <span class="tag">CMMC</span>
+                <span class="tag">NIST 800-171</span>
+                <span class="tag">SOC 2</span>
+                <span class="tag">ISO 27001</span>
+                <span class="tag">ISO 42001</span>
+              </div>
+              <p class="prose-sm">Rarely one regime. The right combination clears the stalled deal, wins the federal work, and gets value from the AI you already paid for.</p>
             </div>
-          </div>
-          <div class="glass" style="margin-top:22px;border-radius:3px;padding:18px 22px;"><div style="margin-bottom:12px;"><div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:3px;">Trusted By</div><div style="font-size:14px;color:#191510;line-height:1.5;">Microsoft · Freddie Mac · Capital One · Accenture · Deloitte · U.S. federal agencies</div></div><div style="margin-bottom:12px;"><div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:3px;">Certifications</div><div style="font-size:14px;color:#191510;line-height:1.5;">CISSP · CISM · CRISC · ISO 27001 Lead Implementer · PMP · PMI-ACP · Prosci</div></div><div style="margin-bottom:12px;"><div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:3px;">DoD 8140 Baseline</div><div style="font-size:14px;color:#191510;line-height:1.5;">IAT III · IAM III · IASAE II</div></div><div><div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:3px;">Education</div><div style="font-size:14px;color:#191510;line-height:1.5;">M.P.A., Indiana (O'Neill) · B.A., Washington University<br>Georgetown SCS Certificate in AI Governance &amp; Compliance</div></div></div>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <section id="moments" style="padding:84px 0 0;scroll-margin-top:80px;">
-    <div class="wrap">
-      <div style="max-width:680px;margin-bottom:38px;">
-        <h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.015em;margin:0 0 16px;color:#120f0b;">When AI governance suddenly matters</h2>
-        <p style="font-size:17px;line-height:1.62;color:#3c372f;margin:0;max-width:600px;">Most organizations don't think about AI governance until one of these moments forces the issue.</p>
-      </div>
-      <div class="moments-grid">
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">Your enterprise customer sent an AI vendor questionnaire and nobody can answer it</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">Your auditors flagged AI systems in scope and you have no documentation</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">Your federal RFP requires AI governance artifacts that don't exist yet</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">Your M&amp;A target uses AI with no governance structure and close is approaching</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">Your cyber insurer is asking about AI controls at renewal</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">Your board asked about AI risk and nobody gave a credible answer</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">You deployed AI six months ago and adoption is flat</div>
-        <div style="padding:18px 2px;border-top:1px solid rgba(25,30,46,0.14);font-size:16.5px;line-height:1.5;color:#3c372f;">You have an AI policy and nothing that enforces it in practice</div>
-      </div>
-      <div style="margin-top:30px;font-size:17px;line-height:1.6;color:#3c372f;">Whichever it is, there is a specific playbook for it. <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" style="text-decoration:none;color:var(--accent,#2f4a63);font-weight:500;white-space:nowrap;">Start with a conversation →</a></div>
-    </div>
-  </section>
-
-  <section id="practice" style="padding:84px 0;scroll-margin-top:80px;">
-    <div class="wrap">
-      
-      <div style="max-width:680px;margin-bottom:40px;"><div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:16px;">What I do</div><h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.015em;margin:0;color:#120f0b;">Three problems I solve.</h2></div><div style="display:flex;align-items:baseline;gap:16px;margin:0 0 36px;max-width:640px;"><div style="font-family:var(--font-display,'Spectral',serif);font-size:42px;color:#2f4a63;line-height:1;">97%</div><div style="font-size:15.5px;line-height:1.5;color:#3c372f;padding-top:5px;">of organizations hit by an AI-related breach had no AI access controls in place. The gap between deploying AI and governing it is the work.<span style="display:block;font-size:11px;color:#9a948a;margin-top:5px;">IBM, Cost of a Data Breach 2025</span></div></div>
-        <div style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:30px;line-height:1.18;letter-spacing:-0.01em;margin:0 0 30px;color:#120f0b;max-width:760px;"><span style="color:var(--accent,#2f4a63);">The practice:</span> make trustworthy AI the operational default for regulated enterprises.</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-bottom:46px;">
-        <div class="glass" style="border-radius:3px;padding:30px 30px;">
-          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:21px;margin:0 0 10px;color:#120f0b;">AI Governance, Risk &amp; Compliance</h3>
-          <p style="font-size:15.5px;line-height:1.6;color:#3c372f;margin:0;">A deal stalls on a security gap. A customer sends an AI vendor questionnaire you can't answer. Auditors flag AI in scope. A federal RFP has requirements your documentation doesn't cover. I clear it: readiness assessments, 3PAO and audit prep, and the governance and risk controls underneath, across CMMC L2/L3, NIST SP 800-171, SOC 2, NIST AI RMF, and ISO 42001.</p><a href="maturity-assessment.html" class="meta" style="display:inline-block;margin-top:14px;text-decoration:none;color:var(--accent,#2f4a63);">Take the free maturity assessment →</a><a href="audit-readiness.html" class="meta" style="display:block;margin-top:8px;text-decoration:none;color:var(--accent,#2f4a63);">Run the free compliance readiness scorecard →</a><div style="margin-top:14px;font-size:14px;line-height:1.5;color:#3c372f;">See the controls catch a live prompt injection in real time. <a href="prompt-injection-demo.html" style="text-decoration:none;color:var(--accent,#2f4a63);font-weight:500;white-space:nowrap;">Run the demo →</a></div>
-        </div>
-        <div class="glass" style="border-radius:3px;padding:30px 30px;">
-          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:21px;margin:0 0 10px;color:#120f0b;">Enterprise AI Adoption</h3>
-          <p style="font-size:15.5px;line-height:1.6;color:#3c372f;margin:0;">The tools are bought; barely anyone uses them. I run the rollout end to end across the major enterprise AI platforms with real change management, a network of champions, training that bakes in the guardrails, and usage you can measure.</p>
-        </div>
-        <div class="glass" style="border-radius:3px;padding:30px 30px;">
-          <h3 style="font-family:var(--font-display,'Spectral',serif);font-weight:500;font-size:21px;margin:0 0 10px;color:#120f0b;">AI ROI &amp; Business Case</h3>
-          <p style="font-size:15.5px;line-height:1.6;color:#3c372f;margin:0;">What is the AI spend returning? I build the business case, model the ROI honestly (adoption lag included), and give your board reporting it can trust and act on.</p><a href="resources.html" class="meta" style="display:inline-block;margin-top:14px;text-decoration:none;color:var(--accent,#2f4a63);">Use the free ROI calculator →</a>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-  <section id="evidence" style="padding:20px 0 84px;scroll-margin-top:80px;">
-    <div class="wrap">
-      <div style="border-top:1px solid rgba(25,30,46,0.14);padding-top:48px;">
-        <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:16px;">Track record</div>
-        <h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.015em;margin:0 0 40px;color:#120f0b;max-width:680px;">What this looks like when the stakes are real.</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:26px 64px;margin-bottom:42px;"><div style="max-width:300px;"><div style="font-family:var(--font-display,'Spectral',serif);font-size:42px;line-height:1;color:#120f0b;">~100K</div><div class="meta" style="margin-top:9px;line-height:1.5;">seats on a federal enterprise-AI deployment where I led the AI-governance workstream, via a prime</div></div><div style="max-width:280px;"><div style="font-family:var(--font-display,'Spectral',serif);font-size:42px;line-height:1;color:#120f0b;">$6M+</div><div class="meta" style="margin-top:9px;line-height:1.5;">AI &amp; analytics portfolio delivered across 7 enterprise cloud programs</div></div><div style="max-width:260px;"><div style="font-family:var(--font-display,'Spectral',serif);font-size:42px;line-height:1;color:#120f0b;">20+</div><div class="meta" style="margin-top:9px;line-height:1.5;">years across federal, financial services, and defense-adjacent work</div></div></div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
-          <div class="glass" style="border-radius:3px;padding:30px 32px;">
-            <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:22px;">Financial services · zero-trust · ~11,000 employees</div>
-            <div style="margin-bottom:16px;"><div class="meta" style="margin-bottom:5px;">Challenge</div><div style="font-size:16px;line-height:1.55;color:#3c372f;">Leadership had to decide whether to fund enterprise GenAI (ServiceNow NowAssist) with no defensible business case and no way to govern sustained use.</div></div>
-            <div style="margin-bottom:16px;"><div class="meta" style="margin-bottom:5px;">Approach</div><div style="font-size:16px;line-height:1.55;color:#3c372f;">Built the AI investment business case, facilitated SOC 2 and vendor risk assessments, and designed human-in-the-loop workflows with intake validation and compliance gates across ITSM and HR.</div></div>
-            <div><div class="meta" style="margin-bottom:5px;">Result</div><div style="font-size:16px;line-height:1.55;color:#120f0b;font-weight:500;">Projected 16% efficiency gains; the analysis informed executive steering decisions on enterprise GenAI investment.</div></div>
           </div>
-          <div class="glass" style="border-radius:3px;padding:30px 32px;">
-            <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:22px;">Enterprise software · M365 &amp; Azure · regulated reporting</div>
-            <div style="margin-bottom:16px;"><div class="meta" style="margin-bottom:5px;">Challenge</div><div style="font-size:16px;line-height:1.55;color:#3c372f;">GenAI-driven compliance reporting was accumulating audit exposure, with findings climbing year over year.</div></div>
-            <div style="margin-bottom:16px;"><div class="meta" style="margin-bottom:5px;">Approach</div><div style="font-size:16px;line-height:1.55;color:#3c372f;">Embedded governance checkpoints and automated policy validation directly into Azure-based GenAI workflows.</div></div>
-            <div><div class="meta" style="margin-bottom:5px;">Result</div><div style="font-size:16px;line-height:1.55;color:#120f0b;font-weight:500;">30% fewer audit findings year over year, with reporting that stays audit-defensible.</div></div>
-          </div>
-        
-          <div class="glass" style="border-radius:3px;padding:30px 32px;"><div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:22px;">Medicaid-funded local government agency · HIPAA · multi-agency data sharing</div><div style="margin-bottom:16px;"><div class="meta" style="margin-bottom:5px;">Challenge</div><div style="font-size:16px;line-height:1.55;color:#3c372f;">The agency needed governance for its AI and data systems, and compliant data sharing with behavioral-health providers under HIPAA and state law.</div></div><div style="margin-bottom:16px;"><div class="meta" style="margin-bottom:5px;">Approach</div><div style="font-size:16px;line-height:1.55;color:#3c372f;">Governed HIPAA-compliant analytics and policy-enforcement workflows, and negotiated data-sharing agreements and privacy clauses with public-sector clients.</div></div><div><div class="meta" style="margin-bottom:5px;">Result</div><div style="font-size:16px;line-height:1.55;color:#120f0b;font-weight:500;">$4M ARR in public-sector accounts governed, with data sharing compliant across federal and California requirements.</div></div></div>
         </div>
-        
+      </section>
+    </header>
+
+    <section id="moments" class="band">
+      <div class="band-inner">
+        <h2 class="display-2 ruled" style="max-width:24ch;">When governance, deployment, and adoption suddenly matter</h2>
+        <p class="prose">Most organizations don't think about it until one of these moments forces the issue.</p>
+
+        <div class="moment-groups">
+          <div class="moment-group">
+            <div class="moment-theme"><svg class="ico ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 15h6"/><path d="M12 18v-6"/></svg><span class="eyebrow">Winning work</span></div>
+            <div class="moment"><span class="prose-sm">Your enterprise customer sent an AI vendor questionnaire and nobody can answer it</span></div>
+            <div class="moment"><span class="prose-sm">Your federal RFP requires AI governance artifacts that don't exist yet</span></div>
+          </div>
+          <div class="moment-group">
+            <div class="moment-theme"><svg class="ico ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg><span class="eyebrow">Passing review</span></div>
+            <div class="moment"><span class="prose-sm">Your auditors flagged AI systems in scope and you have no documentation</span></div>
+            <div class="moment"><span class="prose-sm">Your cyber insurer is asking about AI controls at renewal</span></div>
+          </div>
+          <div class="moment-group">
+            <div class="moment-theme"><svg class="ico ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><span class="eyebrow">Answering leadership</span></div>
+            <div class="moment"><span class="prose-sm">Your M&amp;A target uses AI with no governance structure and close is approaching</span></div>
+            <div class="moment"><span class="prose-sm">Your board asked about AI risk and nobody gave a credible answer</span></div>
+          </div>
+          <div class="moment-group">
+            <div class="moment-theme"><svg class="ico ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><span class="eyebrow">Realizing value</span></div>
+            <div class="moment"><span class="prose-sm">You deployed AI six months ago and adoption is flat</span></div>
+            <div class="moment"><span class="prose-sm">You have an AI policy and nothing that enforces it in practice</span></div>
+          </div>
+        </div>
+
+        <div class="moment moment--cta">
+            <p class="prose-sm">Whichever it is, there is a specific playbook for it.</p>
+            <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--ghost">Book a conversation&nbsp;→</a>
+          </div>
       </div>
-    </div>
-  
-  </section>
-    <section id="speaking" style="padding:20px 0 84px;scroll-margin-top:80px;">
-    <div class="wrap">
-      <div style="position:relative;border-radius:3px;padding:60px 52px;overflow:hidden;background:linear-gradient(140deg,rgba(28,42,58,0.94) 0%,rgba(18,27,38,0.94) 100%);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,0.14);box-shadow:0 26px 64px -26px rgba(12,20,32,0.6);">
-        <div class="speak-grid">
-          <div>
-            <div class="meta" style="color:#8fa8c2;margin-bottom:16px;">Insights</div>
-            <h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.015em;margin:0 0 18px;color:#fff;">A practitioner's view, on the record.</h2>
-            <p style="font-size:17px;line-height:1.62;color:#c4cfdb;margin:0 0 26px;">Writing and speaking on what it takes to govern and scale AI where the stakes are high, for boards, CISOs, and program leaders making the call. Available for keynotes, panels, executive briefings, and board sessions.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:12px;">
-              <a href="mailto:jimi@jimiige.com?subject=Speaking%20inquiry" style="text-decoration:none;color:#15212e;background:rgba(255,255,255,0.94);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;display:inline-block;" style-hover="background:#fff;">Invite me to speak</a>
-              <a href="https://www.linkedin.com/in/jimi-ige" target="_blank" rel="noopener" style="text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,0.4);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;display:inline-block;" style-hover="border-color:#fff;">Read on LinkedIn →</a>
+    </section>
+
+    <section id="practice" class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">What I do</span></div>
+        <h2 class="display-2 ruled">Three problems I solve.</h2>
+
+        <div class="stack">
+
+          <section class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="card-n">01</span>
+                <h3 class="card-title">AI Governance, Risk &amp; Compliance</h3>
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="meta" style="color:#8fa8c2;margin-bottom:6px;">Themes</div>
-            <div style="display:grid;grid-template-columns:1fr;padding:18px 0;border-top:1px solid rgba(255,255,255,0.14);font-size:16.5px;color:#e6edf4;"><span>Why AI Trust Has Become Enterprise Infrastructure</span></div>
-            <div style="display:grid;grid-template-columns:1fr;padding:18px 0;border-top:1px solid rgba(255,255,255,0.14);font-size:16.5px;color:#e6edf4;"><span>Governing AI Where the Stakes Are Real — Federal, Financial Services, and Regulated Enterprises</span></div>
-            <div style="display:grid;grid-template-columns:1fr;padding:18px 0;border-top:1px solid rgba(255,255,255,0.14);font-size:16.5px;color:#e6edf4;"><span>Turning a Compliance Deadline into an AI Operating Model</span></div>
-            <div style="display:grid;grid-template-columns:1fr;padding:18px 0;border-top:1px solid rgba(255,255,255,0.14);font-size:16.5px;color:#e6edf4;"><span>The Gap Between AI Deployment and AI Adoption — and What It Costs</span></div>
-            <div style="display:grid;grid-template-columns:1fr;padding:18px 0;border-top:1px solid rgba(255,255,255,0.14);border-bottom:1px solid rgba(255,255,255,0.14);font-size:16.5px;color:#e6edf4;"><span>AI ROI That Survives the Adoption Lag</span></div>
-          </div>
-        </div>
-      </div>
-      <a href="governing-ai-in-regulated-workflows.html" class="glass" style="margin-top:24px;border-radius:3px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;text-decoration:none;color:inherit;" style-hover="background:rgba(255,255,255,0.62);">
-        <div style="flex:1;min-width:280px;">
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:10px;">Featured playbook</div>
-          <div style="font-family:var(--font-display,'Spectral',serif);font-size:23px;line-height:1.2;color:#120f0b;margin-bottom:10px;">Governing AI in Regulated Workflows</div>
-          <p style="font-size:15.5px;line-height:1.55;color:#3c372f;margin:0;max-width:580px;">The ten-chapter playbook for running AI inside CUI, CMMC, HIPAA, and financial-controls workflows without failing the audit. Every framework current and sourced, with where judgment beats the tool at each step.</p>
-        </div>
-        <span style="color:#fff;background:var(--accent,#2f4a63);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;white-space:nowrap;">Read the playbook →</span>
-      </a>
-      <a href="crosswalk.html" class="glass" style="margin-top:16px;border-radius:3px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;text-decoration:none;color:inherit;" style-hover="background:rgba(255,255,255,0.62);">
-        <div style="flex:1;min-width:280px;">
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:10px;">Featured framework</div>
-          <div style="font-family:var(--font-display,'Spectral',serif);font-size:23px;line-height:1.2;color:#120f0b;margin-bottom:10px;">The AI Governance Control Crosswalk</div>
-          <p style="font-size:15.5px;line-height:1.55;color:#3c372f;margin:0;max-width:580px;">One control program, mapped across NIST AI RMF, ISO 42001, SOC 2, ISO 27001, CMMC, and privacy, with the business pain each control relieves and the tooling that enforces it. Filter it by commercial or federal.</p>
-        </div>
-        <span style="color:#fff;background:var(--accent,#2f4a63);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;white-space:nowrap;">View the crosswalk →</span>
-      </a>
-      <a href="readiness-audit.html" class="glass" style="margin-top:16px;border-radius:3px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;text-decoration:none;color:inherit;" style-hover="background:rgba(255,255,255,0.62);">
-        <div style="flex:1;min-width:280px;">
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:10px;">Featured instrument</div>
-          <div style="font-family:var(--font-display,'Spectral',serif);font-size:23px;line-height:1.2;color:#120f0b;margin-bottom:10px;">The AI Readiness Assessment</div>
-          <p style="font-size:15.5px;line-height:1.55;color:#3c372f;margin:0;max-width:580px;">Score your organization control by control across the same ten domains, with a live maturity scorecard, a prioritized gap list, and a where-to-start roadmap. Nothing you enter leaves your browser.</p>
-        </div>
-        <span style="color:#fff;background:var(--accent,#2f4a63);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;white-space:nowrap;">Open the assessment →</span>
-      </a>
-      <a href="agent-demo.html" class="glass" style="margin-top:16px;border-radius:3px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;text-decoration:none;color:inherit;" style-hover="background:rgba(255,255,255,0.62);">
-        <div style="flex:1;min-width:280px;">
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:10px;">Live demo</div>
-          <div style="font-family:var(--font-display,'Spectral',serif);font-size:23px;line-height:1.2;color:#120f0b;margin-bottom:10px;">The Governed Agent Demo</div>
-          <p style="font-size:15.5px;line-height:1.55;color:#3c372f;margin:0;max-width:580px;">Run the same AI agent with governance on and off. A hidden prompt injection tries to exfiltrate data and move money. With the controls on, it is caught. Without them, it is a breach.</p>
-        </div>
-        <span style="color:#fff;background:var(--accent,#2f4a63);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;white-space:nowrap;">Run the demo →</span>
-      </a>
-      <a href="adoption-scorecard.html" class="glass" style="margin-top:16px;border-radius:3px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;text-decoration:none;color:inherit;" style-hover="background:rgba(255,255,255,0.62);">
-        <div style="flex:1;min-width:280px;">
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:10px;">Measurement tool</div>
-          <div style="font-family:var(--font-display,'Spectral',serif);font-size:23px;line-height:1.2;color:#120f0b;margin-bottom:10px;">The AI Adoption Scorecard</div>
-          <p style="font-size:15.5px;line-height:1.55;color:#3c372f;margin:0;max-width:580px;">A license is not adoption, and usage is not value. Score your adoption across six dimensions, see where you sit on the ladder, and get the plays to run first.</p>
-        </div>
-        <span style="color:#fff;background:var(--accent,#2f4a63);padding:14px 26px;border-radius:2px;font-size:15px;font-weight:600;white-space:nowrap;">Score your adoption →</span>
-      </a>
-    </div>
-  </section>
+            <div class="card-body">
+              <div class="card-split">
+                <div class="stack-tight">
+                  <svg class="ico ico--lg ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                  <p class="prose-sm">Governance, risk, and compliance clears stalled deals, wins proposals, and passes audits. I run readiness assessments, 3PAO and audit prep, and the controls underneath — CMMC L2/L3, NIST SP 800-171, SOC 2, NIST AI RMF, and ISO 42001.</p>
+                </div>
+                <div class="card-aside">
+                  <a href="maturity-assessment.html" class="btn btn--ghost">Take the free maturity assessment&nbsp;→</a>
+                  <a href="audit-readiness.html" class="btn btn--ghost">Run the free compliance readiness scorecard&nbsp;→</a>
+                  <p class="prose-sm">See the controls catch a live prompt injection in real time. <a href="prompt-injection-demo.html" class="btn btn--ghost">Run the demo&nbsp;→</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-  <section id="contact" style="padding:20px 0 84px;scroll-margin-top:80px;">
-      <div class="wrap contact-grid" style="border-top:1px solid rgba(25,30,46,0.14);padding-top:48px;">
-        <div>
-          <div class="meta" style="color:var(--accent,#2f4a63);margin-bottom:16px;">Contact</div>
-          <h2 style="font-family:var(--font-display,'Spectral',serif);font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.015em;margin:0 0 20px;color:#120f0b;text-wrap:balance;">Start with a conversation.</h2>
-          <p style="font-size:17px;line-height:1.6;color:#3c372f;margin:0 0 32px;max-width:430px;">Standing up a governance program, scaling adoption, or preparing for audit. Tell me where you are and where you need to be.</p>
-          <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" style="text-decoration:none;color:#fff;background:var(--accent,#2f4a63);padding:15px 30px;border-radius:2px;font-size:15px;font-weight:600;display:inline-block;box-shadow:0 14px 30px -14px rgba(47,74,99,0.6);" style-hover="background:var(--accent-deep,#21364a);">Book a conversation</a>
-          <div class="meta" style="margin-top:20px;color:#6f685d;">References available on request</div>
-        </div>
-        <div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:16px;">
-            <a href="mailto:jimi@jimiige.com" class="glass" style="text-decoration:none;border-radius:3px;padding:22px 24px;display:flex;flex-direction:column;gap:10px;color:#191510;" style-hover="background:rgba(255,255,255,0.62);"><span class="meta">Email</span><span style="font-size:16.5px;font-weight:500;word-break:break-word;">jimi@jimiige.com</span></a>
-            <a href="tel:+12025966024" class="glass" style="text-decoration:none;border-radius:3px;padding:22px 24px;display:flex;flex-direction:column;gap:10px;color:#191510;" style-hover="background:rgba(255,255,255,0.62);"><span class="meta">Phone</span><span style="font-size:16.5px;font-weight:500;">(202) 596-6024</span></a>
+          <div class="grid-2">
+
+          <section class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="card-n">02</span>
+                <h3 class="card-title">Enterprise AI Adoption</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <svg class="ico ico--lg ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <p class="prose-sm">The tools are bought; adoption is the unlock. I run the rollout end to end — change management, a network of champions, training that bakes in the guardrails, and usage you can measure.</p>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="card-n">03</span>
+                <h3 class="card-title">AI ROI &amp; Business Case</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <svg class="ico ico--lg ico--accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              <p class="prose-sm">What is the AI spend returning? I build an honest business case, adoption lag included, with board reporting you can act on.</p>
+              <a href="resources.html" class="btn btn--ghost">Use the free ROI calculator&nbsp;→</a>
+            </div>
+          </section>
+
           </div>
-          <div class="glass" style="border-radius:3px;padding:6px 28px;">
-            <a href="https://www.linkedin.com/in/jimi-ige" target="_blank" rel="noopener" style="text-decoration:none;display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid rgba(25,30,46,0.12);color:#191510;" style-hover="color:var(--accent,#2f4a63);"><span><span class="meta" style="display:block;margin-bottom:6px;">LinkedIn</span><span style="font-size:16px;line-height:1.45;">linkedin.com/in/jimi-ige</span></span><span style="color:var(--accent,#2f4a63);font-size:18px;">→</span></a>
-            <a href="https://github.com/Jimi-Ige" target="_blank" rel="noopener" style="text-decoration:none;display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid rgba(25,30,46,0.12);color:#191510;" style-hover="color:var(--accent,#2f4a63);"><span><span class="meta" style="display:block;margin-bottom:6px;">GitHub</span><span style="font-size:16px;line-height:1.45;">github.com/Jimi-Ige</span></span><span style="color:var(--accent,#2f4a63);font-size:18px;">→</span></a>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=1725+I+Street+NW+Suite+300+Washington+DC+20019" target="_blank" rel="noopener" style="text-decoration:none;display:flex;justify-content:space-between;align-items:center;padding:18px 0;color:#191510;" style-hover="color:var(--accent,#2f4a63);"><span><span class="meta" style="display:block;margin-bottom:6px;">Office</span><span style="font-size:16px;line-height:1.45;">1725 I Street NW, Suite 300<br>Washington, DC 20019</span></span><span style="color:var(--accent,#2f4a63);font-size:18px;">→</span></a>
+
+        </div>
+
+        <div class="row" style="gap:var(--space-5);align-items:baseline;flex-wrap:nowrap;">
+          <span class="display-2" style="color:var(--risk-high-text);flex-shrink:0;">97%</span>
+          <div class="stack-tight">
+            <p class="prose">of organizations hit by an AI-related breach had no AI access controls in place. The gap between deploying AI and governing it is the work.</p>
+            <span class="eyebrow">IBM, Cost of a Data Breach 2025</span>
           </div>
         </div>
       </div>
     </section>
 
-  <footer style="border-top:1px solid rgba(25,30,46,0.14);padding:30px 0 44px;">
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <span style="display:inline-flex;align-items:center;gap:18px;"><span class="meta" style="color:#191510;">Jimi Ige</span><a href="https://www.linkedin.com/in/jimi-ige/" target="_blank" rel="noopener" class="meta" style="text-decoration:none;color:#6f685d;" style-hover="color:#2f4a63;">LinkedIn</a></span>
-      <span class="meta" style="color:#6f685d;">AI Governance, Deployment &amp; Adoption · Washington, D.C. · © 2026 Jimi Ige LLC</span>
-    </div>
-  </footer>
+    <section id="evidence" class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">Track record</span></div>
+        <h2 class="display-2 ruled" style="max-width:24ch;">What this looks like when the stakes are real.</h2>
 
-  </div>
+        <div class="grid-3">
+          <div class="metric">
+            <span class="figure">~100K</span>
+            <span class="prose-sm">seats on a federal enterprise-AI deployment where I led the AI-governance workstream, via a prime</span>
+          </div>
+          <div class="metric">
+            <span class="figure">$6M+</span>
+            <span class="prose-sm">AI &amp; analytics portfolio delivered across 7 enterprise cloud programs</span>
+          </div>
+          <div class="metric">
+            <span class="figure">20+</span>
+            <span class="prose-sm">years across federal, financial services, and defense-adjacent work</span>
+          </div>
+        </div>
+
+        <div class="grid-3">
+
+          <section class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="card-meta">Financial services · zero-trust · ~11,000 employees</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="stack-tight"><span class="eyebrow">Challenge</span><span class="prose-sm">Leadership had to decide whether to fund enterprise GenAI (ServiceNow NowAssist) with no defensible business case and no way to govern sustained use.</span></div><div class="stack-tight"><span class="eyebrow">Approach</span><span class="prose-sm">Built the AI investment business case, facilitated SOC 2 and vendor risk assessments, and designed human-in-the-loop workflows with intake validation and compliance gates across ITSM and HR.</span></div>
+              <div class="stack-tight"><span class="eyebrow eyebrow--accent">Result</span><span class="prose-sm">Projected 16% efficiency gains; the analysis informed executive steering decisions on enterprise GenAI investment.</span></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="card-meta">Enterprise software · M365 &amp; Azure · regulated reporting</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="stack-tight"><span class="eyebrow">Challenge</span><span class="prose-sm">GenAI-driven compliance reporting was accumulating audit exposure, with findings climbing year over year.</span></div><div class="stack-tight"><span class="eyebrow">Approach</span><span class="prose-sm">Embedded governance checkpoints and automated policy validation directly into Azure-based GenAI workflows.</span></div>
+              <div class="stack-tight"><span class="eyebrow eyebrow--accent">Result</span><span class="prose-sm">30% fewer audit findings year over year, with reporting that stays audit-defensible.</span></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="card-meta">Medicaid-funded local government agency · HIPAA · multi-agency data sharing</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="stack-tight"><span class="eyebrow">Challenge</span><span class="prose-sm">The agency needed governance for its AI and data systems, and compliant data sharing with behavioral-health providers under HIPAA and state law.</span></div><div class="stack-tight"><span class="eyebrow">Approach</span><span class="prose-sm">Governed HIPAA-compliant analytics and policy-enforcement workflows, and negotiated data-sharing agreements and privacy clauses with public-sector clients.</span></div>
+              <div class="stack-tight"><span class="eyebrow eyebrow--accent">Result</span><span class="prose-sm">$4M ARR in public-sector accounts governed, with data sharing compliant across federal and California requirements.</span></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="speaking" class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">Insights</span></div>
+
+        <div class="grid-split">
+          <div class="stack">
+            <h2 class="display-2 ruled">A practitioner's view, on the record.</h2>
+            <p class="prose">Writing and speaking on what it takes to govern and scale AI where the stakes are high, for boards, CISOs, and program leaders making the call. Available for keynotes, panels, executive briefings, and board sessions.</p>
+            <div class="row">
+              <a href="mailto:jimi@jimiige.com?subject=Speaking%20inquiry" class="btn btn--primary">Invite me to speak</a>
+              <a href="https://www.linkedin.com/in/jimi-ige" target="_blank" rel="noopener" class="btn btn--secondary">Read on LinkedIn&nbsp;→</a>
+            </div>
+          </div>
+
+          <span class="split-rule" aria-hidden="true"></span>
+
+          <div class="stack-tight">
+            <span class="eyebrow">Themes</span>
+            <div class="register register--single">
+              <div class="register-row"><span class="prose-sm">Why AI Trust Has Become Enterprise Infrastructure</span></div>
+              <div class="register-row"><span class="prose-sm">Governing AI Where the Stakes Are Real — Federal, Financial Services, and Regulated Enterprises</span></div>
+              <div class="register-row"><span class="prose-sm">Turning a Compliance Deadline into an AI Operating Model</span></div>
+              <div class="register-row"><span class="prose-sm">The Gap Between AI Deployment and AI Adoption — and What It Costs</span></div>
+              <div class="register-row"><span class="prose-sm">AI ROI That Survives the Adoption Lag</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+
+          <a href="governing-ai-in-regulated-workflows.html" class="card card--lead">
+            <div class="card-body">
+              <div class="card-split">
+                <div class="stack-tight">
+                  <span class="eyebrow">Featured playbook</span>
+                  <h3 class="card-title">Governing AI in Regulated Workflows</h3>
+                  <span class="btn btn--secondary btn--sm card-cta">Read the playbook&nbsp;→</span>
+                </div>
+                <div class="card-aside"><p class="prose-sm">The ten-chapter playbook for running AI inside CUI, CMMC, HIPAA, and financial-controls workflows without failing the audit. Every framework current and sourced, with where judgment beats the tool at each step.</p></div>
+              </div>
+            </div>
+          </a>
+
+          <div class="grid-2">
+
+          <a href="crosswalk.html" class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="eyebrow">Featured framework</span>
+                <h3 class="card-title">The AI Governance Control Crosswalk</h3>
+              </div>
+            </div>
+            <div class="card-body"><p class="prose-sm">One control program, mapped across NIST AI RMF, ISO 42001, SOC 2, ISO 27001, CMMC, and privacy, with the business pain each control relieves and the tooling that enforces it. Filter it by commercial or federal.</p><span class="btn btn--secondary btn--sm card-cta">View the crosswalk&nbsp;→</span></div>
+          </a>
+
+          <a href="readiness-audit.html" class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="eyebrow">Featured instrument</span>
+                <h3 class="card-title">The AI Readiness Assessment</h3>
+              </div>
+            </div>
+            <div class="card-body"><p class="prose-sm">Score your organization control by control across the same ten domains, with a live maturity scorecard, a prioritized gap list, and a where-to-start roadmap. Nothing you enter leaves your browser.</p><span class="btn btn--secondary btn--sm card-cta">Open the assessment&nbsp;→</span></div>
+          </a>
+
+          <a href="agent-demo.html" class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="eyebrow">Live demo</span>
+                <h3 class="card-title">The Governed Agent Demo</h3>
+              </div>
+            </div>
+            <div class="card-body"><p class="prose-sm">Run the same AI agent with governance on and off. A hidden prompt injection tries to exfiltrate data and move money. With the controls on, it is caught. Without them, it is a breach.</p><span class="btn btn--secondary btn--sm card-cta">Run the demo&nbsp;→</span></div>
+          </a>
+
+          <a href="adoption-scorecard.html" class="card">
+            <div class="card-head">
+              <div class="card-headings">
+                <span class="eyebrow">Measurement tool</span>
+                <h3 class="card-title">The AI Adoption Scorecard</h3>
+              </div>
+            </div>
+            <div class="card-body"><p class="prose-sm">A license is not adoption, and usage is not value. Score your adoption across six dimensions, see where you sit on the ladder, and get the plays to run first.</p><span class="btn btn--secondary btn--sm card-cta">Score your adoption&nbsp;→</span></div>
+          </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">Contact</span></div>
+
+        <div class="grid-split">
+          <div class="stack stack--anchor">
+            <h2 class="display-2 ruled">Start with a conversation.</h2>
+            <p class="prose">Standing up a governance program, scaling adoption, or preparing for audit. Tell me where you are and where you need to be.</p>
+            <div class="stack-tight anchored">
+              <div class="row">
+                <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--primary">Book a conversation</a>
+              </div>
+              <span class="mono-sm">References available on request</span>
+            </div>
+          </div>
+
+          <span class="split-rule" aria-hidden="true"></span>
+
+          <div class="stack">
+            <div class="grid-2">
+              <a href="mailto:jimi@jimiige.com" class="card">
+                <div class="card-body"><span class="eyebrow">Email</span><span class="mono">jimi@jimiige.com</span></div>
+              </a>
+              <a href="tel:+12025966024" class="card">
+                <div class="card-body"><span class="eyebrow">Phone</span><span class="mono">(202) 596-6024</span></div>
+              </a>
+            </div>
+
+            <div class="linklist">
+              <a href="https://www.linkedin.com/in/jimi-ige" target="_blank" rel="noopener">
+                <span class="stack-tight"><span class="eyebrow">LinkedIn</span><span class="mono">linkedin.com/in/jimi-ige</span></span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="https://github.com/Jimi-Ige" target="_blank" rel="noopener">
+                <span class="stack-tight"><span class="eyebrow">GitHub</span><span class="mono">github.com/Jimi-Ige</span></span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=1725+I+Street+NW+Suite+300+Washington+DC+20019" target="_blank" rel="noopener">
+                <span class="stack-tight"><span class="eyebrow">Office</span><span class="mono">1725 I Street NW, Suite 300<br>Washington, DC 20019</span></span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- the house motif, once per document, as the closing seal -->
+        <div class="seal">
+          <div class="riskmatrix" data-riskmatrix data-size="4" data-cell="48" data-legend></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </div>
 
-<script>
-  function dcToggleMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display=(m.style.display==='block')?'none':'block';}
-  function dcCloseMenu(){var m=document.getElementById('mobile-menu');if(m)m.style.display='none';}
-  document.querySelectorAll('[style-hover]').forEach(function(el){
-    var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');
-    el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
-    el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
-  });
-  window.addEventListener('resize',function(){if(window.innerWidth>920)dcCloseMenu();});
-</script>
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span class="row" style="gap:var(--space-4);">
+      <span class="foot-name">Jimi Ige</span>
+      <a href="https://www.linkedin.com/in/jimi-ige/" target="_blank" rel="noopener" class="foot-link">LinkedIn</a>
+    </span>
+    <span class="foot-meta">AI Governance, Deployment &amp; Adoption · Washington, D.C. · © 2026 Jimi Ige LLC</span>
+  </div>
+</footer>
+
 </body></html>

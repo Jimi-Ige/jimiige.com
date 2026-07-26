@@ -1,0 +1,11 @@
+:root {
+  /* Motion is restrained and linear-ish. Nothing bounces, nothing springs —
+     a compliance surface should never feel playful. Colour and rule-weight
+     changes carry state; movement is reserved for entering/leaving. */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --dur-instant: 90ms; /* hover/press colour shifts */
+  --dur-fast: 140ms; /* control state, tab underline */
+  --dur-base: 200ms; /* overlays, disclosure */
+  --lift-press: 1px; /* press = translateY, never scale */
+}

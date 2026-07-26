@@ -1,0 +1,59 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  line-height: var(--lh-mono);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-instant) var(--ease-standard);
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+::selection {
+  background: rgba(139, 94, 60, 0.22);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-shadow);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  color: var(--text-display);
+  letter-spacing: var(--track-display);
+  line-height: var(--lh-display);
+  font-weight: var(--weight-regular);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* Utility: the uppercase mono eyebrow used throughout the brand */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}

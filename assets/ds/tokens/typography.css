@@ -1,0 +1,35 @@
+:root {
+  /* Two families. No sans-serif — serif states, mono attests. */
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Display serif — claims and headlines only */
+  --size-display-1: 46px; /* banner headline */
+  --size-display-2: 36px;
+  --size-display-3: 28px;
+  --size-display-4: 22px;
+  --lh-display: 1.22;
+  --track-display: -0.5px; /* serif at size always tightens */
+
+  /* Serif prose — paragraphs, long-form findings */
+  --size-prose: 17px;
+  --size-prose-sm: 15px;
+  --lh-prose: 1.62;
+
+  /* Mono — credentials, labels, data, every control */
+  --size-mono-lg: 30px; /* practice line on the banner */
+  --size-mono-md: 18px; /* credential stack — do not go below at scale */
+  --size-mono: 14px; /* UI default */
+  --size-mono-sm: 12px;
+  --size-mono-xs: 10px; /* gutter numerals, matrix axes */
+  --lh-mono: 1.45;
+
+  /* Mono tracking widens as it shrinks — the inverse of the serif */
+  --track-mono-lg: 1px;
+  --track-mono: 2px;
+  --track-label: 2.4px; /* uppercase eyebrows */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+}

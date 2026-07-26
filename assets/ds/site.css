@@ -1,0 +1,2673 @@
+/* ==========================================================================
+   jimiige.com — site layer
+   The design system's React reference components (design_system/components/**)
+   ported to plain HTML + CSS classes. No framework, no bundler, no Babel.
+   Tokens are shipped unchanged in tokens/; nothing here redefines a token.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   1. Document shell
+   The artifact is capped at the banner's own canonical width and centred on
+   the darker "desk" ground, so the cream field reads as a sheet of paper.
+   ========================================================================== */
+
+.doc {
+  position: relative;
+  max-width: var(--field-max);
+  margin: 0 auto;
+  background: var(--surface-field);
+}
+
+.doc > main {
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   2. The numbered margin rail
+   One continuous pleading margin for the whole document, not one per band.
+   Positions are percentages of the 1584 canvas so the rail stays locked to
+   the hero's geometry as the hero scales.
+
+     numeral column right edge  x=44    -> width 2.78%
+     margin rule 1              x=58    -> left  3.66%
+     margin rule 2              x=64    -> left  4.04%
+
+   The numeral count is NEVER computed from a measured height — that goes
+   stale on reflow and the numbering silently stops short. The numerals are a
+   single over-rendered text column and .rail's own overflow crops the tail,
+   the same way the copper rules work off CSS inset and need no measurement.
+   -------------------------------------------------------------------------- */
+
+/* The rail is a child of <main>, so the numbering starts at 01 at the top of
+   the document body rather than running unseen behind the sticky nav. It
+   paints ABOVE the bands (which are opaque cream) and below the nav. */
+.rail {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.rail-rule {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  width: 1px;
+  background: var(--copper-600);
+  opacity: 0.5;
+}
+
+.rail-rule--a {
+  left: 3.66%;
+}
+
+.rail-rule--b {
+  left: 4.04%;
+}
+
+/* --- The reading head ---------------------------------------------------
+   A slide-rule cursor for the margin. As you scroll, the first copper rule
+   inks in behind you and a small square index rides the pair, with a hairline
+   tick reaching toward the numerals. It is the document marking its own
+   place — copper only, never the risk scale, which means severity and
+   nothing else. Decorative and aria-hidden; drops with the numerals at 600. */
+
+.rail-read {
+  position: absolute;
+  left: 3.66%;
+  top: 14px;
+  width: 1px;
+  height: 0;
+  background: var(--copper-600);
+  opacity: 0.95;
+}
+
+.rail-head {
+  position: absolute;
+  left: 3.66%;
+  top: 14px;
+  width: 1px;
+  height: 1px;
+}
+
+.rail-head::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: -3.5px;
+  width: 7px;
+  height: 7px;
+  background: var(--copper-600);
+}
+
+.rail-head::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 0;
+  width: 10px;
+  height: 1px;
+  background: var(--copper-600);
+  opacity: 0.55;
+}
+
+@media (max-width: 900px) {
+  .rail-read,
+  .rail-head {
+    left: 34px;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .rail-read,
+  .rail-head {
+    display: none;
+  }
+}
+
+/* line-height 36 = the banner's gutter step; the 9px offset lands the first
+   numeral on the banner's first gutter baseline (y=63, box top y=22). */
+.rail-nums {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 2.78%;
+  text-align: right;
+  white-space: pre;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: 1px;
+  line-height: 36px;
+  color: var(--ink-500);
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   3. Site chrome — nav
+   ========================================================================== */
+
+.sitenav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--surface-field);
+  border-bottom: var(--border-default);
+}
+
+.sitenav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: var(--space-3) 4.92% var(--space-3) 7.07%;
+  min-height: 64px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.wordmark-name {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: var(--size-mono);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-900);
+  white-space: nowrap;
+}
+
+.wordmark-practice {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--copper-700);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--ink-900);
+  border-bottom-color: var(--copper-600);
+}
+
+.nav-toggle {
+  display: none;
+  flex-shrink: 0;
+  width: var(--control-height);
+  height: var(--control-height);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-none);
+  cursor: pointer;
+  transition: border-color var(--dur-instant) var(--ease-standard);
+}
+
+.nav-toggle:hover {
+  border-color: var(--copper-600);
+}
+
+.nav-toggle span {
+  width: 16px;
+  height: 1px;
+  background: var(--ink-800);
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+  border-top: 1px solid var(--rule-hairline);
+  background: var(--surface-field);
+  padding: var(--space-2) 4.92% var(--space-4) 7.07%;
+}
+
+.nav-menu[data-open="true"] {
+  display: block;
+}
+
+.nav-menu a {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--ink-800);
+  text-decoration: none;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule-hairline);
+}
+
+.nav-menu a:hover {
+  color: var(--copper-700);
+}
+
+/* ==========================================================================
+   4. The hero — the banner reproduced at its own geometry
+   Canvas 1584 x 396. Every coordinate below is a literal canvas unit; --u is
+   one canvas unit expressed in CSS pixels, so the whole artifact scales
+   continuously with its container and every number in the handoff's
+   coordinate table stays true at any width.
+
+   --u must be declared on a CHILD of the query container: a container's own
+   declarations cannot resolve cqw against itself.
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-field);
+  aspect-ratio: 1584 / 396;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  --u: calc(min(100vw, 1584px) / 1584); /* fallback: no container queries */
+}
+
+@supports (container-type: inline-size) {
+  .hero {
+    container-type: inline-size;
+  }
+  .hero-canvas {
+    --u: calc(100cqw / 1584); /* exact: 1 canvas unit */
+  }
+}
+
+/* The blueprint grid is its own layer and fades out toward the fold. It
+   establishes the field at the top, then gets out of the way — it is never
+   repeated down the page. */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--rule-hairline) 0 1px,
+      transparent 1px calc(132 * var(--u))
+    ),
+    repeating-linear-gradient(to bottom, var(--rule-hairline) 0 1px, transparent 1px calc(66 * var(--u)));
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 38%, transparent 92%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 38%, transparent 92%);
+}
+
+.hero-kicker {
+  position: absolute;
+  left: calc(112 * var(--u));
+  top: calc(26 * var(--u));
+  width: calc(760 * var(--u));
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: calc(18 * var(--u));
+  line-height: calc(24 * var(--u));
+  letter-spacing: calc(-0.2 * var(--u));
+  color: var(--copper-700);
+}
+
+.hero-h1 {
+  position: absolute;
+  left: calc(112 * var(--u));
+  top: calc(60 * var(--u));
+  width: calc(760 * var(--u));
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: calc(46 * var(--u));
+  line-height: calc(58 * var(--u));
+  letter-spacing: calc(-0.5 * var(--u));
+  color: var(--ink-900);
+}
+
+/* Italic + copper marks the phrase carrying the claim. It is the only
+   emphasis treatment in the system. */
+.hero-h1 em,
+.claim {
+  font-style: italic;
+  color: var(--copper-600);
+}
+
+.hero-rule {
+  position: absolute;
+  left: calc(114 * var(--u));
+  top: calc(198 * var(--u));
+  width: calc(386 * var(--u));
+  height: 1px;
+  background: var(--rule-accent);
+}
+
+.hero-practice {
+  position: absolute;
+  left: calc(1000 * var(--u));
+  top: calc(92 * var(--u));
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: calc(28 * var(--u));
+  line-height: calc(36 * var(--u));
+  letter-spacing: calc(1 * var(--u));
+  color: var(--copper-700);
+  white-space: nowrap;
+}
+
+.hero-creds {
+  position: absolute;
+  left: calc(1000 * var(--u));
+  top: calc(214 * var(--u));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-creds li {
+  font-family: var(--font-mono);
+  font-size: calc(18 * var(--u));
+  line-height: calc(28 * var(--u));
+  letter-spacing: calc(2 * var(--u));
+  color: var(--ink-600);
+  white-space: nowrap;
+}
+
+.hero-domain {
+  position: absolute;
+  left: 0;
+  top: calc(346 * var(--u));
+  width: calc(1506 * var(--u));
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: calc(15 * var(--u));
+  letter-spacing: calc(2 * var(--u));
+  line-height: 1;
+  color: var(--ink-600);
+}
+
+/* The lede: 18px Georgia / 28px line-height, top 218, width 700, sitting under
+   the copper rule. This is the handoff's second documented departure from the
+   source banner, and it is what fills the lower half of the canvas. */
+.hero-lede {
+  position: absolute;
+  left: calc(112 * var(--u));
+  top: calc(218 * var(--u));
+  width: calc(700 * var(--u));
+  margin: 0;
+  font-family: var(--font-mono);
+  letter-spacing: calc(1 * var(--u));
+  font-size: calc(18 * var(--u));
+  line-height: calc(28 * var(--u));
+  color: var(--ink-600);
+}
+
+/* A divider always brackets the blocks it separates: the lede runs to y=302,
+   so the divider runs y 66 -> 302. */
+.hero-divider {
+  position: absolute;
+  left: calc(892 * var(--u));
+  top: calc(66 * var(--u));
+  height: calc(212 * var(--u));
+  width: 1px;
+  background: var(--rule-strong);
+}
+
+/* Corner risk matrix — ten 96 x 48 cells, severity banded on the
+   anti-diagonal: severe top-right, descending to low bottom-left. */
+.hero-cell {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(96 * var(--u));
+  height: calc(48 * var(--u));
+  border: 1px solid var(--rule-border);
+}
+
+.hero-cell--low {
+  background: var(--risk-low-fill);
+}
+.hero-cell--moderate {
+  background: var(--risk-moderate-fill);
+}
+.hero-cell--high {
+  background: var(--risk-high-fill);
+}
+.hero-cell--severe {
+  background: var(--risk-severe-fill);
+}
+
+.hero-axis {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: calc(9 * var(--u));
+  letter-spacing: calc(2 * var(--u));
+  line-height: 1;
+  color: var(--ink-500);
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.hero-axis--x {
+  left: calc(1176 * var(--u));
+  top: calc(14 * var(--u));
+}
+
+.hero-axis--y {
+  left: calc(1574 * var(--u));
+  top: calc(130 * var(--u));
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+}
+
+/* ==========================================================================
+   5. Bands
+   Every band hangs off the banner's own 112px content margin and 1506px right
+   edge, expressed as percentages of the 1584 canvas so they track the hero.
+   ========================================================================== */
+
+.band {
+  position: relative;
+  background: var(--surface-field);
+  padding: var(--space-6) 4.92% var(--space-6) 7.07%;
+  border-top: 1px solid var(--rule-hairline);
+}
+
+.band--flush {
+  border-top: none;
+}
+
+/* the first band after the banner sits tight to it, so the portrait clears
+   the fold on a short laptop instead of starting a screen down */
+.band--tight {
+  padding-top: var(--space-4);
+}
+
+.band-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.band-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.band-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule-border);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stack-tight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+/* the proof band: portrait, credentials, action — three columns that carry
+   the fold. The action column's buttons run full width so the pair stacks. */
+.hero-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.hero-act .stack-tight .btn {
+  width: 100%;
+  white-space: normal;
+  height: auto;
+  min-height: var(--control-height);
+  padding-top: var(--space-1);
+  padding-bottom: var(--space-1);
+}
+
+@media (max-width: 900px) {
+  .hero-proof {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* a stack that stretches to its grid row and anchors its last action row to
+   the bottom edge, so paired columns close on one line */
+.grid-split > .stack--anchor {
+  align-self: stretch;
+}
+
+.stack--anchor > .row:last-child,
+.stack--anchor > .anchored:last-child {
+  margin-top: auto;
+}
+
+/* the house layout: a wide statement block, a narrower attestation column,
+   one vertical hairline centred in the gap */
+.grid-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.62fr) 1px minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.grid-split > .split-rule {
+  align-self: stretch;
+  background: var(--rule-strong);
+}
+
+/* ==========================================================================
+   6. Type utilities
+   Serif states, mono attests. No sans-serif anywhere.
+   ========================================================================== */
+
+.display-1 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-1);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  color: var(--text-display);
+  margin: 0;
+}
+
+.display-2 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-2);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  color: var(--text-display);
+  margin: 0;
+}
+
+.display-3 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-3);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  color: var(--text-display);
+  margin: 0;
+}
+
+.display-4 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-4);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  color: var(--text-display);
+  margin: 0;
+}
+
+/* Client direction 2026-07-25: free-form body text is set in the credential
+   mono — the voice of the Trusted By / Certifications blocks — not the serif.
+   Serif remains the display voice: headlines, the banner, statements, and the
+   playbook's long-read body (which has its own rules). */
+.prose {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: var(--text-body);
+  margin: 0;
+  max-width: var(--measure-prose);
+}
+
+.prose-sm {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: var(--text-body);
+  margin: 0;
+  max-width: var(--measure-prose);
+}
+
+.prose-wide {
+  max-width: none;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 1px;
+  color: var(--text-body);
+}
+
+.mono-sm {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.mono-md {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-md);
+  letter-spacing: var(--track-mono);
+  color: var(--ink-600);
+}
+
+.eyebrow--accent {
+  color: var(--copper-700);
+}
+
+.figure {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-2);
+  line-height: 1.1;
+  letter-spacing: var(--track-display);
+  color: var(--text-display);
+}
+
+/* ==========================================================================
+   7. Components — core
+   ========================================================================== */
+
+/* --- Button ------------------------------------------------------------- */
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--track-mono);
+  border-radius: var(--radius-none);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: var(--control-height);
+  padding: 0 var(--space-4);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: background-color var(--dur-instant) var(--ease-standard),
+    color var(--dur-instant) var(--ease-standard), border-color var(--dur-instant) var(--ease-standard),
+    transform var(--dur-instant) var(--ease-standard);
+}
+
+.btn:active {
+  transform: translateY(var(--lift-press));
+}
+
+.btn--sm {
+  height: var(--control-height-sm);
+  padding: 0 var(--space-3);
+  font-size: var(--size-mono-sm);
+}
+
+.btn--primary {
+  background: var(--ink-900);
+  color: var(--cream-200);
+  border-color: var(--ink-900);
+}
+
+.btn--primary:hover {
+  background: var(--ink-700);
+  border-color: var(--ink-700);
+  color: var(--cream-200);
+}
+
+/* copper is reserved for commitment — attest, sign, submit an assessment */
+.btn--accent {
+  background: var(--copper-600);
+  color: var(--cream-100);
+  border-color: var(--copper-600);
+}
+
+.btn--accent:hover {
+  background: var(--copper-500);
+  border-color: var(--copper-500);
+  color: var(--cream-100);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--ink-900);
+  border-color: var(--rule-strong);
+}
+
+.btn--secondary:hover {
+  border-color: var(--copper-600);
+  color: var(--copper-700);
+}
+
+/* ghost is an inline text action, so it wraps like text rather than forcing
+   its row wider than the column */
+.btn--ghost {
+  background: transparent;
+  color: var(--copper-600);
+  border-color: transparent;
+  padding: 0;
+  height: auto;
+  white-space: normal;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.btn--ghost:hover {
+  color: var(--copper-500);
+  box-shadow: inset 0 -1px 0 var(--copper-500);
+}
+
+.btn[disabled],
+.btn[aria-disabled="true"] {
+  background: var(--surface-sunken);
+  color: var(--ink-400);
+  border-color: var(--rule-border);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn--secondary[disabled],
+.btn--ghost[disabled] {
+  background: transparent;
+}
+
+/* --- Card --------------------------------------------------------------- */
+
+.card {
+  background: var(--surface-card);
+  border: var(--border-default);
+  border-radius: var(--radius-none);
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--dur-instant) var(--ease-standard);
+}
+
+/* hover is a colour response, never a lift: the hairline warms to quiet
+   copper; link cards (below) take the full accent */
+.card:hover {
+  border-color: var(--accent-quiet);
+}
+
+.card--field {
+  background: var(--surface-field);
+}
+
+/* one accented card per screen, maximum */
+.card--accent {
+  border-top: 2px solid var(--copper-600);
+}
+
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  flex-wrap: wrap;
+}
+
+.card-head + .card-body {
+  border-top: var(--border-hairline);
+}
+
+.card-headings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-4);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  color: var(--text-display);
+  margin: 0;
+}
+
+.card-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.card-body {
+  padding: var(--space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* display numeral for a card head — the mono eyebrow at card scale is mousy */
+.card-n {
+  font-family: var(--font-serif);
+  font-size: var(--size-display-3);
+  line-height: 1;
+  letter-spacing: var(--track-display);
+  color: var(--copper-600);
+}
+
+/* the house split, at card scale: statement left, attestation right */
+.card-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.card-aside {
+  border-left: var(--border-hairline);
+  padding-left: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .card-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card-aside {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+/* the lead card of a set: display-scale title, split interior */
+.card--lead .card-title {
+  font-size: var(--size-display-3);
+}
+
+/* a card CTA that anchors to the card's base, so a row of cards ends level */
+.card-cta {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* a card that is itself a link — hover shifts the border, never a lift */
+a.card {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--dur-instant) var(--ease-standard);
+}
+
+a.card:hover {
+  border-color: var(--copper-600);
+}
+
+a.card:hover .card-title {
+  color: var(--copper-700);
+}
+
+/* --- Badge -------------------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-none);
+  background: transparent;
+  color: var(--ink-600);
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge--sm {
+  height: 18px;
+  padding: 0 6px;
+  font-size: var(--size-mono-xs);
+}
+
+/* Label text uses the -text tones. The base risk hues over their own tinted
+   fills measure 3.4-3.9:1 and fail AA; these clear 5.6:1. */
+.badge--low {
+  background: var(--risk-low-fill);
+  border-color: var(--risk-low);
+  color: var(--risk-low-text);
+}
+
+.badge--moderate {
+  background: var(--risk-moderate-fill);
+  border-color: var(--risk-moderate);
+  color: var(--risk-moderate-text);
+}
+
+.badge--high {
+  background: var(--risk-high-fill);
+  border-color: var(--risk-high);
+  color: var(--risk-high-text);
+}
+
+.badge--accent {
+  background: rgba(139, 94, 60, 0.1);
+  border-color: var(--copper-600);
+  color: var(--copper-700);
+}
+
+.badge--inverse {
+  background: var(--ink-900);
+  border-color: var(--ink-900);
+  color: var(--cream-200);
+}
+
+/* --- Tag ---------------------------------------------------------------- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 24px;
+  padding: 0 var(--space-2);
+  background: var(--cream-200);
+  color: var(--ink-600);
+  border: 1px solid var(--rule-border);
+  border-radius: var(--radius-hair); /* the only radius in the system */
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color var(--dur-instant) var(--ease-standard),
+    background-color var(--dur-instant) var(--ease-standard), color var(--dur-instant) var(--ease-standard);
+}
+
+button.tag,
+a.tag {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.tag:hover,
+a.tag:hover {
+  border-color: var(--copper-600);
+}
+
+.tag--selected,
+.tag[aria-pressed="true"] {
+  background: var(--ink-900);
+  color: var(--cream-200);
+  border-color: var(--ink-900);
+}
+
+/* --- Icon --------------------------------------------------------------- */
+
+.ico {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  vertical-align: -2px;
+  stroke-width: 1.5;
+}
+
+.ico--lg {
+  width: 20px;
+  height: 20px;
+}
+
+.ico--accent {
+  color: var(--copper-600);
+}
+
+/* --- Tabs --------------------------------------------------------------- */
+
+.tabs {
+  display: flex;
+  gap: var(--space-5);
+  border-bottom: var(--border-default);
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 0 var(--space-3);
+  margin-bottom: -1px;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+}
+
+.tab:hover {
+  color: var(--copper-700);
+}
+
+.tab[aria-selected="true"] {
+  color: var(--ink-900);
+  border-bottom-color: var(--copper-600);
+}
+
+/* ink-400 measures 3.57:1 on the cream field and fails AA as text; the count
+   is information, so it takes the muted tone. (ink-400 survives on
+   .btn[disabled] only, where WCAG exempts inactive controls.) */
+.tab-count {
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   8. Components — forms
+   ========================================================================== */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.field-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.field-hint {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.field-error {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--risk-high-text);
+}
+
+.input,
+.select,
+textarea.input {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 1px;
+  color: var(--ink-800);
+  background: var(--surface-card);
+  border: var(--border-default);
+  border-radius: var(--radius-none);
+  height: var(--control-height);
+  padding: 0 var(--space-2);
+  width: 100%;
+  transition: border-color var(--dur-fast) var(--ease-standard);
+}
+
+textarea.input {
+  height: auto;
+  padding: var(--space-2);
+  line-height: var(--lh-mono);
+  resize: vertical;
+}
+
+.input:hover,
+.select:hover {
+  border-color: var(--rule-strong);
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--risk-high);
+}
+
+.select {
+  appearance: none;
+  padding-right: var(--space-5);
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-600) 50%),
+    linear-gradient(135deg, var(--ink-600) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 18px, calc(100% - 12px) 18px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+/* square ballot mark, copper fill — and a Radio that is deliberately a square
+   with an inset copper block, not a circle */
+.check input[type="checkbox"],
+.check input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  flex-shrink: 0;
+  background: var(--surface-card);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-none);
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: border-color var(--dur-fast) var(--ease-standard);
+}
+
+.check input[type="checkbox"]:checked {
+  background: var(--copper-600);
+  border-color: var(--copper-600);
+}
+
+.check input[type="checkbox"]:checked::after {
+  content: "";
+  width: 8px;
+  height: 4px;
+  border-left: 1.5px solid var(--cream-100);
+  border-bottom: 1.5px solid var(--cream-100);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.check input[type="radio"]:checked {
+  border-color: var(--copper-600);
+}
+
+.check input[type="radio"]:checked::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--copper-600);
+}
+
+.check-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 1px;
+  color: var(--ink-800);
+}
+
+.check-desc {
+  font-family: var(--font-mono);
+  font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose);
+  color: var(--text-body);
+}
+
+/* rectangular track, square knob */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.switch input {
+  appearance: none;
+  width: 34px;
+  height: 18px;
+  background: var(--surface-sunken);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-none);
+  position: relative;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-standard);
+}
+
+.switch input::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  background: var(--ink-500);
+  transition: transform var(--dur-fast) var(--ease-standard),
+    background-color var(--dur-fast) var(--ease-standard);
+}
+
+.switch input:checked::after {
+  transform: translateX(16px);
+  background: var(--copper-600);
+}
+
+/* ==========================================================================
+   9. Components — governance primitives
+   ========================================================================== */
+
+/* --- MaturityMeter — segmented 0-5, copper fill, worded caption.
+       Never rendered in the risk colours: maturity is not severity. --------- */
+
+.meter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.meter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.meter-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--ink-700);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meter-count,
+.meter-caption {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.meter-track {
+  display: flex;
+  gap: 3px;
+}
+
+.meter-seg {
+  flex: 1;
+  height: 10px;
+  background: var(--cream-400);
+  border: 1px solid var(--rule-border);
+}
+
+.meter-seg--on {
+  background: var(--copper-600);
+  border-color: var(--copper-600);
+}
+
+.meter-seg--target {
+  box-shadow: inset 0 0 0 1px var(--cream-100), inset 0 0 0 2px var(--ink-800);
+}
+
+/* --- RiskMatrix — built by ds.js from the ported band() so the severity
+       bands land on the anti-diagonal. Do not hand-author cells. ----------- */
+
+.riskmatrix {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.rm-axis {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-mono);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.rm-body {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.rm-axis--y {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  align-self: stretch;
+}
+
+.rm-row {
+  display: flex;
+}
+
+.rm-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid var(--rule-border);
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  color: var(--ink-700);
+}
+
+.rm-cell--low {
+  background: var(--risk-low-fill);
+}
+.rm-cell--moderate {
+  background: var(--risk-moderate-fill);
+}
+.rm-cell--high {
+  background: var(--risk-high-fill);
+}
+.rm-cell--severe {
+  background: var(--risk-severe-fill);
+}
+
+.rm-chip {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  background: var(--ink-900);
+  color: var(--cream-200);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+}
+
+.rm-legend {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+  flex-wrap: wrap;
+}
+
+.rm-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rm-swatch {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--rule-border);
+}
+
+/* --- CredentialStack — practice line over credentials, all mono ---------- */
+
+.credstack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.credstack-practice {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: var(--size-mono-lg);
+  line-height: 1.28;
+  letter-spacing: var(--track-mono-lg);
+  color: var(--text-credential);
+}
+
+.credstack-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3) var(--space-4);
+}
+
+@media (max-width: 599.98px) {
+  .credstack-groups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.credstack-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* The reference homepage renders this stack at scale 0.9, which puts group
+   items at ~14px — the UI floor, not the 18px artifact floor (that floor is
+   for recompressed exports, and this is a live page). */
+.credstack-group li,
+.credstack-group p {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: var(--ink-600);
+  margin: 0;
+}
+
+.credstack-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* --- DocumentFrame — the pleading margin as a reusable frame, one per view - */
+
+.docframe {
+  position: relative;
+  background: var(--surface-field);
+  border: var(--border-default);
+  display: flex;
+  overflow: hidden;
+}
+
+.docframe--bleed {
+  border: none;
+}
+
+.docframe--grid {
+  background-image: var(--grid-pattern);
+}
+
+.docframe-gutter {
+  position: relative;
+  width: var(--margin-gutter);
+  flex-shrink: 0;
+  padding: var(--space-4) var(--space-2) 0 0;
+  text-align: right;
+  white-space: pre;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: 1px;
+  line-height: 36px;
+  color: var(--ink-500);
+  opacity: 0.6;
+}
+
+.docframe-gutter::before,
+.docframe-gutter::after {
+  content: "";
+  position: absolute;
+  top: var(--space-4);
+  bottom: var(--space-4);
+  width: 1px;
+  background: var(--accent-quiet);
+}
+
+.docframe-gutter::before {
+  right: -6px;
+}
+
+.docframe-gutter::after {
+  right: -12px;
+}
+
+.docframe-body {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-5);
+  padding-left: var(--space-6);
+}
+
+/* ==========================================================================
+   10. Page patterns
+   ========================================================================== */
+
+/* numbered register rows — the trigger list, findings, checklists */
+.register {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--space-6);
+  border-top: var(--border-default);
+}
+
+.register--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.register-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: var(--border-hairline);
+}
+
+.register-n {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: var(--track-mono);
+  color: var(--copper-600);
+  flex-shrink: 0;
+}
+
+/* the moments index: a 3 x 3 contents-page grid, not boxes. Each entry opens
+   on a hairline with a display-serif copper numeral over the sentence; the
+   ninth cell is the section's own closing line under a 2px copper rule. */
+.moment-groups {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.moment-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.moment-theme {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--copper-600);
+}
+
+/* The note: a flag stuck to the instrument. Brass paper — the system's
+   secondary metal at 9% — with the deeper adhesive strip showing along the
+   top edge. Square, unrotated, unshadowed: a filing flag, not stationery.
+   A client-approved third surface; the precedent is the crosswalk's amber
+   column (brass at 10%). Never the risk hues — a note is not a severity. */
+.moment {
+  position: relative;
+  background: rgba(176, 141, 87, 0.09);
+  transition: background-color var(--dur-instant) var(--ease-standard);
+  padding: calc(var(--space-3) + 8px) var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.moment::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: rgba(176, 141, 87, 0.16);
+  transition: background-color var(--dur-instant) var(--ease-standard);
+}
+
+/* hovering a flag presses it to the page: the paper and its strip deepen */
+.moment:hover {
+  background: rgba(176, 141, 87, 0.14);
+}
+
+.moment:hover::before {
+  background: rgba(176, 141, 87, 0.26);
+}
+
+.moment--cta:hover {
+  background: transparent;
+}
+
+.moment--cta {
+  background: transparent;
+  border-top: 2px solid var(--copper-600);
+  padding: var(--space-3) 0 var(--space-4);
+}
+
+.moment--cta::before {
+  content: none;
+}
+
+.moment--cta .btn {
+  align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .moment-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599.98px) {
+  .moment-groups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* metric panels */
+.metric {
+  background: var(--surface-card);
+  border: var(--border-default);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: border-color var(--dur-instant) var(--ease-standard);
+}
+
+.metric:hover {
+  border-color: var(--accent-quiet);
+}
+
+/* the portrait: square corners, one hairline, no shadow, no radius.
+   Sized so the plate and the first credential group land above the fold
+   together, rather than the picture filling the column on its own. */
+.portrait {
+  max-width: 380px;
+  border: var(--border-default);
+  background: var(--surface-card);
+  padding: var(--space-1);
+  display: block;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-none);
+}
+
+.portrait-caption {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: var(--track-mono);
+  color: var(--ink-600);
+  padding: var(--space-2) var(--space-1) 0;
+}
+
+/* a link list set as a register — contact rows, resource rows */
+.linklist {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border-hairline);
+}
+
+.linklist a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: var(--border-hairline);
+  text-decoration: none;
+  color: var(--ink-800);
+  transition: color var(--dur-instant) var(--ease-standard);
+}
+
+.linklist a:hover {
+  color: var(--copper-700);
+}
+
+.linklist .mono-sm {
+  color: var(--text-muted);
+}
+
+.arrow {
+  color: var(--copper-600);
+  flex-shrink: 0;
+}
+
+/* --- Disclosure ---------------------------------------------------------
+   Detail on demand. Native <details>/<summary>, so it is keyboard-operable
+   and its contents stay in the document for search and screen readers —
+   nothing here is hidden from anything except the eye. The marker is the
+   Checkbox's square ballot mark, filled copper when open. */
+
+.disclose {
+  border-top: var(--border-hairline);
+}
+
+.disclose > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--dur-instant) var(--ease-standard);
+}
+
+.disclose > summary::-webkit-details-marker {
+  display: none;
+}
+
+.disclose > summary::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border: 1px solid var(--copper-600);
+  transition: background-color var(--dur-fast) var(--ease-standard);
+}
+
+.disclose[open] > summary::before {
+  background: var(--copper-600);
+}
+
+.disclose > summary:hover {
+  color: var(--copper-700);
+}
+
+.disclose-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-1) 0 var(--space-3);
+}
+
+/* a page-level switch that folds every gloss away at once */
+.guidance-toggle {
+  margin-left: auto;
+}
+
+body[data-guidance="off"] .gloss {
+  display: none;
+}
+
+/* The stress: the claim phrase inside mono running text drops into the serif
+   italic with the accent — the author's hand annotating the typescript. Use
+   once per band at most; it is the system's only emphasis treatment. */
+.stress {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15em;
+  line-height: 1;
+  color: var(--copper-600);
+}
+
+/* The ruled heading: every section opens the way the banner does — the thin
+   copper rule under the claim. The legal-pad line, carried down the page. */
+.ruled::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: min(240px, 62%);
+  background: var(--rule-accent);
+  margin-top: var(--space-3);
+}
+
+/* the matrix seal — the corner motif, once per document, right-aligned */
+.seal {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-4);
+}
+
+/* ==========================================================================
+   10b. Instrument patterns
+   Shared by the published instruments (crosswalk, assessments, scorecards,
+   demos) so they read as one family rather than eight separate pages.
+   ========================================================================== */
+
+/* --- Page header: eyebrow / display heading / lede ----------------------- */
+
+.page-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.page-head .display-1 {
+  max-width: 20ch;
+}
+
+/* --- Toolbar: filters and controls above a data view -------------------- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: center;
+}
+
+.toolbar-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* --- Segmented control --------------------------------------------------
+   A closed set of mutually exclusive views or ratings. Square, hairline,
+   mono; the chosen segment takes the ink fill. Selection is state, not
+   commitment, so it is never copper — except where the segment names a
+   severity, in which case it carries the risk tone (see .seg--risk). */
+
+.seg {
+  display: inline-flex;
+  border: var(--border-default);
+  border-radius: var(--radius-none);
+  flex-shrink: 0;
+  align-self: flex-start;
+  background: var(--surface-card);
+}
+
+.seg button {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  padding: 0 var(--space-3);
+  height: var(--control-height-sm);
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--rule-border);
+  color: var(--ink-600);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
+}
+
+.seg button:last-child {
+  border-right: none;
+}
+
+.seg button:hover {
+  color: var(--copper-700);
+}
+
+.seg button.active,
+.seg button[data-on],
+.seg button[aria-pressed="true"] {
+  background: var(--ink-900);
+  color: var(--cream-200);
+}
+
+/* Where the segments name a severity, colour is data and the risk scale
+   applies. Label text uses the -text tones, never the base hues. */
+.seg--risk button[data-on][data-v="Met"] {
+  background: var(--risk-low-fill);
+  color: var(--risk-low-text);
+}
+
+.seg--risk button[data-on][data-v="Partial"] {
+  background: var(--risk-moderate-fill);
+  color: var(--risk-moderate-text);
+}
+
+.seg--risk button[data-on][data-v="Gap"] {
+  background: var(--risk-high-fill);
+  color: var(--risk-high-text);
+}
+
+/* --- Data table ---------------------------------------------------------
+   Hairlines, no fills, no zebra. Emphasis is carried by type and rule
+   weight, and by the raised paper surface on bracketed columns. */
+
+.table-wrap {
+  overflow-x: auto;
+  border: var(--border-default);
+  background: var(--surface-field);
+}
+
+table.table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose);
+}
+
+table.table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  vertical-align: bottom;
+  background: var(--surface-field);
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+table.table td {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 0.5px;
+  line-height: 1.55;
+  color: var(--text-body);
+  padding: var(--space-3) var(--space-2);
+  border-top: var(--border-hairline);
+  vertical-align: top;
+}
+
+table.table tbody tr:hover td {
+  background: var(--cream-100);
+}
+
+/* the constant columns, bracketed by hairlines on the raised paper surface */
+table.table th.spine,
+table.table td.spine {
+  background: var(--surface-card);
+  border-left: var(--border-hairline);
+  border-right: var(--border-hairline);
+}
+
+table.table th.spine {
+  color: var(--copper-700);
+}
+
+/* The column carrying the statement: serif at full ink, marked by a copper
+   rule. Deliberately NOT .claim — that class is the system's italic-copper
+   emphasis span and would set this whole column in italic. */
+table.table th.stmt {
+  color: var(--copper-700);
+  border-bottom: 2px solid var(--copper-600);
+}
+
+table.table td.stmt {
+  color: var(--text-display);
+  min-width: 22ch;
+}
+
+/* a supporting cell: still a sentence, so still serif, just quieter */
+table.table td.note {
+  color: var(--text-muted);
+  min-width: 20ch;
+}
+
+table.table .rowhead {
+  display: block;
+  font-family: var(--font-serif);
+  color: var(--text-display);
+  min-width: 16ch;
+}
+
+/* --- Instrument layout: a scrolling column beside a sticky result rail ---
+   Five pages each rolled their own (.sc-layout/.ra-layout at 330px,
+   .ad-wrap at 320px, .assess-grid as a 1.35fr/0.9fr grid). One layout, one
+   width token, one collapse breakpoint. */
+
+.instrument-layout {
+  --rail-width: 330px;
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+
+.instrument-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.instrument-rail {
+  width: var(--rail-width);
+  flex-shrink: 0;
+  position: sticky;
+  top: 84px;
+}
+
+/* --- Score card: the headline result. Ink is the page's second and last
+       background; on it, text uses the inverse tones. ---------------------- */
+
+.score-card {
+  background: var(--surface-inverse);
+  border-radius: var(--radius-none);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.score-value {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-display-1);
+  line-height: 1;
+  letter-spacing: var(--track-display);
+  color: var(--cream-200);
+}
+
+.score-denom {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted-on-inverse);
+}
+
+.score-verdict {
+  font-family: var(--font-mono);
+  font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose);
+  color: var(--cream-200);
+}
+
+.score-card .eyebrow {
+  color: var(--accent-on-inverse);
+}
+
+/* --- Scored row: an id, a statement, a gloss, and a control -------------- */
+
+.scored-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-top: var(--border-hairline);
+}
+
+.scored-row:first-of-type {
+  border-top: none;
+}
+
+.scored-main {
+  flex: 1 1 24ch;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scored-id {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: var(--track-mono);
+  color: var(--copper-600);
+}
+
+.scored-stmt {
+  font-family: var(--font-mono);
+  font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose);
+  color: var(--text-display);
+}
+
+.scored-note {
+  font-family: var(--font-mono);
+  font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose);
+  color: var(--text-muted);
+}
+
+.scored-note b {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* --- Rating scale: the older assessment family's inline control ----------
+   Two arities off one primitive: a 3-state RAG and a 0-4 numeric. RAG names
+   a severity, so it carries the risk scale and its -text label tones; the
+   numeric scale names a maturity level, so it is copper — maturity is not
+   severity and must never be rendered in the risk colours. */
+
+.scale {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.scale-btn {
+  min-width: 34px;
+  height: var(--control-height-sm);
+  padding: 0 var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-card);
+  border: var(--border-default);
+  border-radius: var(--radius-none);
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--ink-600);
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard);
+}
+
+.scale-btn:hover {
+  border-color: var(--copper-600);
+}
+
+/* numeric maturity scale — copper, like the meter and the ballot mark */
+.scale-btn.on {
+  background: var(--copper-600);
+  border-color: var(--copper-600);
+  color: var(--cream-100);
+}
+
+/* RAG severity scale */
+.scale-btn.on-g {
+  background: var(--risk-low-fill);
+  border-color: var(--risk-low);
+  color: var(--risk-low-text);
+}
+
+.scale-btn.on-y {
+  background: var(--risk-moderate-fill);
+  border-color: var(--risk-moderate);
+  color: var(--risk-moderate-text);
+}
+
+.scale-btn.on-r {
+  background: var(--risk-high-fill);
+  border-color: var(--risk-high);
+  color: var(--risk-high-text);
+}
+
+/* --- Heat grid ----------------------------------------------------------
+   Colour here is data: a domain's score is a severity reading, so it uses
+   the risk scale and nothing else. Unscored is sunken cream, not a tint. */
+
+.heat-grid {
+  --heat-cols: 6;
+  display: grid;
+  grid-template-columns: repeat(var(--heat-cols), minmax(0, 1fr));
+  gap: 6px;
+  margin: var(--space-3) 0 4px;
+}
+
+.heat-cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-border, 1px solid var(--rule-border));
+  border-radius: var(--radius-none);
+  background: var(--surface-sunken);
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  color: var(--ink-600);
+  transition: background-color var(--dur-fast) var(--ease-standard);
+}
+
+.heat-cell[data-band="low"] {
+  background: var(--risk-low-fill);
+  color: var(--risk-low-text);
+}
+.heat-cell[data-band="moderate"] {
+  background: var(--risk-moderate-fill);
+  color: var(--risk-moderate-text);
+}
+.heat-cell[data-band="high"] {
+  background: var(--risk-high-fill);
+  color: var(--risk-high-text);
+}
+.heat-cell[data-band="severe"] {
+  background: var(--risk-severe-fill);
+  color: var(--risk-high-text);
+}
+
+.heat-caption {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+/* --- Segmented proportional bar ----------------------------------------- */
+
+.dbar {
+  height: 8px;
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--radius-none);
+  background: var(--surface-sunken);
+  margin-top: 5px;
+}
+
+.dbar > span {
+  height: 100%;
+  transition: width var(--dur-base) var(--ease-standard);
+}
+
+.dbar > span.seg-g {
+  background: var(--risk-low);
+}
+.dbar > span.seg-y {
+  background: var(--risk-moderate);
+}
+.dbar > span.seg-r {
+  background: var(--risk-high);
+}
+
+/* ==========================================================================
+   11. Footer — the one inverse surface. Sits outside the numbered rail.
+   On ink, copper changes value: text uses --accent-on-inverse (5.5:1) and
+   --text-muted-on-inverse (7.4:1). Copper-600 on ink is rules only.
+   ========================================================================== */
+
+.sitefoot {
+  background: var(--surface-inverse);
+  padding: var(--space-6) 7.07%;
+  max-width: var(--field-max);
+  margin: 0 auto;
+}
+
+.sitefoot-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.sitefoot .eyebrow {
+  color: var(--text-muted-on-inverse);
+}
+
+.foot-name {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream-200);
+}
+
+.foot-link {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--accent-on-inverse);
+  text-decoration: none;
+}
+
+.foot-link:hover {
+  color: var(--cream-200);
+  text-decoration: underline;
+}
+
+.foot-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-sm);
+  letter-spacing: 1px;
+  color: var(--text-muted-on-inverse);
+}
+
+/* ==========================================================================
+   12. Responsive
+   Mobile and tablet were not designed; the breakpoints below are the
+   implementer's. Three rules drive them:
+     - the banner stays literally true only while its own type floors hold
+       (18px mono credentials / 14px floor => scale >= 0.778 => 1232px);
+       below that the hero becomes a flow block at real type sizes;
+     - multi-column grids collapse to one column;
+     - the rail keeps its double copper rule everywhere, and drops the
+       numerals once the gutter would crowd the text column.
+   ========================================================================== */
+
+/* ---- < 1232px : the hero stops being a scaled artifact ------------------ */
+@media (max-width: 1231.98px) {
+  .hero {
+    aspect-ratio: auto;
+    container-type: normal;
+  }
+
+  .hero-canvas {
+    position: relative;
+    inset: auto;
+    padding: var(--space-6) 4.92% var(--space-6) 7.07%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: var(--grid-pattern);
+  }
+
+  .hero-kicker,
+  .hero-h1,
+  .hero-rule,
+  .hero-lede,
+  .hero-practice,
+  .hero-creds,
+  .hero-domain {
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+  }
+
+  .hero-lede {
+    font-size: var(--size-prose);
+    line-height: var(--lh-prose);
+    max-width: var(--measure-prose);
+  }
+
+  .hero-kicker {
+    font-size: var(--size-prose);
+    line-height: var(--lh-prose);
+    letter-spacing: 0;
+    max-width: var(--measure-prose);
+  }
+
+  .hero-h1 {
+    font-size: clamp(30px, 4.6vw, 46px);
+    line-height: 1.14;
+    letter-spacing: var(--track-display);
+    max-width: 16ch;
+  }
+
+  .hero-rule {
+    width: 386px;
+    max-width: 100%;
+    margin: var(--space-1) 0 var(--space-2);
+  }
+
+  .hero-practice {
+    font-size: var(--size-display-3);
+    line-height: 1.24;
+    letter-spacing: var(--track-mono-lg);
+  }
+
+  .hero-creds li {
+    font-size: var(--size-mono-md);
+    line-height: 1.5;
+    letter-spacing: var(--track-mono);
+    white-space: normal;
+  }
+
+  .hero-domain {
+    text-align: left;
+    font-size: var(--size-mono-sm);
+    letter-spacing: var(--track-mono);
+    margin-top: var(--space-2);
+  }
+
+  .hero-divider,
+  .hero-matrix {
+    display: none;
+  }
+}
+
+/* ---- <= 1024px : split layouts collapse -------------------------------- */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sitefoot {
+    padding: var(--space-5) 7.07%;
+  }
+
+  /* the instrument rail stops being a rail and leads the column */
+  .instrument-layout {
+    flex-direction: column;
+  }
+
+  .instrument-rail {
+    position: static;
+    width: 100%;
+    order: -1;
+  }
+}
+
+/* ---- <= 900px : one column, nav collapses ------------------------------ */
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3,
+  .register {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* The statement/attestation split holds to 900 rather than 1024, so the
+     portrait stays beside the copy at laptop widths instead of dropping a
+     screen and a half below it. */
+  .grid-split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+  }
+
+  .grid-split > .split-rule {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .band {
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+  }
+
+  /* Below 900 the rail stops shrinking with the viewport and freezes at the
+     proportions it had there. Percentages would squeeze the numeral column
+     under the width a 3-digit numeral needs, clipping its first digit, and
+     collapse the 6px gap that makes the double rule read as a double rule. */
+  .rail-nums {
+    width: 26px;
+  }
+
+  .rail-rule--a {
+    left: 34px;
+  }
+
+  .rail-rule--b {
+    left: 40px;
+  }
+
+  .band,
+  .hero-canvas,
+  .nav-menu,
+  .sitenav-inner {
+    padding-left: 64px;
+  }
+}
+
+/* ---- < 600px : fixed rail, numerals dropped ---------------------------- */
+@media (max-width: 599.98px) {
+  .rail-nums {
+    display: none;
+  }
+
+  .rail-rule--a {
+    left: 12px;
+  }
+
+  .rail-rule--b {
+    left: 18px;
+  }
+
+  .band,
+  .hero-canvas,
+  .nav-menu,
+  .sitenav-inner {
+    padding-left: 32px;
+    padding-right: 20px;
+  }
+
+  .sitefoot {
+    padding: var(--space-5) 32px;
+  }
+
+  .band {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .display-2 {
+    font-size: var(--size-display-3);
+  }
+
+  .display-3 {
+    font-size: var(--size-display-4);
+  }
+
+  .figure {
+    font-size: var(--size-display-3);
+  }
+
+  .card-head,
+  .card-body {
+    padding: var(--space-3);
+  }
+
+  .row .btn {
+    width: 100%;
+  }
+
+  /* A button label is a sentence on some pages ("Talk through your regulated
+     workflow"), and nowrap makes it wider than a phone. Let it wrap and grow
+     instead of pushing the document sideways. */
+  .btn {
+    white-space: normal;
+    height: auto;
+    min-height: var(--control-height);
+    padding-top: var(--space-1);
+    padding-bottom: var(--space-1);
+    text-align: center;
+  }
+
+  .btn--ghost {
+    min-height: 0;
+    text-align: left;
+  }
+
+  .wordmark {
+    gap: var(--space-1);
+  }
+
+  .wordmark-practice {
+    font-size: var(--size-mono-xs);
+    letter-spacing: 1px;
+  }
+
+  .riskmatrix {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* wide tables, matrices and code never scroll the page body */
+.scroll-x {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Available to assistive tech, absent from the page. Used where production
+   already carries the words on screen and repeating them would be a copy
+   change rather than a styling one. */
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media print {
+  .sitenav,
+  .rail,
+  .nav-toggle {
+    display: none;
+  }
+}

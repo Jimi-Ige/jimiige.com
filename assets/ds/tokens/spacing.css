@@ -1,0 +1,21 @@
+:root {
+  /* Base 6. The banner's blueprint grid is 132 × 66 and its numbered
+     gutter steps every 36 — the scale is that grid, halved and halved. */
+  --space-1: 6px;
+  --space-2: 12px;
+  --space-3: 18px;
+  --space-4: 24px;
+  --space-5: 36px;
+  --space-6: 48px; /* = matrix cell height */
+  --space-7: 66px; /* = grid row */
+  --space-8: 96px; /* = matrix cell width */
+  --space-9: 132px; /* = grid column */
+
+  /* Document geometry lifted from the banner */
+  --margin-gutter: 58px; /* pleading rule x-position */
+  --margin-content: 112px; /* text starts here, clear of the rule */
+  --measure-prose: 62ch; /* max line length for serif prose */
+  --control-height: 40px;
+  --control-height-sm: 30px;
+  --field-max: 1584px; /* canonical artifact width */
+}

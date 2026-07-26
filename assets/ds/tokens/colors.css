@@ -1,0 +1,68 @@
+:root {
+  /* ── Ink (navy-black, cool) ───────────────────────────── */
+  --ink-900: #14202E; /* display headlines */
+  --ink-800: #1B2430; /* rules, hairlines, grid strokes */
+  --ink-700: #263140;
+  --ink-600: #3B4552; /* mono body + credential text */
+  --ink-500: #5A6472; /* muted labels, gutter numerals */
+  --ink-400: #7C8593;
+  --ink-300: #A7AEB8;
+
+  /* ── Cream field (warm paper) ─────────────────────────── */
+  --cream-100: #FBFAF8; /* raised surface / input fill */
+  --cream-200: #F2EFEA; /* primary field — the banner ground */
+  --cream-300: #DFDCD6; /* desk / page behind the artifact */
+  --cream-400: #CFCBC3; /* pressed + disabled fill */
+
+  /* ── Copper (the single accent) ───────────────────────── */
+  --copper-700: #7A4A2B; /* deep — credential headings */
+  --copper-600: #8B5E3C; /* base accent, rules, italic emphasis */
+  --copper-500: #A9743F; /* hover / lift */
+  --brass-500: #B08D57; /* secondary metal, sparing */
+  --slate-500: #5E6B7A; /* cool alternate accent */
+  --copper-400: #C08A52; /* the ONLY copper legible as text on ink (5.5:1) */
+
+  /* ── Risk scale (matrix + status, never decorative) ───── */
+  --risk-low: #4E7A5B;
+  --risk-moderate: #B08A3E;
+  --risk-high: #A85A44;
+  /* Label text on the tinted fills below. The fill hues themselves measure
+     3.4–3.9:1 as text and fail AA; these clear 5.6:1. Borders, matrix cells and
+     meter marks keep the base hues. */
+  --risk-low-text: #2F5A3D;
+  --risk-moderate-text: #6B4E14;
+  --risk-high-text: #7E3A28;
+  --risk-low-fill: rgba(78, 122, 91, 0.15);
+  --risk-moderate-fill: rgba(176, 138, 62, 0.22);
+  --risk-high-fill: rgba(168, 90, 68, 0.26);
+  --risk-severe-fill: rgba(168, 90, 68, 0.34);
+
+  /* ── Semantic aliases (use these in components) ───────── */
+  --surface-page: var(--cream-300);
+  --surface-field: var(--cream-200);
+  --surface-card: var(--cream-100);
+  --surface-sunken: var(--cream-400);
+  --surface-inverse: var(--ink-900);
+
+  --text-display: var(--ink-900);
+  --text-body: var(--ink-600);
+  --text-muted: var(--ink-500);
+  --text-accent: var(--copper-600);
+  --text-credential: var(--copper-700);
+  --text-on-inverse: var(--cream-200);
+  /* On ink, copper-500 measures only 4.12:1 and ink-400 only 4.42:1 — both fail
+     AA below 18px. Use these two on any inverse surface instead. */
+  --accent-on-inverse: var(--copper-400);
+  --text-muted-on-inverse: var(--ink-300);
+
+  --accent: var(--copper-600);
+  --accent-hover: var(--copper-500);
+  --accent-quiet: rgba(139, 94, 60, 0.5);
+
+  --rule-hairline: rgba(27, 36, 48, 0.12);
+  --rule-border: rgba(27, 36, 48, 0.16);
+  --rule-strong: rgba(27, 36, 48, 0.22);
+  --rule-accent: rgba(139, 94, 60, 0.6);
+
+  --focus-ring: var(--copper-600);
+}
