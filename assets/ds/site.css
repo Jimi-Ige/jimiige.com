@@ -2128,6 +2128,63 @@ body[data-guidance="off"] .gloss {
   margin-top: var(--space-3);
 }
 
+/* The clipboard: the office family's fifth piece — flags, folders,
+   corkboard, cabinet, and now the assessment's deliverables as a checked
+   sheet clipped to a board. The board is the drawer-front manila, the
+   sheet is house card stock, and the clip is a copper bar straddling the
+   sheet's top edge. Checks are drawn iconography, like the glyphs and the
+   corkboard pins. */
+.clipboard {
+  position: relative;
+  max-width: 46rem;
+  background: #E6DDD0;
+  border: var(--border-hairline);
+  padding: var(--space-3);
+  padding-top: var(--space-4);
+}
+
+.clipboard::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-4) - 7px);
+  left: 50%;
+  width: 76px;
+  height: 14px;
+  margin-left: -38px;
+  background: var(--copper-700);
+}
+
+.clipboard-sheet {
+  background: var(--surface-card);
+  border: var(--border-default);
+  padding: var(--space-4);
+}
+
+.clipboard-sheet .eyebrow {
+  display: block;
+  padding-bottom: var(--space-2);
+}
+
+.check-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  padding: var(--space-3) 0;
+  border-top: var(--border-hairline);
+}
+
+.check-row:last-child {
+  padding-bottom: var(--space-1);
+}
+
+.checkglyph {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  margin-top: 3px;
+  color: var(--copper-600);
+}
+
 /* The seal's DNA, redistributed: each free instrument carries a nine-cell
    conceptual snapshot — the matrix form at glyph scale. Colour is meaning,
    never decoration: risk hues appear only where the concept is risk (the
