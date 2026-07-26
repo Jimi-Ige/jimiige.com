@@ -2128,6 +2128,16 @@ body[data-guidance="off"] .gloss {
   margin-top: var(--space-3);
 }
 
+/* The engagement's two halves side by side on the house split: what you
+   leave with, and how you get there. The 1.62:1 ratio is not decorative
+   here — measured against 1:1 it gives the clipboard back the width its
+   checklist needs, and closes the two columns' ragged bottoms from 144px
+   to 72px. The board fills its column; below 900 the split collapses and
+   the pair stacks artifact-first, both inherited from .grid-split. */
+.engage-pair > .clipboard {
+  max-width: none;
+}
+
 /* The clipboard: the office family's fifth piece — flags, folders,
    corkboard, cabinet, and now the assessment's deliverables as a checked
    sheet clipped to a board. The board is the drawer-front manila, the
