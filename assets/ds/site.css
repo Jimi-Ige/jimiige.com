@@ -1868,6 +1868,33 @@ body[data-guidance="off"] .gloss {
   margin-top: var(--space-3);
 }
 
+/* The note skin: a card set as an aside stuck onto the page — the same brass
+   paper and adhesive strip as the flags. For cross-sell notes, not content. */
+.card--note {
+  position: relative;
+  background: rgba(176, 141, 87, 0.09);
+  border-color: transparent;
+  transition: background-color var(--dur-instant) var(--ease-standard);
+}
+
+.card--note::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: rgba(176, 141, 87, 0.16);
+  transition: background-color var(--dur-instant) var(--ease-standard);
+}
+
+.card--note:hover {
+  background: rgba(176, 141, 87, 0.14);
+  border-color: transparent;
+}
+
+.card--note:hover::before {
+  background: rgba(176, 141, 87, 0.26);
+}
+
 /* the matrix seal — the corner motif, once per document, right-aligned */
 .seal {
   display: flex;
