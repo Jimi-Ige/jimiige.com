@@ -1964,30 +1964,66 @@ body[data-guidance="off"] .gloss {
   }
 }
 
-/* The drawer front beneath the folders: one manila strip holding the free
-   instruments pulled out so the folders could sit even. Deeper manila than
-   the folders — the drawer is what they sit in. */
-.folder-drawer {
+/* The instrument cabinet: one piece of office furniture holding every free
+   instrument. The chest is the drawer-front manila; each instrument is a
+   labelled drawer — glyph, name plate, copper pull — and the playbook sits
+   on top as the display shelf. */
+.cabinet {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-2) var(--space-4);
+  flex-direction: column;
+  gap: var(--space-3);
   background: #E6DDD0;
+  border: var(--border-hairline);
+  padding: var(--space-4);
+}
+
+.cabinet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.cdrawer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--surface-card);
+  border: var(--border-default);
   padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  transition: border-color var(--dur-instant) var(--ease-standard);
 }
 
-.folder-drawer .eyebrow {
-  color: var(--copper-700);
+.cdrawer:hover {
+  border-color: var(--accent-quiet);
 }
 
-.folder-drawer .btn--ghost {
-  color: var(--copper-700);
-  white-space: normal;
+.cdrawer-name {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: 1px;
+  color: var(--text-body);
 }
 
-.folder-drawer .btn--ghost:hover {
-  color: var(--copper-600);
-  box-shadow: inset 0 -1px 0 var(--copper-600);
+/* the pull, at the drawer's right edge */
+.cdrawer::after {
+  content: "";
+  flex: none;
+  margin-left: auto;
+  width: 26px;
+  height: 5px;
+  background: rgba(176, 141, 87, 0.55);
+  transition: background-color var(--dur-instant) var(--ease-standard);
+}
+
+.cdrawer:hover::after {
+  background: var(--copper-600);
+}
+
+@media (max-width: 900px) {
+  .cabinet-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* The note skin: a card set as an aside stuck onto the page — the same brass
@@ -2077,12 +2113,6 @@ body[data-guidance="off"] .gloss {
    conceptual snapshot — the matrix form at glyph scale. Colour is meaning,
    never decoration: risk hues appear only where the concept is risk (the
    gap map, the caught injection); growth and value read in copper. */
-.drawer-tool {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
 .toolglyph {
   width: 20px;
   height: 20px;
