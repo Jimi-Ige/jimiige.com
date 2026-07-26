@@ -2017,7 +2017,6 @@ body[data-guidance="off"] .gloss {
   background: rgba(176, 141, 87, 0.26);
 }
 
-/* the matrix seal — the corner motif, once per document, right-aligned */
 /* Track record as a corkboard: pinned notes on a cork field. Cork is the
    deepest cut of the brass paper family (0.32 over the field, flattened);
    the notes are house card stock, each pinned with a copper head and
@@ -2074,28 +2073,29 @@ body[data-guidance="off"] .gloss {
   margin-top: var(--space-3);
 }
 
-.seal {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: var(--space-4);
+/* The seal's DNA, redistributed: each free instrument carries a nine-cell
+   conceptual snapshot — the matrix form at glyph scale. Colour is meaning,
+   never decoration: risk hues appear only where the concept is risk (the
+   gap map, the caught injection); growth and value read in copper. */
+.drawer-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
-/* The closing seal, drained of data: the matrix form in the accent ink
-   only. The risk hues are reserved for severity data — a decorative
-   heatmap in those colours reads as a chart and invites decoding. In
-   copper it reads as what it is: a printer's mark. Band per cell follows
-   the real band() anti-diagonal so the form stays authentic. */
-.seal-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 44px);
-  grid-auto-rows: 44px;
-  gap: 4px;
+.toolglyph {
+  width: 20px;
+  height: 20px;
+  flex: none;
 }
 
-.sg--0 { background: rgba(139, 94, 60, 0.08); }
-.sg--1 { background: rgba(139, 94, 60, 0.18); }
-.sg--2 { background: rgba(139, 94, 60, 0.32); }
-.sg--3 { background: rgba(139, 94, 60, 0.50); }
+.tg-ghost { fill: rgba(176, 141, 87, 0.28); }
+.tg-c5 { fill: var(--copper-500); }
+.tg-c6 { fill: var(--copper-600); }
+.tg-c7 { fill: var(--copper-700); }
+.tg-low { fill: var(--risk-low-text); }
+.tg-mod { fill: var(--risk-moderate-text); }
+.tg-high { fill: var(--risk-high-text); }
 
 /* ==========================================================================
    10b. Instrument patterns
