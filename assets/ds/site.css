@@ -1875,10 +1875,22 @@ body[data-guidance="off"] .gloss {
    flags — a document that gets flagged also gets filed — but a different
    structure: a flag is stuck on, a folder contains. The tab carries the file
    number and merges into the body, so the two read as one cut of card stock. */
+/* The folder is one cut of card stock: a tab and the body it supports.
+   The manila here is OPAQUE, flattened from the same brass tint the flags
+   carry (0.12 and 0.18 over the field). It has to be: the tab overlaps the
+   body by a pixel so there is no gap to fall through, and two translucent
+   layers compose where they meet — drawing a visible darker line exactly
+   where the object is meant to read as continuous. */
 .card--folder {
+  /* The one curve in the system. Square corners are the house rule and the
+     only standing exception is .tag at 2px; a folder tab reads as a folder
+     tab because of this radius, so it earns a second. Top corners only. */
+  --radius-tab: 4px;
+  --manila: #EAE3D8;
+  --tab-h: 38px;
   position: relative;
-  margin-top: 38px;
-  background: rgba(176, 141, 87, 0.12);
+  margin-top: var(--tab-h);
+  background: var(--manila);
   border-color: transparent;
   transition: background-color var(--dur-instant) var(--ease-standard);
 }
@@ -1887,23 +1899,31 @@ body[data-guidance="off"] .gloss {
   border-top-color: rgba(27, 36, 48, 0.1);
 }
 
+/* The tab: eased at the top like real stock, square where it meets the body,
+   and running one pixel into it so the two share a silhouette. Tabs step
+   right across the set the way folders sit in a drawer — --tab-x per folder.
+   The min() caps the step by what the tab itself needs (its 84px min-width
+   plus a gutter), not by a fraction of the card, so the stagger survives
+   every width where it physically fits and only gives way when it cannot. */
 .card--folder .card-n {
   position: absolute;
-  top: -38px;
-  left: 0;
-  height: 38px;
+  top: calc(var(--tab-h) * -1);
+  left: min(var(--tab-x, 0px), calc(100% - 84px - var(--space-4)));
+  height: calc(var(--tab-h) + 1px);
   min-width: 84px;
   padding: 0 var(--space-3);
   display: inline-flex;
   align-items: center;
-  background: rgba(176, 141, 87, 0.12);
+  background: var(--manila);
+  border-radius: var(--radius-tab) var(--radius-tab) 0 0;
   font-size: var(--size-display-4);
   transition: background-color var(--dur-instant) var(--ease-standard);
 }
 
-.card--folder:hover,
-.card--folder:hover .card-n {
-  background: rgba(176, 141, 87, 0.18);
+/* one hover, one object: repainting the shared --manila carries the tab and
+   the body together, so the whole folder responds as a single shape */
+.card--folder:hover {
+  --manila: #E6DDD0;
 }
 
 /* copper-600 measures 3.99:1 on the manila surface and fails AA; the deeper
