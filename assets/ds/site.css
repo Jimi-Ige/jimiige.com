@@ -2,13 +2,25 @@
    jimiige.com — site layer
    The design system's React reference components (design_system/components/**)
    ported to plain HTML + CSS classes. No framework, no bundler, no Babel.
-   Tokens are shipped unchanged in tokens/; nothing here redefines a token.
+   Tokens are shipped unchanged in tokens/; the one exception is the type
+   lift just below, which redefines the mono sizes at this layer rather
+   than editing the shipped token sheet.
    ========================================================================== */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Client direction 2026-07-26: at the system's 14px UI default the mono
+   voice reads small as running text. The reading voice gets its own step,
+   and the UI mono scale lifts one notch behind it. Labels and gutter
+   furniture (--size-mono-xs) stay put. */
+:root {
+  --size-mono-read: 16px;
+  --size-mono: 15px;
+  --size-mono-sm: 13px;
 }
 
 html {
@@ -688,7 +700,7 @@ img {
    playbook's long-read body (which has its own rules). */
 .prose {
   font-family: var(--font-mono);
-  font-size: var(--size-mono);
+  font-size: var(--size-mono-read);
   letter-spacing: 1px;
   line-height: 1.6;
   color: var(--text-body);
@@ -698,7 +710,7 @@ img {
 
 .prose-sm {
   font-family: var(--font-mono);
-  font-size: var(--size-mono);
+  font-size: var(--size-mono-read);
   letter-spacing: 1px;
   line-height: 1.6;
   color: var(--text-body);
