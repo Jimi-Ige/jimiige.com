@@ -2137,7 +2137,9 @@ body[data-guidance="off"] .gloss {
 .clipboard {
   position: relative;
   max-width: 46rem;
-  background: #E6DDD0;
+  /* one step deeper than the cabinet chest (#E6DDD0), one shy of cork
+     (#DDD0BB): the board earns its own seat on the brass ramp */
+  background: #E2D6C6;
   border: var(--border-hairline);
   padding: var(--space-3);
   padding-top: var(--space-4);
@@ -2152,6 +2154,19 @@ body[data-guidance="off"] .gloss {
   height: 14px;
   margin-left: -38px;
   background: var(--copper-700);
+}
+
+/* the clip's hinge: a narrower second bar above the body, so the hardware
+   reads as a clip and not a label */
+.clipboard::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-4) - 13px);
+  left: 50%;
+  width: 34px;
+  height: 8px;
+  margin-left: -17px;
+  background: var(--copper-600);
 }
 
 .clipboard-sheet {
