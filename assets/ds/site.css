@@ -13,14 +13,21 @@
   box-sizing: border-box;
 }
 
-/* Client direction 2026-07-26: at the system's 14px UI default the mono
-   voice reads small as running text. The reading voice gets its own step,
-   and the UI mono scale lifts one notch behind it. Labels and gutter
-   furniture (--size-mono-xs) stay put. */
+/* Client direction 2026-07-26: readability across the board. At the
+   system's 14px UI default the mono voice read small as running text; at
+   16px it crowded the headings. The whole scale moves together: the
+   reading voice settles at 15px (mono's large x-height reads like ~17px
+   serif), the UI mono lifts with it, and the display scale steps up so
+   the hierarchy holds over the bigger body. The banner artifact sizes in
+   canvas units and display-1 are untouched; labels and gutter furniture
+   (--size-mono-xs) stay put. */
 :root {
-  --size-mono-read: 16px;
+  --size-mono-read: 15px;
   --size-mono: 15px;
   --size-mono-sm: 13px;
+  --size-display-2: 40px;
+  --size-display-3: 30px;
+  --size-display-4: 24px;
 }
 
 html {
