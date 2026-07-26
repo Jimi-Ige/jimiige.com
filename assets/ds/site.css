@@ -1740,6 +1740,9 @@ textarea.input {
 .portrait img {
   display: block;
   width: 100%;
+  /* the width/height attributes reserve layout space against CLS; without
+     this the height attribute wins and the portrait stretches */
+  height: auto;
   border-radius: var(--radius-none);
 }
 
