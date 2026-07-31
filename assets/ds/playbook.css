@@ -1,0 +1,182 @@
+/* Playbook layout — shared presentation for the field-playbook pages.
+   Extracted from the inline system of governing-ai-in-regulated-workflows.html
+   (which keeps its own inline copy and is intentionally untouched). New
+   playbooks link this file plus playbook.js and inherit the whole reading
+   system: panel track, magazine reader, print. */
+
+.pb-inner { max-width: 768px; margin: 0 auto; padding: 0 var(--space-4); }
+.pb-panel { position: relative; }
+
+/* Cover -----------------------------------------------------------------
+   Two covers. The photographic cover (pb-cover-img + scrims) belongs to the
+   regulated playbook. The industry playbooks use the flat ink cover: one
+   surface, no gradients, cream type. */
+.pb-cover { position: relative; min-height: min(86vh, 620px); display: flex; overflow: hidden; }
+.pb-cover--ink { background: var(--ink-900); }
+.pb-cover-img { position: absolute; inset: 0;
+  background: var(--ink-900) url('../playbook-cover.jpg') center/cover no-repeat; }
+.pb-cover-navy { position: absolute; inset: 0; background: rgba(20, 32, 46, 0.62); }
+.pb-cover-dark { position: absolute; inset: 0; background: rgba(20, 32, 46, 0.16); }
+.pb-cover-content { position: relative; z-index: 2; display: flex; flex-direction: column;
+  padding: var(--space-6) var(--space-5) var(--space-5); width: 100%; color: var(--cream-200); }
+.pb-cover .eyebrow { font-family: var(--font-mono); font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--cream-200); }
+.pb-cover h1 { font-family: var(--font-serif); font-weight: var(--weight-regular);
+  font-size: clamp(36px, 6vw, 56px); line-height: 1.04; letter-spacing: var(--track-display);
+  margin: var(--space-3) 0 0; color: var(--cream-100); max-width: 16ch; }
+.pb-cover .pb-cover-sub { font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(17px, 2.4vw, 21px); line-height: 1.42; color: var(--cream-200);
+  margin-top: var(--space-3); max-width: 34ch; }
+.pb-cover .pb-cover-foot { margin-top: auto; padding-top: var(--space-5); }
+.pb-cover .ed { font-family: var(--font-mono); font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--cream-200);
+  border-top: 1px solid rgba(242, 239, 234, 0.4); padding-top: var(--space-2); display: inline-block; }
+.pb-cover .by { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 1px;
+  color: var(--cream-200); margin-top: var(--space-1); }
+/* the flat cover carries one copper filing tab, top left: the cabinet motif */
+.pb-cover--ink .pb-cover-tab { position: absolute; top: 0; left: var(--space-5); width: 96px; height: 10px;
+  background: var(--copper-600); }
+
+/* Opening + outcome band ------------------------------------------------- */
+.pb-open { padding: var(--space-6) 0 var(--space-4); }
+.pb-lede { font-family: var(--font-mono); font-size: var(--size-prose); line-height: var(--lh-prose);
+  color: var(--text-body); margin: 0 0 var(--space-4); }
+.pb-statband { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-5) 0 var(--space-1); }
+.pb-stat { flex: 1; min-width: 180px; background: var(--surface-card); border: var(--border-default);
+  border-radius: var(--radius-none); padding: var(--space-3); }
+.pb-stat .num { font-family: var(--font-serif); font-size: var(--size-display-3); line-height: 1;
+  letter-spacing: var(--track-display); color: var(--text-display); margin-bottom: var(--space-1); }
+/* word variant: the industry playbooks lead with outcomes, not statistics */
+.pb-stat .word { font-family: var(--font-serif); font-size: var(--size-display-4); line-height: 1.1;
+  letter-spacing: var(--track-display); color: var(--text-display); margin-bottom: var(--space-1); }
+.pb-stat .txt { font-family: var(--font-mono); font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose); color: var(--text-body); }
+.pb-stat .src { font-family: var(--font-mono); font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--text-muted); margin-top: var(--space-1); }
+
+/* Contents --------------------------------------------------------------- */
+.pb-contents { padding: var(--space-6) 0 var(--space-4); }
+.pb-contents h2 { font-family: var(--font-serif); font-weight: var(--weight-regular);
+  font-size: clamp(28px, 4vw, 38px); line-height: var(--lh-display); letter-spacing: var(--track-display);
+  color: var(--text-display); margin: var(--space-1) 0 var(--space-4); }
+.pb-toc-list { list-style: none; margin: 0; padding: 0; }
+.pb-toc-list a { display: flex; gap: var(--space-3); align-items: baseline; padding: var(--space-2) 0;
+  border-top: var(--border-hairline); text-decoration: none; color: var(--text-display);
+  font-family: var(--font-mono); font-size: var(--size-prose); line-height: 1.4; }
+.pb-toc-list a:hover { color: var(--copper-700); }
+.pb-toc-list .pb-tnum { font-family: var(--font-mono); font-size: var(--size-mono-sm);
+  letter-spacing: var(--track-mono); color: var(--copper-600); min-width: 30px; }
+
+/* Chapters --------------------------------------------------------------- */
+.pb-ch { padding: var(--space-6) 0 var(--space-1); border-top: var(--border-hairline); scroll-margin-top: 84px; }
+.pb-ch .kicker { font-family: var(--font-mono); font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: var(--space-2); }
+.pb-chnum { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: 66px;
+  line-height: 0.78; color: var(--accent-quiet); float: left; margin: 4px var(--space-3) 0 0; }
+.pb-ch h2 { font-family: var(--font-serif); font-weight: var(--weight-regular);
+  font-size: clamp(26px, 3.4vw, 34px); line-height: 1.16; letter-spacing: var(--track-display);
+  margin: 0 0 var(--space-4); color: var(--text-display); }
+.pb-ch h3 { font-family: var(--font-mono); font-size: var(--size-mono-xs);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--copper-700);
+  margin: var(--space-4) 0 var(--space-2); clear: both; }
+.pb-ch p { font-family: var(--font-mono); font-size: var(--size-prose); line-height: var(--lh-prose);
+  color: var(--text-body); margin: 0 0 4px; }
+.pb-ch ul { margin: var(--space-1) 0 0; padding-left: 0; list-style: none; }
+.pb-ch ul li { font-family: var(--font-mono); font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose); color: var(--text-body); padding: var(--space-2) 0 var(--space-2) 26px;
+  position: relative; border-top: var(--border-hairline); }
+.pb-ch ul li:first-child { border-top: none; }
+/* square, not a bullet dot: nothing in this system is round */
+.pb-ch ul li:before { content: ""; position: absolute; left: 6px; top: 20px; width: 6px; height: 6px;
+  background: var(--copper-600); }
+
+/* the pull quote is the one italic-copper emphasis, on a copper rule */
+.pb-pull { border-left: 2px solid var(--copper-600); padding: 4px 0 4px var(--space-3);
+  margin: var(--space-4) 0 4px; font-family: var(--font-serif); font-style: italic;
+  font-size: var(--size-display-4); line-height: 1.4; color: var(--copper-700); }
+
+.pb-toollink { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--space-3); margin-top: var(--space-5); padding: var(--space-4); text-decoration: none;
+  color: inherit; background: var(--surface-card); border: var(--border-default);
+  border-radius: var(--radius-none); transition: border-color var(--dur-instant) var(--ease-standard); }
+.pb-toollink:hover { border-color: var(--copper-600); }
+.pb-toollink-body { flex: 1; min-width: 260px; }
+.pb-toollink .lbl { font-family: var(--font-serif); font-size: var(--size-display-4);
+  line-height: var(--lh-display); letter-spacing: var(--track-display); color: var(--text-display);
+  margin-bottom: var(--space-1); }
+.pb-toollink:hover .lbl { color: var(--copper-700); }
+.pb-toollink .blurb { font-family: var(--font-mono); font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose); color: var(--text-body); margin: 0; max-width: 560px; }
+.pb-toollink .eyebrow { display: block; color: var(--copper-700); margin-bottom: var(--space-1); }
+.pb-toollink .go { font-family: var(--font-mono); font-size: var(--size-mono); font-weight: var(--weight-medium);
+  letter-spacing: var(--track-mono); color: var(--cream-200); background: var(--ink-900);
+  border: 1px solid var(--ink-900); padding: 0 var(--space-4); height: var(--control-height);
+  display: inline-flex; align-items: center; white-space: nowrap; }
+
+.pb-close { padding: var(--space-6) 0 var(--space-1); border-top: 1px solid var(--rule-strong); scroll-margin-top: 84px; }
+.pb-sources { margin: var(--space-5) 0 0; padding: var(--space-4); background: var(--surface-card);
+  border: var(--border-default); font-family: var(--font-mono); font-size: var(--size-prose-sm);
+  line-height: var(--lh-prose); color: var(--text-body); }
+
+/* Reader mode (progressive enhancement) ---------------------------------- */
+#pbChrome, #pbEnter { display: none; }
+body.pb-reader { overflow: hidden; }
+body.pb-reader .sitenav, body.pb-reader .sitefoot, body.pb-reader .rail { display: none !important; }
+body.pb-reader #pbTrack { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: row;
+  overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  background: var(--surface-field); -webkit-overflow-scrolling: touch; }
+body.pb-reader .pb-panel { flex: 0 0 100vw; width: 100vw; height: 100vh; overflow-y: auto;
+  scroll-snap-align: start; -webkit-overflow-scrolling: touch; }
+body.pb-reader .pb-inner { padding-bottom: 104px; }
+body.pb-reader .pb-ch, body.pb-reader .pb-close { border-top: none; }
+body.pb-reader .pb-cover { min-height: 100vh; height: 100vh; }
+body.pb-reader #pbChrome { display: flex; }
+body.js:not(.pb-reader) #pbEnter { display: inline-flex; }
+
+#pbChrome { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; align-items: center;
+  gap: var(--space-2); padding: var(--space-2) var(--space-3); background: var(--surface-field);
+  border-top: var(--border-default); }
+#pbChrome button { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 1px;
+  cursor: pointer; border: var(--border-default); background: var(--surface-card);
+  color: var(--ink-800); border-radius: var(--radius-none); }
+#pbChrome button:hover { border-color: var(--copper-600); color: var(--copper-700); }
+.pb-navbtn { width: var(--control-height); height: var(--control-height); font-size: 20px; line-height: 1;
+  display: flex; align-items: center; justify-content: center; }
+.pb-progress { flex: 1; height: 4px; background: var(--surface-sunken); overflow: hidden; min-width: 50px; }
+.pb-progress > i { display: block; height: 100%; width: 8%; background: var(--copper-600);
+  transition: width var(--dur-base) var(--ease-standard); }
+#pbInd { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 1px;
+  color: var(--text-muted); white-space: nowrap; min-width: 118px; text-align: right; }
+.pb-txtbtn { padding: 0 var(--space-3); height: var(--control-height); white-space: nowrap; }
+.pb-home { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 1px;
+  color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+#pbEnter { position: fixed; right: 18px; bottom: 18px; z-index: 60; align-items: center; gap: var(--space-1);
+  padding: 0 var(--space-4); height: var(--control-height); cursor: pointer; border: 1px solid var(--ink-900);
+  border-radius: var(--radius-none); background: var(--ink-900); color: var(--cream-200);
+  font-family: var(--font-mono); font-size: var(--size-mono); font-weight: var(--weight-medium);
+  letter-spacing: var(--track-mono); }
+#pbEnter:hover { background: var(--ink-700); border-color: var(--ink-700); }
+
+@media (max-width: 680px) {
+  #pbInd { display: none; }
+  .pb-home { display: none; }
+  .pb-chnum { float: none; display: block; margin: 0 0 var(--space-1); }
+}
+
+/* Print (Download PDF) --------------------------------------------------- */
+@media print {
+  .sitenav, .sitefoot, .rail, #pbChrome, #pbEnter { display: none !important; }
+  body { background: #fff !important; }
+  body.pb-reader { overflow: visible !important; }
+  #pbTrack { position: static !important; display: block !important; overflow: visible !important; height: auto !important; }
+  .pb-panel { flex: none !important; width: auto !important; height: auto !important;
+    overflow: visible !important; page-break-before: always; break-before: page; }
+  .pb-panel:first-child { page-break-before: avoid; break-before: avoid; }
+  .pb-inner { padding-bottom: 12px !important; }
+  .pb-cover { min-height: 0 !important; height: 94vh !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pb-cover--ink, .pb-cover-img, .pb-cover-navy, .pb-cover-dark {
+    -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .pb-ch, .pb-close { border-top: none !important; }
+}

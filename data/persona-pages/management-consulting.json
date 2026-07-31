@@ -1,0 +1,265 @@
+{
+  "industry": "management-consulting",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Grow the firm without betting it on the hiring market.",
+      "outcome": "Your growth plan currently has one engine: hire senior people fast enough to keep up with the work you win. Governed AI adds a second engine. Assembly, drafting, retrieval, and synthesis move onto rails, senior attention returns to winning and standing behind work, and revenue can move faster than headcount without the firm's name paying for it.",
+      "triggers": [
+        "The growth plan assumes senior hires the market will not supply at a price the model affords.",
+        "Partners are at capacity while the pipeline is still growing, and the choice reads as decline work or dilute quality.",
+        "The firm's distinctive expertise is concentrated in a few heads, and succession is a hope rather than a plan.",
+        "Clients have started asking how the firm uses AI, and the current answer is individual improvisation."
+      ],
+      "workflows": [
+        { "name": "Proposal-to-Project", "line": "Win more of the right work without more partner evenings: qualification stays senior, assembly stops being senior work." },
+        { "name": "Knowledge-to-Delivery", "line": "The firm's best thinking compounds instead of retiring with its authors, so every engagement starts above zero." },
+        { "name": "Delivery-to-Executive Insight", "line": "Portfolio truth you can run the firm on: status, capacity, and risk traceable to sources, not to Friday memory." }
+      ],
+      "aiChanges": [
+        "Research, first drafts, and retrieval come off senior desks, so partner hours concentrate on promise, price, and judgment.",
+        "Every pursuit and engagement starts from the firm's best prior work, with provenance, instead of from a blank page.",
+        "The operating picture of the firm assembles itself from live artifacts instead of consuming a layer of management time."
+      ],
+      "controls": [
+        "Engagement-level boundaries: what one client taught the firm never surfaces in another client's work uninvited.",
+        "Human review before anything client-facing, unchanged from today, so accountability never moves.",
+        "Provenance on every reused artifact, so the firm always knows what its promises are built from.",
+        "A disclosure answer written before clients ask, one a managing partner would happily read aloud."
+      ],
+      "metrics": [
+        "Revenue per professional, the honest growth number",
+        "Proposal cycle time and win rate, read together",
+        "Share of delivery hours on reused versus recreated work",
+        "Review turnaround at partner gates"
+      ],
+      "evidence": {
+        "text": "Enterprise surveys in 2025 find regular AI use near nine in ten organizations, while only a minority report enterprise-level earnings impact and most experiments never fully scale.",
+        "source": "McKinsey State of AI 2025; Deloitte generative-AI survey 2025",
+        "caveat": "Self-reported, large-enterprise-skewed consultancy surveys. The pattern is about value capture, not professional-services ROI; it argues for operating discipline, not for urgency theater."
+      },
+      "cta": {
+        "headline": "See where your firm's growth is actually constrained.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three workflows mapped and baselined, the constraint named, and the moves with the best leverage-to-risk trade identified. Evidence first, program second.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More delivery through the same organization, without the wheels coming off.",
+      "outcome": "You already know where the friction is: work recreated because nobody can find the original, handoffs that lose what was promised, status assembled by hand every week, staffing decided by hallway memory. Governed AI takes the assembly load out of delivery operations while your review gates and escalation paths stay exactly where you put them.",
+      "triggers": [
+        "Utilization looks healthy while delivery still runs late, which means the hours are going somewhere unproductive.",
+        "The same proposals, frameworks, and reports keep being rebuilt from scratch across practices.",
+        "Staffing scrambles happen through personal networks while qualified people sit unseen on other teams.",
+        "The weekly operating picture consumes a day of senior time to assemble and is stale on arrival."
+      ],
+      "workflows": [
+        { "name": "Knowledge-to-Delivery", "line": "Prior work, experts, and research surface on demand with provenance, so delivery starts from the firm's best instead of from zero." },
+        { "name": "Delivery-to-Executive Insight", "line": "Status, capacity, and risk synthesized from live artifacts on one spine, drillable to source in one step." },
+        { "name": "Proposal-to-Project handoff", "line": "What was sold arrives in delivery as a structured record, so teams build what was promised instead of what was remembered." }
+      ],
+      "aiChanges": [
+        "Assembly work leaves the critical path: retrieval, drafting, and synthesis run on rails instead of on people.",
+        "Handoffs become records instead of conversations, so nothing promised gets lost between sale and delivery.",
+        "Capacity signals come from staffing and timesheet reality, visible while there is still time to act on them."
+      ],
+      "controls": [
+        "Role-based access that mirrors staffing, so the tools reach exactly what each team should reach.",
+        "Quality criteria written into the review points where reviewers actually work.",
+        "Named approval points, so ship decisions have owners instead of committees.",
+        "Retention and reuse rules set at engagement close, while the boundaries are still fresh."
+      ],
+      "metrics": [
+        "Cycle time on proposals and recurring deliverables",
+        "Time from staffing need to a qualified team in place",
+        "Review turnaround at quality gates",
+        "Realization and margin by engagement, visible during delivery"
+      ],
+      "evidence": {
+        "text": "In a field experiment with 758 consultants at one elite firm, AI use on tasks inside its capability frontier meant 12.2 percent more tasks completed, 25.1 percent faster, at more than 40 percent higher judged quality than the control group.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Task-level results at one elite firm; not proof for mid-market firms or firm-level margin. The same study found quality damage when AI was used outside the frontier, which is what the review gates are for."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it.",
+        "line": "The Workflow Leverage & Trust Assessment maps and baselines your two highest-friction workflows in a fixed-scope working session, and returns the operational moves with the best leverage-to-risk trade. You keep the baseline either way.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Protect the work that carries your name, and ship more of it.",
+      "outcome": "Growth is welcome. Dilution is not. The promise of governed AI for a practice leader is specific: drafts that start from the practice's best prior work instead of a junior's blank page, review that gets sharper because provenance rides along, and senior time returned to the coaching and client thinking that actually develop a practice.",
+      "triggers": [
+        "Review load is crushing your senior people, and the bottleneck is becoming the practice's growth ceiling.",
+        "Juniors spend their years assembling and formatting instead of learning the work that makes them promotable.",
+        "A quality near-miss got caught late, and the honest post-mortem says the reviewer was saturated.",
+        "A client asked how the practice uses AI on their work, and the answer depended on who they asked."
+      ],
+      "workflows": [
+        { "name": "Knowledge-to-Delivery", "line": "Every deliverable starts from the practice's best precedent, with provenance, so the floor rises without the ceiling dropping." },
+        { "name": "Quality Review & Partner Judgment", "line": "Reviews arrive with sources attached and criteria visible, so senior scrutiny lands where it matters." },
+        { "name": "Client Onboarding & Communication", "line": "Updates drafted for review, decisions logged where both sides see them, and a cadence the client can rely on." }
+      ],
+      "aiChanges": [
+        "First drafts are grounded in the practice's own vetted material, so editing replaces assembling.",
+        "Reviewers see what was reused and where it came from, which makes review faster and sharper at once.",
+        "Lessons learned get filed as part of shipping, so the practice's edge compounds instead of evaporating."
+      ],
+      "controls": [
+        "Human review before anything client-facing, exactly as today: what changes is the quality of what arrives at the gate.",
+        "Curated sources with owners and review dates, so drafts are built from the practice's best, not the file share's worst.",
+        "Engagement walls, so client confidences never cross-pollinate.",
+        "A written answer on AI use you can give any client without checking who is asking."
+      ],
+      "metrics": [
+        "Review notes per deliverable, trending down as drafts improve",
+        "First-pass quality at partner review",
+        "Share of junior hours on judgment-building versus assembly work",
+        "Client communication cadence promised versus kept"
+      ],
+      "evidence": {
+        "text": "The same field experiment that measured large in-frontier gains found consultant quality fell when AI was applied to tasks outside its capability frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Which tasks sit outside the frontier shifts with the model and the domain. Accountable human review remains a standing professional requirement, independent of average productivity gains."
+      },
+      "cta": {
+        "headline": "Find the senior hours your practice is spending beneath itself.",
+        "line": "The Workflow Leverage & Trust Assessment baselines where your practice's senior time actually goes and which workflows would return the most of it, without touching the review discipline that protects your name.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, instead of thirty ungoverned tools.",
+      "outcome": "The business is already using AI, approved or not. The question on your desk is whether that becomes a platform you can operate and defend, or a sprawl you get blamed for. Governed AI operations gives you the architecture: engagement-scoped access, approved sources, traceability by default, and a sanctioned path good enough that people stop wanting the shadow one.",
+      "triggers": [
+        "Shadow AI is already in the building: individual subscriptions, browser tools, and nobody can say what client data has touched them.",
+        "Practice groups are procuring point tools independently, each with its own data posture and none with a shared control model.",
+        "Client security questionnaires have started asking AI questions the current estate cannot answer cleanly.",
+        "Leadership wants AI rolled out and IT is expected to make it safe after the fact."
+      ],
+      "workflows": [
+        { "name": "Knowledge-to-Delivery", "line": "The retrieval corpus becomes a governed asset: curated sources, engagement walls, provenance, and an owner." },
+        { "name": "Proposal-to-Project", "line": "Capability reuse runs on access controls that mirror engagement staffing, enforced by the platform rather than by memory." },
+        { "name": "Delivery-to-Executive Insight", "line": "Reporting synthesis with one source of record per metric, which is an architecture decision before it is a reporting one." }
+      ],
+      "aiChanges": [
+        "The sanctioned path becomes the fastest path, which is the only adoption strategy that has ever beaten shadow IT.",
+        "Access follows staffing automatically, so engagement boundaries are enforced by the platform, not by policy documents.",
+        "Every AI-assisted artifact carries its source trail, so audits and client questionnaires get answered from the system instead of from archaeology."
+      ],
+      "controls": [
+        "Role-based access mirroring engagement staffing, provisioned and revoked with it.",
+        "An approved-tool list with a real intake path for new needs, so exceptions have somewhere to go besides the shadows.",
+        "Source traceability and retention rules as platform defaults, not per-team habits.",
+        "An incident path that assumes a miss will eventually happen and names who does what when it does."
+      ],
+      "metrics": [
+        "Sanctioned-path coverage versus observed shadow use",
+        "Access reviews passed without remediation",
+        "Turnaround time on client security questionnaires",
+        "Time from tool request to governed availability"
+      ],
+      "evidence": {
+        "text": "NIST's AI Risk Management Framework (January 2023) and its Generative AI Profile (July 2024) give a voluntary, vendor-neutral scaffold for governing AI design, deployment, use, and evaluation.",
+        "source": "NIST AI RMF 1.0; NIST.AI.600-1",
+        "caveat": "Voluntary frameworks, not mandates and not a professional-liability safe harbor. They have to be adapted to the firm's own duty-of-care and client obligations."
+      },
+      "cta": {
+        "headline": "Design the platform before the business designs it for you.",
+        "line": "The Workflow Leverage & Trust Assessment maps the workflows the platform must serve and the control architecture they need, so the estate you operate is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "AI use your firm could explain to its most demanding client.",
+      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say how, where, or under what controls. Governed AI operations replaces improvisation with a defensible posture: engagement boundaries, human accountability at every consequential point, evidence that reconstructs what happened, and a disclosure answer ready before anyone asks.",
+      "triggers": [
+        "Client contracts have started speaking to AI directly, and the firm's posture varies by whoever is asked.",
+        "A near-miss surfaced: client material in an unapproved tool, caught by luck rather than by design.",
+        "Professional accountability for AI-assisted work has never been written down, and reviewers are assuming someone else checked.",
+        "An insurer, auditor, or client questionnaire asked about AI controls and the answer was assembled overnight."
+      ],
+      "workflows": [
+        { "name": "Knowledge-to-Delivery", "line": "Reuse inside engagement walls with provenance, so the firm's memory works for it without working against its confidences." },
+        { "name": "Proposal-to-Project", "line": "Capability reuse with provenance and review, so no promise ships carrying another client's material." },
+        { "name": "Client Onboarding & Communication", "line": "Client-facing drafting with a human owner on every send, and a record both sides can rely on." }
+      ],
+      "aiChanges": [
+        "What changes is assembly speed. What never changes is accountability: a named human answers for every consequential output.",
+        "Every AI-assisted artifact is traceable to its sources and its reviewer, so questions get answers instead of investigations.",
+        "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover."
+      ],
+      "controls": [
+        "Engagement-level data boundaries checked against each client's actual contract, because contracts now differ on AI.",
+        "Human review and named approval points ahead of every client-facing use.",
+        "Retention rules for prompts and outputs, set deliberately rather than defaulted.",
+        "An incident path with rehearsed client communication, because the plan you need is the one written before the miss.",
+        "A standing disclosure answer, reviewed by you, consistent everywhere it is given."
+      ],
+      "metrics": [
+        "Engagements with confirmed AI posture against their contracts",
+        "Review and approval compliance on client-facing work",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer a client or insurer AI questionnaire"
+      ],
+      "evidence": {
+        "text": "Quality risk from misapplied AI is not hypothetical: causal field evidence shows professional performance degrades when AI is relied on for tasks outside its capability frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Frontier boundaries move as models and domains change. The control implication is task routing and accountable review, not prohibition; prohibition just relocates the risk to shadow tools."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment gives the risk chair a design seat from day one: boundaries, review points, evidence, and disclosure, built into the workflows rather than appended to them.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI investment case that would survive your own diligence.",
+      "outcome": "You have seen the vendor math: day-one payback, hours saved that nobody redeployed, benefits counted three times. The governed version is different by construction: baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points, and freed capacity named to a destination so it lands in margin instead of evaporating.",
+      "triggers": [
+        "AI spend is accumulating across practices with no consolidated view of cost, let alone return.",
+        "A vendor business case reached the executive table and did not survive ten minutes of questions.",
+        "Margin compression that utilization alone no longer explains, while delivery hours hide recreated work.",
+        "The next planning cycle needs an AI line item and there is no defensible number to put on it."
+      ],
+      "workflows": [
+        { "name": "Proposal-to-Project", "line": "Cost of sale is mostly senior time; cycle time and win rate, read together, show whether that time is buying growth." },
+        { "name": "Knowledge-to-Delivery", "line": "The recreated-work share of delivery hours is the quiet margin leak this workflow exists to close." },
+        { "name": "Delivery-to-Executive Insight", "line": "Realization and margin visible during delivery, while pricing and staffing can still respond." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
+        "The value side gets honest: baselined workflows, measured deltas, and freed hours assigned to a named destination.",
+        "Reporting you can stand behind: every number in the case traces to a source, because the case is a work sample of the firm's rigor."
+      ],
+      "controls": [
+        "Baselines captured before any pilot, so every claim has a before.",
+        "One owner and one source of record per metric.",
+        "Adoption lag modeled explicitly, so value arriving in month eight was planned, not excused.",
+        "Ranges with stated assumptions in front of the partnership, never false points."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow",
+        "Realization and margin by engagement, live",
+        "Measured cycle-time deltas against baseline on piloted workflows",
+        "Revenue per professional, the number the whole case answers to"
+      ],
+      "evidence": {
+        "text": "Professionals surveyed in 2024 predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
+        "source": "Thomson Reuters Future of Professionals, 2024",
+        "caveat": "Vendor-sponsored global survey of predictions. Predicted hours may never convert to utilization, realization, or margin; only a baseline and honest measurement can show whether they do."
+      },
+      "cta": {
+        "headline": "Start with the baseline, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment produces the baseline and the honest range: what the two candidate workflows cost today, what governed AI plausibly returns, and what the numbers would need to show before scaling. If the case is weak, you will know for the price of a working session.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}

@@ -17,6 +17,19 @@ Jimi Ige helps regulated and defense-adjacent organizations govern, deploy, and 
 ## Playbook
 - [Governing AI in Regulated Workflows](https://jimiige.com/governing-ai-in-regulated-workflows.html): A nine-chapter playbook on putting AI into CUI/CMMC, HIPAA, and financial-controls workflows without breaking the obligations underneath. Covers mapping the workflow, risk-tiering AI in scope, the control overlay per regime, human oversight, audit-grade evidence, third-party and embedded AI, and a starting plan.
 
+## Professional services library
+Governed AI Operations for Professional Services: eight industry field playbooks on one operating lens (winning work, knowledge-to-delivery, delivery-to-insight, client communication, quality and judgment, practice operations). Improved operations are the product; AI is the enabling technology; governance is why the result is trusted. Every quantitative claim is cited to a named primary source with its caveat.
+- [Governed AI Operations for Professional Services (hub)](https://jimiige.com/professional-services.html): The library index, the shared workflow lens, and the way in.
+- [Grow Delivery Capacity with Governed AI](https://jimiige.com/grow-delivery-capacity-with-governed-ai.html): The featured playbook, for management consulting firms: eleven chapters on Proposal-to-Project, Knowledge-to-Delivery, and Delivery-to-Executive Insight, with governance patterns and a 90-day way in.
+- [Deliver More Projects with Governed AI](https://jimiige.com/governed-ai-for-it-consulting.html): For IT consulting and systems-integration firms.
+- [Grow the Practice with Governed AI](https://jimiige.com/governed-ai-for-accounting-cpa-firms.html): For accounting and CPA firms; licensed professionals keep judgment and sign-off.
+- [Expand Matter Capacity with Governed AI](https://jimiige.com/governed-ai-for-law-firms.html): For law firms; attorneys keep judgment, privilege, and the signature.
+- [Win and Deliver More Projects with Governed AI](https://jimiige.com/governed-ai-for-architecture-engineering.html): For architecture and engineering firms; licensed professionals keep the seal.
+- [Run More Searches with Governed AI](https://jimiige.com/governed-ai-for-executive-search.html): For executive search firms.
+- [Raise Agency Throughput with Governed AI](https://jimiige.com/governed-ai-for-creative-agencies.html): For creative agencies.
+- [Scale Service Delivery with Governed AI](https://jimiige.com/governed-ai-for-managed-service-providers.html): For managed service providers.
+- [Workflow Leverage & Trust Assessment](https://jimiige.com/workflow-leverage-assessment.html): The fixed-scope working session behind the library: workflows mapped and baselined, the constraint named, a governed 90-day pilot plan.
+
 ## Free tools
 - [AI Maturity Assessment](https://jimiige.com/maturity-assessment.html): An 18-point self-assessment of AI governance and risk maturity against the NIST AI Risk Management Framework (Govern, Map, Measure, Manage), mapped to ISO 42001. Returns a maturity tier and the gap by function.
 - [AI Readiness Assessment](https://jimiige.com/readiness-audit.html): A control-level instrument that scores AI governance, risk, and compliance readiness across ten domains, with a maturity scorecard, heatmap, and prioritized gap list.

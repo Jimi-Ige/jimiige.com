@@ -1,0 +1,11 @@
+{
+  "note": "Host-to-route mapping for campaign hostnames. No domains are configured today; entries below are placeholders showing the shape. The canonical page for every visit is the jimiige.com fallback route, which works with no DNS at all. See docs/professional-services-system.md for the connection steps when a real domain is purchased.",
+  "updated": "2026-07-30",
+  "hosts": {
+    "example-consulting-campaign.example": {
+      "route": "/go/management-consulting/managing-partner/",
+      "campaign": "governed-ai-ops_management-consulting",
+      "status": "placeholder"
+    }
+  }
+}

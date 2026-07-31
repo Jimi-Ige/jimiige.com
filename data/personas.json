@@ -1,0 +1,56 @@
+{
+  "system": "governed-ai-operations-for-professional-services",
+  "version": "1.0",
+  "updated": "2026-07-30",
+  "note": "Six canonical personas for the persona landing pages. Industry files in data/persona-pages/ carry the message-matched copy for each industry x persona pair; industry personaTitles in data/professional-services.json carry the industry-specific role titles.",
+  "personas": [
+    {
+      "slug": "managing-partner",
+      "role": "Managing Partner / CEO",
+      "archetype": "Growth Champion",
+      "concern": "Growing the firm without the growth being hostage to hiring, and without the next stage of growth diluting what made the firm good.",
+      "readsFor": "Revenue per professional, the growth plan, succession of expertise, and whether the firm's name is protected.",
+      "ctaFrame": "A working session on where your firm's growth is constrained, and which workflows would move it."
+    },
+    {
+      "slug": "operations-director",
+      "role": "COO / Operations Director",
+      "archetype": "Efficiency Driver",
+      "concern": "Delivery capacity, utilization, and process reliability. Getting more through the same organization without the wheels coming off.",
+      "readsFor": "Cycle times, utilization, handoff friction, and whether an improvement survives contact with a busy quarter.",
+      "ctaFrame": "A working session on your delivery bottlenecks, and which two workflows to instrument first."
+    },
+    {
+      "slug": "practice-leader",
+      "role": "Practice Leader",
+      "archetype": "Client Advocate",
+      "concern": "Client outcomes and the quality of the work that carries the practice's name. Growth is welcome; dilution is not.",
+      "readsFor": "Work quality, team development, client relationships, and whether AI raises the floor without lowering the ceiling.",
+      "ctaFrame": "A working session on where your practice loses senior time to work that is beneath it."
+    },
+    {
+      "slug": "it-director",
+      "role": "CIO / IT Director",
+      "archetype": "Technology Steward",
+      "concern": "One governed platform instead of tool sprawl. Access control, data boundaries, and something IT can actually operate and defend.",
+      "readsFor": "Architecture, access model, vendor posture, auditability, and whether governance is designed in or bolted on.",
+      "ctaFrame": "A working session on the platform and control architecture, before the business picks its own tools."
+    },
+    {
+      "slug": "risk-counsel",
+      "role": "Risk / General Counsel / Compliance Lead",
+      "archetype": "Risk Guardian",
+      "concern": "Client confidentiality, professional accountability, and the firm's obligations. AI use the firm could explain to its most demanding client.",
+      "readsFor": "Confidentiality boundaries, accountability for outputs, evidence and traceability, and what happens when something goes wrong.",
+      "ctaFrame": "A working session on the control set: boundaries, review points, and the evidence trail behind them."
+    },
+    {
+      "slug": "finance-partner",
+      "role": "CFO / Finance Partner",
+      "archetype": "Investment Skeptic",
+      "concern": "Whether the spend returns, measured honestly. Margin visibility, not a vendor's hockey stick.",
+      "readsFor": "Cost of the program, where the hours actually go, payback discipline, and metrics that would survive a board question.",
+      "ctaFrame": "A working session on the honest business case: what to measure, and what the numbers would need to show."
+    }
+  ]
+}

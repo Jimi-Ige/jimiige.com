@@ -1,0 +1,332 @@
+{
+  "system": "governed-ai-operations-for-professional-services",
+  "version": "1.0",
+  "updated": "2026-07-30",
+  "positioning": {
+    "practice": "Jimi Ige LLC helps professional-services firms increase the leverage of every knowledge worker through governed AI.",
+    "product": "Improved operations are the product. AI is the enabling technology. Governance is why the result is trusted.",
+    "outcomes": [
+      "Grow without proportional hiring.",
+      "Increase delivery capacity without sacrificing quality.",
+      "Turn institutional knowledge into controlled, reusable leverage.",
+      "Adopt AI while protecting client confidentiality, professional judgment, and trust."
+    ],
+    "notThis": "Not a generic AI automation agency, a chatbot builder, or a tool-specific systems integrator. Never a replacement for professional judgment, and never legal, tax, audit, or accounting advice."
+  },
+  "assessment": {
+    "name": "Workflow Leverage & Trust Assessment",
+    "file": "workflow-leverage-assessment.html",
+    "calendlyBase": "https://calendly.com/jimi-ige/connect",
+    "utm": {
+      "source": "site",
+      "campaignPrefix": "governed-ai-ops"
+    }
+  },
+  "hub": {
+    "file": "professional-services.html",
+    "title": "Governed AI Operations for Professional Services",
+    "eyebrow": "For professional services"
+  },
+  "personaPathPrefix": "go",
+  "industries": [
+    {
+      "slug": "management-consulting",
+      "name": "Management Consulting",
+      "label": "Consulting",
+      "status": "active",
+      "playbook": {
+        "file": "grow-delivery-capacity-with-governed-ai.html",
+        "title": "Grow Delivery Capacity with Governed AI",
+        "subtitle": "A field playbook for management consulting firms to scale expertise, improve delivery, and protect client trust.",
+        "description": "How management consulting firms grow delivery capacity with governed AI: proposal-to-project, knowledge-to-delivery, and delivery-to-executive insight, with the controls that keep client trust intact."
+      },
+      "economics": "The firm sells senior judgment delivered through leveraged teams. Growth is rate, utilization, and leverage, and the binding constraint is senior attention.",
+      "personaTitles": {
+        "managing-partner": "Managing Partner / CEO",
+        "operations-director": "COO / Operations Director",
+        "practice-leader": "Practice Leader / Engagement Partner",
+        "it-director": "CIO / IT Director",
+        "risk-counsel": "General Counsel / Risk Lead",
+        "finance-partner": "CFO / Finance Partner"
+      },
+      "workflows": [
+        { "id": "proposal-to-project", "flagship": true, "name": "Proposal-to-Project", "summary": "Research, qualification, proposal and RFP drafting, capability reuse, partner review, and delivery handoff." },
+        { "id": "knowledge-to-delivery", "flagship": true, "name": "Knowledge-to-Delivery", "summary": "Prior-work retrieval, expert discovery, research support, drafting, quality review, and lessons learned." },
+        { "id": "delivery-to-insight", "flagship": true, "name": "Delivery-to-Executive Insight", "summary": "Status synthesis, portfolio reporting, capacity signals, risk escalation, and traceable executive reporting." },
+        { "id": "client-communication", "flagship": false, "name": "Client Onboarding & Communication", "summary": "Kickoff preparation, stakeholder alignment, and a communication cadence the client can rely on." },
+        { "id": "quality-judgment", "flagship": false, "name": "Quality Review & Partner Judgment", "summary": "Partner review, professional judgment, and the approval points where accountability lives." },
+        { "id": "practice-operations", "flagship": false, "name": "Practice Operations", "summary": "Capacity, utilization, and margin visibility across the portfolio." }
+      ],
+      "kpis": [
+        "Proposal cycle time, from qualified conversation to submitted proposal",
+        "Win rate, tracked by practice and by pursuit type",
+        "Share of delivery hours spent on reusable versus recreated work product",
+        "Time from staffing need to a qualified team in place",
+        "Review turnaround time at partner and quality gates",
+        "Realization and margin by engagement, visible during delivery rather than after close"
+      ]
+    },
+    {
+      "slug": "it-consulting",
+      "name": "IT Consulting",
+      "label": "IT consulting",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-it-consulting.html",
+        "title": "Deliver More Projects with Governed AI",
+        "subtitle": "A field playbook for IT consulting and systems-integration firms to raise delivery throughput without diluting engineering quality.",
+        "description": "How IT consulting and systems-integration firms raise delivery throughput with governed AI: pursuit-to-SOW, solution reuse, and portfolio signal, with the review gates that keep engineering quality intact."
+      },
+      "economics": "The firm sells engineered outcomes against fixed bids and T&M rates. Margin lives in estimation accuracy, reuse, and keeping the bench productive between projects.",
+      "personaTitles": {
+        "managing-partner": "CEO / Managing Director",
+        "operations-director": "COO / Delivery Director",
+        "practice-leader": "Practice Lead / Solution Director",
+        "it-director": "CTO / CIO",
+        "risk-counsel": "Security & Risk Lead",
+        "finance-partner": "CFO / Finance Director"
+      },
+      "workflows": [
+        { "id": "pursuit-to-sow", "flagship": false, "name": "Pursuit-to-SOW", "summary": "RFP responses, solution outlines, estimation support, SOW drafting, and technical review before anything is promised." },
+        { "id": "build-on-what-you-built", "flagship": false, "name": "Build on What You Built", "summary": "Prior-solution retrieval, reference architectures, component and pattern reuse, and documentation drafting." },
+        { "id": "project-to-portfolio-signal", "flagship": false, "name": "Project-to-Portfolio Signal", "summary": "Status rollups, burn and velocity synthesis, risk escalation, and client-ready reporting." },
+        { "id": "environment-onboarding", "flagship": false, "name": "Client Environment Onboarding", "summary": "Access, environment setup, and security-posture documentation at project start." },
+        { "id": "review-gates", "flagship": false, "name": "Architecture & Code Review Gates", "summary": "Design review, code review, and the approval points where a senior engineer stays accountable." },
+        { "id": "bench-and-margin", "flagship": false, "name": "Bench, Utilization & Margin", "summary": "Staffing visibility, utilization, and margin by project while the project can still be corrected." }
+      ],
+      "kpis": [
+        "Estimate-to-actual variance by project type",
+        "Proposal and SOW cycle time",
+        "Share of delivered work built on reviewed, reusable components",
+        "Defect and rework rates caught at review gates versus in production",
+        "Bench time between assignments",
+        "Margin by project, visible during delivery"
+      ]
+    },
+    {
+      "slug": "accounting-cpa",
+      "name": "Accounting & CPA Firms",
+      "label": "Accounting / CPA",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-accounting-cpa-firms.html",
+        "title": "Grow the Practice with Governed AI",
+        "subtitle": "A field playbook for accounting and CPA firms to expand capacity while licensed professionals keep the judgment and the sign-off.",
+        "description": "How accounting and CPA firms expand capacity with governed AI: engagement setup, workpaper leverage, and partner insight, with review hierarchies that keep licensed judgment and sign-off exactly where they belong."
+      },
+      "economics": "The firm sells assurance and advice under a license, through a preparer-to-reviewer-to-partner hierarchy. Capacity is seasonal, realization is fragile, and the partner's signature carries the liability.",
+      "professionalGuardrail": "AI assists operations and documentation. Accountable licensed professionals retain every judgment and every sign-off. Nothing in this content is tax, accounting, or audit advice.",
+      "personaTitles": {
+        "managing-partner": "Managing Partner",
+        "operations-director": "COO / Firm Administrator",
+        "practice-leader": "Partner-in-Charge / Practice Leader",
+        "it-director": "CIO / IT Director",
+        "risk-counsel": "Quality & Risk Partner",
+        "finance-partner": "CFO / Finance Partner"
+      },
+      "workflows": [
+        { "id": "proposal-and-engagement", "flagship": false, "name": "Proposal & Engagement Setup", "summary": "Qualification, engagement-letter drafting from approved templates, scope reuse, and partner acceptance decisions." },
+        { "id": "workpaper-leverage", "flagship": false, "name": "Workpaper & Research Leverage", "summary": "Prior-year file retrieval, technical-research support, and first-draft memos that reach a licensed reviewer faster." },
+        { "id": "client-to-partner-insight", "flagship": false, "name": "Client-to-Partner Insight", "summary": "Status across the book, deadline tracking, and the advisory signals hiding in compliance work." },
+        { "id": "onboarding-and-pbc", "flagship": false, "name": "Client Onboarding & PBC", "summary": "Document-request lists, intake tracking, and client communication that does not consume senior time." },
+        { "id": "review-and-signoff", "flagship": false, "name": "Review Hierarchy & Sign-off", "summary": "Preparer-to-reviewer-to-partner flow, with every judgment and signature staying with the licensed professional." },
+        { "id": "season-capacity", "flagship": false, "name": "Season Capacity & Realization", "summary": "Workload balance through peak season, realization by client, and write-down visibility." }
+      ],
+      "kpis": [
+        "Days from engagement acceptance to a complete PBC list in the client's hands",
+        "Preparer-to-reviewer turnaround time per engagement",
+        "Review notes per engagement, trending down as first drafts improve",
+        "Realization by client and by service line",
+        "Peak-season overtime hours against plan",
+        "On-time filing and deliverable rates"
+      ]
+    },
+    {
+      "slug": "law-firms",
+      "name": "Law Firms",
+      "label": "Law",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-law-firms.html",
+        "title": "Expand Matter Capacity with Governed AI",
+        "subtitle": "A field playbook for law firms to take on more matters while attorneys keep the judgment, the privilege, and the signature.",
+        "description": "How law firms expand matter capacity with governed AI: pitch and intake, precedent-to-draft, and matter insight, inside confidentiality and privilege boundaries, with supervising attorneys accountable for every filing."
+      },
+      "economics": "The firm sells counsel under privilege, billed largely by the hour through a partner-associate pyramid. Client confidentiality is absolute, and the supervising attorney answers for every position taken.",
+      "professionalGuardrail": "AI assists operations and documentation. Attorneys retain every legal judgment, every client position, and every signature. Nothing in this content is legal advice.",
+      "personaTitles": {
+        "managing-partner": "Managing Partner / Chair",
+        "operations-director": "Executive Director / COO",
+        "practice-leader": "Practice Group Leader",
+        "it-director": "CIO / Director of Innovation",
+        "risk-counsel": "General Counsel / Ethics & Risk",
+        "finance-partner": "CFO / Finance Director"
+      },
+      "workflows": [
+        { "id": "pitch-and-intake", "flagship": false, "name": "Pitch & Matter Intake", "summary": "Pitches and RFP responses, experience retrieval, and intake support that respects conflicts procedures." },
+        { "id": "precedent-to-draft", "flagship": false, "name": "Precedent-to-Draft", "summary": "Precedent retrieval, first drafts from firm work product, research support, and attorney review before anything leaves the firm." },
+        { "id": "matter-to-management", "flagship": false, "name": "Matter-to-Management Insight", "summary": "Matter status, budget-to-actual, and portfolio reporting partners can rely on." },
+        { "id": "client-intake-communication", "flagship": false, "name": "Client Intake & Communication", "summary": "Engagement communications and status updates, drafted for attorney review." },
+        { "id": "attorney-review", "flagship": false, "name": "Attorney Review & Privilege Boundaries", "summary": "Supervision, verification of every authority cited, and the privilege and confidentiality walls AI must respect." },
+        { "id": "matter-economics", "flagship": false, "name": "Utilization & Matter Economics", "summary": "Utilization, realization, and matter budgets visible while the matter is live." }
+      ],
+      "kpis": [
+        "Pitch and RFP turnaround time",
+        "First-draft turnaround on recurring document types",
+        "Associate hours per matter phase against budget",
+        "Write-offs and write-downs by matter type",
+        "Review cycles per document before partner sign-off",
+        "Matter-budget variance, visible during the matter"
+      ]
+    },
+    {
+      "slug": "architecture-engineering",
+      "name": "Architecture & Engineering",
+      "label": "A&E",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-architecture-engineering.html",
+        "title": "Win and Deliver More Projects with Governed AI",
+        "subtitle": "A field playbook for architecture and engineering firms to grow throughput while licensed professionals keep the seal.",
+        "description": "How architecture and engineering firms grow project throughput with governed AI: qualifications-to-proposal, detail and specification reuse, and project insight, with QA/QC and the professional seal untouched."
+      },
+      "economics": "The firm sells designed and sealed work through project teams, against fee structures set early and spent late. The licensed professional's seal carries statutory responsibility, and rework is margin leaving the building.",
+      "professionalGuardrail": "AI assists production and documentation. Licensed architects and engineers retain responsible charge, every design decision, and the seal. Nothing in this content is engineering or architectural advice.",
+      "personaTitles": {
+        "managing-partner": "Managing Principal / President",
+        "operations-director": "COO / Director of Operations",
+        "practice-leader": "Studio / Discipline Leader",
+        "it-director": "CIO / Digital Practice Leader",
+        "risk-counsel": "Risk Manager / QA-QC Director",
+        "finance-partner": "CFO / Finance Director"
+      },
+      "workflows": [
+        { "id": "qualifications-to-proposal", "flagship": false, "name": "Qualifications-to-Proposal", "summary": "SOQs and RFQ responses, project-sheet reuse, fee-proposal support, and principal review." },
+        { "id": "detail-and-spec-reuse", "flagship": false, "name": "Detail & Specification Reuse", "summary": "Retrieval of proven details and specifications, narrative drafting, and calculation support that a licensed professional verifies." },
+        { "id": "project-to-principal", "flagship": false, "name": "Project-to-Principal Insight", "summary": "Phase status, budget burn, schedule risk, and portfolio visibility for principals." },
+        { "id": "kickoff-communication", "flagship": false, "name": "Project Kickoff & Client Communication", "summary": "Kickoff preparation, meeting summaries, and client updates on a reliable cadence." },
+        { "id": "qaqc-and-seal", "flagship": false, "name": "QA/QC & the Professional Seal", "summary": "Checking discipline, interdisciplinary coordination review, and responsible charge staying with the licensed professional." },
+        { "id": "backlog-and-fees", "flagship": false, "name": "Backlog, Staffing & Fee Health", "summary": "Backlog visibility, staffing against phases, and earned-value signals before the fee is gone." }
+      ],
+      "kpis": [
+        "SOQ and proposal turnaround time",
+        "Hours per sheet or deliverable on recurring project types",
+        "QA/QC findings caught internally versus by the client or contractor",
+        "RFI volume attributable to document quality",
+        "Fee spent versus phase completed, by project",
+        "Backlog months by studio"
+      ]
+    },
+    {
+      "slug": "executive-search",
+      "name": "Executive Search",
+      "label": "Search",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-executive-search.html",
+        "title": "Run More Searches with Governed AI",
+        "subtitle": "A field playbook for executive search firms to expand mandate capacity while consultants keep the judgment candidates and clients trust.",
+        "description": "How executive search firms expand mandate capacity with governed AI: pitch-to-mandate, research-to-longlist, and client reporting, with the discretion and assessment judgment that make the fee defensible."
+      },
+      "economics": "The firm sells access, discretion, and assessment judgment, one mandate at a time. Capacity is consultant attention, and the asset is a network that took a career to build and a reputation that can be lost in one breach of discretion.",
+      "personaTitles": {
+        "managing-partner": "Managing Partner / CEO",
+        "operations-director": "COO / Head of Operations",
+        "practice-leader": "Practice Leader / Sector Head",
+        "it-director": "Head of Technology / Research Operations",
+        "risk-counsel": "Risk / Data Privacy Lead",
+        "finance-partner": "CFO / Finance Director"
+      },
+      "workflows": [
+        { "id": "pitch-to-mandate", "flagship": false, "name": "Pitch-to-Mandate", "summary": "Pitch preparation, capability proof from prior mandates, and terms that reflect the work." },
+        { "id": "research-to-longlist", "flagship": false, "name": "Research-to-Longlist", "summary": "Market mapping, candidate research from approved sources, and longlists built faster without narrowing the lens." },
+        { "id": "search-to-client-reporting", "flagship": false, "name": "Search-to-Client Reporting", "summary": "Weekly client updates, pipeline status, and progress reporting a client can trust." },
+        { "id": "candidate-communication", "flagship": false, "name": "Candidate & Client Communication", "summary": "Outreach drafting, scheduling, and interview summaries handled with discretion." },
+        { "id": "assessment-judgment", "flagship": false, "name": "Assessment Judgment & Reference Integrity", "summary": "Interview synthesis support, with the read on a person and every reference staying with the consultant." },
+        { "id": "search-load", "flagship": false, "name": "Search Load & Consultant Capacity", "summary": "Mandates per consultant, stage-by-stage progress, and where searches stall." }
+      ],
+      "kpis": [
+        "Days from mandate signature to a client-ready longlist",
+        "Searches active per consultant without quality slippage",
+        "Candidate response rates to outreach",
+        "Time-to-shortlist and time-to-placement by mandate type",
+        "Client update cadence kept versus promised",
+        "Placement stick rate after twelve months"
+      ]
+    },
+    {
+      "slug": "creative-agencies",
+      "name": "Creative Agencies",
+      "label": "Creative",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-creative-agencies.html",
+        "title": "Raise Agency Throughput with Governed AI",
+        "subtitle": "A field playbook for creative agencies to move more work through the studio while the creative bar, and the client's brand, stay protected.",
+        "description": "How creative agencies raise throughput with governed AI: pitch-to-brief, concept support, and production insight, with brand stewardship, approval discipline, and creative judgment kept firmly human."
+      },
+      "economics": "The agency sells ideas and execution against scopes that creep and retainers that compress. Margin lives in scope discipline and utilization, and the product is taste applied to someone else's brand.",
+      "personaTitles": {
+        "managing-partner": "CEO / Founder",
+        "operations-director": "COO / Managing Director",
+        "practice-leader": "Executive Creative Director / Group Account Director",
+        "it-director": "Head of Technology",
+        "risk-counsel": "Business Affairs / Legal",
+        "finance-partner": "CFO / Finance Director"
+      },
+      "workflows": [
+        { "id": "pitch-to-brief", "flagship": false, "name": "Pitch-to-Brief", "summary": "RFP responses, pitch preparation, case-study reuse, and briefs that reach the studio complete." },
+        { "id": "concept-support", "flagship": false, "name": "Brief-to-Concept Support", "summary": "Research, references, territory exploration, and production variants, with the creative call staying human." },
+        { "id": "production-insight", "flagship": false, "name": "Production-to-Account Insight", "summary": "Status, burn, and scope-creep signals while the job can still be saved." },
+        { "id": "client-approvals", "flagship": false, "name": "Client Onboarding & Approvals", "summary": "Brief intake, approval cycles, and feedback consolidation that stops version chaos." },
+        { "id": "creative-review", "flagship": false, "name": "Creative Review & Brand Stewardship", "summary": "Review gates, brand-guideline enforcement, and usage rules for AI-assisted material, disclosed where the client requires it." },
+        { "id": "scope-and-margin", "flagship": false, "name": "Utilization, Scope & Margin", "summary": "Utilization, scope-versus-actual by job, and margin visibility across the client roster." }
+      ],
+      "kpis": [
+        "Pitch turnaround time and pitch win rate",
+        "Revisions per deliverable, by client and by work type",
+        "Scope-versus-actual hours by job",
+        "Share of production time on first-pass mechanical work",
+        "On-time delivery rate by client",
+        "Margin by client and by retainer"
+      ]
+    },
+    {
+      "slug": "managed-service-providers",
+      "name": "Managed Service Providers",
+      "label": "MSP",
+      "status": "library",
+      "playbook": {
+        "file": "governed-ai-for-managed-service-providers.html",
+        "title": "Scale Service Delivery with Governed AI",
+        "subtitle": "A field playbook for managed service providers to serve more clients per engineer without letting quality or security slip.",
+        "description": "How managed service providers scale delivery with governed AI: quote-to-contract, ticket-to-knowledge, and QBR insight, with escalation tiers and change approval keeping accountable engineers in charge."
+      },
+      "economics": "The MSP sells outcomes per seat at fixed monthly fees, so every saved engineer-hour is margin and every recurring ticket is a leak. The client handed over the keys, which makes trust and security posture the whole franchise.",
+      "personaTitles": {
+        "managing-partner": "CEO / Owner",
+        "operations-director": "COO / Service Delivery Director",
+        "practice-leader": "vCIO / Account Management Lead",
+        "it-director": "CTO / Automation Lead",
+        "risk-counsel": "Security & Compliance Lead",
+        "finance-partner": "CFO / Finance Director"
+      },
+      "workflows": [
+        { "id": "quote-to-contract", "flagship": false, "name": "Quote-to-Contract", "summary": "Assessments, quotes from the service catalog, and agreements that match what delivery can keep." },
+        { "id": "ticket-to-knowledge", "flagship": false, "name": "Ticket-to-Knowledge", "summary": "Runbook retrieval and drafting, past-resolution reuse, and documentation that survives technician turnover." },
+        { "id": "service-to-qbr", "flagship": false, "name": "Service-to-QBR Insight", "summary": "QBR preparation, SLA reporting, incident synthesis, and the roadmap conversation that renews the contract." },
+        { "id": "client-onboarding", "flagship": false, "name": "Client Onboarding & Runbooks", "summary": "Environment documentation, credential handling under strict control, and onboarding that does not burn senior engineers." },
+        { "id": "escalation-and-change", "flagship": false, "name": "Escalation Tiers & Change Approval", "summary": "Tiered escalation, change-approval gates, and an accountable engineer on every consequential action." },
+        { "id": "seat-economics", "flagship": false, "name": "Seat Economics & Tech Utilization", "summary": "Tickets per endpoint, effort per client, and which agreements are quietly underwater." }
+      ],
+      "kpis": [
+        "Endpoints or seats supported per engineer",
+        "First-touch resolution rate at tier one",
+        "Mean time to resolution by ticket class",
+        "Recurring-ticket rate per client, trending down as root causes close",
+        "Onboarding days from contract to steady-state",
+        "Effort versus agreement value by client"
+      ]
+    }
+  ]
+}
