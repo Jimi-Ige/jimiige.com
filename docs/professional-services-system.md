@@ -88,6 +88,26 @@ Generated pages are committed (GitHub Pages serves static files; there is no
 build step in deployment). Treat `/go/**` as build output: edit the JSON,
 re-run the script, never hand-edit a generated page.
 
+### The validator
+
+```
+node scripts/validate.mjs
+```
+
+The deterministic pre-publish gate. Run it after any content change and
+before any commit that touches the system; it exits non-zero on any error.
+It checks playbook head metadata against each file's own URL, shared asset
+links, panel and reader-chrome structure, the recurring chapter section
+pattern (principle / trap / exactly one pull quote / checklist / where
+judgment beats the tool), TOC-to-anchor integrity and stated chapter count,
+required toollinks and backlinks, internal link resolution, campaign status
+headers and all 12 posts' UTM correctness, persona-data schema and workflow
+name integrity, generated-page noindex and canonical values, sitemap
+exclusion of `/go/`, and banned characters and vocabulary everywhere.
+
+It does not judge prose quality, evidence fidelity, or message-match; those
+are review concerns, not mechanical ones.
+
 ## 5. Custom campaign hostnames
 
 No domains are configured today, by design. The system supports them without
@@ -153,6 +173,8 @@ professionals retain judgment and sign-off; nothing is professional advice.
 - Re-verify vendor/consultancy survey numbers (SPI/Deltek, McKinsey,
   Deloitte, Clio, Thomson Reuters) each major release year; re-check bar and
   association ethics pages quarterly (see `data/evidence/cross_industry_synthesis.md` §7).
+- Run `node scripts/validate.mjs` before every commit that touches content;
+  treat a non-zero exit as a blocker, not a suggestion.
 - When adding a public page: add it to `PUBLIC_PAGES` in `scripts/build.mjs`
   and re-run the script (sitemap), and consider `llms.txt`.
 - When adding an industry: extend `data/professional-services.json`, add the

@@ -1,4 +1,4 @@
-# Campaign library — Governed AI Operations for Professional Services
+# Campaign library: Governed AI Operations for Professional Services
 
 One campaign package per industry, one file per industry. Each file carries a
 campaign brief and twelve LinkedIn posts. This directory is the source of
