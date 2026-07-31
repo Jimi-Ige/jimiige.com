@@ -1,0 +1,266 @@
+{
+  "industry": "architecture-engineering",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Convert record backlog into delivered work, not burnout.",
+      "outcome": "Your growth plan currently has one engine: hire licensed professionals fast enough to keep up with the backlog, in a market where every competitor is fishing the same pool. Governed AI adds a second engine. Assembly, drafting, retrieval, and synthesis move onto rails, licensed attention returns to design judgment, checking, and clients, and backlog converts to revenue faster than headcount grows, without the name on the title block paying for it.",
+      "triggers": [
+        "Backlog sits at or near record levels while key licensed roles stay open for months.",
+        "Principals are at capacity, with winning work, checking work, and client calls all competing for the same few people.",
+        "The firm's distinctive design intelligence is concentrated in a few heads near retirement, and succession is a hope rather than a plan.",
+        "Owners and public clients have started asking in RFQs how the firm uses AI, and the current answer is individual improvisation."
+      ],
+      "workflows": [
+        { "name": "Qualifications-to-Proposal", "line": "Win more of the right pursuits without principal weekends: the go/no-go stays senior, assembly stops being senior work." },
+        { "name": "Detail & Specification Reuse", "line": "The firm's proven production compounds instead of retiring with its authors, so every project starts above zero." },
+        { "name": "Project-to-Principal Insight", "line": "Portfolio truth you can run the firm on: fee burn, phase status, and risk traceable to sources, not to Friday memory." }
+      ],
+      "aiChanges": [
+        "Research, first drafts, and assembly come off licensed desks, so senior hours concentrate on design judgment, checking, and clients.",
+        "Every pursuit and every project starts from the firm's best prior work, with provenance, instead of from a blank sheet.",
+        "The operating picture of the portfolio assembles itself from live project artifacts instead of consuming a layer of senior time."
+      ],
+      "controls": [
+        "Project-level boundaries: one client's confidential material never surfaces in another client's set.",
+        "QA/QC review and responsible charge unchanged: licensed professionals retain every design decision and the seal.",
+        "Provenance on every reused detail and specification, so the firm always knows what its documents are built from.",
+        "A disclosure answer written before owners ask, one a managing principal would happily read aloud."
+      ],
+      "metrics": [
+        "Backlog months by studio, and the rate it converts to revenue",
+        "SOQ and proposal turnaround, read with shortlist rate",
+        "Hours per sheet or deliverable on recurring project types",
+        "QA/QC findings caught internally versus by the client or contractor"
+      ],
+      "evidence": {
+        "text": "Engineering firm leaders surveyed in Q1 2026 reported a median backlog of 11 months, with 47 percent of firms at a year or more and 88 percent still carrying at least one open position.",
+        "source": "ACEC Research Institute, Engineering Business Sentiment, Q1 2026 (N=628)",
+        "caveat": "A member sentiment survey, not a census; backlog measures demand, not delivery efficiency, and none of it is an AI effect. It frames the capacity problem. It does not prove any solution."
+      },
+      "cta": {
+        "headline": "See where the firm's growth is actually constrained.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three workflows mapped and baselined, the constraint named, and the moves with the best leverage-to-risk trade identified. Evidence first, program second.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More delivery through the same studios, without the wheels coming off.",
+      "outcome": "You already know where the friction is: details redrawn because nobody can find the proven one, SOQs assembled by hand from old submittals, the weekly picture built on Friday and stale by Monday, staffing decided by hallway memory. Governed AI takes the assembly load out of production and pursuit while your QA/QC gates and escalation paths stay exactly where you put them.",
+      "triggers": [
+        "Utilization looks healthy while projects still run over fee, which means the hours are going somewhere unproductive.",
+        "The same details, specifications, and narratives keep being rebuilt from scratch across studios.",
+        "Staffing scrambles run on personal networks while qualified people sit unseen on other teams.",
+        "The weekly operating picture consumes a day of senior time to assemble and is stale on arrival."
+      ],
+      "workflows": [
+        { "name": "Detail & Specification Reuse", "line": "Proven details, master specifications, and prior narratives surface on demand with provenance, so production starts from the firm's best instead of from zero." },
+        { "name": "Project-to-Principal Insight", "line": "Fee burn against phase completion, schedule risk, and staffing synthesized from live artifacts, drillable to source in one step." },
+        { "name": "Backlog, Staffing & Fee Health", "line": "Backlog, phase staffing, and earned-value signals visible while the fee can still be protected." }
+      ],
+      "aiChanges": [
+        "Assembly work leaves the critical path: retrieval, drafting, and synthesis run on rails instead of on people.",
+        "Fee burn is read against phase completion from timesheets and deliverable status, not against the calendar.",
+        "Capacity signals come from assignments and staffing reality, visible while there is still time to act on them."
+      ],
+      "controls": [
+        "Role-based access that mirrors project teams, so the tools reach exactly what each team should reach.",
+        "QA/QC criteria for AI-assisted content written into the checkpoints where checkers actually work.",
+        "Named approval points, so issuing a set has an owner instead of a committee.",
+        "Retention and reuse rules set at project close, while the boundaries are still fresh."
+      ],
+      "metrics": [
+        "SOQ and proposal turnaround time",
+        "Hours per sheet or deliverable on recurring project types",
+        "Fee spent versus phase completed, by project",
+        "RFI volume attributable to document quality"
+      ],
+      "evidence": {
+        "text": "In a preregistered experiment published in Science, access to a general AI assistant reduced time on professional writing tasks by about 40 percent and raised judged quality by about 18 percent (N of about 453).",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Task-level results on occupation-specific writing, the nearest analog to narratives, reports, and SOQ prose. Not design work, not sealed documents, and not firm-level margin, which is why baselines come before business cases."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it.",
+        "line": "The Workflow Leverage & Trust Assessment maps and baselines your two highest-friction workflows in a fixed-scope working session, and returns the operational moves with the best leverage-to-risk trade. You keep the baseline either way.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Protect the work that carries your seal, and ship more of it.",
+      "outcome": "Growth is welcome. Dilution is not. The promise of governed AI for a studio or discipline leader is specific: sets that start from the studio's proven details and tuned specifications instead of a blank sheet, checking that gets sharper because provenance rides along, and senior time returned to the design thinking and mentoring that actually build a practice.",
+      "triggers": [
+        "Checking load is crushing your senior people, and the QA/QC queue is becoming the studio's growth ceiling.",
+        "Juniors spend their years formatting and assembling instead of learning the judgment that makes them licensable.",
+        "A document quality near-miss got caught late, and the honest post-mortem says the checker was saturated.",
+        "An owner asked how the studio uses AI on their project, and the answer depended on who they asked."
+      ],
+      "workflows": [
+        { "name": "Detail & Specification Reuse", "line": "Every set starts from the studio's proven details and tuned specifications, with provenance, so the floor rises without the ceiling dropping." },
+        { "name": "QA/QC & the Professional Seal", "line": "Checking arrives with provenance attached and criteria visible, so senior scrutiny lands where the risk actually is." },
+        { "name": "Project Kickoff & Client Communication", "line": "Updates drafted for review, decisions logged where both sides see them, and a cadence the client can rely on." }
+      ],
+      "aiChanges": [
+        "First drafts are grounded in the studio's own vetted production, so editing replaces assembling.",
+        "Checkers see what was reused, what was generated, and what was drawn fresh, which makes checking faster and sharper at once.",
+        "RFI patterns and post-construction lessons get filed into the libraries at close-out, so the studio's edge compounds instead of evaporating."
+      ],
+      "controls": [
+        "QA/QC review and responsible charge unchanged: what changes is the quality of what arrives at the gate.",
+        "Curated detail and specification libraries with owners and review dates, so drafts are built from the studio's best, not the archive's worst.",
+        "Calculations and code-compliance conclusions stay with qualified professionals, always. AI assembles; it never asserts.",
+        "Project walls, so one client's confidential material never crosses into another client's set."
+      ],
+      "metrics": [
+        "QA/QC findings caught internally versus by the client or contractor",
+        "RFI volume attributable to document quality, by project type",
+        "Share of junior hours on judgment-building versus assembly work",
+        "Checking turnaround at the QA/QC gate"
+      ],
+      "evidence": {
+        "text": "The same field experiment that measured large in-frontier gains found professional quality fell when AI was relied on for tasks outside its capability frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "A consulting field experiment; the transfer to design work is a caution, not a measurement. For a studio, the clearest outside-frontier examples are unverified calculations and code-compliance assertions, which is exactly what the QA/QC gate and responsible charge exist to catch."
+      },
+      "cta": {
+        "headline": "Find the senior hours your studio is spending beneath itself.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that baselines where your studio's licensed time actually goes and which workflows would return the most of it, without touching the checking discipline that protects the seal.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, instead of another tool on the pile.",
+      "outcome": "The design technology estate is already crowded: the CAD and BIM environment, the document management system, the specification tool, a decade of project folders on the file server, and now AI in the studios whether it was approved or not. The question on your desk is whether that becomes a platform you can operate and defend, or a sprawl you get blamed for. Governed AI operations gives you the architecture: project-scoped access that mirrors the project team, curated detail and specification libraries as the only corpus retrieval is allowed to reach, provenance that survives into the record set behind a seal, and a sanctioned path good enough that people stop wanting the shadow one.",
+      "triggers": [
+        "Shadow AI is already in the studios, on personal subscriptions and browser tools, and nobody can say which models, drawings, or specifications have passed through them.",
+        "Each discipline has procured its own point tool and its own add-ins inside the CAD and BIM environment, every one with a different data posture and none with a shared control model.",
+        "Models and documents move to subconsultants and owners through half a dozen channels, so the boundary the firm enforces internally dissolves at the transmittal.",
+        "A public owner's security clauses now reach every tool that touches project data, and the estate cannot produce a clean list of which tools those are."
+      ],
+      "workflows": [
+        { "name": "Detail & Specification Reuse", "line": "The libraries become governed assets rather than folders: curated details and master specifications, project walls, provenance, review dates, and an owner." },
+        { "name": "Qualifications-to-Proposal", "line": "The qualifications library runs on access controls that mirror pursuit teams, enforced by the platform rather than by memory." },
+        { "name": "Project-to-Principal Insight", "line": "Fee burn, phase status, and staffing pulled from timesheets, deliverable status, and submittal logs, which makes one source of record per metric an integration decision before it is a reporting one." }
+      ],
+      "aiChanges": [
+        "The sanctioned path runs inside the CAD, specification, and document systems people already work in, which is the only version of adoption that has ever beaten a browser tab.",
+        "Access follows project staffing automatically, so client and project boundaries are enforced by the platform, not by policy documents.",
+        "Provenance survives the handoff into the record set, so what the checker saw at the QA/QC gate is still reconstructable years later, when a sealed set is the thing being examined."
+      ],
+      "controls": [
+        "Role-based access mirroring project teams, provisioned and revoked with staffing, and extended deliberately to subconsultant accounts rather than by exception.",
+        "An approved-tool list that covers plugins and add-ins inside the CAD and BIM environment, with a real intake path, because that is where design tools actually enter the estate.",
+        "Source traceability and retention rules as platform defaults, not per-studio habits.",
+        "Data-exchange rules written into the platform for transmittals to owners and subconsultants, so the boundary holds where the data actually leaves.",
+        "An incident path that assumes a miss will eventually happen, naming who tells the project principal, the client, and the insurer."
+      ],
+      "metrics": [
+        "Share of AI-assisted project work produced inside the sanctioned path, by studio",
+        "Project access reviews passed without remediation, subconsultant accounts included",
+        "Turnaround time on owner and public-client security questionnaires",
+        "Detail, specification, and project-model repositories under governed retrieval, versus still living on the file server"
+      ],
+      "evidence": {
+        "text": "NIST's AI Risk Management Framework (January 2023) and its Generative AI Profile (July 2024) give a voluntary, vendor-neutral scaffold for governing AI design, deployment, use, and evaluation.",
+        "source": "NIST AI RMF 1.0; NIST.AI.600-1",
+        "caveat": "Voluntary frameworks, not mandates and not a professional-liability safe harbor. They have to be adapted to a licensed practice's duty of care, its client contracts, and the responsible-charge rules that govern sealed work."
+      },
+      "cta": {
+        "headline": "Design the platform before the studios design it for you.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps the workflows the platform must serve and the control architecture they need, so the estate you operate is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "AI use your firm could defend to an owner, an insurer, or a licensing board.",
+      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say how, where, under what controls, and who verified what. Governed AI operations replaces improvisation with a defensible posture: project-level boundaries, qualified verification at every consequential point, a documented review trail behind every seal, and a disclosure answer ready before anyone asks.",
+      "triggers": [
+        "Owner contracts and public RFQs have started speaking to AI directly, and the firm's posture varies by whoever is asked.",
+        "A near-miss surfaced: client project data in an unapproved tool, caught by luck rather than by design.",
+        "Accountability for AI-assisted content has never been written into the quality manual, and checkers are assuming someone else verified.",
+        "An insurer, auditor, or client questionnaire asked about AI controls and the answer was assembled overnight."
+      ],
+      "workflows": [
+        { "name": "QA/QC & the Professional Seal", "line": "Checking discipline stated explicitly for AI-assisted content, provenance visible at the gate, and responsible charge exactly where the statute puts it." },
+        { "name": "Detail & Specification Reuse", "line": "Reuse inside project walls with provenance and performance history, so the firm's memory works for it without working against its confidences." },
+        { "name": "Project Kickoff & Client Communication", "line": "Client-facing drafting with a professional owner on every send, and a record both sides can rely on." }
+      ],
+      "aiChanges": [
+        "What changes is assembly speed. What never changes is accountability: a licensed professional answers for every design decision and every seal.",
+        "Every AI-assisted artifact is traceable to its sources, its verifier, and its reviewer, so questions get answers instead of investigations.",
+        "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover."
+      ],
+      "controls": [
+        "Project-level data boundaries checked against each client's actual contract, because owner and public-sector contracts now differ on AI.",
+        "Qualified verification of every calculation and code-compliance assertion, whatever produced it.",
+        "A documented review trail behind every seal, so the firm can show its discipline instead of asserting it.",
+        "Retention rules for prompts and outputs, set deliberately rather than defaulted.",
+        "An incident path with rehearsed client communication, because the plan you need is the one written before the miss."
+      ],
+      "metrics": [
+        "Projects with confirmed AI posture against their contracts",
+        "QA/QC review compliance on issued documents",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer an owner, insurer, or client AI questionnaire"
+      ],
+      "evidence": {
+        "text": "NSPE's Board of Ethical Review concluded in Case 24-2 that AI-assisted drafting can be ethical when a competent engineer thoroughly reviews and verifies the content under the engineer's direction and control, and that uploading client confidential information to an open AI interface without consent is unethical.",
+        "source": "NSPE Board of Ethical Review, Case 24-2",
+        "caveat": "A hypothetical ethics case interpreting the NSPE Code, not a court decision. Its facts distinguish open interfaces from controlled enterprise systems, client-consent analysis is still required, and it is not legal advice."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that gives the risk chair a design seat from day one: boundaries, verification points, the evidence trail, and disclosure, built into the workflows rather than appended to them.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI investment case built the way you underwrite a fee.",
+      "outcome": "The fee was underwritten at negotiation, against a scope that was still a sketch, and it gets spent in construction documents where the hours actually live. That asymmetry is the arithmetic any AI case has to survive here: not hours saved in the abstract, but fee protected on projects already priced. The governed version is built accordingly. Baselines before pilots, program cost counted once across the studios that share it, adoption lag priced against the project calendar, ranges instead of points, and freed capacity named to a destination, converted backlog or restored checking capacity, so it shows up as earned value by phase instead of evaporating into utilization.",
+      "triggers": [
+        "AI spend is accumulating studio by studio inside overhead, with no consolidated view of cost and no line connecting it to any project's fee.",
+        "A vendor business case reached the principals' table promising hours saved, with no answer for which phase of which project the fee comes back in.",
+        "Fee overruns that utilization alone no longer explains, while production hours hide re-solved work.",
+        "Write-downs at close keep being explained as rework, and nobody can say what document quality is costing during construction."
+      ],
+      "workflows": [
+        { "name": "Backlog, Staffing & Fee Health", "line": "Earned-value signals by project while the fee can still be protected, instead of a write-off explained at close-out." },
+        { "name": "Qualifications-to-Proposal", "line": "Pursuit cost is unbilled senior time; SOQ turnaround and shortlist rate, read together, show whether that time is buying work." },
+        { "name": "Detail & Specification Reuse", "line": "The re-solved share of production hours is the quiet margin leak this workflow exists to close." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost sitting in overhead, counted once, with each workflow carrying only its marginal cost instead of each studio carrying a copy.",
+        "The value side gets honest: baselined workflows, deltas measured by phase, and freed hours assigned to converted backlog or restored checking capacity rather than to a slide.",
+        "Reporting you can stand behind: every number in the case traces to a source, because in a firm that sells checked work the business case is a work sample."
+      ],
+      "controls": [
+        "Baselines captured on named projects before any pilot, so every claim has a before that a project manager would recognize.",
+        "One owner and one source of record per metric, with fee and phase figures read from project accounting rather than restated in a deck.",
+        "Adoption lag modeled against the project calendar, so value arriving two phases later was planned, not excused.",
+        "Ranges with stated assumptions in front of the principals, never false points."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow, read against fee protected on live projects",
+        "Fee spent versus phase completed, by project, live",
+        "Measured turnaround deltas against baseline on piloted workflows",
+        "Backlog months converted to revenue per quarter"
+      ],
+      "evidence": {
+        "text": "Professionals surveyed in 2024 (N=2,205 across legal, tax and accounting, risk and compliance, and C-suite respondents) predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
+        "source": "Thomson Reuters Future of Professionals, 2024",
+        "caveat": "A vendor-sponsored global survey of predictions, and design professions were not its focus. Predicted hours may never convert to fee protection or margin; only a baseline and honest measurement can show whether they do."
+      },
+      "cta": {
+        "headline": "Start with the baseline, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that produces the baseline and the honest range: what the two candidate workflows cost today, what governed AI plausibly returns, and what the numbers would need to show before scaling. If the case is weak, you will know before a program budget is committed.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}

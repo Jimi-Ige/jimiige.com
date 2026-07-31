@@ -1,0 +1,266 @@
+{
+  "industry": "managed-service-providers",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Add seats faster than you add senior engineers.",
+      "outcome": "Your growth plan has one engine today: hire engineers good enough to hold the desk, fast enough to keep pace with the seats you sign. Governed AI adds a second engine. Runbook knowledge becomes firm property instead of personal property, tier one resolves more of what arrives, and senior attention returns to the escalations and client conversations only it can handle. Seats can grow faster than payroll without the service, or the trust that made the model possible, paying for it.",
+      "triggers": [
+        "The growth plan assumes engineering hires the market will not supply at a price the per-seat fee can absorb.",
+        "A senior engineer gave notice, and a working share of the runbook knowledge is walking out with them.",
+        "Clients keep signing while the after-hours rotation gets thinner, and the honest choice reads as slow the growth or stretch the desk.",
+        "A client asked how the firm uses AI inside their environment, and the answer depended on which engineer they asked."
+      ],
+      "workflows": [
+        { "name": "Ticket-to-Knowledge", "line": "Resolution knowledge stops resigning with the engineer who earned it, so the speed of the desk belongs to the firm." },
+        { "name": "Seat Economics & Tech Utilization", "line": "Which agreements are quietly underwater, visible while there is still time to fix the environment or reprice the deal." },
+        { "name": "Service-to-QBR Insight", "line": "Renewals decided on evidence the client recognizes, not on a pack assembled the night before." }
+      ],
+      "aiChanges": [
+        "Runbook retrieval, ticket documentation, and QBR assembly come off senior desks, so senior hours go back to escalations and client relationships.",
+        "Every ticket the desk resolves adds to the firm's asset base instead of to one engineer's memory.",
+        "A new technician reaches useful sooner, because what the desk knows is retrievable rather than folkloric."
+      ],
+      "controls": [
+        "Client boundaries: what one environment teaches the desk never surfaces in another client's ticket.",
+        "An accountable engineer on every consequential action, and no standing permission for AI to change a client environment.",
+        "Credentials in controlled storage only, never in prompts, outputs, or logs.",
+        "A disclosure answer written before the security questionnaire asks, one you would read aloud to your largest client."
+      ],
+      "metrics": [
+        "Seats or endpoints supported per engineer, the honest growth number",
+        "Recurring-ticket rate per client, trending down as root causes close",
+        "Onboarding days from contract to steady state",
+        "Effort versus agreement value, read client by client"
+      ],
+      "evidence": {
+        "text": "Across several causal studies published in 2023, AI assistance tended to narrow the performance gap between less and more experienced workers on supported tasks, which is the pattern behind faster technician ramp and stronger resolution at tier one.",
+        "source": "Cross-study inference from Noy & Zhang, 2023; Dell'Acqua et al., 2023; Brynjolfsson, Li & Raymond, 2023",
+        "caveat": "This is a cross-study pattern, not an MSP onboarding measurement, and none of the studies ran on a multi-tenant service desk. It raises the stakes on supervision rather than lowering them. No approved primary source in this library covers MSP margin, utilization, or seat economics, so the only benchmark worth planning against is your own."
+      },
+      "cta": {
+        "headline": "See where growth is actually constrained on your desk.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three workflows mapped and baselined, the constraint named, and the moves with the best leverage-to-risk trade identified. Evidence first, program second.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More resolved at tier one, with every gate exactly where you put it.",
+      "outcome": "You already know where the desk leaks: the same issues re-solved from scratch, escalations that arrive without their history, onboarding that runs on one engineer's nights, documentation promised and never written. Governed AI takes the retrieval and drafting load off the desk while escalation tiers, change approval, and the accountable engineer stay precisely where you put them.",
+      "triggers": [
+        "Tier-one escalations are consuming tier-three hours, and the after-hours rotation is fraying.",
+        "The same tickets recur at the same clients while the agreement price stays fixed for the life of the contract.",
+        "Escalations arrive without what was tried or what the environment showed, so senior engineers restart the diagnosis.",
+        "Onboarding a client still takes your best engineer offline for weeks, and the runbooks arrive late or never."
+      ],
+      "workflows": [
+        { "name": "Ticket-to-Knowledge", "line": "Runbooks and past resolutions surface with provenance at intake, and the write-back happens as part of closing the ticket." },
+        { "name": "Escalation Tiers & Change Approval", "line": "Escalations travel with their evidence, and every consequential change still passes a named human gate." },
+        { "name": "Client Onboarding & Runbooks", "line": "Environment documentation drafted while discovery is fresh, so steady state arrives in days instead of quarters." }
+      ],
+      "aiChanges": [
+        "Tickets arrive enriched with client, environment, and the history of this exact issue, so routing takes seconds instead of archaeology.",
+        "Tier one works from the firm's own documented fixes for this environment, verified against the live system before anything is touched.",
+        "Documentation stops being a virtue reserved for quiet weeks and becomes part of the definition of a closed ticket."
+      ],
+      "controls": [
+        "Retrieval walled by client, mirroring the tenant isolation the rest of the stack already enforces.",
+        "A curated runbook corpus with owners and review dates, not the whole documentation share pointed at a model.",
+        "A published escalation ladder, with the evidence each step must carry named in advance.",
+        "Change approval by an accountable engineer on every consequential action, including the ones automation proposes."
+      ],
+      "metrics": [
+        "First-touch resolution rate at tier one",
+        "Mean time to resolution by ticket class",
+        "Share of escalations arriving with their evidence attached",
+        "Onboarding days from contract to steady state"
+      ],
+      "evidence": {
+        "text": "In a staggered deployment of a generative AI assistant across 5,179 customer-support agents, issues resolved per hour rose about 14 percent on average and about 34 percent for novice and lower-skilled agents, with minimal gains for the most experienced.",
+        "source": "Brynjolfsson, Li & Raymond, NBER w31161, 2023",
+        "caveat": "The setting is single-tenant software support chat, many agents outside the U.S., and agents could ignore suggestions. It is not multi-tenant MSP work with SLAs and privileged access, so on your desk it is a transfer hypothesis to test against a baseline, not a result to bank."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps and baselines your two highest-friction desk workflows and returns the operational moves with the best leverage-to-risk trade. You keep the baseline either way.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Walk into the QBR with instruments, not a defense.",
+      "outcome": "The QBR is the one hour in the quarter when the client actually sees the service they have been paying for, and where the contract quietly renews or quietly begins to die. Governed AI rebuilds the pack from live service records instead of from the night before: ticket and SLA synthesis, incident narratives with root cause attached, and roadmap recommendations tied to evidence from that client's own environment. Your read still decides what the meeting is about.",
+      "triggers": [
+        "QBR packs get assembled the night before from ticketing exports and memory, and a renewal recently wobbled.",
+        "The pack defends last quarter instead of setting up the client's next year.",
+        "Recurring issues are visible to the client before they are visible in your reporting.",
+        "Roadmap recommendations read as selling, because nothing in the pack traces to the client's own environment."
+      ],
+      "workflows": [
+        { "name": "Service-to-QBR Insight", "line": "Every figure in the pack drillable to tickets, alerts, or incidents in one step, and drafted for your review before it ships." },
+        { "name": "Quote-to-Contract", "line": "Expansion scoped from the maintained catalog, with exclusions stated in the agreement instead of discovered at the first ticket." },
+        { "name": "Ticket-to-Knowledge", "line": "The resolution record your credibility rests on, complete enough to show the client what changed and why it will not recur." }
+      ],
+      "aiChanges": [
+        "Service synthesis, incident narrative, and trend detection are drafted from live records instead of reconstructed from memory.",
+        "Recurring tickets, aging assets, and looming exposures surface per client before the client discovers them first.",
+        "Preparation time moves from assembling the pack to deciding what the meeting should be about."
+      ],
+      "controls": [
+        "Your read before any pack reaches a client. Synthesis prepares the story; it does not get to tell it.",
+        "Every number drillable to its source record, so a figure challenged in the room is answered in the room.",
+        "The quarter reported as the client lived it, including what went wrong and what changed because of it.",
+        "Client-walled context, so nothing from another environment ever appears in this client's pack."
+      ],
+      "metrics": [
+        "Recurring-ticket rate per client, trending down as root causes close",
+        "Mean time to resolution by ticket class, as the client experiences it",
+        "Preparation hours per QBR, and where the returned hours go",
+        "Effort versus agreement value by client, visible before the renewal conversation"
+      ],
+      "evidence": {
+        "text": "The field experiment behind the jagged-frontier finding showed professional performance degrading when AI was relied on for tasks outside its capability frontier, even as in-frontier work improved sharply.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "One elite global firm, consultants on experimental business tasks, not engineers in client environments, and where the frontier sits shifts with the model and the domain. For a client-facing pack the implication is a human read before anything ships, because a polished summary that contradicts the quarter the client lived costs more than a rough one that matches it."
+      },
+      "cta": {
+        "headline": "Rebuild the QBR before the next renewal cycle.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps how your service record and QBR pack are assembled today, what a governed version would change, and which client conversations get better first.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, instead of an assistant bolted to every system.",
+      "outcome": "The desk is already using AI, sanctioned or not, inside environments where the firm holds admin credentials. The question on your desk is whether that becomes a platform you can operate and defend, or a sprawl the firm answers for later. Governed AI operations gives you the architecture: client-walled retrieval, approved sources, credential vaulting, traceability by default, and a sanctioned path fast enough that nobody wants the shadow one.",
+      "triggers": [
+        "Assistants are appearing across the ticketing and monitoring stack, each with its own data posture and none with a shared control model.",
+        "Nobody can say with confidence which client environments have had material pass through an unapproved tool.",
+        "Client security questionnaires have started asking AI questions the current estate cannot answer cleanly.",
+        "Leadership wants AI on the desk, and engineering is expected to make it safe after the fact."
+      ],
+      "workflows": [
+        { "name": "Ticket-to-Knowledge", "line": "The runbook corpus becomes a governed asset: curated sources, client walls, provenance, an owner, and review dates." },
+        { "name": "Escalation Tiers & Change Approval", "line": "Approval gates enforced by the platform rather than by habit, including for the changes automation proposes." },
+        { "name": "Service-to-QBR Insight", "line": "One source of record per service metric, which is an architecture decision before it is a reporting one." }
+      ],
+      "aiChanges": [
+        "The sanctioned path becomes the fastest path, which is the only adoption strategy that has ever beaten shadow tooling.",
+        "Reach follows the tier structure and client assignment automatically, so boundaries hold without anyone remembering to enforce them.",
+        "Every AI-assisted resolution carries its source trail, so questionnaires and audits get answered from the system instead of from archaeology."
+      ],
+      "controls": [
+        "Credential vaulting, so secrets never appear in prompts, outputs, or logs, with auditing for the day one does.",
+        "Client-scoped retrieval mirroring tenant isolation, provisioned and revoked with client assignment.",
+        "An approved-tool list with a real intake path, so new needs have somewhere to go besides the shadows.",
+        "No standing write access to client environments; every consequential action passes a human gate.",
+        "Retention rules for prompts and outputs, including what happens when a client offboards."
+      ],
+      "metrics": [
+        "Sanctioned-path coverage versus observed shadow use",
+        "Access reviews confirming reach matches live client assignment, passed without remediation",
+        "Turnaround time on client security questionnaires",
+        "Time from tool request to governed availability"
+      ],
+      "evidence": {
+        "text": "NIST's AI Risk Management Framework (January 2023) and its Generative AI Profile (July 2024) give a voluntary, vendor-neutral scaffold for governing AI design, deployment, use, and evaluation, and ISO/IEC 42001:2023 specifies requirements for an AI management system.",
+        "source": "NIST AI RMF 1.0; NIST.AI.600-1; ISO/IEC 42001:2023",
+        "caveat": "Voluntary frameworks, not mandates and not a liability safe harbor, and each has to be adapted to the compliance overlay a given client operates under. The ISO standard's text is paywalled, and its certification cost and complexity may exceed what a mid-market MSP needs."
+      },
+      "cta": {
+        "headline": "Design the platform before the desk designs it for you.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps the workflows the platform must serve and the control architecture they need, so the estate you operate is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "AI use you could explain to the client who handed you the keys.",
+      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say where, inside which boundaries, and with whom accountable. Governed AI operations replaces improvisation with a posture you can show: credentials vaulted, context walled by client, a named engineer answering for every consequential action, evidence that reconstructs what happened, and a disclosure answer ready before the questionnaire arrives.",
+      "triggers": [
+        "Client contracts and compliance overlays now speak to AI directly, and the firm's posture varies by whoever is asked.",
+        "A near-miss surfaced: a credential or a client detail in a tool nobody approved, caught by luck rather than by design.",
+        "Two clients in the same market are served by the same engineers, and nothing technical keeps their environments out of the same context.",
+        "An insurer, an auditor, or a client asked about AI controls in a privileged environment, and the answer was assembled overnight."
+      ],
+      "workflows": [
+        { "name": "Ticket-to-Knowledge", "line": "Retrieval walled by client with provenance on every suggestion, so the memory of the desk works for the firm without working against its confidences." },
+        { "name": "Escalation Tiers & Change Approval", "line": "A named human gate in front of every consequential change, whoever or whatever proposed it." },
+        { "name": "Client Onboarding & Runbooks", "line": "Credentials captured into controlled storage at intake, and nowhere else, ever." }
+      ],
+      "aiChanges": [
+        "What changes is how fast retrieval and drafting happen. What never changes is who answers for a change to a client environment.",
+        "Every AI-assisted resolution is traceable to its sources and its approver, so questions get answers instead of investigations.",
+        "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover later."
+      ],
+      "controls": [
+        "Credential vaulting, with auditing for the day a secret reaches a prompt, an output, or a log.",
+        "Client-walled context, checked against each client's contract and compliance overlay, because the regimes genuinely differ.",
+        "No standing permission for AI to change a client environment, at any maturity stage, in any workflow.",
+        "Retention rules for prompts and outputs set deliberately, including what is destroyed at offboarding.",
+        "An incident path with rehearsed client communication, because the plan you need is the one written before the miss."
+      ],
+      "metrics": [
+        "Clients with a confirmed AI posture checked against their contract",
+        "Change-approval compliance on consequential actions, including automation-proposed ones",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer a client or insurer AI questionnaire"
+      ],
+      "evidence": {
+        "text": "Quality risk from misapplied AI is evidenced rather than hypothetical: in a field experiment, professional performance degraded when AI was relied on for tasks outside its capability frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "The study ran with consultants on business tasks, not engineers with privileged access, and frontier boundaries move as models and domains change. On a service desk the outside-frontier failure mode is a plausible-sounding runbook action against a live client system, which argues for task routing and change approval rather than prohibition; prohibition only relocates the work to shadow tools."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that builds credentials, client walls, change approval, and evidence into the workflow design from day one, instead of appending them after the first incident.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI case that survives your own diligence, and a baseline that outlives the pilot.",
+      "outcome": "You have seen the arithmetic: tickets deflected that nobody verified, hours saved that nobody redeployed, a benchmark quoted from a webinar with no method behind it. The governed version is different by construction: the desk baselined before the first pilot, program cost counted once, adoption lag priced in, ranges instead of points, and freed engineer hours named to a destination so they land in margin instead of evaporating.",
+      "triggers": [
+        "AI spend is accumulating across the service stack with no consolidated view of cost, let alone return.",
+        "A vendor business case reached the leadership table and did not survive ten minutes of questions.",
+        "Margin is compressing on agreements that looked healthy at signature, and nobody can say which ones.",
+        "The next planning cycle needs an AI line item and there is no defensible number to put on it."
+      ],
+      "workflows": [
+        { "name": "Seat Economics & Tech Utilization", "line": "Effort per client against agreement value, so an underwater agreement surfaces during the term instead of at renewal." },
+        { "name": "Quote-to-Contract", "line": "The fee is fixed at signature and the cost is discovered afterward, which makes the assessment and the review gate a finance control." },
+        { "name": "Ticket-to-Knowledge", "line": "Recurring and re-solved tickets are the quiet margin leak this workflow exists to close." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
+        "The value side gets honest: baselined desk metrics, measured deltas, and freed hours assigned to a named destination.",
+        "Every number in the case traces to a service record, because the case is a work sample of how the firm reports."
+      ],
+      "controls": [
+        "Baselines captured before any pilot, so every claim has a before.",
+        "One owner and one source of record per metric.",
+        "Adoption lag modeled explicitly, so value arriving in month eight was planned rather than excused.",
+        "Ranges with stated assumptions in front of leadership, never false points."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow",
+        "Effort versus agreement value by client, live rather than at renewal",
+        "Measured deltas against baseline on the piloted desk metrics",
+        "Seats or endpoints per engineer, the number the whole case answers to"
+      ],
+      "evidence": {
+        "text": "Enterprise surveys in 2025 report regular AI use in at least one function at 88 percent of organizations while only 39 percent report enterprise-level EBIT impact, and most generative AI experiments are not expected to fully scale in the near term.",
+        "source": "McKinsey State of AI 2025; Deloitte generative-AI survey 2025",
+        "caveat": "Self-reported, large-enterprise-skewed surveys produced by firms that sell AI services, and not MSP financials. The pattern argues for baselines and operating discipline rather than urgency. No approved primary source in this library covers MSP margin, utilization, or seat economics, so the only benchmark worth budgeting against is your own desk."
+      },
+      "cta": {
+        "headline": "Start with the baseline, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that produces the baseline and the honest range: what the two candidate workflows cost the desk today, what governed AI plausibly returns, and what the numbers would have to show before scaling. If the case is weak, you will know for the price of a working session.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}

@@ -32,7 +32,7 @@ The four recurring themes, adapted per industry:
 
 ## Link and attribution conventions
 
-- Post CTAs link to the industry playbook or to the Workflow Leverage &amp;
+- Post CTAs link to the industry playbook or to the Workflow Leverage &
   Trust Assessment page, always with UTM parameters:
   `?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_<industry-slug>&utm_content=post-NN`
 - On-site Calendly CTAs carry the matching `utm_campaign`, so a booking can be
@@ -61,7 +61,7 @@ The four recurring themes, adapted per industry:
   in `data/evidence/priority_claims_list.md` section F. Predictions are always
   labeled as predictions; vendor and sponsored surveys carry that label.
 - No invented statistics, clients, or case studies. Where the evidence ledger
-  flags a gap (mid-market ROI, realization impact, E&amp;O claims data, creative
+  flags a gap (mid-market ROI, realization impact, E&O claims data, creative
   and search and MSP primary economics), the gap is stated, never filled.
 - No em dashes, no marketing-speak, no "buyer"/"prospect"/"lead" vocabulary,
   no vendor product names in positioning copy.

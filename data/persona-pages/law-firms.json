@@ -1,0 +1,266 @@
+{
+  "industry": "law-firms",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Grow the book without betting it on the lateral market.",
+      "outcome": "Your growth plan currently has one engine: add lawyers fast enough to keep up with the matters the firm wins, and hope the pyramid holds. Governed AI adds a second engine. Retrieval, drafting, and assembly move onto rails inside privilege boundaries, partner attention returns to winning matters and standing behind positions, and the book can grow faster than headcount without the firm's name paying for it.",
+      "triggers": [
+        "The growth plan assumes lateral partners and senior associates the market will not supply at a price the model affords.",
+        "Partners are at capacity while demand keeps arriving, and the choice reads as decline matters or dilute supervision.",
+        "The firm's best work product lives in a few heads and in matter files nobody can search, and succession is a hope rather than a plan.",
+        "Clients have started asking what the firm's AI posture is, and the current answer depends on which partner they ask."
+      ],
+      "workflows": [
+        { "name": "Precedent-to-Draft", "line": "Every matter starts from the firm's best prior work, with provenance, instead of from a blank page and a memory." },
+        { "name": "Pitch & Matter Intake", "line": "Win more of the right matters without more partner evenings: conflicts and acceptance stay with the firm, assembly stops being partner work." },
+        { "name": "Matter-to-Management Insight", "line": "Portfolio truth you can run the firm on: status, budgets, and risk traceable to sources, not to who you asked." }
+      ],
+      "aiChanges": [
+        "Research, first drafts, and retrieval come off senior desks, so partner hours concentrate on positions, clients, and judgment.",
+        "The firm's accumulated work product becomes an asset the whole firm can draw on, walled by client and matter.",
+        "The operating picture of the firm assembles itself from live sources instead of consuming a layer of management time."
+      ],
+      "controls": [
+        "Client and matter boundaries mirroring ethical screens, so one client's confidences never surface in another's work.",
+        "Attorney review and sign-off before anything leaves the firm, unchanged from today, so accountability never moves.",
+        "Verification of every cited authority by the attorney, written into the workflow rather than assumed.",
+        "A standing AI answer, checked against client guidelines, that you would happily give your most demanding client."
+      ],
+      "metrics": [
+        "Revenue per lawyer, the honest growth number",
+        "Pitch and RFP turnaround time, read with what the firm declined",
+        "First-draft turnaround on recurring document types",
+        "Review cycles per document before partner sign-off"
+      ],
+      "evidence": {
+        "text": "ABA Formal Opinion 512 (July 2024) sets out the duties a lawyer using generative AI must fully consider: competence, confidentiality, communication, supervision, meritorious claims, candor toward the tribunal, and reasonable fees. It sets the competence bar where a firm can operationalize it: a reasonable understanding of the specific tool's capabilities and limits, not becoming an AI expert.",
+        "source": "ABA Formal Opinion 512, July 2024",
+        "caveat": "The opinion interprets the ABA Model Rules; state adoption and state opinions vary, and nothing here is legal advice. It defines the duties, not the operating model. Building the operating model is the growth decision on your desk."
+      },
+      "cta": {
+        "headline": "See where your firm's capacity is actually constrained.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three of your firm's workflows mapped and baselined, the real constraint named, and the moves with the best leverage-to-risk trade identified before anything is bought or built.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More matters through the same firm, without the wheels coming off.",
+      "outcome": "You already know where the friction lives: intake that crawls while conflicts packets and engagement letters wait on someone's afternoon, recurring documents rebuilt from scratch, matter status collected by hand, budget problems surfacing at pre-bill. Governed AI takes the assembly load out of firm operations while attorney review, conflicts procedures, and sign-off stay exactly where the profession put them.",
+      "triggers": [
+        "Matter openings stall on assembly: conflicts information, engagement letters, and intake details each waiting on a person with a fuller plate.",
+        "The same recurring document types are drafted from scratch across practice groups, at rates clients increasingly refuse to pay.",
+        "Matter status and budget reporting consume senior time to assemble and are stale on arrival.",
+        "Write-downs surface at pre-bill, after every chance to manage them has passed."
+      ],
+      "workflows": [
+        { "name": "Pitch & Matter Intake", "line": "Intake support assembles what conflicts and engagement terms need, so matters open cleanly and faster without shortcutting clearance." },
+        { "name": "Precedent-to-Draft", "line": "Recurring document types start from the firm's approved work product, so associate hours go into the matter, not the archaeology." },
+        { "name": "Matter-to-Management Insight", "line": "Status and budget-to-actual synthesized from time entries and matter plans, drillable to source in one step." }
+      ],
+      "aiChanges": [
+        "Assembly leaves the critical path: retrieval, drafting, and synthesis run on rails instead of on people's evenings.",
+        "Matter openings become a tracked flow with owners and clear gates, instead of a relay of emails.",
+        "Budget signals arrive while the phase is open, so managing a matter stops meaning reconstructing it afterward."
+      ],
+      "controls": [
+        "Access that mirrors matter staffing and ethical screens, provisioned and revoked with the team.",
+        "Conflicts clearance ahead of everything: no pitch ships and no matter opens on an incomplete check.",
+        "Verification and quality criteria written into the review points where reviewers actually work.",
+        "Named sign-out on everything that leaves the firm, so ship decisions have owners.",
+        "Retention and reuse rules applied at matter close, in line with each client's guidelines."
+      ],
+      "metrics": [
+        "Days from clearance to a cleanly opened matter",
+        "First-draft turnaround on recurring document types",
+        "Review turnaround at partner gates",
+        "Matter-budget variance, visible during the matter rather than at pre-bill"
+      ],
+      "evidence": {
+        "text": "In a preregistered experiment published in Science, access to a general AI assistant cut time on occupation-specific professional writing tasks by about 40 percent while raising judged quality by about 18 percent (N of about 453).",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Task-level results on general professional writing, not legal drafting under privilege and not full matters. Quality was evaluator-scored on experimental outputs. Do not treat as firm-level realization or margin improvement; treat it as the reason first-draft turnaround is worth baselining."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it.",
+        "line": "The Workflow Leverage & Trust Assessment maps and baselines your two highest-friction workflows in a fixed-scope working session and returns the operational moves with the best leverage-to-risk trade. The baseline is yours to keep either way.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Protect the work that carries the group's name, and ship more of it.",
+      "outcome": "Growth is welcome. Dilution is not. For a practice group leader the promise of governed AI is specific: drafts that start from the group's best precedent instead of an associate's blank page, review that gets sharper because provenance and verification ride along, and senior time returned to the positions, clients, and teaching that actually build a practice.",
+      "triggers": [
+        "Review load is crushing your senior lawyers, and the bottleneck is becoming the group's growth ceiling.",
+        "Associates spend their years assembling and reformatting instead of learning the judgment that makes them worth their rate.",
+        "A near-miss got caught late, and the honest post-mortem says the reviewing attorney was saturated.",
+        "A client asked how the group uses AI on their matters, and the answer depended on who picked up the phone."
+      ],
+      "workflows": [
+        { "name": "Precedent-to-Draft", "line": "Every draft starts from the group's vetted precedent, with provenance, so the floor rises without the ceiling dropping." },
+        { "name": "Attorney Review & Privilege Boundaries", "line": "Review arrives with sources attached and verification explicit, so senior scrutiny lands on position and risk." },
+        { "name": "Client Intake & Communication", "line": "Engagement communications and status updates drafted for attorney review, on a cadence the client can rely on." }
+      ],
+      "aiChanges": [
+        "First drafts are grounded in the group's own vetted material, so editing replaces assembling.",
+        "Reviewers see what was reused and where it came from, which makes review faster and sharper at once.",
+        "Verification of every authority becomes a written step with a name on it, instead of an assumption about who checked."
+      ],
+      "controls": [
+        "Attorney review before anything leaves the firm, exactly as today: what changes is the quality of what arrives at the gate.",
+        "A curated precedent bank with owners and review dates, so drafts build from the group's best, not the document store's worst.",
+        "Client and matter walls mirroring the firm's ethical screens, so confidences never cross-pollinate.",
+        "A written answer on AI use you can give any client without checking who is asking."
+      ],
+      "metrics": [
+        "Review cycles per document, trending down as first drafts improve",
+        "First-pass quality at partner review",
+        "Share of associate hours on judgment-building work versus assembly",
+        "Client communication cadence promised versus kept"
+      ],
+      "evidence": {
+        "text": "The field experiment that measured large AI gains on tasks inside its capability frontier also found professional quality fell when AI was relied on for tasks outside that frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Consulting tasks at one elite firm, not legal work, and where the frontier sits shifts with the model and the domain. In a law practice the outside-frontier failure looks like a fabricated citation or a conclusion never checked against authority, which is why verification stays a written step with a name on it."
+      },
+      "cta": {
+        "headline": "Find the senior hours your group is spending beneath itself.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that baselines where the group's senior time actually goes and which workflows would return the most of it, without touching the supervision that protects the group's name.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, before every practice group picks its own tools.",
+      "outcome": "Lawyers are already using AI, approved or not, and client material may already sit inside tools nobody vetted. The question on your desk is whether that becomes a platform the firm can operate and defend, or a sprawl it answers for later. Governed AI operations gives you the architecture: matter-scoped access, approved sources, provenance by default, and a sanctioned path fast enough that nobody wants the shadow one.",
+      "triggers": [
+        "Shadow AI is already in the building: personal subscriptions and browser tools, with no way to say what client material has touched them.",
+        "Practice groups are procuring point tools independently, each with its own data posture and none with a shared control model.",
+        "Outside counsel guidelines and client audits now ask AI questions the current estate cannot answer cleanly.",
+        "Leadership wants AI moving, and innovation is expected to make it safe after the fact."
+      ],
+      "workflows": [
+        { "name": "Precedent-to-Draft", "line": "The precedent bank becomes a governed asset: curated sources, client and matter walls, provenance, and an owner." },
+        { "name": "Pitch & Matter Intake", "line": "Experience and capability reuse runs on access controls that mirror matter staffing, enforced by the platform rather than by memory." },
+        { "name": "Matter-to-Management Insight", "line": "One source of record per number across the portfolio, which is an architecture decision before it is a reporting one." }
+      ],
+      "aiChanges": [
+        "The sanctioned path becomes the fastest path, which is the only adoption strategy that has ever beaten shadow IT.",
+        "Access follows matter staffing and ethical screens automatically, so boundaries are enforced by the platform, not by policy documents.",
+        "Every AI-assisted artifact carries its source trail, so guideline responses and client audits get answered from the system instead of from archaeology."
+      ],
+      "controls": [
+        "Role-based access mirroring matter teams and ethical screens, provisioned and revoked with staffing.",
+        "An approved-tool list with a real intake path, so new needs have somewhere to go besides the shadows.",
+        "Provenance and retention rules as platform defaults, tuned to what each client's guidelines require.",
+        "An incident path that assumes a miss will eventually happen and names who does what when it does."
+      ],
+      "metrics": [
+        "Sanctioned-path coverage versus observed shadow use",
+        "Access reviews passed without remediation",
+        "Turnaround time on client guideline and audit responses",
+        "Time from tool request to governed availability"
+      ],
+      "evidence": {
+        "text": "The State Bar of California's generative AI guidance warns that these tools may use prompts and uploaded documents for training or share queries with third parties, and requires use to conform to existing professional responsibility duties.",
+        "source": "State Bar of California, Generative AI Practical Guidance",
+        "caveat": "One state's guidance; other jurisdictions may differ, and product data practices change, so current vendor terms govern. The implication is tool vetting, matter-scoped access, and an approved list, not prohibition. Not legal advice."
+      },
+      "cta": {
+        "headline": "Design the platform before the practice groups design it for you.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps the workflows the platform must serve and the control architecture they need, so the estate you operate is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "An AI posture the firm can defend: to clients, to courts, and to itself.",
+      "outcome": "The risk is not that lawyers use AI. It is that the firm cannot say how, where, under what controls, and inside which boundaries. Governed AI operations replaces improvisation with a defensible posture: client and matter walls that mirror ethical screens, a named attorney answering for every output, verification of every cited authority as procedure rather than assumption, and an answer checked against each client's guidelines before anyone asks.",
+      "triggers": [
+        "Outside counsel guidelines now speak to AI directly, and the firm's posture varies by whoever answers.",
+        "A near-miss surfaced: client material in an unapproved tool, caught by luck rather than by design.",
+        "Supervision and verification duties for AI-assisted work have never been written down, and reviewers are assuming someone else checked.",
+        "An insurer, auditor, or client questionnaire asked about AI controls, and the answer was assembled overnight."
+      ],
+      "workflows": [
+        { "name": "Attorney Review & Privilege Boundaries", "line": "Supervision, verification of every authority, and privilege walls written into the workflow instead of assumed around it." },
+        { "name": "Precedent-to-Draft", "line": "Reuse inside client and matter walls with provenance, so the firm's memory works for it without working against its confidences." },
+        { "name": "Client Intake & Communication", "line": "Client-facing drafting with an attorney owner on every send, and a record that reconstructs who approved what." }
+      ],
+      "aiChanges": [
+        "What changes is assembly speed. What never changes is accountability: a named attorney answers for every judgment, every position, and every signature.",
+        "Every AI-assisted artifact is traceable to its sources and its reviewing attorney, so questions get answers instead of investigations.",
+        "The firm's posture becomes one sentence you control, checked against each client's guidelines, instead of an improvisation per partner you discover later."
+      ],
+      "controls": [
+        "Client and matter boundaries mirroring ethical screens, checked against each client's outside counsel guidelines.",
+        "Attorney review and named sign-off ahead of anything that leaves the firm.",
+        "Verification of every cited authority by the attorney, as written procedure with a name attached.",
+        "Retention rules for prompts and outputs set deliberately, matter by matter, rather than defaulted.",
+        "An incident path with rehearsed client communication, because the plan you need is the one written before the miss."
+      ],
+      "metrics": [
+        "Engagements with confirmed AI posture against their client's guidelines",
+        "Verification and sign-off compliance on work that leaves the firm",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer a client, insurer, or audit questionnaire on AI use"
+      ],
+      "evidence": {
+        "text": "ABA Formal Opinion 512 (July 2024) confirms that a lawyer's existing duties, competence, confidentiality, communication, supervision, meritorious claims, candor toward the tribunal, and reasonable fees, apply in full when generative AI is used. The duties are not new. The supervision surface is.",
+        "source": "ABA Formal Opinion 512, July 2024",
+        "caveat": "Interprets the ABA Model Rules; state adoption and state opinions vary, and the opinion does not quantify enforcement. It is a floor to design controls on, not a control set, and nothing here is legal advice."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that gives ethics and risk a design seat from day one: boundaries, review and verification points, evidence, and the client-guideline answer, built into the workflows rather than appended to them.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI investment case built for a firm that bills by the hour.",
+      "outcome": "You have seen the vendor math: hours saved multiplied by a blended rate, payback by the second month. In an hourly firm that arithmetic is not just optimistic, it is confused, because a saved hour is not revenue until someone decides where it lands. The governed version is different by construction: baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points, and freed capacity named to a destination, more matters, alternative-fee margin, client development, before it is counted as anything.",
+      "triggers": [
+        "AI spend is accumulating across practice groups with no consolidated view of cost, let alone return.",
+        "A vendor business case multiplied saved hours by a blended rate and did not survive ten minutes of partner questions.",
+        "Realization and write-downs are drifting in ways utilization alone no longer explains.",
+        "The next planning cycle needs an AI line item, and there is no defensible number to put on it."
+      ],
+      "workflows": [
+        { "name": "Utilization & Matter Economics", "line": "Utilization, realization, and matter budgets visible while the matter is live, which is when they can still be managed." },
+        { "name": "Matter-to-Management Insight", "line": "Budget-to-actual by phase with every number traceable to source, so the portfolio conversation starts from shared facts." },
+        { "name": "Precedent-to-Draft", "line": "First-draft time on recurring document types is the measurable leak, and the piece of the case easiest to baseline honestly." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
+        "The value side gets honest: baselined workflows, measured deltas, and freed hours assigned to a destination in the fee structure that prices them.",
+        "Every number in the case traces to a source, because in a firm that sells rigor the business case is a work sample."
+      ],
+      "controls": [
+        "Baselines captured before any pilot, so every claim has a before.",
+        "One owner and one source of record per metric.",
+        "Adoption lag modeled explicitly, so value arriving late was planned, not excused.",
+        "Ranges with stated assumptions in front of the partnership, never false points."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow",
+        "Write-offs and write-downs by matter type",
+        "Matter-budget variance during the matter",
+        "Measured first-draft and pitch turnaround deltas against baseline"
+      ],
+      "evidence": {
+        "text": "In Thomson Reuters' 2024 Future of Professionals survey (N=2,205 across legal, tax and accounting, risk, and the C-suite), professionals predicted AI could save about four hours per week within a year and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
+        "source": "Thomson Reuters Future of Professionals, 2024",
+        "caveat": "Vendor-sponsored survey of predictions, not a time-motion study. In an hourly firm a predicted hour is doubly hypothetical: it may never be saved, and if saved it is not margin until the firm decides where it lands. Only a baseline and honest measurement can show what actually happened."
+      },
+      "cta": {
+        "headline": "Start with the baseline, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that produces the baseline and the honest range: what two candidate workflows cost today, what governed AI plausibly returns under your fee structures, and what the numbers would need to show before scaling.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "industry": "accounting-cpa",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Grow the practice without betting it on the hiring market.",
+      "outcome": "Your growth plan currently has one engine: recruit ahead of the season, then stretch the people who can review and sign until the deadline passes. Governed AI adds a second engine. Retrieval, rollforward, document-chasing, and first drafts move onto governed rails, licensed attention returns to the judgment and the signature, and the practice can take on more work than the hiring market will staff. AI assists operations and documentation. Every judgment and every sign-off stays with the licensed professional.",
+      "triggers": [
+        "The growth plan assumes experienced seniors and managers the hiring market has not supplied for several seasons running.",
+        "Reviewers and signing partners are the ceiling: work can be won and prepared faster than it can be reviewed and signed.",
+        "Another season closed on overtime and write-downs discovered at billing, and the plan for the next one is the same plan.",
+        "Clients have started asking how the firm uses AI on their engagement, sometimes in the engagement letter, and the answer depends on who they ask."
+      ],
+      "workflows": [
+        { "name": "Workpaper & Research Leverage", "line": "Preparation reaches a licensed reviewer faster, so growth stops being capped by how long it takes to assemble a file." },
+        { "name": "Client-to-Partner Insight", "line": "The whole book visible in season: deadlines, hours against budget, and realization while any of it can still be managed." },
+        { "name": "Season Capacity & Realization", "line": "More work through the peak without buying it back in overtime and write-downs the firm only sees afterward." }
+      ],
+      "aiChanges": [
+        "Retrieval, rollforward, and first drafts come off licensed desks, so partner and manager hours concentrate on judgment, clients, and sign-off.",
+        "The prior-year file, the research already done, and the review notes already written become firm assets instead of retiring with the person who produced them.",
+        "The season's operating picture assembles itself from live files and time entries instead of from Friday memory."
+      ],
+      "controls": [
+        "What moves onto rails is assembly and documentation, never accountability: the licensed professional keeps every judgment and every signature.",
+        "Engagement-level data boundaries, so what one client's records taught the firm never surfaces in another client's file.",
+        "Review depth held constant regardless of where a draft came from. Provenance changes the reviewer's starting point, never the standard.",
+        "A disclosure answer written before clients ask, one you would happily read aloud in a partner meeting and in a client's boardroom."
+      ],
+      "metrics": [
+        "Revenue per professional, the honest growth number",
+        "On-time filing and deliverable rates through the peak",
+        "Realization by client and by service line",
+        "Peak-season overtime hours against plan"
+      ],
+      "evidence": {
+        "text": "In the AICPA's 2024 CPA firm top-issues survey (N=667, fielded April to May 2024), finding qualified staff ranked as the top issue for every firm category except sole practitioners, and the largest categories ranked retaining qualified staff second.",
+        "source": "AICPA CPA firm top-issues survey, 2024",
+        "caveat": "Self-reported issue rankings from U.S. CPA firms, not a measured staffing shortfall and not an AI finding. It shows where the constraint is felt across the profession. It says nothing about what closes it in your firm, which is what a baseline is for."
+      },
+      "cta": {
+        "headline": "See where the practice is actually constrained.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three of your workflows mapped and baselined against last season, the real constraint named, whether it is winning work, preparing it, reviewing it, or signing it, and the moves with the best leverage-to-risk trade identified before anything is bought or built.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More work through the same firm, without the season deciding how it goes.",
+      "outcome": "You already know where the friction lives: request lists assembled by hand and chased for six weeks, engagements starting on incomplete files, preparers waiting on reviewers, status collected on Friday, write-downs surfacing at billing. Governed AI takes the assembly and the chasing out of firm operations while the preparer-to-reviewer-to-partner hierarchy stays exactly as deep as the profession built it. AI assists operations and documentation; licensed professionals keep every judgment and every sign-off.",
+      "triggers": [
+        "Engagements start weeks late because the file is still incomplete, and the chase consumes the weeks when capacity is scarcest.",
+        "Preparer-to-reviewer turnaround stretches through the peak while review notes repeat the same formatting corrections season after season.",
+        "The status of the book is assembled by hand and is stale by the time it reaches the partners it was assembled for.",
+        "Overtime absorbs the season's variance, and nobody can say which engagements caused it until the bills go out."
+      ],
+      "workflows": [
+        { "name": "Client Onboarding & PBC", "line": "The request list is complete at acceptance, built from the engagement type and the prior-year file, and intake status is a fact on a board instead of an inbox to excavate." },
+        { "name": "Workpaper & Research Leverage", "line": "Prior-year retrieval and first drafts, so preparers edit upward instead of assembling from a blank workpaper in the busiest weeks." },
+        { "name": "Season Capacity & Realization", "line": "Workload balance and hours against budget while the engagement is open, when staffing and scope can still respond." }
+      ],
+      "aiChanges": [
+        "Assembly and chasing leave the critical path: retrieval, drafting, intake tracking, and synthesis run on rails instead of on people's evenings.",
+        "Completeness becomes visible in one place, so a file that is not ready is a known fact in January rather than a discovery in March.",
+        "Capacity and realization signals arrive while the work is live, which is the only time anyone can act on them."
+      ],
+      "controls": [
+        "A person reads, edits, and owns every client-facing reminder and status note. Clients cannot tell which messages you considered routine.",
+        "Access mirroring engagement staffing, so the tools reach exactly what each engagement team should reach and nothing else.",
+        "Quality criteria written into the review points where reviewers actually work, not into a policy document nobody opens in March.",
+        "Review depth unchanged by provenance, and escalation reserved for judgment: the missing item that changes the work, never the third follow-up.",
+        "Judgment and sign-off stay with the licensed professional at every step, including the steps that got faster."
+      ],
+      "metrics": [
+        "Days from engagement acceptance to a complete PBC file in the firm's hands",
+        "Preparer-to-reviewer turnaround time per engagement",
+        "Review notes per engagement, trending down as first drafts improve",
+        "Peak-season overtime hours against plan"
+      ],
+      "evidence": {
+        "text": "In a preregistered experiment published in Science, access to a general AI assistant cut time on occupation-specific professional writing tasks by about 40 percent while raising judged quality by about 18 percent (N of about 453).",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Task-level results on general professional writing, not tax or audit work, and professional conclusions are outside what the study measured. Quality was evaluator-scored on experimental outputs, never realization or margin. Treat it as the reason preparer-to-reviewer turnaround is worth baselining, not as a result you have been promised."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it against last season.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps and baselines your two highest-friction workflows and returns the operational moves with the best leverage-to-risk trade. The baseline is yours to keep either way, and it is timed to the calendar the firm actually lives on.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Protect the work that carries your license, and put more of it out the door.",
+      "outcome": "Growth is welcome. Dilution is not. For the partner whose name and license sit on the work, the promise is specific: drafts that start from the practice's own prior-year files and approved research instead of a first-season preparer's blank workpaper, review that gets sharper because sources ride along, and senior time returned to the coaching and client judgment that actually build a practice. What arrives at review changes. Who concludes and who signs does not.",
+      "triggers": [
+        "Review load is crushing your managers and partners, and the review queue has become the practice's growth ceiling.",
+        "New staff spend their first two seasons assembling and formatting instead of learning the judgment that makes them promotable.",
+        "A quality issue was caught late, and the honest post-mortem says the reviewer was saturated in March.",
+        "A client asked how the practice uses AI on their engagement, and the answer depended on who picked up the phone."
+      ],
+      "workflows": [
+        { "name": "Workpaper & Research Leverage", "line": "Every engagement starts from the practice's best prior-year work and approved research, with citations attached for a licensed professional to verify." },
+        { "name": "Review Hierarchy & Sign-off", "line": "Drafts arrive with sources visible and open questions flagged, so review notes address judgment instead of formatting." },
+        { "name": "Client Onboarding & PBC", "line": "The file is complete before the work starts, so senior attention goes to the engagement rather than to the chase." }
+      ],
+      "aiChanges": [
+        "First drafts are grounded in the practice's own vetted material, so preparers edit upward instead of assembling from zero.",
+        "Reviewers can see what was reused and where it came from, which makes review faster and sharper at the same time.",
+        "What review corrected is written back to the engagement, so next season's first draft starts from this season's best."
+      ],
+      "controls": [
+        "Licensed review before anything is client-facing or file-final, exactly as today. What changes is the quality of what reaches the gate.",
+        "AI-assisted drafts labeled as unreviewed until a licensed professional owns them. No unlabeled drafts, ever.",
+        "Research support restricted to the firm's approved sources, with every citation verified by a person before anything relies on it.",
+        "Conclusions stay human: the tooling assembles, cites, and formats; the licensed professional concludes and signs.",
+        "A curated template and prior-year corpus with a named owner and review dates, so drafts build from the practice's best rather than the file share's oldest."
+      ],
+      "metrics": [
+        "Review notes per engagement, trending down as first drafts improve",
+        "First-pass quality at partner review",
+        "Share of staff hours on judgment-building work versus assembly",
+        "Preparer-to-reviewer turnaround through the peak"
+      ],
+      "evidence": {
+        "text": "Across the 2023 causal studies, AI assistance often narrowed the performance gap between less and more experienced workers on supported tasks, which is a staff-leverage signal for a profession that hires young and teaches through review.",
+        "source": "Cross-study inference from Noy & Zhang, 2023; Brynjolfsson, Li & Raymond, 2023; Dell'Acqua et al., 2023",
+        "caveat": "Labeled inference from task-level studies, not a measured onboarding return in any CPA firm. It does not mean AI substitutes for professional judgment, licensure, or partner review. If anything it raises the stakes on review, because a first-season preparer's draft now looks more finished than it has been examined."
+      },
+      "cta": {
+        "headline": "Find the senior hours the practice is spending beneath itself.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that baselines where your practice's licensed time actually goes and which workflows would return the most of it, without touching the review hierarchy that protects your name.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, before every service line picks its own tools.",
+      "outcome": "Client financial records are the most sensitive material the firm holds, and AI is already inside the practice whether it was approved or not. The question on your desk is whether that becomes a platform the firm can operate and defend, or a sprawl the firm answers for later. Governed AI operations gives you the architecture: engagement-scoped access, approved research and template sources, provenance by default, retention aligned to the firm's workpaper obligations, and a sanctioned path fast enough in March that nobody wants the shadow one.",
+      "triggers": [
+        "Shadow AI is already in the practice, and nobody can say which trial balances, returns, or client ledgers have passed through it.",
+        "Service lines are buying their own research and drafting tools, each with its own data posture and none with a shared control model.",
+        "Client security questionnaires and vendor reviews now ask AI questions the current estate cannot answer cleanly.",
+        "Attest engagements need a stricter posture than the rest of the firm, and the current estate cannot tell one from the other."
+      ],
+      "workflows": [
+        { "name": "Workpaper & Research Leverage", "line": "The template and prior-year corpus becomes a governed asset: curated sources, engagement walls, provenance, and an owner with a review date." },
+        { "name": "Client Onboarding & PBC", "line": "Document intake as a controlled flow, so client records arrive, live, and expire where the firm intended them to." },
+        { "name": "Client-to-Partner Insight", "line": "One source of record per number across the book, which is an architecture decision well before it is a reporting one." }
+      ],
+      "aiChanges": [
+        "The sanctioned path becomes the fastest path, the only adoption strategy that has ever beaten shadow IT, and in a CPA firm it has to be fastest in March.",
+        "Access follows engagement staffing automatically, so boundaries are enforced by the platform rather than by policy documents.",
+        "Every AI-assisted artifact carries its source trail, so questionnaires and internal inspections get answered from the system instead of from archaeology."
+      ],
+      "controls": [
+        "Role-based access mirroring engagement staffing, provisioned and revoked with it.",
+        "An approved-tool list with a real intake path for new needs, so exceptions have somewhere to go besides the shadows.",
+        "Attest engagements held to the strictest posture in the firm by default rather than by exception.",
+        "Retention rules for prompts and outputs set against the firm's own workpaper retention obligations, not against a vendor's default.",
+        "The platform assists operations and documentation. Judgment and sign-off stay with the licensed professional, by design rather than by configuration."
+      ],
+      "metrics": [
+        "Sanctioned-path coverage versus observed shadow use",
+        "Access reviews confirming rights mirror live engagement staffing, passed without remediation",
+        "Turnaround time on client security and AI questionnaires",
+        "Time from tool request to governed availability"
+      ],
+      "evidence": {
+        "text": "NIST's AI Risk Management Framework (AI RMF 1.0, January 2023) and its Generative AI Profile (NIST.AI.600-1, July 2024) give a voluntary, vendor-neutral scaffold for governing how AI is designed, deployed, used, and evaluated.",
+        "source": "NIST AI RMF 1.0; NIST.AI.600-1",
+        "caveat": "Voluntary frameworks, not mandates and not a professional-liability safe harbor. They have to be adapted to the firm's own confidentiality, independence, and quality obligations, and they say nothing at all about tax, accounting, or audit judgment, which stays with the licensed professional."
+      },
+      "cta": {
+        "headline": "Design the platform before the service lines design it for you.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps the workflows the platform has to serve and the control architecture they need, so the estate you end up operating is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "AI use the firm can explain to any client, in writing, without checking who is asking.",
+      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say how, where, inside which boundaries, and with whose name on the result. Governed AI operations replaces improvisation with a defensible posture: engagement-level confidentiality boundaries, a stricter default on attest work, licensed accountability at every consequential point, evidence that reconstructs what happened, and a disclosure answer ready before a client, an insurer, or an engagement letter asks for one. AI assists operations and documentation, accountable licensed professionals retain every judgment and every sign-off, and nothing the firm says about its AI use should read as tax, accounting, or audit advice.",
+      "triggers": [
+        "Engagement letters and client agreements have started speaking to AI directly, and the firm's posture varies by whoever answers.",
+        "A near-miss surfaced: client financial records in an unapproved tool, caught by luck rather than by design.",
+        "Nobody has written down who is accountable for AI-assisted content in a workpaper, and reviewers are assuming someone else checked.",
+        "An insurer or a client questionnaire asked about AI controls, and the answer was assembled overnight."
+      ],
+      "workflows": [
+        { "name": "Review Hierarchy & Sign-off", "line": "The ladder written into the workflow instead of assumed around it: preparer, reviewer, partner, with AI-assisted drafts labeled at every step." },
+        { "name": "Workpaper & Research Leverage", "line": "Reuse inside engagement walls with provenance, and research citations verified by a person before anything in the file relies on them." },
+        { "name": "Client Onboarding & PBC", "line": "Client records arriving through a controlled intake, with a named owner on every client-facing message and a record of what was sent." }
+      ],
+      "aiChanges": [
+        "What changes is assembly speed. What never changes is accountability: a named licensed professional answers for every conclusion and every signature.",
+        "Every AI-assisted artifact is traceable to its sources and its reviewer, so questions get answers instead of investigations.",
+        "The firm's posture becomes one sentence you control, consistent across engagement letters and questionnaires, instead of an improvisation per partner you discover afterward."
+      ],
+      "controls": [
+        "Engagement-level confidentiality boundaries checked against each engagement's own terms, because client agreements no longer say the same thing about AI.",
+        "Independence considerations reviewed before any tool arrangement touches an attest engagement, with the strictest posture as the firm's default question.",
+        "Licensed review and named sign-off ahead of anything client-facing or file-final, unchanged by how the draft was produced.",
+        "Retention rules for prompts and outputs set deliberately against the firm's workpaper retention obligations rather than defaulted.",
+        "An incident path with rehearsed client communication, because the plan you need is the one written before the miss."
+      ],
+      "metrics": [
+        "Engagements with a confirmed AI posture checked against their own terms",
+        "Review and sign-off compliance on AI-assisted work",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer a client or insurer questionnaire on AI use"
+      ],
+      "evidence": {
+        "text": "The field experiment that measured large gains on tasks inside AI's capability frontier also found professional quality fell when people relied on it for tasks outside that frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Consulting tasks at one elite global firm, not accounting work, and where the frontier sits shifts with the model and the domain. It is named here as the risk the review hierarchy exists to catch: in this profession, outside-frontier territory includes whether a technical position has authority behind it and whether the evidence in the file supports the conclusion. That is a control implication for the firm, not advice about any engagement."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that gives quality and risk a design seat from day one: boundaries, review and sign-off points, evidence, and the client answer, built into the workflows rather than appended to them.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI investment case that survives a partner meeting in a seasonal business.",
+      "outcome": "You have seen the vendor math: hours saved multiplied by a standard rate, payback by the second month, benefits counted in three business cases at once. In a firm whose year is decided in a few compressed months, that arithmetic is not merely optimistic, it is confused, because a March hour and a July hour are not the same asset. The governed version is different by construction: baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points, and freed capacity named to a destination before anyone books it as a benefit.",
+      "triggers": [
+        "AI spend is accumulating across service lines with no consolidated view of cost, let alone return.",
+        "A vendor business case reached the partner meeting and did not survive ten minutes of questions.",
+        "Realization keeps drifting and write-downs keep appearing at billing, after every decision that caused them was already made.",
+        "The next planning cycle needs an AI line item and there is no defensible number to put on it."
+      ],
+      "workflows": [
+        { "name": "Season Capacity & Realization", "line": "Realization by client and service line, and hours against budget while the engagement is open rather than at the bill." },
+        { "name": "Client-to-Partner Insight", "line": "Every number in the book traceable in one step to the file, time entry, or intake record behind it." },
+        { "name": "Workpaper & Research Leverage", "line": "Preparer-to-reviewer turnaround is the measurable leak, and the easiest piece of the case to baseline honestly." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
+        "The value side gets honest: baselined workflows, deltas measured across a full season, and freed hours assigned to a named destination.",
+        "Every number in the case traces to a source, because in a firm that sells rigor the business case is a work sample."
+      ],
+      "controls": [
+        "Baselines captured before any pilot, and taken against a real season rather than a quiet month.",
+        "One owner and one source of record per metric.",
+        "Adoption lag modeled explicitly, so value arriving after the first season was planned rather than excused.",
+        "Ranges with stated assumptions in front of the partnership, never false points.",
+        "Nothing in the case assumes AI carries professional judgment: AI assists operations and documentation, the licensed professional keeps every judgment and every sign-off, and the review hierarchy stays fully funded in the cost base."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow",
+        "Realization by client and by service line",
+        "Write-downs by engagement, read against when they first became visible",
+        "Measured deltas against baseline on the piloted workflows, read across a full season"
+      ],
+      "evidence": {
+        "text": "In Thomson Reuters' 2024 Future of Professionals survey (N=2,205 across legal, tax and accounting, risk and compliance, and the C-suite), professionals predicted AI could save about four hours per week within a year and about twelve within five years. Those figures are expectations respondents reported, not observed savings.",
+        "source": "Thomson Reuters Future of Professionals, 2024",
+        "caveat": "A vendor-sponsored global survey of predictions, not a time-motion study. In a seasonal practice a predicted hour is doubly hypothetical: it may never be saved, and an hour saved in July is not the asset an hour saved in March is. The two numbers a partner group most wants do not exist in the public record either: the realization impact of AI drafting is unmeasured, and there is no credible mid-market CPA-firm ROI figure. Your own baseline is the only number that will ever be about your firm."
+      },
+      "cta": {
+        "headline": "Start with the baseline, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that produces the baseline and the honest range: what two candidate workflows cost you today, what governed AI plausibly returns across a season, and what the numbers would have to show before the firm scales anything.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}

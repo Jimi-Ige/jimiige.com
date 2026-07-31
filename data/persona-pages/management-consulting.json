@@ -4,22 +4,22 @@
   "pages": [
     {
       "persona": "managing-partner",
-      "headline": "Grow the firm without betting it on the hiring market.",
-      "outcome": "Your growth plan currently has one engine: hire senior people fast enough to keep up with the work you win. Governed AI adds a second engine. Assembly, drafting, retrieval, and synthesis move onto rails, senior attention returns to winning and standing behind work, and revenue can move faster than headcount without the firm's name paying for it.",
+      "headline": "Grow the pyramid without betting the firm on the partner market.",
+      "outcome": "Consulting economics run on three dials: the rate you command, the utilization you sustain, and the leverage you run between senior and junior hours. In most firms only the third dial still has room in it, and it is stuck because too much of the pyramid's work needs a partner's hands rather than a partner's judgment. Governed AI moves assembly, retrieval, drafting, and synthesis off senior desks, so the same partnership can carry more delivery without the firm selling work it cannot staff.",
       "triggers": [
-        "The growth plan assumes senior hires the market will not supply at a price the model affords.",
-        "Partners are at capacity while the pipeline is still growing, and the choice reads as decline work or dilute quality.",
-        "The firm's distinctive expertise is concentrated in a few heads, and succession is a hope rather than a plan.",
-        "Clients have started asking how the firm uses AI, and the current answer is individual improvisation."
+        "The growth plan needs partners the market cannot certify on schedule, because someone clients will actually buy from takes years to make and cannot be hired on a quarter's notice.",
+        "The no-bid call keeps arriving after the proposal is half written, so partners are spending their scarcest judgment on pursuits the firm should have declined.",
+        "The methods that make a practice distinctive live in a few senior heads, so the practice's value leaves with whoever built it.",
+        "Clients have started asking, in pursuit meetings, how the firm uses AI on their work, and the answer changes with whichever partner is in the room."
       ],
       "workflows": [
-        { "name": "Proposal-to-Project", "line": "Win more of the right work without more partner evenings: qualification stays senior, assembly stops being senior work." },
-        { "name": "Knowledge-to-Delivery", "line": "The firm's best thinking compounds instead of retiring with its authors, so every engagement starts above zero." },
-        { "name": "Delivery-to-Executive Insight", "line": "Portfolio truth you can run the firm on: status, capacity, and risk traceable to sources, not to Friday memory." }
+        { "name": "Proposal-to-Project", "line": "The pursuit decision stays a partner call and everything downstream of it stops being one. A faster no-bid is worth more to the pyramid than a faster proposal." },
+        { "name": "Knowledge-to-Delivery", "line": "The firm's methods stop living in senior heads, so junior hours start above zero and the leverage ratio can move without the work getting thinner." },
+        { "name": "Delivery-to-Executive Insight", "line": "Practice margin, utilization, and bench truth traceable to sources, so the partnership runs the firm on instruments rather than on Friday memory." }
       ],
       "aiChanges": [
-        "Research, first drafts, and retrieval come off senior desks, so partner hours concentrate on promise, price, and judgment.",
-        "Every pursuit and engagement starts from the firm's best prior work, with provenance, instead of from a blank page.",
+        "Assembly comes off senior desks, so partner hours go to the three calls that set the economics: whether to pursue, what to promise, and what to charge.",
+        "Junior hours shift from formatting and reconstruction toward the analysis that makes people promotable, which is how leverage moves without dilution.",
         "The operating picture of the firm assembles itself from live artifacts instead of consuming a layer of management time."
       ],
       "controls": [
@@ -29,10 +29,10 @@
         "A disclosure answer written before clients ask, one a managing partner would happily read aloud."
       ],
       "metrics": [
-        "Revenue per professional, the honest growth number",
-        "Proposal cycle time and win rate, read together",
-        "Share of delivery hours on reused versus recreated work",
-        "Review turnaround at partner gates"
+        "Revenue per professional, read against the senior-to-junior leverage ratio that produced it",
+        "Senior hours per pursuit, and win rate by pursuit type, read together",
+        "Share of delivery hours on reused versus recreated work product",
+        "Time from promotion to a new partner carrying their own book, the firm's real capacity clock"
       ],
       "evidence": {
         "text": "Enterprise surveys in 2025 find regular AI use near nine in ten organizations, while only a minority report enterprise-level earnings impact and most experiments never fully scale.",
@@ -58,7 +58,7 @@
       "workflows": [
         { "name": "Knowledge-to-Delivery", "line": "Prior work, experts, and research surface on demand with provenance, so delivery starts from the firm's best instead of from zero." },
         { "name": "Delivery-to-Executive Insight", "line": "Status, capacity, and risk synthesized from live artifacts on one spine, drillable to source in one step." },
-        { "name": "Proposal-to-Project handoff", "line": "What was sold arrives in delivery as a structured record, so teams build what was promised instead of what was remembered." }
+        { "name": "Proposal-to-Project", "line": "The handoff is the control point: what was sold arrives in delivery as a structured record, so teams build what was promised instead of what was remembered." }
       ],
       "aiChanges": [
         "Assembly work leaves the critical path: retrieval, drafting, and synthesis run on rails instead of on people.",
@@ -137,7 +137,7 @@
       "outcome": "The business is already using AI, approved or not. The question on your desk is whether that becomes a platform you can operate and defend, or a sprawl you get blamed for. Governed AI operations gives you the architecture: engagement-scoped access, approved sources, traceability by default, and a sanctioned path good enough that people stop wanting the shadow one.",
       "triggers": [
         "Shadow AI is already in the building: individual subscriptions, browser tools, and nobody can say what client data has touched them.",
-        "Practice groups are procuring point tools independently, each with its own data posture and none with a shared control model.",
+        "Practice groups are adopting their own drafting and research tools inside live proposal and engagement work, each with its own data posture and none with a shared control model.",
         "Client security questionnaires have started asking AI questions the current estate cannot answer cleanly.",
         "Leadership wants AI rolled out and IT is expected to make it safe after the fact."
       ],
@@ -159,7 +159,7 @@
       ],
       "metrics": [
         "Sanctioned-path coverage versus observed shadow use",
-        "Access reviews passed without remediation",
+        "Access reviews confirming rights mirror live engagement staffing, passed without remediation",
         "Turnaround time on client security questionnaires",
         "Time from tool request to governed availability"
       ],
@@ -176,36 +176,36 @@
     },
     {
       "persona": "risk-counsel",
-      "headline": "AI use your firm could explain to its most demanding client.",
-      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say how, where, or under what controls. Governed AI operations replaces improvisation with a defensible posture: engagement boundaries, human accountability at every consequential point, evidence that reconstructs what happened, and a disclosure answer ready before anyone asks.",
+      "headline": "AI use the firm can defend to two clients who compete with each other.",
+      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say how, where, and under whose accountability, engagement by engagement, when the client asking is one of two rivals served out of the same practice. Governed AI operations replaces improvisation with a defensible posture: boundaries drawn where the conflicts actually are, a named human answering for every consequential output, evidence that reconstructs what happened, and one disclosure answer ready before the procurement questionnaire arrives.",
       "triggers": [
-        "Client contracts have started speaking to AI directly, and the firm's posture varies by whoever is asked.",
-        "A near-miss surfaced: client material in an unapproved tool, caught by luck rather than by design.",
-        "Professional accountability for AI-assisted work has never been written down, and reviewers are assuming someone else checked.",
-        "An insurer, auditor, or client questionnaire asked about AI controls and the answer was assembled overnight."
+        "Master services agreements and statements of work have started carrying AI clauses, and each one was negotiated by a different partner to a different standard.",
+        "Two clients in the same practice compete directly, and nothing but staffing habit keeps their material out of one shared retrieval corpus.",
+        "A near-miss surfaced: an engagement team put client material into an unapproved tool on deadline, caught by luck rather than by design.",
+        "A client's procurement questionnaire arrived mid-pursuit asking how AI touches the engagement, and the answer was assembled overnight by whoever was free."
       ],
       "workflows": [
-        { "name": "Knowledge-to-Delivery", "line": "Reuse inside engagement walls with provenance, so the firm's memory works for it without working against its confidences." },
-        { "name": "Proposal-to-Project", "line": "Capability reuse with provenance and review, so no promise ships carrying another client's material." },
-        { "name": "Client Onboarding & Communication", "line": "Client-facing drafting with a human owner on every send, and a record both sides can rely on." }
+        { "name": "Knowledge-to-Delivery", "line": "Reuse walled by engagement and by conflict, so the firm's memory works for it without carrying one client's context into a rival's deliverable." },
+        { "name": "Proposal-to-Project", "line": "Capability reuse with provenance and review, so nothing in a pursuit document traces back to work the firm did for the client's competitor." },
+        { "name": "Client Onboarding & Communication", "line": "Client-facing drafting with a named human owner on every send, and a record both sides can rely on when a decision is questioned later." }
       ],
       "aiChanges": [
         "What changes is assembly speed. What never changes is accountability: a named human answers for every consequential output.",
-        "Every AI-assisted artifact is traceable to its sources and its reviewer, so questions get answers instead of investigations.",
-        "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover."
+        "Every AI-assisted artifact is traceable to its sources and its reviewer, so a client question gets an answer instead of an investigation.",
+        "The firm's posture becomes one sentence you control, given the same way in every pursuit, instead of a hundred improvisations you discover afterward."
       ],
       "controls": [
-        "Engagement-level data boundaries checked against each client's actual contract, because contracts now differ on AI.",
-        "Human review and named approval points ahead of every client-facing use.",
-        "Retention rules for prompts and outputs, set deliberately rather than defaulted.",
+        "AI boundaries set per engagement and checked against that client's MSA or engagement letter, because the clauses now differ from client to client.",
+        "Corpus separation between clients who compete, enforced by the platform rather than by whoever remembers the conflict.",
+        "Human review and named approval points ahead of every client-facing use, unchanged by how the draft was produced.",
         "An incident path with rehearsed client communication, because the plan you need is the one written before the miss.",
-        "A standing disclosure answer, reviewed by you, consistent everywhere it is given."
+        "One standing answer to the AI section of a procurement questionnaire, reviewed by you, given the same way at every pursuit."
       ],
       "metrics": [
-        "Engagements with confirmed AI posture against their contracts",
-        "Review and approval compliance on client-facing work",
+        "Engagements with AI posture confirmed against their own MSA or engagement letter",
+        "Competing-client pairs with corpus separation verified rather than assumed",
         "Near-misses reported and closed, a number that should be nonzero and falling",
-        "Time to answer a client or insurer AI questionnaire"
+        "Turnaround on the AI section of a client or insurer questionnaire during a live pursuit"
       ],
       "evidence": {
         "text": "Quality risk from misapplied AI is not hypothetical: causal field evidence shows professional performance degrades when AI is relied on for tasks outside its capability frontier.",
@@ -221,22 +221,22 @@
     {
       "persona": "finance-partner",
       "headline": "An AI investment case that would survive your own diligence.",
-      "outcome": "You have seen the vendor math: day-one payback, hours saved that nobody redeployed, benefits counted three times. The governed version is different by construction: baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points, and freed capacity named to a destination so it lands in margin instead of evaporating.",
+      "outcome": "You have seen the vendor math: day-one payback, hours saved that nobody redeployed, benefits counted three times. The governed version is different by construction: baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points. And the freed hours get a destination that shows up in your accounts, because a senior hour returned to a pursuit the firm wins, or to a fixed-fee engagement that stops writing off its overrun, is the only version of this that reaches margin.",
       "triggers": [
+        "Pursuit cost is climbing as a share of fee on competitive RFPs, and nobody can say which pursuits earned the senior hours they consumed.",
+        "Fixed-fee engagements keep closing with write-offs the delivery team saw coming and the pricing model did not.",
         "AI spend is accumulating across practices with no consolidated view of cost, let alone return.",
-        "A vendor business case reached the executive table and did not survive ten minutes of questions.",
-        "Margin compression that utilization alone no longer explains, while delivery hours hide recreated work.",
-        "The next planning cycle needs an AI line item and there is no defensible number to put on it."
+        "A vendor business case reached the partnership and did not survive ten minutes of questions."
       ],
       "workflows": [
-        { "name": "Proposal-to-Project", "line": "Cost of sale is mostly senior time; cycle time and win rate, read together, show whether that time is buying growth." },
-        { "name": "Knowledge-to-Delivery", "line": "The recreated-work share of delivery hours is the quiet margin leak this workflow exists to close." },
-        { "name": "Delivery-to-Executive Insight", "line": "Realization and margin visible during delivery, while pricing and staffing can still respond." }
+        { "name": "Proposal-to-Project", "line": "Pursuit cost is mostly senior time. Cost per pursuit against win rate by pursuit type shows whether that time is buying growth or subsidizing it." },
+        { "name": "Knowledge-to-Delivery", "line": "Recreated work is the write-off you book before the engagement has even slipped, and closing that gap is where fixed-fee margin actually lives." },
+        { "name": "Delivery-to-Executive Insight", "line": "Realization, leverage, and margin visible during delivery, while pricing and staffing can still respond to what they say." }
       ],
       "aiChanges": [
         "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
-        "The value side gets honest: baselined workflows, measured deltas, and freed hours assigned to a named destination.",
-        "Reporting you can stand behind: every number in the case traces to a source, because the case is a work sample of the firm's rigor."
+        "The value side gets honest: baselined workflows, measured deltas, and freed senior hours assigned to a named destination.",
+        "Freed senior hours translate through the leverage ratio, so the case is written in margin rather than in hours nobody redeployed."
       ],
       "controls": [
         "Baselines captured before any pilot, so every claim has a before.",
@@ -246,9 +246,9 @@
       ],
       "metrics": [
         "Program cost, total and per active workflow",
-        "Realization and margin by engagement, live",
-        "Measured cycle-time deltas against baseline on piloted workflows",
-        "Revenue per professional, the number the whole case answers to"
+        "Pursuit cost as a share of fee, by pursuit type",
+        "Write-offs on fixed-fee engagements, read against the recreated-work share of their hours",
+        "Revenue per professional against the leverage ratio, the pair the whole case answers to"
       ],
       "evidence": {
         "text": "Professionals surveyed in 2024 predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",

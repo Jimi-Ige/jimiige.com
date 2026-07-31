@@ -1,0 +1,268 @@
+{
+  "industry": "executive-search",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Grow the firm without betting it on the market for proven consultants.",
+      "outcome": "Your growth plan currently has one engine: hire consultants whose networks arrive with them, and the market rarely sells one at a price the model affords. Governed AI adds a second engine. Market mapping, drafting, assembly, and reporting move onto rails, consultant attention returns to candidates, clients, and judgment, and each desk runs more searches well without the firm's name or its network paying for it.",
+      "triggers": [
+        "The growth plan assumes hiring proven consultants with portable networks, and every year the market proves it will not supply them at that price.",
+        "Consultants are at their search ceiling while mandate demand keeps arriving, and the choice reads as decline work or let coverage and cadence slip.",
+        "The firm's market knowledge lives in a few heads and a database nobody fully trusts, and succession is a hope rather than a plan.",
+        "Clients have started asking how the firm uses AI and how candidate data is protected, and the answer depends on who they ask."
+      ],
+      "workflows": [
+        { "name": "Pitch-to-Mandate", "line": "Win more of the right searches without more partner evenings: the take-or-decline call stays senior, assembling the track record stops being senior work." },
+        { "name": "Research-to-Longlist", "line": "Markets covered faster without narrowing the lens, starting from the firm's prior work in the territory instead of from zero." },
+        { "name": "Search-to-Client Reporting", "line": "A portfolio view you can run the firm on: every search's status traceable to its live record, not to who you asked." }
+      ],
+      "aiChanges": [
+        "Mapping, research assembly, and first drafts come off consultant desks, so senior hours concentrate on candidates, clients, and the verdict.",
+        "Every pitch and every search starts from the firm's accumulated market knowledge, with provenance, instead of from a blank page.",
+        "The operating picture of every desk assembles itself from live search records instead of consuming a partner meeting to reconstruct."
+      ],
+      "controls": [
+        "Mandate-level boundaries, so one search's confidences never surface in another's work uninvited.",
+        "A consultant reads, edits, and owns every word that reaches a candidate or a client, unchanged from today.",
+        "The verdict stays human by explicit rule: the read on a person, every reference, and every reject decision belong to the consultant.",
+        "Retention for candidate data written deliberately, so what the firm holds is what it decided to hold.",
+        "A disclosure answer written before clients ask, one a managing partner would happily read aloud."
+      ],
+      "metrics": [
+        "Searches active per consultant without quality slippage",
+        "Days from mandate signature to a client-ready longlist",
+        "Client update cadence kept versus promised",
+        "Placement stick rate after twelve months"
+      ],
+      "evidence": {
+        "text": "Enterprise surveys in 2025 find regular AI use near nine in ten organizations, while only a minority report enterprise-level earnings impact and most experiments never fully scale.",
+        "source": "McKinsey State of AI 2025; Deloitte generative-AI survey 2025",
+        "caveat": "Self-reported, large-enterprise-skewed consultancy surveys, none of them about search firms. The pattern argues for operating discipline and measurement, not for urgency theater; no comparable primary evidence exists for executive search economics."
+      },
+      "cta": {
+        "headline": "See where mandate capacity is actually constrained.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three of your firm's workflows mapped and baselined, the real constraint named, and the moves with the best leverage-to-risk trade identified before anything is bought or built.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More searches through the same firm, without the wheels coming off.",
+      "outcome": "You already know where the friction is: every mandate queuing behind the same research bench, markets remapped from scratch, client updates assembled by hand on Friday, search status living in heads and inboxes. Governed AI takes the assembly load out of running searches while the stage gates, disclosure rules, and consultant ownership stay exactly where you put them.",
+      "triggers": [
+        "Every mandate crosses the research bench before anything else can happen, and the queue, not the client, sets time to longlist.",
+        "Market maps, pitch materials, and candidate profiles keep being rebuilt from scratch for territories the firm has worked for years.",
+        "Client updates consume consultant evenings and still slip, assembled from memory rather than from the record of the search.",
+        "Nobody can say where every active search stands without calling a meeting, and stalls surface weeks after they start."
+      ],
+      "workflows": [
+        { "name": "Research-to-Longlist", "line": "Mapping and profile assembly move onto governed rails with provenance, so researchers verify and enrich instead of hunting from zero." },
+        { "name": "Search-to-Client Reporting", "line": "Updates synthesized from the live record of each search, edited and owned by the consultant, on a cadence that gets kept." },
+        { "name": "Search Load & Consultant Capacity", "line": "Mandates per desk, stage-by-stage progress, and where searches stall, visible while there is still time to act." }
+      ],
+      "aiChanges": [
+        "Assembly leaves the critical path: maps, profiles, and drafts run on rails instead of on researcher evenings.",
+        "Every client update draws from the live search record, so cadence stops depending on who had time on Friday.",
+        "Load and stall signals surface per desk from the record, instead of arriving anecdotally after the client noticed."
+      ],
+      "controls": [
+        "An approved source list for research, so every profile is built from sources the firm could defend to the client.",
+        "Access that mirrors the search team, provisioned and revoked with it.",
+        "A consultant edits and owns every update and every approach before it ships.",
+        "Disclosure rules by stage, so no candidate is named to a client before the conversation has earned it.",
+        "Retention and reuse rules applied at mandate close: keep the map, never the confidences."
+      ],
+      "metrics": [
+        "Days from mandate signature to a client-ready longlist",
+        "Searches active per consultant without quality slippage",
+        "Client update cadence kept versus promised",
+        "Time-to-shortlist and time-to-placement by mandate type"
+      ],
+      "evidence": {
+        "text": "In a preregistered experiment published in Science in 2023, access to a general AI assistant cut time on occupation-specific professional writing tasks by about 40 percent and raised judged quality by about 18 percent, across roughly 453 college-educated professionals.",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Controlled, task-level writing results, evaluator-scored; not search deliverables, client mandates, or firm-level capacity. It locates the drafting layer as the opportunity; only your own baseline shows what it returns."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it.",
+        "line": "The Workflow Leverage & Trust Assessment maps and baselines your two highest-friction workflows in a fixed-scope working session, and returns the operational moves with the best leverage-to-risk trade. You keep the baseline either way.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Protect the read that carries your name, and run more searches beside it.",
+      "outcome": "Growth is welcome. A narrower lens is not. The promise of governed AI for a sector head is specific: markets covered wide and fast from assembled research with provenance, longlists that arrive with the reasons attached, and the read on a person, every reference, and every client counsel staying exactly where the fee says they belong, with the consultant.",
+      "triggers": [
+        "Your best consultants are at their ceiling, and the next mandate in the sector will stretch either coverage or cadence.",
+        "Longlists are drifting toward what any competitor's tooling would produce, and the client is paying for a lens, not a database export.",
+        "Clumsy automated outreach somewhere in the market burned a relationship, and your sector compares notes.",
+        "A client asked how the practice uses AI on their search, and the answer depended on who they asked."
+      ],
+      "workflows": [
+        { "name": "Research-to-Longlist", "line": "Coverage assembles wide from defensible sources, and the lens narrows late, by consultant judgment, with every cut recorded." },
+        { "name": "Assessment Judgment & Reference Integrity", "line": "Interview material organized for the consultant to correct, while the verdict and every reference call stay human by rule." },
+        { "name": "Candidate & Client Communication", "line": "Approaches drafted in your consultants' own register, owned on every send, at a volume a relationship could actually carry." }
+      ],
+      "aiChanges": [
+        "Profiles and market context arrive assembled with sources attached, so consultants verify and judge instead of hunting.",
+        "Interview notes reach the file organized for correction, so the record improves without the read being delegated.",
+        "The longlist carries its reasons: why each name stayed or left, which is the audit trail of the lens."
+      ],
+      "controls": [
+        "A consultant's read on every longlist before the client sees it, with the reasons for every cut recorded.",
+        "The verdict human by explicit rule: no model makes a reject decision, and references remain conversations between people who trust each other.",
+        "Outreach capped at what a human relationship could plausibly carry, drafted in the consultant's register.",
+        "Approved sources only, so every profile could be defended to the client that paid for it."
+      ],
+      "metrics": [
+        "Breadth of the lens, read together with days to longlist",
+        "Candidate response rates to outreach",
+        "Client update cadence kept versus promised",
+        "Placement stick rate after twelve months"
+      ],
+      "evidence": {
+        "text": "The field experiment that measured large gains from AI on tasks inside its capability frontier also found professional quality fell when consultants relied on it for tasks outside that frontier.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Task-level evidence from one elite consulting firm, not a search firm, and the frontier moves with the model and the domain. In search the clearest outside-frontier move is letting a model make reject decisions; the control is a human verdict on every cut, not prohibition."
+      },
+      "cta": {
+        "headline": "Find the hours your desks spend beneath the fee.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that baselines where your consultants' time actually goes and which workflows would return the most of it, without touching the judgment that makes the fee defensible.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, instead of a sprawl holding fragments of the network.",
+      "outcome": "The desks are already using AI, approved or not, and some of it is touching candidate data. The question on your desk is whether that becomes a platform the firm can operate and defend, or a sprawl it gets blamed for. Governed AI operations gives you the architecture: mandate-scoped access, approved sources, provenance and retention by default, and a sanctioned path fast enough that nobody wants the shadow one.",
+      "triggers": [
+        "Shadow AI is already in the building: individual subscriptions and browser tools, and nobody can say what candidate data has touched them.",
+        "Desks and sector teams are picking point tools independently, each holding fragments of the network with no shared control model.",
+        "Client security and data questionnaires have started asking AI questions the current estate cannot answer cleanly.",
+        "Leadership wants AI rolled out, and technology is expected to make it safe after the fact."
+      ],
+      "workflows": [
+        { "name": "Research-to-Longlist", "line": "Research runs on an approved source list with provenance attached, so every profile is traceable and the corpus has an owner." },
+        { "name": "Search-to-Client Reporting", "line": "One live record per search as the single source of synthesis, which is an architecture decision before it is a reporting one." },
+        { "name": "Candidate & Client Communication", "line": "Drafting and scheduling inside the governed platform, so candidate data stops leaking into personal tools." }
+      ],
+      "aiChanges": [
+        "The sanctioned path becomes the fastest path, which is the only adoption strategy that has ever beaten shadow IT.",
+        "Access follows the search team automatically, so mandate boundaries are enforced by the platform, not by policy documents.",
+        "Every AI-assisted artifact carries its source trail, so client questionnaires get answered from the system instead of from archaeology."
+      ],
+      "controls": [
+        "Access mirroring mandate staffing, provisioned and revoked with the search team.",
+        "An approved-tool list with a real intake path, so new needs have somewhere to go besides the shadows.",
+        "Retention and deletion rules for candidate data as platform defaults, not per-desk habits.",
+        "An incident path that assumes a miss will eventually happen and names who does what when it does."
+      ],
+      "metrics": [
+        "Mandates with candidate data confined to sanctioned tools, versus observed shadow use",
+        "Turnaround time on client security and candidate-data questionnaires",
+        "Access reviews confirming rights mirror live search-team staffing, passed without remediation",
+        "Time from tool request to governed availability"
+      ],
+      "evidence": {
+        "text": "NIST's AI Risk Management Framework (January 2023) and its Generative AI Profile (July 2024) give a voluntary, vendor-neutral scaffold for governing AI design, deployment, use, and evaluation.",
+        "source": "NIST AI RMF 1.0; NIST.AI.600-1",
+        "caveat": "Voluntary frameworks, not mandates and not a safe harbor. They still have to be adapted to candidate-data obligations, cross-border rules, and each client's expectations of discretion."
+      },
+      "cta": {
+        "headline": "Design the platform before the desks design it for you.",
+        "line": "The Workflow Leverage & Trust Assessment maps the workflows the platform must serve and the control architecture they need, in a fixed-scope working session, so the estate you operate is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "Candidate data handling your firm could explain to its most demanding client.",
+      "outcome": "The risk is not that the firm uses AI. It is that the firm cannot say where candidate data goes, how long it is kept, or whether a model ever influenced who left a list. Governed AI operations replaces improvisation with a defensible posture: mandate boundaries in both directions, human verdicts by explicit rule, retention decided rather than defaulted, and a disclosure answer ready before anyone asks.",
+      "triggers": [
+        "A near-miss surfaced: candidate notes or a client spec in an unapproved tool, caught by luck rather than by design.",
+        "A client asked how candidate data is protected, and the answer had to be assembled overnight.",
+        "Retention has never been decided, so candidate files accumulate by default, including notes on people who never asked to be in them.",
+        "Nobody can say with confidence whether software ever influenced a reject decision, and the regulatory exposure runs in both directions."
+      ],
+      "workflows": [
+        { "name": "Assessment Judgment & Reference Integrity", "line": "Models may organize interview material; the verdict, every reference, and every reject decision stay with the consultant, by written rule." },
+        { "name": "Candidate & Client Communication", "line": "Every outbound word owned by a consultant, with discretion rules that hold at machine speed as well as human speed." },
+        { "name": "Research-to-Longlist", "line": "Research from approved sources with provenance and recorded reasons for every cut, which is the audit trail of the lens." }
+      ],
+      "aiChanges": [
+        "What changes is assembly speed. What never changes is accountability: a named consultant answers for every verdict and every send.",
+        "Every AI-assisted artifact is traceable to its sources and its owner, so questions get answers instead of investigations.",
+        "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover."
+      ],
+      "controls": [
+        "Mandate-level boundaries protecting both confidences at once: what candidates said, and what the spec reveals about the client.",
+        "Retention and deletion for candidate data written deliberately: what is kept when a search closes, for how long, and what is destroyed.",
+        "The verdict human by explicit rule: no model makes a reject decision, and references remain unquoted conversations between people.",
+        "An incident path with rehearsed client and candidate communication, written before the miss instead of during it.",
+        "A standing disclosure answer, reviewed by you, consistent everywhere it is given."
+      ],
+      "metrics": [
+        "Mandates with confirmed data posture against client agreements",
+        "Retention and deletion checks passed at mandate close",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer a client data-protection questionnaire"
+      ],
+      "evidence": {
+        "text": "The U.S. EEOC and Department of Justice have warned that employers' use of AI and automated software tools in hiring, monitoring, pay, or promotion decisions can violate the Americans with Disabilities Act.",
+        "source": "U.S. EEOC and Department of Justice",
+        "caveat": "A warning and technical assistance, not a finding that any specific tool is unlawful, and not legal advice. A search firm sits on both sides of it, screening in its own process and advising clients who screen in theirs, which is why reject decisions stay human."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment gives the risk chair a design seat from day one: boundaries, retention, human-verdict rules, and the evidence trail, built into the workflows in a fixed-scope working session rather than appended afterward.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI investment case built on your own searches, because there is no benchmark to borrow.",
+      "outcome": "You have seen the vendor math: day-one payback, hours saved that nobody redeployed, benefits counted three times. In this industry there is not even a credible benchmark to borrow, which makes discipline the whole case. The governed version is different by construction: baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points, and freed consultant hours named to a destination so they land in fees instead of evaporating.",
+      "triggers": [
+        "AI spend is accumulating across desks with no consolidated view of cost, let alone return.",
+        "A vendor business case reached the partner table and did not survive ten minutes of questions.",
+        "Capacity is the stated constraint while revenue per consultant sits flat, which means hours are going somewhere unbilled.",
+        "The next planning cycle needs an AI line item and there is no defensible number to put on it."
+      ],
+      "workflows": [
+        { "name": "Search Load & Consultant Capacity", "line": "Searches per desk and where they stall, measured against baseline, which is the number the whole case answers to." },
+        { "name": "Pitch-to-Mandate", "line": "The cost of winning work is mostly senior time; cycle time and mandates declined, read together, show whether that time is buying the right fees." },
+        { "name": "Search-to-Client Reporting", "line": "Cadence kept versus promised, visible while the search is live, because retention of clients is the cheapest growth there is." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
+        "The value side gets honest: baselined workflows, measured deltas, and freed hours assigned to named destinations.",
+        "Every number in the case traces to a source, because in a firm that sells judgment the business case is a work sample."
+      ],
+      "controls": [
+        "Baselines captured per desk before any pilot, so every capacity claim has a before.",
+        "One owner and one source of record per metric, drawn from the live search record rather than recollection.",
+        "Adoption lag modeled explicitly, so value arriving in month eight was planned, not excused.",
+        "Freed consultant hours named to a destination before the case is approved: more searches, deeper coverage, or client work.",
+        "Ranges with stated assumptions in front of the partnership, never false points."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow",
+        "Searches active per consultant, against baseline",
+        "Days to longlist and time-to-placement deltas on piloted workflows",
+        "Revenue per consultant, the honest growth number"
+      ],
+      "evidence": {
+        "text": "Professionals surveyed in 2024 predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
+        "source": "Thomson Reuters Future of Professionals, 2024",
+        "caveat": "A vendor-sponsored global survey of predictions, none of it specific to search firms. Predicted hours may never convert to fees or margin; only a baseline and honest measurement can show whether they do."
+      },
+      "cta": {
+        "headline": "Start with the baseline your own desks produce, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment produces the baseline and the honest range in a fixed-scope working session: what two candidate workflows cost today, what governed AI plausibly returns, and what the numbers would need to show before scaling. If the case is weak, you will know for the price of a working session.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Campaign — Management Consulting
+# Campaign: Management Consulting
 
 **Status: ACTIVE**
 
@@ -34,7 +34,7 @@ Governance is why the result can be trusted with client work.
 - Margin compression that utilization alone no longer explains.
 
 **Primary outcome.**
-Booked Workflow Leverage &amp; Trust Assessments with firms matching the
+Booked Workflow Leverage & Trust Assessments with firms matching the
 profile. Secondary: playbook readership within target roles.
 
 **Campaign themes.**
@@ -46,7 +46,7 @@ Rotate themes so no two consecutive posts share one: 01, 04, 07, 10, 02, 05,
 08, 11, 03, 06, 09, 12. Two posts per week sustains the rotation for six weeks.
 
 **Conversion path.**
-Post → playbook (or persona page for targeted shares) → Workflow Leverage &amp;
+Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
@@ -59,7 +59,7 @@ qualitative. Predictions are always labeled as predictions.
 
 ## Posts
 
-### Post 01 — Theme 1: Grow without proportional hiring
+### Post 01, Theme 1: Grow without proportional hiring
 
 Every consulting growth plan I have seen lately has the same silent
 assumption buried in it: that the firm can hire senior people as fast as it
@@ -80,7 +80,7 @@ I wrote a field playbook on exactly this. Link in the comments.
 *Soft CTA:* Grow Delivery Capacity with Governed AI →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-01
 
-### Post 02 — Theme 1: Grow without proportional hiring
+### Post 02, Theme 1: Grow without proportional hiring
 
 Revenue per professional is the most honest number in a consulting firm, and
 the least discussed.
@@ -96,16 +96,16 @@ from memory, the framework reconstructed from a deck nobody can find, the
 status pack assembled by hand every Friday. Move that work onto governed
 rails and the ratio starts to move, without a single additional hire.
 
-The backdrop makes this urgent. The most recent professional-services
-benchmark put surveyed billable utilization at 66.4 percent, the lowest in
-that survey's history (SPI Research, summarized by Deltek; a vendor-sponsored
-voluntary survey, not a census, and not an AI effect). Capacity is under
-pressure across the sector. The question is what your firm does about it.
+There is a version of this you can check before the next partner meeting.
+Put revenue per professional next to headcount for the last three years and
+see which line grew faster. If headcount won, the firm has been buying
+growth, and no industry benchmark is going to tell you more than that
+comparison already does.
 
 *Soft CTA:* The playbook covers how, chapter by chapter →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-02
 
-### Post 03 — Theme 1: Grow without proportional hiring
+### Post 03, Theme 1: Grow without proportional hiring
 
 "We need to hire ahead of the revenue" is how consulting firms have always
 grown, and it quietly prices a bet: that utilization arrives before the
@@ -122,10 +122,10 @@ I am not going to tell you what that share is in your firm, because I have
 not measured your firm. That is the point: baseline two workflows for ninety
 days and let your own numbers make the argument.
 
-*Soft CTA:* The Workflow Leverage &amp; Trust Assessment is the fixed-scope way in →
+*Soft CTA:* The Workflow Leverage & Trust Assessment is the fixed-scope way in →
 https://jimiige.com/workflow-leverage-assessment.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-03
 
-### Post 04 — Theme 2: Stop recreating work
+### Post 04, Theme 2: Stop recreating work
 
 Ask a partner where the firm's best proposal from last year is. Not the
 final PDF. The thinking: the pricing logic, the team structure, the win
@@ -144,7 +144,7 @@ finally makes practical.
 *Soft CTA:* Chapter 5 of the playbook is entirely about this →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-04
 
-### Post 05 — Theme 2: Stop recreating work
+### Post 05, Theme 2: Stop recreating work
 
 Lessons learned is the most abandoned deliverable in consulting. Everyone
 means to write it. The next engagement starts Monday.
@@ -163,7 +163,7 @@ virtue.
 *Soft CTA:* How that works in practice, in the playbook →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-05
 
-### Post 06 — Theme 2: Stop recreating work
+### Post 06, Theme 2: Stop recreating work
 
 Reuse has a failure mode nobody puts on the slide: the fastest way to end a
 client relationship is to let another client's material surface in their
@@ -182,7 +182,7 @@ from before it ships. Leverage and trust are the same build.
 *Soft CTA:* The governance patterns are in chapter 10 →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-06
 
-### Post 07 — Theme 3: Improve delivery without lowering quality
+### Post 07, Theme 3: Improve delivery without lowering quality
 
 The fear in every partner meeting about AI is the same fear, differently
 dressed: that speed will be bought with quality, and the firm's name will
@@ -208,7 +208,7 @@ sellable. A faster draft that still passes the same gate is pure gain.
 *Soft CTA:* The playbook's quality chapters →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-07
 
-### Post 08 — Theme 3: Improve delivery without lowering quality
+### Post 08, Theme 3: Improve delivery without lowering quality
 
 A steering committee is only as good as its ability to challenge a number,
 and most engagement status packs cannot survive the challenge. The figure
@@ -227,7 +227,7 @@ deserve instruments, not performances.
 *Soft CTA:* Delivery-to-Executive Insight, chapter 6 →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-08
 
-### Post 09 — Theme 3: Improve delivery without lowering quality
+### Post 09, Theme 3: Improve delivery without lowering quality
 
 The old client-communication failure was the update that never went out. The
 new one is worse: the update that went out with nobody home.
@@ -246,7 +246,7 @@ Drafted by a machine is fine. Sent unread is not.
 *Soft CTA:* More in the playbook →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-09
 
-### Post 10 — Theme 4: Govern AI without slowing the firm down
+### Post 10, Theme 4: Govern AI without slowing the firm down
 
 "Governance will slow us down" assumes governance is a committee. It should
 be rails.
@@ -267,7 +267,7 @@ allowed to.
 *Soft CTA:* Chapter 10: governance that speeds the firm up →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-10
 
-### Post 11 — Theme 4: Govern AI without slowing the firm down
+### Post 11, Theme 4: Govern AI without slowing the firm down
 
 Somewhere in your next partner meeting about AI, the general counsel is
 going to ask the confidentiality question. The program that survives is the
@@ -286,7 +286,7 @@ It becomes the reason the partnership says yes.
 *Soft CTA:* The six chairs, chapter 3 →
 https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-11
 
-### Post 12 — Theme 4: Govern AI without slowing the firm down
+### Post 12, Theme 4: Govern AI without slowing the firm down
 
 You do not need an AI transformation. You need one honest test.
 
@@ -302,5 +302,5 @@ Ninety days later you know something true about your own firm, which is
 more than most AI strategies ever deliver. And if the test says stop, you
 learned that for the price of a pilot instead of a program.
 
-*Soft CTA:* The Workflow Leverage &amp; Trust Assessment is how the test starts →
+*Soft CTA:* The Workflow Leverage & Trust Assessment is how the test starts →
 https://jimiige.com/workflow-leverage-assessment.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_management-consulting&utm_content=post-12

@@ -1,0 +1,267 @@
+{
+  "industry": "creative-agencies",
+  "updated": "2026-07-30",
+  "pages": [
+    {
+      "persona": "managing-partner",
+      "headline": "Grow the agency without hiring taste you cannot buy.",
+      "outcome": "Your growth plan has one engine: hire senior creative people fast enough to keep up with the work you win, in a market that rarely supplies them at a price the retainer mix can carry. Governed AI adds a second engine. Research, assembly, versioning, and status synthesis move onto rails, senior creative attention returns to the idea, the room, and the call, and the agency can take on more work without the portfolio starting to look like everyone else's.",
+      "triggers": [
+        "The growth plan assumes senior creative hires the market will not supply at a price your retainers can carry.",
+        "Founders and senior creatives are still on every job, and the choice reads as decline the work or dilute it.",
+        "A client or their procurement team asked whether and how AI touched their work, and the answer varied by who they asked.",
+        "Retainers keep renewing at the same fee for visibly more scope, and revenue growth stops being visible in margin."
+      ],
+      "workflows": [
+        { "name": "Pitch-to-Brief", "line": "Win more of the right work without more unbilled senior evenings: the pitch or no-pitch call stays yours, assembly stops being founder work." },
+        { "name": "Brief-to-Concept Support", "line": "The search widens and the mechanical spread comes off creative desks, while the idea and the call stay exactly where your reputation needs them." },
+        { "name": "Production-to-Account Insight", "line": "One read of the roster you can run the agency on: status, burn, and scope health traceable to artifacts instead of to Monday's optimism." }
+      ],
+      "aiChanges": [
+        "Research, first drafts, versions, and status compilation leave senior creative desks, so the hours you cannot buy more of concentrate on the work and the client.",
+        "The agency's own record, cases, brand systems, and the reasons campaigns worked, becomes reusable infrastructure instead of folklore held by whoever happened to be there.",
+        "The operating picture of the roster assembles itself from live production records instead of consuming a layer of account and production time."
+      ],
+      "controls": [
+        "Account-level boundaries: what one client's brand taught the agency never surfaces in a competitor's work.",
+        "Internal creative review before anything a client sees, unchanged from today, so the bar and the accountability never move.",
+        "Human creative direction documented on every deliverable, which supports the agency's rights posture and its disclosure answer at once.",
+        "One written answer on AI use, given the same way by every account team, ready before a client asks for it."
+      ],
+      "metrics": [
+        "Revenue per full-time creative, the honest growth number",
+        "Pitch turnaround time and win rate, read together",
+        "Margin by client and by retainer",
+        "Share of production time on first-pass mechanical work"
+      ],
+      "evidence": {
+        "text": "Enterprise surveys in 2025 report regular AI use at 88 percent of organizations in at least one function, while only 39 percent report enterprise-level earnings impact and most experiments never fully scale.",
+        "source": "McKinsey State of AI 2025; Deloitte generative-AI survey 2025",
+        "caveat": "Self-reported consultancy surveys, skewed to large enterprises and produced by firms that sell AI services. Not agency data and not audited financials. The pattern is about value capture rather than access, and no public source for creative-agency utilization or realization economics passed this library's evidence bar, so the only economics worth planning against are your own."
+      },
+      "cta": {
+        "headline": "See where the agency's growth is actually constrained.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session: two or three of your agency's workflows mapped and baselined, the real constraint named, and the moves with the best leverage-to-risk trade identified. Evidence first, program second.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "operations-director",
+      "headline": "More work through the same studio, without the wheels coming off.",
+      "outcome": "You already know where the friction lives: briefs that reach the studio incomplete, feedback arriving in five channels, versions multiplying faster than anyone can log them, Monday's status compiled by hand, and jobs whose trouble only becomes visible at reconciliation. Governed AI takes the assembly load out of studio operations while creative review gates, approval order, and escalation paths stay exactly where you put them.",
+      "triggers": [
+        "Utilization looks healthy while jobs still run late, which means the hours are going somewhere the scope never priced.",
+        "The same credentials deck, case study, and boilerplate keep getting rebuilt from scratch under pitch deadline.",
+        "Feedback arrives in five channels and the studio revises against a version nobody can agree on.",
+        "The weekly work-in-progress review consumes a day of account and production time to assemble and is stale by the time it is read."
+      ],
+      "workflows": [
+        { "name": "Production-to-Account Insight", "line": "Status, burn, and revision counts synthesized from live production records, with every line drillable to the artifact behind it in one step." },
+        { "name": "Client Onboarding & Approvals", "line": "One feedback channel, one version log, one approver map, so the studio stops manufacturing revisions it was never scoped for." },
+        { "name": "Pitch-to-Brief", "line": "What was promised in the room arrives in the studio as a complete brief, so teams build what was sold instead of what was remembered." }
+      ],
+      "aiChanges": [
+        "Assembly leaves the critical path: research, first drafts, versions, and status synthesis run on rails instead of on people.",
+        "Handoffs become records instead of conversations, so nothing promised in the pitch room goes missing on the way to production.",
+        "Revision and scope signals surface the week they diverge from what the scope assumed, while the job can still be saved."
+      ],
+      "controls": [
+        "Account-scoped access that mirrors team assignment, so each team reaches exactly what it should and nothing from the account across the aisle.",
+        "Feedback consolidated with conflicts preserved and attributed, never averaged into a position nobody actually holds.",
+        "Internal creative review before any external route, with no exception for small deliverables, because clients do not grade on size.",
+        "Scope changes logged as dated events with the request attached, so the creep conversation has evidence instead of grievance.",
+        "Retention and reuse rules set at job close, while the boundaries are still fresh."
+      ],
+      "metrics": [
+        "Revisions per deliverable, by client and by work type",
+        "Scope-versus-actual hours by job",
+        "On-time delivery rate by client",
+        "Share of production time on first-pass mechanical work"
+      ],
+      "evidence": {
+        "text": "In a preregistered experiment published in Science, access to a general AI assistant cut time on occupation-specific professional writing tasks by about 40 percent and raised evaluator-judged quality by about 18 percent, across roughly 453 college-educated professionals.",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Controlled writing tasks, evaluator-scored on experimental outputs, not full client engagements and not creative concepting. It is production-adjacent evidence, not a firm-level margin or realization result. Aim it at the mechanical layer of the studio, where it actually applies, and baseline your own workflows before believing anything about them."
+      },
+      "cta": {
+        "headline": "Name the two workflows, then prove it.",
+        "line": "The Workflow Leverage & Trust Assessment maps and baselines your two highest-friction workflows in a fixed-scope working session, and returns the operational moves with the best leverage-to-risk trade. You keep the baseline either way.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "practice-leader",
+      "headline": "Put more work over the bar without lowering it.",
+      "outcome": "Growth is welcome. Sameness is not. The promise for the creative chair is specific: research and references that arrive assembled with their sources attached, wider territory exploration so the team rejects from abundance instead of settling from fatigue, the mechanical spread of sizes, formats, and versions off creative desks, and the idea and the call left entirely alone. The bar does not move. What arrives at it gets better, and it arrives earlier.",
+      "triggers": [
+        "Senior creatives are producing versions instead of directing work, and the review calendar has become the studio's bottleneck.",
+        "The work has started to sound like the category's default answer, and nobody can point to where the drift began.",
+        "Juniors spend their years resizing and adapting instead of learning the judgment that makes them promotable.",
+        "A client asked how AI was used on their campaign, and the account team's answer did not match the studio's."
+      ],
+      "workflows": [
+        { "name": "Brief-to-Concept Support", "line": "Research, references, and variants assisted from governed libraries; the direction chosen and shaped by a creative director, a stage that keeps no automation column on purpose." },
+        { "name": "Creative Review & Brand Stewardship", "line": "Work arrives at review with sources, rights status, and the AI-assistance check already visible, so senior scrutiny lands on the work instead of on the archaeology." },
+        { "name": "Client Onboarding & Approvals", "line": "The brand captured properly at intake, guidelines, voice, mandatories, and the approver map, so the studio stops relearning the account on the client's time." }
+      ],
+      "aiChanges": [
+        "Exploration widens, because surveying ten territories no longer costs what surveying three used to, and the team rejects from abundance rather than settling at 2am.",
+        "The mechanical spread, sizes, formats, versions, and first-pass adaptations, comes off creative desks and arrives at review instead of at midnight.",
+        "What was reused and where it came from travels with the work, which makes creative review faster and sharper at the same time."
+      ],
+      "controls": [
+        "The support boundary written down: research, references, and variants are assisted; the idea and the call are not.",
+        "Internal creative review before anything a client sees, including the brand-guideline check and the AI-assistance check.",
+        "Governed reference and asset libraries with rights status visible before anything is pinned to a board.",
+        "Human creative direction documented on every deliverable, kept with the job file rather than in someone's memory.",
+        "Junior work redesigned rather than deleted, so the people who will hold the bar in five years still learn how."
+      ],
+      "metrics": [
+        "Revisions per deliverable, by client and by work type",
+        "Share of production time on first-pass mechanical work",
+        "Territories explored per brief, and how many survive internal review",
+        "Share of junior hours on judgment-building versus mechanical work"
+      ],
+      "evidence": {
+        "text": "The field experiment that measured large gains from AI inside its capability frontier also found professional quality fell when people relied on it for tasks outside that frontier, across 758 consultants at one elite consulting firm.",
+        "source": "Dell'Acqua et al., 2023 (SSRN)",
+        "caveat": "Consulting tasks at one elite firm, so the transfer to creative work is an inference, and the frontier itself moves with the model and the domain. Nobody has credibly measured what AI does to the quality of an idea. That gap is exactly why the call stays human and the review gate stays where it is."
+      },
+      "cta": {
+        "headline": "Find the senior creative hours the studio is spending beneath itself.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that baselines where senior creative time actually goes and which workflows would return the most of it, without touching the review discipline that protects the work.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "it-director",
+      "headline": "One governed platform, instead of a studio full of subscriptions.",
+      "outcome": "The studio is already using AI, approved or not, because generation tools arrived where creative people work and nobody waited for a policy. The question on your desk is whether that becomes a platform you can operate and defend, or a sprawl you get blamed for. Governed AI operations gives you the architecture: account-scoped access, approved reference and asset libraries, provenance by default, and a sanctioned path fast enough that nobody wants the shadow one.",
+      "triggers": [
+        "Personal generation subscriptions are already in the studio, and nobody can say which client material has passed through them.",
+        "Account teams are adopting their own drafting and image tools inside live client work, each with its own data posture and none with a shared control model.",
+        "A client's procurement or security questionnaire asked AI questions the current estate cannot answer cleanly.",
+        "Leadership wants AI moving and technology is expected to make it safe after the fact."
+      ],
+      "workflows": [
+        { "name": "Brief-to-Concept Support", "line": "Reference and asset libraries become governed assets: approved sources, rights status, account walls, provenance, and a named owner." },
+        { "name": "Creative Review & Brand Stewardship", "line": "The AI-assistance check and the provenance trail become platform features rather than habits that depend on who happens to be on the job." },
+        { "name": "Production-to-Account Insight", "line": "One source of record per number, which is an architecture decision long before it is a reporting one." }
+      ],
+      "aiChanges": [
+        "The sanctioned path becomes the fastest path, which is the only strategy that has ever beaten shadow tooling in a creative studio.",
+        "Access follows team assignment, so account walls are enforced by the platform instead of by anyone's memory of who is on what.",
+        "Every AI-assisted asset carries its source trail, so client questionnaires and rights questions get answered from the system instead of from archaeology."
+      ],
+      "controls": [
+        "Account-scoped access, provisioned and revoked with team assignment rather than reviewed once a year.",
+        "An approved-tool list with a real intake path for new needs, so exceptions have somewhere to go besides the shadows.",
+        "Provenance, rights status, and retention as platform defaults, not per-team practice.",
+        "An incident path that assumes a miss will eventually happen and names who does what when it does."
+      ],
+      "metrics": [
+        "Sanctioned-path coverage against observed shadow use",
+        "Access reviews confirming reach matches live team assignment, passed without remediation",
+        "Turnaround time on client security and AI questionnaires",
+        "Time from a studio tool request to governed availability"
+      ],
+      "evidence": {
+        "text": "Enterprise surveys in 2025 put regular AI use at 88 percent of organizations in at least one function, while nearly two-thirds have not begun enterprise-wide scaling and most experiments never fully scale.",
+        "source": "McKinsey State of AI 2025; Deloitte generative-AI survey 2025",
+        "caveat": "Self-reported consultancy surveys, skewed to large enterprises and produced by firms that sell AI services. Not agency data. Read the shape, not the benchmark: AI use spreads through an organization faster than any platform is built to hold it, which is precisely the estate you inherit when the sanctioned path is not the fast one."
+      },
+      "cta": {
+        "headline": "Design the platform before the studio designs it for you.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that maps the workflows the platform has to serve and the control architecture they need, so the estate you end up operating is the one you would have chosen.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "risk-counsel",
+      "headline": "AI use the agency could explain to its most demanding client.",
+      "outcome": "The risk is not that the agency uses AI. It is that the agency cannot say how, where, and under what controls, on paper that now differs client by client. Governed AI operations replaces improvisation with a posture you set: account walls that mirror team assignment, human creative direction documented on every deliverable, a usage-rights position checked against each contract, and one disclosure answer given the same way in every room.",
+      "triggers": [
+        "Client contracts have started speaking to AI directly, and the agency's own paper is silent on it.",
+        "Usage rights for AI-assisted material came up in a negotiation and the answer was assembled in the meeting.",
+        "A near-miss surfaced: client material in an unapproved tool, caught by luck rather than by design.",
+        "Three people from the same agency gave three different answers to one client's question about AI."
+      ],
+      "workflows": [
+        { "name": "Creative Review & Brand Stewardship", "line": "The gate where brand guidelines, rights status, and the AI-assistance check are enforced and recorded before anything goes external." },
+        { "name": "Brief-to-Concept Support", "line": "Exploration from governed libraries with rights status attached, so nothing derivative or unownable reaches a board and then a client." },
+        { "name": "Client Onboarding & Approvals", "line": "Intake that captures each client's actual AI terms and approver map, so the posture is set per contract instead of per meeting." }
+      ],
+      "aiChanges": [
+        "What changes is assembly speed. What never changes is accountability: a named human owns every consequential output that leaves the agency.",
+        "Human creative direction is documented on every deliverable, which supports the rights posture and the disclosure answer with a single habit.",
+        "The agency's position becomes one sentence you control, instead of a hundred improvisations you discover afterwards."
+      ],
+      "controls": [
+        "Account-level data and retrieval boundaries checked against each client's actual contract, because contracts now differ on AI.",
+        "Internal creative review and a named approver before anything client-facing, with the check recorded rather than assumed.",
+        "Human creative direction documented on every deliverable, kept with the job file.",
+        "Retention rules for prompts, outputs, and reference sets, set deliberately at job close rather than defaulted by a tool.",
+        "One written disclosure answer, reviewed by you, given the same way by every account team."
+      ],
+      "metrics": [
+        "Accounts with a confirmed AI posture matched to their contract",
+        "Deliverables with human creative direction documented",
+        "Near-misses reported and closed, a number that should be nonzero and falling",
+        "Time to answer a client, insurer, or procurement AI questionnaire"
+      ],
+      "evidence": {
+        "text": "In January 2025 the US Copyright Office concluded that questions of copyrightability and AI can be addressed under existing law, and that using AI tools to assist rather than replace human creativity does not, by itself, deny copyright protection for the original human expression in a work.",
+        "source": "US Copyright Office, Copyright and Artificial Intelligence, Part 2, January 2025",
+        "caveat": "Agency legal analysis, not a court holding. It leaves training-data and infringement questions to other parts of the Office's work and to ongoing litigation, and nothing here is legal advice for client contracts or the agency's own IP policy. The operational lesson is narrow and useful: protection attaches to the human contribution, which makes documenting human creative direction a habit worth building."
+      },
+      "cta": {
+        "headline": "Get the control set designed in, not bolted on.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that gives business affairs a design seat from day one: account boundaries, review points, documentation, and the disclosure answer, built into the workflows rather than appended to them.",
+        "label": "Book the working session"
+      }
+    },
+    {
+      "persona": "finance-partner",
+      "headline": "An AI case that would survive your own reconciliation.",
+      "outcome": "You have seen the vendor math: day-one payback, hours saved that nobody redeployed, benefits counted three times. The governed version is different by construction. Baselines before pilots, program cost counted once, adoption lag priced in, ranges instead of points, and freed studio hours named to a destination so they land in margin instead of evaporating into rounds seven through nine.",
+      "triggers": [
+        "AI spend is accumulating across accounts and departments with no consolidated view of cost, let alone return.",
+        "A vendor business case reached the leadership table and did not survive ten minutes of questions.",
+        "Margin compression that utilization alone no longer explains, while write-offs keep surfacing at reconciliation.",
+        "Next year's plan needs an AI line item and there is no defensible number to put on it."
+      ],
+      "workflows": [
+        { "name": "Utilization, Scope & Margin", "line": "Scope-versus-actual by job and margin by client and retainer, visible while pricing and staffing can still respond to them." },
+        { "name": "Production-to-Account Insight", "line": "Burn and revision counts against the scope mid-job, so the scope conversation happens as a negotiation instead of an apology." },
+        { "name": "Pitch-to-Brief", "line": "Pitch cost is mostly unbilled senior time; turnaround and win rate, read together, show whether that time is buying growth." }
+      ],
+      "aiChanges": [
+        "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
+        "The value side gets honest: baselined workflows, measured deltas, and freed studio hours assigned to a named destination before the program starts.",
+        "Every number in the case traces to a source, because the case is a work sample of how this agency reports on itself."
+      ],
+      "controls": [
+        "Baselines captured before any pilot, so every claim has a before.",
+        "One owner and one source of record per measure, agreed before the first number is presented.",
+        "Adoption lag modeled explicitly, so value arriving in month eight was planned rather than excused.",
+        "Ranges with stated assumptions in front of leadership, never false points."
+      ],
+      "metrics": [
+        "Program cost, total and per active workflow",
+        "Margin by client and by retainer",
+        "Scope-versus-actual hours by job, measured against baseline",
+        "Measured cycle-time deltas on piloted workflows"
+      ],
+      "evidence": {
+        "text": "The strongest causal evidence available here is task-level, not margin-level: in a preregistered experiment published in Science, access to a general AI assistant cut time on occupation-specific professional writing tasks by about 40 percent and raised evaluator-judged quality by about 18 percent, across roughly 453 college-educated professionals.",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Controlled writing tasks, evaluator-scored, not client engagements and not creative concepting, and explicitly not a firm-level margin or realization result. No public source for creative-agency utilization or realization economics passed this library's evidence bar either, so every number in your case has to come from your own baseline."
+      },
+      "cta": {
+        "headline": "Start with the baseline, not the invoice.",
+        "line": "The Workflow Leverage & Trust Assessment is a fixed-scope working session that produces the baseline and the honest range: what the two candidate workflows cost the agency today, what governed AI plausibly returns, and what the numbers would have to show before scaling. If the case is weak, you will know it for the price of a working session.",
+        "label": "Book the working session"
+      }
+    }
+  ]
+}
