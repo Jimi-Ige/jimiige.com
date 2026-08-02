@@ -45,7 +45,11 @@ const BANNED_CHARS = [
 // word-boundary noun uses; "leading"/"targets" etc. must not trip these
 const BANNED_WORDS = [/\bbuyers?\b/i, /\bprospects?\b/i, /\bsales lead\b/i];
 
-function checkText(file, text, { allowArrows = false } = {}) {
+// `internal: true` skips the vocabulary rule. That rule exists because
+// transactional words read as vendor rather than advisor in copy a client sees;
+// it does not apply to internal build and research records, where "buyer" is the
+// canonical Notion Business Play Card field name.
+function checkText(file, text, { allowArrows = false, internal = false } = {}) {
   for (const [ch, name] of BANNED_CHARS) {
     const n = text.split(ch).length - 1;
     if (n) err(file, `${n} ${name} character(s) (U+${ch.codePointAt(0).toString(16).toUpperCase()})`);
@@ -54,9 +58,11 @@ function checkText(file, text, { allowArrows = false } = {}) {
     const n = text.split('→').length - 1;
     warn(file, `${n} unicode arrow(s); HTML should use &rarr;`);
   }
-  for (const re of BANNED_WORDS) {
-    const m = text.match(re);
-    if (m) err(file, `banned vocabulary: "${m[0]}"`);
+  if (!internal) {
+    for (const re of BANNED_WORDS) {
+      const m = text.match(re);
+      if (m) err(file, `banned vocabulary: "${m[0]}"`);
+    }
   }
   if (text.includes('&amp;amp;')) err(file, 'double-escaped entity &amp;amp;');
 }
@@ -234,6 +240,54 @@ for (const dir of ['/content/', '/data/', '/docs/', '/scripts/']) {
 }
 if (robots.includes(`Disallow: /${PREFIX}/`)) {
   err('robots.txt', `must NOT disallow /${PREFIX}/ (crawlers need to fetch the page to see noindex)`);
+}
+
+// --- outcome layer ---------------------------------------------------------
+// Outcome-first assets sit above the industry playbooks. Public outcome pages are
+// indexed; campaign landing pages under lp/ are noindex so they do not compete
+// with the evergreen outcome page for the same intent.
+const OUTCOME_PUBLIC = ['outcomes.html', 'outcome-proposal-to-project.html', 'proposal-to-project-diagnostic.html'];
+for (const f of OUTCOME_PUBLIC) {
+  if (!has(f)) { err(f, 'outcome-layer page missing'); continue; }
+  const t = read(f);
+  checkText(f, t);
+  const url = `${SITE}/${f}`;
+  const canon = (t.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
+  if (canon !== url) err(f, `canonical is ${canon}, expected ${url}`);
+  if (/<meta name="robots"[^>]*noindex/.test(t)) err(f, 'public outcome page must not be noindex');
+  if (!sitemap.includes(url)) err('sitemap.xml', `missing outcome-layer page ${f}`);
+  for (const m of t.matchAll(/href="(?!https?:|mailto:|tel:|#|\/)([^"?#]+\.html)/g)) {
+    if (!has(m[1])) err(f, `broken internal link: ${m[1]}`);
+  }
+}
+
+const lpDir = join(ROOT, 'lp');
+if (existsSync(lpDir)) {
+  for (const slug of readdirSync(lpDir)) {
+    const f = `lp/${slug}/index.html`;
+    if (!has(f)) { err(f, 'campaign landing page missing index.html'); continue; }
+    const t = read(f);
+    checkText(f, t);
+    if (!/<meta name="robots" content="noindex, nofollow">/.test(t)) {
+      err(f, 'campaign landing page must be noindex, nofollow');
+    }
+    if (sitemap.includes(`${SITE}/lp/${slug}/`)) err('sitemap.xml', `campaign landing page ${slug} must not be in sitemap`);
+    if (!t.includes('utm_campaign=')) err(f, 'CTA missing campaign UTM');
+    if (!t.includes('data-cta')) err(f, 'no data-cta hook for host attribution');
+  }
+}
+
+// --- research layer --------------------------------------------------------
+// The canonical research layer the evidence policy governs. Files listed as
+// pending in the manifest are intentionally absent, not missing.
+for (const f of ['research/README.md', 'research/evidence-policy.md', 'research/evidence-gaps.md',
+                 'research/source-bibliography.md', 'research/manifest.yaml']) {
+  if (!has(f)) err(f, 'required research-layer file missing');
+  else checkText(f, read(f), { allowArrows: true, internal: true });
+}
+if (!has('data/evidence/evidence_ledger.csv')) err('data/evidence/', 'raw evidence layer missing; provenance is broken');
+for (const f of readdirSync(join(ROOT, 'content', 'business-plays')).filter(n => n.endsWith('.md'))) {
+  checkText(`content/business-plays/${f}`, read(`content/business-plays/${f}`), { allowArrows: true, internal: true });
 }
 
 // --- report ---------------------------------------------------------------

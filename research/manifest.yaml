@@ -1,0 +1,113 @@
+# Manifest for the curated canonical research layer.
+# Mirrors the Research Workstreams database in Notion for tooling; Notion is the
+# pipeline of record. See README.md for the raw-versus-canonical split.
+
+version: "1.0"
+updated: "2026-08-02"
+governing_spec: "Notion, Content Evidence & Production System"
+publication_standard: "research/evidence-policy.md"
+
+layers:
+  raw:
+    path: "data/evidence/"
+    description: >-
+      The Perplexity research package exactly as imported on 2026-07-31.
+      Preserved unmodified for provenance. Never edited to match a publication
+      decision.
+    files:
+      - claim_cards.md
+      - evidence_ledger.csv
+      - executive_brief.md
+      - industry_packs.md
+      - cross_industry_synthesis.md
+      - priority_claims_list.md
+  canonical:
+    path: "research/"
+    description: >-
+      The curated layer publication draws from. Where the layers disagree, this
+      one is the working authority for what may be published.
+
+present:
+  - file: evidence-policy.md
+    status: current
+    description: Two-tier publication standard, Approved versus Verified.
+  - file: source-bibliography.md
+    status: current
+    description: All 30 sources grouped by tier, with claims and limits.
+    generated_from: data/evidence/evidence_ledger.csv
+  - file: evidence-gaps.md
+    status: current
+    description: Ten open gaps, stated rather than filled.
+  - file: README.md
+    status: current
+  - file: manifest.yaml
+    status: current
+
+pending:
+  # Not created as stubs on purpose: a placeholder that looks like an evidence
+  # pack is the unimplemented-specification trap. Each entry names its workstream.
+  - file: evidence-ledger.csv
+    workstream: 19
+    blocked_on: WS-19 validation pass completing
+    note: >-
+      Until present, data/evidence/evidence_ledger.csv is the working ledger,
+      with import-time statuses that have not passed the approval gate.
+  - file: claim-cards.md
+    workstream: 19
+    blocked_on: validated statuses
+  - file: universal-professional-services.md
+    workstream: 1
+    status: not_started
+  - path: industries/
+    workstreams: [2, 3, 4, 5, 6, 7, 8, 9]
+    status: not_started
+    note: >-
+      The eight industry playbooks were built from the universal and industry
+      material in the raw import, not from per-industry evidence packs.
+  - path: workflows/
+    workstreams: [10, 11, 12]
+    status: not_started
+    note: >-
+      Proposal-to-Project, Knowledge-to-Delivery, Delivery-to-Executive Insight.
+  - path: personas/
+    workstreams: [13, 14, 15, 16, 17, 18]
+    status: not_started
+
+published_surfaces:
+  # Every public asset bound by the evidence policy.
+  outcome_layer:
+    - outcomes.html
+    - outcome-proposal-to-project.html
+    - proposal-to-project-diagnostic.html
+    - lp/proposal-to-project/index.html   # noindex, campaign traffic only
+  hub_and_offer:
+    - professional-services.html
+    - workflow-leverage-assessment.html
+  playbooks:
+    - grow-delivery-capacity-with-governed-ai.html
+    - governed-ai-for-it-consulting.html
+    - governed-ai-for-accounting-cpa-firms.html
+    - governed-ai-for-law-firms.html
+    - governed-ai-for-architecture-engineering.html
+    - governed-ai-for-executive-search.html
+    - governed-ai-for-creative-agencies.html
+    - governed-ai-for-managed-service-providers.html
+  campaigns: "content/campaigns/*.md"
+  persona_pages: "go/<industry>/<persona>/  # 48 pages, noindex, generated"
+  business_play_cards: "content/business-plays/*.md"
+
+business_plays:
+  # Canonical records live in Notion; these are the build-side references.
+  - name: Proposal-to-Project Accelerator
+    outcome: Shorten the Path from Proposal to Project
+    stage: Defined
+    commercial: active
+    card: content/business-plays/proposal-to-project.md
+  - name: Knowledge-to-Delivery Accelerator
+    outcome: Turn institutional knowledge into reusable client-ready delivery
+    stage: Defined
+    commercial: library
+  - name: Delivery-to-Executive Insight Accelerator
+    outcome: Give leaders trustworthy visibility into delivery, risk, and next actions
+    stage: Hypothesis
+    commercial: library
