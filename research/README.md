@@ -47,22 +47,41 @@ not be used for.
 ## What the validation pass changed
 
 The WS-19 pass on 2026-08-02 consulted the original source behind every claim
-and moved 22 of the 43. Nine rose to Approved once confirmed. Seven fell,
-including several the research tool had labelled Approved on import:
+and moved **21 of the 43: 10 rose and 11 fell.** One further row, CRE-001, was
+normalized from `reject` to `rejected` without changing meaning, and is not
+counted as a move.
 
-- **U-AI-003, U-AI-004** (Dell'Acqua, the consulting field experiment) fell to
-  Verified because the source could not be reached at an authoritative
-  location. The jagged-frontier finding survives as a directional claim; its
-  figures may no longer be published.
-- **U-AI-005** (Brynjolfsson) and **CONS-001** fell to Candidate, so they are
-  no longer publishable at all.
-- **U-MEAS-001** fell to Verified and was found to misstate its source,
-  converting a respondent expectation into an observed outcome.
-- **LAW-005** and **SEARCH-001** were rejected outright.
+Rose to Approved once confirmed: ACCT-002, AE-003, AE-004, IP-002,
+U-ADOPT-001, U-ADOPT-002, U-ADOPT-003, U-ADOPT-004, U-ECON-005, U-ECON-006.
+
+Fell, several of them from an Approved label the research tool had assigned on
+import:
+
+- **U-AI-003, U-AI-004** (the consulting field experiment) fell to Verified
+  because the source could not be reached at an authoritative location. The
+  jagged-frontier finding survives as a directional claim; its figures may no
+  longer be published.
+- **U-AI-005** and **CONS-001** fell from Approved to Candidate, so they are no
+  longer publishable at all.
+- **U-KNOW-001**, **U-MEAS-001** and **IT-001** fell from Approved to Verified.
+- **U-ADOPT-006** and **U-GOV-005** fell from Verified to Candidate.
+- **LAW-005** and **SEARCH-001** fell to Rejected.
+
+**U-ADOPT-006 was additionally found to misstate its source**, converting a
+respondent expectation into an observed outcome.
 
 The ledger keeps both `Import Status` and `Validated Status` so every one of
 those moves stays auditable. This is the reason the standard exists: a status
 assigned by a research tool is a hypothesis about evidence, not evidence.
+
+> **Correction, 2026-08-02.** An earlier version of this section said 22 moved,
+> nine rose and seven fell. That was wrong on all three counts: the script
+> behind it treated only `approved` to something-lower as a fall, missing five
+> others, and counted the CRE-001 spelling normalization as a move. It also
+> attributed the source-misstatement finding to U-MEAS-001 rather than
+> U-ADOPT-006. The counts above are recomputed directly from the ledger. Noted
+> rather than quietly amended, because a file that governs publication accuracy
+> should show its own corrections.
 
 ## Relationship to Notion
 

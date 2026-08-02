@@ -18,7 +18,7 @@ in published copy as any of:
 
 - a **statistic or percentage** ("66.4 percent", "about 40 percent", "nine in ten")
 - a **count or magnitude** ("N of 758", "median 11 months")
-- a **comparative claim** ("the lowest in the survey's history", "more than double")
+- a **magnitude comparative** ("more than double", "twice as high", "a third lower")
 - a **causal outcome claim** ("AI use produced faster completion")
 - a **named finding attributed as fact** ("the study found X")
 
@@ -43,6 +43,20 @@ Not permitted from a Verified claim:
 
 The difference is the exact figure. Direction, attribution, and caveat may be
 published from Tier B. Precision may not.
+
+**Attributed superlatives are Tier B, not Tier A**, provided three things hold:
+the source itself makes the comparison, the copy attributes it rather than
+asserting it, and no figure travels with it. "Reported at its lowest level in
+that benchmark's own history (SPI Research, summarized by Deltek; a
+vendor-sponsored voluntary survey)" is permitted from a Verified claim.
+"The lowest in the survey's history", stated flatly as fact, is not, because it
+drops the attribution and becomes the publication's own assertion. A superlative
+that implies a magnitude ("more than double the previous low") is Tier A
+regardless of attribution.
+
+*Clarified 2026-08-02. The original wording put all comparatives in Tier A while
+its own Tier B example used an attributed superlative, which was
+self-contradictory and would have made the permitted example illegal.*
 
 ### Excluded entirely
 
