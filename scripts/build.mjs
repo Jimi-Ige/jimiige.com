@@ -36,6 +36,8 @@ const PUBLIC_PAGES = [
   { loc: '/resources.html', lastmod: '2026-07-30', changefreq: 'monthly', priority: '0.9' },
   { loc: '/outcomes.html', lastmod: '2026-08-01', changefreq: 'monthly', priority: '0.9' },
   { loc: '/outcome-proposal-to-project.html', lastmod: '2026-08-01', changefreq: 'monthly', priority: '0.9' },
+  { loc: '/outcome-knowledge-to-delivery.html', lastmod: '2026-08-02', changefreq: 'monthly', priority: '0.9' },
+  { loc: '/outcome-delivery-to-insight.html', lastmod: '2026-08-02', changefreq: 'monthly', priority: '0.8' },
   { loc: '/proposal-to-project-diagnostic.html', lastmod: '2026-08-01', changefreq: 'monthly', priority: '0.8' },
   { loc: '/professional-services.html', lastmod: '2026-07-30', changefreq: 'monthly', priority: '0.9' },
   { loc: '/grow-delivery-capacity-with-governed-ai.html', lastmod: '2026-07-30', changefreq: 'monthly', priority: '0.9' },

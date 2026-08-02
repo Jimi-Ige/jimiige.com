@@ -23,30 +23,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/ds/styles.css">
 <link rel="stylesheet" href="assets/ds/site.css">
+<link rel="stylesheet" href="assets/ds/outcome.css">
 <script src="assets/ds/ds.js" defer></script>
-<style>
-  /* The before-and-after is the page's central object: two states of the same
-     work, set side by side on one rule. Nothing decorative. */
-  .ba { display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-4);
-    align-items: start; margin-top: var(--space-4); }
-  .ba-rule { width: 1px; background: var(--rule-strong); align-self: stretch; }
-  .ba-col .eyebrow { display: block; margin-bottom: var(--space-2); }
-  .ba-col p { font-family: var(--font-mono); font-size: var(--size-prose);
-    line-height: var(--lh-prose); color: var(--text-body); margin: 0; }
-  .ba-col--after p { color: var(--text-display); }
-  @media (max-width: 760px) {
-    .ba { grid-template-columns: 1fr; }
-    .ba-rule { width: auto; height: 1px; }
-  }
-  .kpi-row { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
-  .kpi { flex: 1; min-width: 210px; background: var(--surface-card); border: var(--border-default);
-    padding: var(--space-3); }
-  .kpi .lbl { font-family: var(--font-mono); font-size: var(--size-mono-xs);
-    letter-spacing: var(--track-label); text-transform: uppercase; color: var(--copper-700);
-    display: block; margin-bottom: var(--space-1); }
-  .kpi p { font-family: var(--font-mono); font-size: var(--size-prose-sm);
-    line-height: var(--lh-prose); color: var(--text-body); margin: 0; }
-</style>
 </head>
 <body>
 
