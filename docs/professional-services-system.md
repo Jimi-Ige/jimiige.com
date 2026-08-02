@@ -28,7 +28,9 @@ the public site.
 | `data/personas.json` | The 6 canonical personas (slug, role, archetype, concern, CTA frame) |
 | `data/persona-pages/<slug>.json` | Message-matched copy for each industry x persona page, incl. the per-persona `evidence` object |
 | `data/campaign-hosts.json` | Host-to-route mapping for future campaign hostnames |
-| `data/evidence/` | The research library: claim cards, evidence ledger, priority list (incl. §E quarantine and §F social safe set), industry packs, synthesis, executive brief. The ONLY permitted source of quantitative claims anywhere in the system |
+| `research/` | The **canonical** evidence layer publication draws from: `evidence-policy.md` (the two-tier standard), `source-bibliography.md`, `evidence-gaps.md`, `manifest.yaml`. Pending evidence packs are listed in the manifest with workstream IDs rather than stubbed |
+| `data/evidence/` | The **raw** imported research package, preserved unmodified for provenance: claim cards, evidence ledger, priority list (incl. §E quarantine and §F social safe set), industry packs, synthesis, executive brief. Never edited to match a publication decision |
+| `content/business-plays/` | Build-side Business Play Cards. The canonical records live in Notion; these mirror them for deriving site assets |
 | `content/campaigns/<slug>.md` | Campaign package per industry: brief + 12 LinkedIn posts. See `content/campaigns/README.md` |
 | `scripts/build.mjs` | Renders all persona pages from the data files and regenerates `sitemap.xml` |
 
@@ -43,6 +45,9 @@ keeps its own inline styles, and is intentionally untouched.
 
 | Route | Page |
 |---|---|
+| `/outcomes.html` | Outcome index: the three Business Plays, outcome-first |
+| `/outcome-proposal-to-project.html` | Evergreen authoritative outcome page (active play) |
+| `/proposal-to-project-diagnostic.html` | 16-point scored diagnostic and lead magnet |
 | `/professional-services.html` | Hub: featured MC playbook + industry library |
 | `/grow-delivery-capacity-with-governed-ai.html` | Management Consulting playbook (featured) |
 | `/governed-ai-for-it-consulting.html` | IT Consulting playbook |
@@ -54,7 +59,12 @@ keeps its own inline styles, and is intentionally untouched.
 | `/governed-ai-for-managed-service-providers.html` | MSP playbook |
 | `/workflow-leverage-assessment.html` | The conversion offer |
 
-**Unlisted (noindex,nofollow, NOT in sitemap, no internal links to them):**
+**Unlisted (noindex,nofollow, NOT in sitemap):**
+
+`/lp/<play-slug>/` — single-offer campaign landing pages. One audience, one
+industry, one offer, one call to action, minimal chrome. Reached from outreach
+and social, deliberately noindex so they do not compete with the evergreen
+outcome page for the same search intent.
 
 `/go/<industry-slug>/<persona-slug>/` — 48 persona landing pages
 (8 industries x 6 personas: `managing-partner`, `operations-director`,
@@ -160,11 +170,39 @@ The homepage never changes for an activation; that is deliberate.
 ## 8. Editorial and evidence rules
 
 Binding rules live in `content/campaigns/README.md` (editorial) and
-`data/evidence/` (evidence). The short form: claim-card language only for any
-number; caveats travel with claims; the §F safe set is the whitelist for
-social; §E quarantined claims are banned; evidence gaps (mid-market ROI,
-realization impact, creative/search/MSP primary economics, E&amp;O claims data)
-are stated, never filled. Licensed industries (CPA, law, A&amp;E) always carry
+`research/evidence-policy.md` (evidence). The evidence standard is two-tier:
+
+- **Approved** status is required for any exact assertion: a statistic,
+  percentage, count, magnitude, comparative claim, or attributed causal finding.
+- **Verified** status permits only clearly attributed, qualified, directional
+  statements, with the source name and caveat adjacent. Direction may be
+  published from a Verified claim; precision may not.
+- **Candidate** and **Rejected** claims, and anything in the §E quarantine list,
+  are never published.
+- No silent upgrades: a claim moves to Approved only through a recorded
+  validation event.
+
+The §F safe set is the additional whitelist for social posts. Evidence gaps
+(mid-market ROI, realization impact, creative/search/MSP primary economics,
+E&amp;O claims data) are catalogued in `research/evidence-gaps.md` and are stated
+in the copy, never filled.
+
+## 8a. The outcome layer
+
+Industry is an adaptation layer, not the primary commercial navigation. The
+outcome layer sits above the industry playbooks without replacing them:
+
+| Layer | Asset | Role |
+|---|---|---|
+| Business Play Card | `content/business-plays/*.md` (Notion is canonical) | The internal record everything derives from |
+| Outcome page | `outcome-<play>.html` | Evergreen, authoritative, indexed |
+| Campaign landing page | `lp/<play>/` | Single-offer, conversion, noindex |
+| Deeper playbook | The eight industry playbooks | Implementation layer, unchanged |
+| Lead magnet | `proposal-to-project-diagnostic.html` | Diagnostic and assessment precursor |
+
+Adding a play: create the card, derive the outcome page and landing page from
+it, add the public pages to `PUBLIC_PAGES` in `scripts/build.mjs`, and list it
+in `research/manifest.yaml`. Licensed industries (CPA, law, A&amp;E) always carry
 the guardrail: AI assists operations and documentation; accountable licensed
 professionals retain judgment and sign-off; nothing is professional advice.
 
