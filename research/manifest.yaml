@@ -42,19 +42,39 @@ present:
     status: current
   - file: manifest.yaml
     status: current
+  - file: evidence-ledger.csv
+    status: current
+    description: >-
+      All 43 claims with validated statuses from the WS-19 pass, 2026-08-02.
+      Carries both Import Status (as delivered by the research tool) and
+      Validated Status (after a validator consulted the original source), so
+      every change is auditable. Status column reflects the validated value.
+    validation_summary:
+      approved: 24
+      verified: 11
+      candidate: 5
+      rejected: 3
+      upgrades_from_import: 9
+      downgrades_from_import: 7
+    notable_downgrades: >-
+      U-AI-003 and U-AI-004 (Dell'Acqua) fell from approved to verified because
+      the source could not be reached at an authoritative location, so their
+      figures may no longer be published as exact assertions. U-AI-005
+      (Brynjolfsson) and CONS-001 fell to candidate. U-KNOW-001 and U-MEAS-001
+      fell to verified; U-MEAS-001 was additionally found to misstate the
+      Deloitte finding by converting a respondent expectation into an observed
+      outcome.
 
 pending:
   # Not created as stubs on purpose: a placeholder that looks like an evidence
   # pack is the unimplemented-specification trap. Each entry names its workstream.
-  - file: evidence-ledger.csv
-    workstream: 19
-    blocked_on: WS-19 validation pass completing
-    note: >-
-      Until present, data/evidence/evidence_ledger.csv is the working ledger,
-      with import-time statuses that have not passed the approval gate.
   - file: claim-cards.md
     workstream: 19
-    blocked_on: validated statuses
+    blocked_on: >-
+      Curation from the raw claim cards, rewriting each card's publication
+      language to match its validated tier. The raw cards at
+      data/evidence/claim_cards.md still carry pre-validation language and
+      must not be used verbatim for the downgraded claims.
   - file: universal-professional-services.md
     workstream: 1
     status: not_started

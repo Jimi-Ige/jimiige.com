@@ -15,7 +15,7 @@ is the record of what was originally imported.
 | Path | What it is | Status |
 |---|---|---|
 | `evidence-policy.md` | The two-tier publication standard (Approved vs Verified) | **Current** |
-| `evidence-ledger.csv` | Claim-level ledger with validated statuses | Populated by the WS-19 validation pass |
+| `evidence-ledger.csv` | Claim-level ledger with validated statuses | **Current**, validated 2026-08-02 |
 | `claim-cards.md` | Publication-ready claim language with caveats | Curated from the raw layer after validation |
 | `source-bibliography.md` | Every source, with tier and what it can support | **Current** |
 | `evidence-gaps.md` | Documented gaps, stated rather than filled | **Current** |
@@ -43,6 +43,26 @@ Nothing reaches a public page as an exact figure unless its claim ID holds
 **Approved** status here, with the source named and the caveat adjacent. See
 `evidence-policy.md` for the full standard, including what Verified may and may
 not be used for.
+
+## What the validation pass changed
+
+The WS-19 pass on 2026-08-02 consulted the original source behind every claim
+and moved 22 of the 43. Nine rose to Approved once confirmed. Seven fell,
+including several the research tool had labelled Approved on import:
+
+- **U-AI-003, U-AI-004** (Dell'Acqua, the consulting field experiment) fell to
+  Verified because the source could not be reached at an authoritative
+  location. The jagged-frontier finding survives as a directional claim; its
+  figures may no longer be published.
+- **U-AI-005** (Brynjolfsson) and **CONS-001** fell to Candidate, so they are
+  no longer publishable at all.
+- **U-MEAS-001** fell to Verified and was found to misstate its source,
+  converting a respondent expectation into an observed outcome.
+- **LAW-005** and **SEARCH-001** were rejected outright.
+
+The ledger keeps both `Import Status` and `Validated Status` so every one of
+those moves stays auditable. This is the reason the standard exists: a status
+assigned by a research tool is a hypothesis about evidence, not evidence.
 
 ## Relationship to Notion
 
