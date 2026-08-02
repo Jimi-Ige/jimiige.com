@@ -1,4 +1,4 @@
-# Governed AI Operations for Professional Services — system documentation
+# Governed AI Operations for Professional Services: system documentation
 
 The content and landing-page system behind `professional-services.html`. This
 document is the operator's manual: content model, routes, the generator,
@@ -61,12 +61,12 @@ keeps its own inline styles, and is intentionally untouched.
 
 **Unlisted (noindex,nofollow, NOT in sitemap):**
 
-`/lp/<play-slug>/` — single-offer campaign landing pages. One audience, one
+`/lp/<play-slug>/`: single-offer campaign landing pages. One audience, one
 industry, one offer, one call to action, minimal chrome. Reached from outreach
 and social, deliberately noindex so they do not compete with the evergreen
 outcome page for the same search intent.
 
-`/go/<industry-slug>/<persona-slug>/` — 48 persona landing pages
+`/go/<industry-slug>/<persona-slug>/`: 48 persona landing pages
 (8 industries x 6 personas: `managing-partner`, `operations-director`,
 `practice-leader`, `it-director`, `risk-counsel`, `finance-partner`).
 Each is a generated `index.html` served as a directory route. Sharing works
