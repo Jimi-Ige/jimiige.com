@@ -132,6 +132,16 @@ for (const pb of playbooks) {
 }
 
 // --- campaigns ------------------------------------------------------------
+// Exactly one industry may be Active at a time. Running two campaigns splits the
+// commercial signal and makes it impossible to learn which positioning converts,
+// which is the whole point of the single-industry activation rule.
+const activeIndustries = ps.industries.filter(i => i.status === 'active').map(i => i.slug);
+if (activeIndustries.length !== 1) {
+  err('data/professional-services.json',
+    `exactly one industry must have status "active"; found ${activeIndustries.length}` +
+    (activeIndustries.length ? ` (${activeIndustries.join(', ')})` : ''));
+}
+
 for (const ind of ps.industries) {
   const file = `content/campaigns/${ind.slug}.md`;
   if (!has(file)) { err(file, 'campaign file missing'); continue; }

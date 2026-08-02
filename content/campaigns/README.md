@@ -4,6 +4,12 @@ One campaign package per industry, one file per industry. Each file carries a
 campaign brief and twelve LinkedIn posts. This directory is the source of
 truth for social distribution; nothing here is rendered on the site.
 
+**How to actually deploy these:** see the Campaign Distribution Runbook in
+Notion, under Motor. It covers cadence, publishing order, the pre-post
+checklist, attribution, targeted persona-page shares, and the activation
+procedure for switching industries. This file is the editorial contract; the
+runbook is the operating procedure.
+
 ## Status model
 
 | Status | Meaning |
@@ -42,6 +48,10 @@ The four recurring themes, adapted per industry:
   attribution. See `docs/professional-services-system.md`.
 
 ## Activating a Library Ready campaign
+
+Exactly one campaign may be Active at a time. `scripts/validate.mjs` enforces
+this and fails if two industries claim it, so both halves of the swap have to
+land together.
 
 1. Change the campaign's status line to Active (and retire the previous
    Active campaign to Library Ready if the primary CTA moves).
