@@ -1,11 +1,28 @@
-# Business Play Card: Shorten the Path from Proposal to Project
+# Business Play Card: Proposal-to-Project Accelerator
 
-**Status:** Draft for review · Not yet recorded in Notion (authorization required)
+**Business Outcome:** Shorten the Path from Proposal to Project
+**Canonical record:** Notion, Business Plays database
+(`app.notion.com/p/3afbde3a3f0481969f75c2c6e680534a`). **That record is the source
+of truth.** This file is the build-side working copy used to derive site assets;
+when the two disagree, Notion wins and this file is corrected.
+
 **Record type:** Business Play · **Outcome stage:** Defined · **Assurance posture:** Design
+**Commercialization stage:** Consulting-ready · **Status:** Draft · **Source:** Documented
 **Ontology position:** Business Outcome → **Business Play** → Industry → Persona → Workflow → AI Pattern → Operational Assurance → Technology
 
-Derived from: GTM Playbook flagship workflow 1, the Business Outcome Architecture v1.0
-Business Play Card template, and the evidence package at `data/evidence/`.
+**Canonical outcome statement:** Shorten the path from a qualified opportunity to a
+reviewed proposal and clean project handoff.
+
+**Canonical decision trigger:** Proposal turnaround, qualification, or handoff is
+delaying revenue or creating avoidable rework.
+
+**Canonical implementation sequence:** Approved knowledge and capability assets →
+qualification and proposal support → accountable review → versioned decision →
+structured delivery handoff.
+
+Derived from: the canonical Notion Business Play, the GTM Playbook flagship
+workflow 1, the Business Outcome Architecture v1.0 Business Play Card template,
+and the evidence package at `data/evidence/` under `research/evidence-policy.md`.
 
 ---
 
@@ -58,12 +75,16 @@ builds something adjacent to what was sold.
 
 ## 4. KPI, baseline, target, economic driver
 
-**Primary KPI:** Senior hours per submitted proposal.
+**Primary KPIs** (canonical, from the Notion record): proposal cycle time;
+qualified-opportunity throughput; handoff rework.
 
-**Supporting KPIs:** proposal cycle time from qualified conversation to submission;
-win rate by pursuit type; share of pursuit content drawn from approved reusable
-assets; no-bid decisions made before drafting begins; handoff rework in the first
-30 days of delivery.
+**Underlying constraint measure:** senior hours per submitted proposal. This is
+what the three primary KPIs exist to relieve, and it is the number that explains
+movement in all of them.
+
+**Supporting KPIs:** share of pursuit content drawn from approved reusable assets;
+no-bid decisions made before drafting begins; win rate by pursuit type where
+attributable.
 
 **Baseline:** Established during the Workflow Leverage &amp; Trust Assessment from
 the firm's own last complete pursuit cycle. **No baseline is assumed or supplied.**

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Proposal-to-Project Diagnostic, Jimi Ige</title>
+<meta name="description" content="A free 16-point diagnostic for professional-services firms: find where your pursuit process loses senior hours, reuse, and handoff fidelity, and which assurance controls are missing. Nothing you enter leaves your browser.">
+<link rel="canonical" href="https://jimiige.com/proposal-to-project-diagnostic.html">
+<meta property="og:title" content="The Proposal-to-Project Diagnostic">
+<meta property="og:description" content="Sixteen questions across qualification, reuse, review, handoff, and assurance. Get a scored profile and the gaps to close first. No email wall.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jimiige.com/proposal-to-project-diagnostic.html">
+<meta property="og:site_name" content="Jimi Ige">
+<meta property="og:image" content="https://jimiige.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Proposal-to-Project Diagnostic">
+<meta name="twitter:description" content="Sixteen questions across qualification, reuse, review, handoff, and assurance. Scored profile and the gaps to close first.">
+<meta name="twitter:image" content="https://jimiige.com/assets/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/ds/styles.css">
+<link rel="stylesheet" href="assets/ds/site.css">
+<script src="assets/ds/ds.js" defer></script>
+<style>
+  .dg-dim { border-top: 1px solid var(--rule-strong); padding-top: var(--space-4); margin-top: var(--space-5); }
+  .dg-dim > .eyebrow { display: block; margin-bottom: var(--space-1); }
+  .dg-dim h3 { font-family: var(--font-serif); font-weight: var(--weight-regular);
+    font-size: var(--size-display-4); line-height: var(--lh-display); letter-spacing: var(--track-display);
+    color: var(--text-display); margin: 0 0 var(--space-3); }
+  .dg-q { border-top: var(--border-hairline); padding: var(--space-3) 0; }
+  .dg-q:first-of-type { border-top: none; }
+  .dg-q .stmt { font-family: var(--font-mono); font-size: var(--size-prose-sm);
+    line-height: var(--lh-prose); color: var(--text-body); display: block; margin-bottom: var(--space-2);
+    max-width: var(--measure-prose); }
+  .dg-scale { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dg-btn { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 1px;
+    cursor: pointer; border: var(--border-default); background: var(--surface-card);
+    color: var(--ink-800); border-radius: var(--radius-none); padding: 0 var(--space-3);
+    height: var(--control-height); }
+  .dg-btn:hover { border-color: var(--copper-600); color: var(--copper-700); }
+  .dg-btn[aria-pressed="true"] { background: var(--ink-900); border-color: var(--ink-900); color: var(--cream-200); }
+
+  .dg-panel { position: sticky; top: 84px; }
+  .dg-score { font-family: var(--font-serif); font-size: var(--size-display-1); line-height: 1;
+    letter-spacing: var(--track-display); color: var(--text-display); }
+  .dg-band { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: var(--track-label);
+    text-transform: uppercase; color: var(--copper-700); margin-top: var(--space-1); display: block; }
+  .dg-bar { margin-top: var(--space-3); }
+  .dg-bar-row { display: flex; align-items: center; gap: var(--space-2); padding: 5px 0; }
+  .dg-bar-lbl { font-family: var(--font-mono); font-size: var(--size-mono-xs); letter-spacing: var(--track-label);
+    text-transform: uppercase; color: var(--text-muted); min-width: 104px; }
+  .dg-bar-track { flex: 1; height: 8px; background: var(--surface-sunken); }
+  .dg-bar-fill { height: 100%; background: var(--copper-600); width: 0; transition: width var(--dur-base) var(--ease-standard); }
+  .dg-gaps { margin-top: var(--space-4); border-top: var(--border-default); padding-top: var(--space-3); }
+  .dg-gap { font-family: var(--font-mono); font-size: var(--size-prose-sm); line-height: var(--lh-prose);
+    color: var(--text-body); padding: var(--space-2) 0 var(--space-2) 22px; position: relative;
+    border-top: var(--border-hairline); }
+  .dg-gap:first-of-type { border-top: none; }
+  .dg-gap:before { content: ""; position: absolute; left: 4px; top: 17px; width: 6px; height: 6px;
+    background: var(--copper-600); }
+  .dg-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--space-5); align-items: start; }
+  @media (max-width: 900px) { .dg-layout { grid-template-columns: 1fr; } .dg-panel { position: static; } }
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <nav class="sitenav">
+    <div class="sitenav-inner">
+      <a href="/#top" class="wordmark">
+        <span class="wordmark-name">Jimi Ige LLC</span>
+        <span class="wordmark-practice">AI Governance, Deployment &amp; Adoption</span>
+      </a>
+      <div class="nav-links">
+        <a href="outcomes.html" class="nav-link">Outcomes</a>
+        <a href="professional-services.html" class="nav-link">Industries</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="workflow-leverage-assessment.html" class="btn btn--primary btn--sm">The assessment</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-menu" id="nav-menu" data-open="false">
+      <a href="outcomes.html">Outcomes</a>
+      <a href="professional-services.html">Industries</a>
+      <a href="resources.html">Resources</a>
+      <a href="workflow-leverage-assessment.html">The assessment</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="rail" aria-hidden="true">
+      <div class="rail-nums"></div>
+      <span class="rail-rule rail-rule--a"></span>
+      <span class="rail-rule rail-rule--b"></span>
+    </div>
+
+    <section class="band band--flush">
+      <div class="band-inner page-head">
+        <span class="eyebrow eyebrow--accent">Free diagnostic &middot; Proposal-to-Project</span>
+        <h1 class="display-1 ruled" style="max-width:22ch;">Where does your pursuit process actually lose time?</h1>
+        <p class="prose">Sixteen statements across the five places a proposal process leaks: qualification, reuse, drafting and review, the delivery handoff, and the assurance that keeps it all safe to run on client work. Rate each one honestly and you get a scored profile and the gaps worth closing first.</p>
+        <p class="prose-sm">No email wall. Nothing you enter leaves your browser. This is a self-assessment and a conversation starter, not an audit.</p>
+      </div>
+    </section>
+
+    <section class="band band--flush">
+      <div class="band-inner">
+        <div class="dg-layout">
+
+          <div>
+            <p class="mono-sm">Rate each statement: <strong>No</strong> (not true of us), <strong>Partly</strong> (inconsistent or informal), <strong>Yes</strong> (true and reliable).</p>
+            <form id="dg" aria-label="Proposal-to-Project diagnostic"></form>
+          </div>
+
+          <aside class="card dg-panel">
+            <div class="card-body">
+              <span class="eyebrow eyebrow--accent">Your profile</span>
+              <div id="dgScore" class="dg-score">0<span style="font-size:0.4em;color:var(--text-muted);"> / 32</span></div>
+              <span id="dgBand" class="dg-band">Answer the statements to begin</span>
+
+              <div class="dg-bar" id="dgBars"></div>
+
+              <div class="dg-gaps">
+                <span class="eyebrow">Close these first</span>
+                <div id="dgGaps"><p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p></div>
+              </div>
+
+              <div class="stack-tight" style="margin-top:var(--space-4);">
+                <p class="prose-sm">The assessment turns this profile into a baseline, a control design, and a 90-day plan.</p>
+                <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=governed-ai-ops_proposal-to-project&amp;utm_content=panel" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Book the working session</a>
+                <button id="dgCopy" class="btn btn--ghost btn--sm" type="button">Copy the summary</button>
+                <span id="dgCopied" class="mono-sm" style="display:none;color:var(--risk-low-text);">Copied</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">Reading your result</span></div>
+        <h2 class="display-2 ruled" style="max-width:24ch;">What the score does and does not mean.</h2>
+        <p class="prose">The score is a structured way to see which part of the pursuit process is weakest, not a measurement of your firm. It has no benchmark behind it, because no credible published benchmark exists for pursuit operations at firms of this size. What it is good for is disagreement: run it separately with a partner, your COO, and a pursuit lead, and the places your answers diverge are usually the places worth looking hardest.</p>
+        <div class="grid-2" style="margin-top:var(--space-4);">
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">A low assurance score with a high leverage score</span><p class="prose-sm">The most common and most dangerous profile. The firm is already moving fast on pursuit work with AI in the mix and without the boundaries, approval points, and evidence trail that make it defensible to a client who asks.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">A high assurance score with a low leverage score</span><p class="prose-sm">Controls exist but the work has not been redesigned, so people experience governance as friction and route around it. The fix is usually workflow, not policy.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Qualification scoring lowest</span><p class="prose-sm">Start here regardless of what else is weak. Every hour saved downstream is spent on pursuits you should have declined if the gate does not hold.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Handoff scoring lowest</span><p class="prose-sm">The cost is showing up in delivery as early rework and margin, where it is rarely traced back to the proposal that caused it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">The 90-day path</span></div>
+        <h2 class="display-2 ruled">From diagnostic to evidence.</h2>
+        <div class="register register--single" style="margin-top:var(--space-4);">
+          <div class="register-row"><span class="register-n">1.</span><span class="prose-sm"><strong>Days 1 to 30.</strong> Baseline the pursuit workflow: cycle time, qualified-opportunity throughput, handoff rework, and the senior hours underneath. Set the engagement boundaries and name the capability-library owner.</span></div>
+          <div class="register-row"><span class="register-n">2.</span><span class="prose-sm"><strong>Days 31 to 60.</strong> Run governed pilots on live pursuits with partner review unchanged. Write the quality criteria where reviewers actually work, and instrument the numbers.</span></div>
+          <div class="register-row"><span class="register-n">3.</span><span class="prose-sm"><strong>Days 61 to 90.</strong> Read the results against the baseline, codify what worked into defaults and reuse rules, retire what did not, and decide on evidence whether to extend to a second workflow.</span></div>
+        </div>
+        <div class="row" style="margin-top:var(--space-5);">
+          <a href="outcome-proposal-to-project.html" class="btn btn--secondary">The outcome in full</a>
+          <a href="grow-delivery-capacity-with-governed-ai.html" class="btn btn--secondary">The deeper playbook</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span class="row" style="gap:var(--space-4);">
+      <span class="foot-name">Jimi Ige</span>
+      <a href="https://www.linkedin.com/in/jimi-ige/" target="_blank" rel="noopener" class="foot-link">LinkedIn</a>
+    </span>
+    <span class="foot-meta">AI Governance, Deployment &amp; Adoption &middot; Washington, D.C. &middot; &copy; 2026 Jimi Ige LLC</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var DIMS = [
+    { key:'qual', name:'Qualification', eyebrow:'Dimension 01',
+      blurb:'The gate that decides whether senior hours get spent at all.',
+      qs:[
+        'The decision to pursue or decline is made before proposal drafting begins.',
+        'That decision has a named owner and written criteria, not just a conversation.',
+        'We can say how many pursuits we declined last quarter, and why.'
+      ]},
+    { key:'reuse', name:'Reuse', eyebrow:'Dimension 02',
+      blurb:'Whether the firm can retrieve its own best prior work.',
+      qs:[
+        'Prior proposals, capability assets, and bios live in a curated library, not a general file share.',
+        'That library has a named owner and review dates, so material is current.',
+        'Every reusable asset carries provenance, so a reviewer can see where it came from.',
+        'Pursuit teams start from retrieved firm material rather than a blank page.'
+      ]},
+    { key:'review', name:'Drafting and review', eyebrow:'Dimension 03',
+      blurb:'Where senior judgment is actually applied.',
+      qs:[
+        'Partner review focuses on promise, price, team, and fit rather than on editing prose.',
+        'Written quality criteria are visible at the point where reviewing happens.',
+        'A named person approves every submission, and that approval is on the record.'
+      ]},
+    { key:'handoff', name:'Delivery handoff', eyebrow:'Dimension 04',
+      blurb:'Whether delivery builds what was actually sold.',
+      qs:[
+        'What was promised transfers to delivery as a structured record, not a conversation.',
+        'The delivery team can check its plan against the commitments in the proposal.',
+        'We track rework in the first thirty days and can trace it back to the proposal.'
+      ]},
+    { key:'assurance', name:'Assurance', eyebrow:'Dimension 05',
+      blurb:'What makes the speed safe to run on client work.',
+      qs:[
+        'Tool access is scoped to the pursuit team, so client material does not cross engagements.',
+        'We know which AI tools are approved for pursuit work, and there is a sanctioned path for new ones.',
+        'We have a standing answer for a client who asks how we use AI on their work.'
+      ]}
+  ];
+  var LABELS = ['No','Partly','Yes'];
+  var answers = {};
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  var form = document.getElementById('dg');
+  var html = '';
+  DIMS.forEach(function(d, di){
+    html += '<section class="dg-dim"><span class="eyebrow eyebrow--accent">'+d.eyebrow+'</span>'+
+            '<h3>'+esc(d.name)+'</h3><p class="prose-sm" style="margin:0 0 var(--space-3);color:var(--text-muted);">'+esc(d.blurb)+'</p>';
+    d.qs.forEach(function(q, qi){
+      var id = d.key+'-'+qi;
+      html += '<div class="dg-q"><span class="stmt">'+esc(q)+'</span><div class="dg-scale" role="group" aria-label="'+esc(q)+'">';
+      for (var v=0; v<3; v++){
+        html += '<button type="button" class="dg-btn" data-q="'+id+'" data-dim="'+d.key+'" data-v="'+v+'" aria-pressed="false">'+LABELS[v]+'</button>';
+      }
+      html += '</div></div>';
+    });
+    html += '</section>';
+  });
+  form.innerHTML = html;
+
+  var barsHtml = '';
+  DIMS.forEach(function(d){
+    barsHtml += '<div class="dg-bar-row"><span class="dg-bar-lbl">'+esc(d.name)+'</span>'+
+                '<span class="dg-bar-track"><i class="dg-bar-fill" id="bar-'+d.key+'"></i></span></div>';
+  });
+  document.getElementById('dgBars').innerHTML = barsHtml;
+
+  var maxTotal = DIMS.reduce(function(a,d){return a + d.qs.length*2;},0);
+
+  function band(pct){
+    if (pct >= 0.8) return 'Strong. Instrument it and extend.';
+    if (pct >= 0.55) return 'Working, with named gaps.';
+    if (pct >= 0.3) return 'Informal. The leaks are structural.';
+    return 'Largely undesigned.';
+  }
+
+  function update(){
+    var total = 0, gaps = [];
+    DIMS.forEach(function(d){
+      var got = 0, max = d.qs.length*2, answered = 0;
+      d.qs.forEach(function(q, qi){
+        var v = answers[d.key+'-'+qi];
+        if (v !== undefined){ got += v; answered++; if (v === 0) gaps.push({d:d.name, q:q, v:v}); else if (v === 1) gaps.push({d:d.name, q:q, v:v}); }
+      });
+      total += got;
+      var fill = document.getElementById('bar-'+d.key);
+      if (fill) fill.style.width = (answered ? (got/max)*100 : 0) + '%';
+    });
+    document.getElementById('dgScore').innerHTML = total + '<span style="font-size:0.4em;color:var(--text-muted);"> / '+maxTotal+'</span>';
+    var answeredAll = Object.keys(answers).length;
+    document.getElementById('dgBand').textContent = answeredAll ? band(total/maxTotal) : 'Answer the statements to begin';
+
+    gaps.sort(function(a,b){return a.v - b.v;});
+    var g = gaps.slice(0,5);
+    document.getElementById('dgGaps').innerHTML = g.length
+      ? g.map(function(x){return '<div class="dg-gap"><strong>'+esc(x.d)+'.</strong> '+esc(x.q)+'</div>';}).join('')
+      : (answeredAll ? '<p class="prose-sm" style="color:var(--text-muted);">No weak answers recorded. Re-run it with a colleague and compare.</p>'
+                     : '<p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p>');
+  }
+
+  form.addEventListener('click', function(e){
+    var b = e.target.closest('.dg-btn');
+    if (!b) return;
+    var q = b.getAttribute('data-q');
+    answers[q] = parseInt(b.getAttribute('data-v'), 10);
+    [].forEach.call(form.querySelectorAll('.dg-btn[data-q="'+q+'"]'), function(x){
+      x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+    });
+    update();
+  });
+
+  document.getElementById('dgCopy').addEventListener('click', function(){
+    var lines = ['Proposal-to-Project Diagnostic', ''];
+    var total = 0;
+    DIMS.forEach(function(d){
+      var got = 0, max = d.qs.length*2;
+      d.qs.forEach(function(q, qi){ var v = answers[d.key+'-'+qi]; if (v !== undefined) got += v; });
+      total += got;
+      lines.push(d.name + ': ' + got + ' / ' + max);
+    });
+    lines.push('', 'Total: ' + total + ' / ' + maxTotal, band(total/maxTotal), '',
+      'A self-assessment, not a benchmark or an audit. Run from jimiige.com.');
+    var txt = lines.join('\n');
+    var c = document.getElementById('dgCopied');
+    function done(){ c.style.display='inline'; setTimeout(function(){ c.style.display='none'; }, 2200); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done); else done();
+  });
+
+  update();
+})();
+</script>
+</body></html>
