@@ -34,7 +34,7 @@ documentation; licensed architects and engineers retain responsible charge,
 every design decision, and the seal.
 
 **Trigger events.**
-- Backlog at or near record levels while key roles stay open for months.
+- Backlog running to a year or more while key roles stay open for months.
 - SOQs and proposals consuming principal weekends to assemble material the firm already has.
 - RFI volume on a recent project traced back to document quality, and the margin that went with it.
 - Fee burn discovered at 80 percent with the construction documents at 50.
@@ -58,12 +58,15 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. Everything else stays
-qualitative. Predictions are always labeled as predictions, association
-sentiment surveys are labeled as sentiment surveys, and nothing in any post
-reads as engineering or architectural advice.
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Candidate and rejected claims do not appear at all.
+The section F "social safe set" in `data/evidence/priority_claims_list.md`
+predates the WS-19 validation pass and is no longer authoritative on its own.
+Everything else stays qualitative. Predictions are always labeled as
+predictions, association sentiment surveys are labeled as sentiment surveys,
+and nothing in any post reads as engineering or architectural advice.
 
 ---
 
@@ -79,7 +82,7 @@ Engineering firm leaders surveyed in Q1 2026 reported a median backlog of 11
 months, with 47 percent of firms at a year or more, and 88 percent still
 carrying at least one open position (ACEC Research Institute, N=628; a member
 sentiment survey, not a census, and backlog measures demand, not delivery
-efficiency). Record demand, empty seats.
+efficiency). Deep demand, empty seats.
 
 You cannot hire your way out of that market, because everyone is trying to
 hire out of the same pool. The honest question is different: how much of what
@@ -121,8 +124,8 @@ https://jimiige.com/governed-ai-for-architecture-engineering.html?utm_source=lin
 supply licensed professionals at a price the fee structure affords, faster
 than the backlog ages. Most firms are losing that bet right now.
 
-There is a version of capacity that does not require it. Most production
-hours in most firms contain a recoverable share: time spent re-solving
+There is a version of capacity that does not require it. Production hours
+are not all the same hour. Some of them are recoverable: time spent re-solving
 solved problems, assembling SOQs from scattered submittals, building the
 Friday status picture by hand. None of it is the judgment the seal
 certifies. All of it competes with that judgment for the same calendar.
@@ -162,7 +165,7 @@ resumes that are six versions stale, and rewriting past-performance
 narratives the firm has written many times before. The firm is assembling
 proof of work it already did, at its most expensive rates.
 
-The drafting layer is where the causal evidence is strongest. In a
+The drafting layer is where the causal evidence actually sits. In a
 preregistered experiment published in Science, access to a general AI
 assistant cut time on professional writing tasks by about 40 percent while
 raising judged quality by about 18 percent (Noy & Zhang, 2023, N of about
@@ -206,12 +209,11 @@ The fear in every principals' meeting about AI is the same fear, differently
 dressed: that throughput will be bought with document quality, and the seal
 will pay for it.
 
-The best field evidence says the fear has a real edge. In an experiment with
-758 consultants at one elite firm, AI raised judged quality by more than 40
-percent on tasks inside its capability frontier, and lowered quality when
-people leaned on it for tasks outside that frontier (Dell'Acqua et al.,
-2023; consulting tasks at one elite firm, and the transfer to engineering
-work is a caution, not a measurement).
+Field evidence says the fear has a real edge. In an experiment at one elite
+firm, AI was reported to raise judged quality on tasks inside its capability
+frontier, and to lower quality when people leaned on it for tasks outside
+that frontier (Dell'Acqua et al., 2023; consulting tasks at one elite firm,
+and the transfer to engineering work is a caution, not a measurement).
 
 For a design firm the outside-frontier examples are not hypothetical:
 calculations and code-compliance assertions that no qualified professional

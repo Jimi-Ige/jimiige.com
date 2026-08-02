@@ -78,9 +78,9 @@
         "Onboarding days from contract to steady state"
       ],
       "evidence": {
-        "text": "In a staggered deployment of a generative AI assistant across 5,179 customer-support agents, issues resolved per hour rose about 14 percent on average and about 34 percent for novice and lower-skilled agents, with minimal gains for the most experienced.",
-        "source": "Brynjolfsson, Li & Raymond, NBER w31161, 2023",
-        "caveat": "The setting is single-tenant software support chat, many agents outside the U.S., and agents could ignore suggestions. It is not multi-tenant MSP work with SLAs and privileged access, so on your desk it is a transfer hypothesis to test against a baseline, not a result to bank."
+        "text": "In a preregistered experiment published in Science, access to a general AI assistant cut time on occupation-specific professional writing tasks by about 40 percent and raised evaluator-judged quality by about 18 percent, across roughly 453 college-educated professionals.",
+        "source": "Noy & Zhang, Science, 2023",
+        "caveat": "Controlled writing tasks, evaluator-scored, not multi-tenant service-desk work with SLAs and privileged access. It speaks to the documentation and drafting layer of the desk, not to first-touch resolution, and no approved primary source in this library measures what AI does to resolution rates or seat economics on an MSP desk. Baseline your own desk before believing anything about it."
       },
       "cta": {
         "headline": "Name the two workflows, then prove it.",
@@ -121,7 +121,7 @@
         "Effort versus agreement value by client, visible before the renewal conversation"
       ],
       "evidence": {
-        "text": "The field experiment behind the jagged-frontier finding showed professional performance degrading when AI was relied on for tasks outside its capability frontier, even as in-frontier work improved sharply.",
+        "text": "The field experiment behind the jagged-frontier finding reported professional performance degrading when AI was relied on for tasks outside its capability frontier, even as in-frontier work improved.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "One elite global firm, consultants on experimental business tasks, not engineers in client environments, and where the frontier sits shifts with the model and the domain. For a client-facing pack the implication is a human read before anything ships, because a polished summary that contradicts the quarter the client lived costs more than a rough one that matches it."
       },
@@ -209,7 +209,7 @@
         "Time to answer a client or insurer AI questionnaire"
       ],
       "evidence": {
-        "text": "Quality risk from misapplied AI is evidenced rather than hypothetical: in a field experiment, professional performance degraded when AI was relied on for tasks outside its capability frontier.",
+        "text": "Quality risk from misapplied AI is documented rather than hypothetical: a field experiment reported professional performance degrading when AI was relied on for tasks outside its capability frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "The study ran with consultants on business tasks, not engineers with privileged access, and frontier boundaries move as models and domains change. On a service desk the outside-frontier failure mode is a plausible-sounding runbook action against a live client system, which argues for task routing and change approval rather than prohibition; prohibition only relocates the work to shadow tools."
       },

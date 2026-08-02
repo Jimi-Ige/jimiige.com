@@ -57,13 +57,16 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. Everything else stays
-qualitative. There is no approved primary source for search-firm economics or
-AI outcomes in executive search, and no post pretends otherwise: where the
-industry evidence is a gap, the post says so or stays qualitative.
-Predictions are always labeled as predictions.
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Candidate and rejected claims do not appear at all.
+The section F "social safe set" in `data/evidence/priority_claims_list.md`
+predates the WS-19 validation pass and is no longer authoritative on its own.
+Everything else stays qualitative. There is no approved primary source for
+search-firm economics or AI outcomes in executive search, and no post
+pretends otherwise: where the industry evidence is a gap, the post says so or
+stays qualitative. Predictions are always labeled as predictions.
 
 ---
 
@@ -197,9 +200,9 @@ The fear in every search partnership about AI is specific: that speed will
 be bought with the lens, and the longlist will stop being worth a retained
 fee.
 
-The best field evidence says the fear deserves respect. The same experiment
-that found large gains when consultants used AI on tasks inside its
-capability frontier also found quality fell when they relied on it for tasks
+Field evidence says the fear deserves respect. The same experiment that
+reported gains when consultants used AI on tasks inside its capability
+frontier also reported quality falling when they relied on it for tasks
 outside that frontier (Dell'Acqua et al., 2023; one elite consulting firm,
 task-level results, not a search firm). And where the frontier sits shifts
 with the model and the domain, so nobody gets to declare a task safe once

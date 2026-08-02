@@ -55,11 +55,15 @@ The four recurring themes, adapted per industry:
 
 ## Editorial rules (non-negotiable)
 
-- Quantitative claims come only from the evidence library in `data/evidence/`
-  (claim cards and the priority list), quoted with their caveat language and
-  source attribution. For social posts, the whitelist is the 10-claim safe set
-  in `data/evidence/priority_claims_list.md` section F. Predictions are always
-  labeled as predictions; vendor and sponsored surveys carry that label.
+- Exact figures come only from claims holding Approved status under
+  `research/evidence-policy.md`, quoted with their caveat language and source
+  attribution. Verified claims may appear only as attributed directional
+  statements, with the source name and its caveat adjacent, and never as an
+  exact figure. Candidate and rejected claims do not appear at all. The
+  10-claim "social safe set" in `data/evidence/priority_claims_list.md`
+  section F predates the WS-19 validation pass and is no longer authoritative
+  on its own. Predictions are always labeled as predictions; vendor and
+  sponsored surveys carry that label.
 - No invented statistics, clients, or case studies. Where the evidence ledger
   flags a gap (mid-market ROI, realization impact, E&O claims data, creative
   and search and MSP primary economics), the gap is stated, never filled.

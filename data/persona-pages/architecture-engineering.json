@@ -4,10 +4,10 @@
   "pages": [
     {
       "persona": "managing-partner",
-      "headline": "Convert record backlog into delivered work, not burnout.",
+      "headline": "Convert months of backlog into delivered work, not burnout.",
       "outcome": "Your growth plan currently has one engine: hire licensed professionals fast enough to keep up with the backlog, in a market where every competitor is fishing the same pool. Governed AI adds a second engine. Assembly, drafting, retrieval, and synthesis move onto rails, licensed attention returns to design judgment, checking, and clients, and backlog converts to revenue faster than headcount grows, without the name on the title block paying for it.",
       "triggers": [
-        "Backlog sits at or near record levels while key licensed roles stay open for months.",
+        "Backlog runs to a year or more while key licensed roles stay open for months.",
         "Principals are at capacity, with winning work, checking work, and client calls all competing for the same few people.",
         "The firm's distinctive design intelligence is concentrated in a few heads near retirement, and succession is a hope rather than a plan.",
         "Owners and public clients have started asking in RFQs how the firm uses AI, and the current answer is individual improvisation."
@@ -121,7 +121,7 @@
         "Checking turnaround at the QA/QC gate"
       ],
       "evidence": {
-        "text": "The same field experiment that measured large in-frontier gains found professional quality fell when AI was relied on for tasks outside its capability frontier.",
+        "text": "The same field experiment that reported in-frontier gains also reported professional quality falling when AI was relied on for tasks outside its capability frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "A consulting field experiment; the transfer to design work is a caution, not a measurement. For a studio, the clearest outside-frontier examples are unverified calculations and code-compliance assertions, which is exactly what the QA/QC gate and responsible charge exist to catch."
       },
@@ -196,7 +196,7 @@
         "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover."
       ],
       "controls": [
-        "Project-level data boundaries checked against each client's actual contract, because owner and public-sector contracts now differ on AI.",
+        "Project-level data boundaries checked against each client's actual contract rather than against a firm-wide policy, because the posture that holds is the one the contract in front of you actually permits.",
         "Qualified verification of every calculation and code-compliance assertion, whatever produced it.",
         "A documented review trail behind every seal, so the firm can show its discipline instead of asserting it.",
         "Retention rules for prompts and outputs, set deliberately rather than defaulted.",
@@ -252,9 +252,9 @@
         "Backlog months converted to revenue per quarter"
       ],
       "evidence": {
-        "text": "Professionals surveyed in 2024 (N=2,205 across legal, tax and accounting, risk and compliance, and C-suite respondents) predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
-        "source": "Thomson Reuters Future of Professionals, 2024",
-        "caveat": "A vendor-sponsored global survey of predictions, and design professions were not its focus. Predicted hours may never convert to fee protection or margin; only a baseline and honest measurement can show whether they do."
+        "text": "In McKinsey's 2025 State of AI survey (N=1,993), 64 percent of respondents said AI is enabling innovation while only 39 percent reported EBIT impact at the enterprise level.",
+        "source": "McKinsey / QuantumBlack, The State of AI, 2025",
+        "caveat": "Cross-industry and global, self-reported rather than audited, with large-organization bias and the publisher's own commercial interest in AI services; design firms were not its focus. Read it as the reason an AI case has to land as fee protected on named projects, measured against a baseline, rather than as hours saved in the abstract. No measured productivity figure specific to architecture and engineering practice exists in the reviewed public record."
       },
       "cta": {
         "headline": "Start with the baseline, not the invoice.",

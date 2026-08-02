@@ -57,11 +57,15 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. The one industry addition is
-Clio's adoption figure, always carried with its vendor-data label. Everything
-else stays qualitative. Predictions are always labeled as predictions, and
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Clio's adoption finding (LAW-004) is Verified, not
+Approved: it stays directional and always carries its vendor-data label.
+Candidate and rejected claims do not appear at all. The section F "social
+safe set" in `data/evidence/priority_claims_list.md` predates the WS-19
+validation pass and is no longer authoritative on its own. Everything else
+stays qualitative. Predictions are always labeled as predictions, and
 nothing in any post is legal advice.
 
 ---
@@ -188,14 +192,14 @@ https://jimiige.com/governed-ai-for-law-firms.html?utm_source=linkedin&utm_mediu
 The fear in every partner meeting about AI is the same fear, differently
 dressed: that speed will be bought with the firm's name.
 
-The best field evidence says the fear deserves respect. In an experiment
-with 758 consultants at one elite firm, AI raised judged quality by more
-than 40 percent on tasks inside its capability frontier, and lowered
-quality when professionals leaned on it outside that frontier (Dell'Acqua
-et al., 2023; consulting tasks at an elite firm, task-level results, not
-legal work, and the frontier moves with the model and the domain). In a
-law firm, outside the frontier has a specific shape: the fabricated
-citation, the legal conclusion nobody checked against authority.
+Field evidence says the fear deserves respect. In an experiment at one
+elite firm, AI was reported to raise judged quality on tasks inside its
+capability frontier, and to lower quality when professionals leaned on it
+outside that frontier (Dell'Acqua et al., 2023; consulting tasks at an
+elite firm, task-level results, not legal work, and the frontier moves with
+the model and the domain). In a law firm, outside the frontier has a
+specific shape: the fabricated citation, the legal conclusion nobody
+checked against authority.
 
 Here is the design answer. Nothing about supervision changes. The
 supervising attorney still reviews position, authority, and risk on
@@ -286,21 +290,24 @@ https://jimiige.com/governed-ai-for-law-firms.html?utm_source=linkedin&utm_mediu
 
 ### Post 11 - Theme 4: Govern AI without slowing the firm down
 
-Clio's Legal Trends research reports that 79 percent of legal professionals
-use AI in their firms, while more than half say their firm has no AI policy
-or they are unaware of one (vendor data from a company that sells practice
+Clio's Legal Trends research reports that most legal professionals now use
+AI in their firms, while a large share say their firm has no AI policy or
+they are unaware of one (vendor data from a company that sells practice
 technology, with broad definitions of AI; an adoption survey, not causal
-proof of anything). Read together, those numbers say the use arrived before
+proof of anything). Read together, those findings say the use arrived before
 the governance did.
 
 Meanwhile your client's outside counsel guidelines may already have an AI
 section. The question is whether the firm has an answer per client, or an
 improvisation per partner.
 
-Guidelines increasingly speak to AI directly: which tools, what disclosure,
-what consent, what happens to prompts and outputs when the matter closes.
-Which means the firm's AI posture is no longer only the firm's decision, and
-"we are still evaluating" ages badly in a relationship review.
+The guidelines I have read speak to AI directly: which tools, what
+disclosure, what consent, what happens to prompts and outputs when the matter
+closes. How common that is across the market is not something I have seen
+measured, which is exactly why the answer has to be per client rather than
+per market. Where the language is there, the firm's AI posture is no longer
+only the firm's decision, and "we are still evaluating" ages badly in a
+relationship review.
 
 The move is unglamorous and effective. Inventory the guidelines in force for
 AI language. Check each engagement's posture against its own client's terms,

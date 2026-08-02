@@ -13,9 +13,18 @@
         "Clients have started asking how the firm uses AI inside their environments, and the answer depends on which engineer they ask."
       ],
       "workflows": [
-        { "name": "Pursuit-to-SOW", "line": "Win more of the right work without more architect evenings: the bid call and the estimate stay senior, assembly stops being senior work." },
-        { "name": "Build on What You Built", "line": "What the firm has already engineered compounds instead of retiring with its authors, so every project starts above zero." },
-        { "name": "Project-to-Portfolio Signal", "line": "Portfolio truth you can run the firm on: burn, margin, and risk traceable to delivery artifacts rather than to Friday recollection." }
+        {
+          "name": "Pursuit-to-SOW",
+          "line": "Win more of the right work without more architect evenings: the bid call and the estimate stay senior, assembly stops being senior work."
+        },
+        {
+          "name": "Build on What You Built",
+          "line": "What the firm has already engineered compounds instead of retiring with its authors, so every project starts above zero."
+        },
+        {
+          "name": "Project-to-Portfolio Signal",
+          "line": "Portfolio truth you can run the firm on: burn, margin, and risk traceable to delivery artifacts rather than to Friday recollection."
+        }
       ],
       "aiChanges": [
         "Research, first drafts, and retrieval come off senior desks, so architect hours concentrate on scope, price, and the architecture call.",
@@ -35,9 +44,9 @@
         "Bench time between assignments"
       ],
       "evidence": {
-        "text": "In a field experiment with 758 consultants at one elite firm, AI use on tasks inside its capability frontier meant 12.2 percent more tasks completed, 25.1 percent faster, at more than 40 percent higher judged quality than the control group.",
+        "text": "In a field experiment at one elite global firm, consultants using AI on tasks inside its capability frontier were reported to complete more work, faster, and at higher judged quality than the control group.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
-        "caveat": "Task-level results at one elite global firm on consulting-style knowledge tasks, the closest causal analog to this work and still not engineering delivery or mid-market proof. The same study found quality fell when AI was used outside the frontier, which is what the review gates are for. No public causal study measures AI's return for a mid-market IT consulting firm."
+        "caveat": "Task-level results at one elite global firm on consulting-style knowledge tasks, the closest analog to this work and still not engineering delivery or mid-market proof. The same study reported quality falling when AI was used outside the frontier, and where that frontier sits shifts with the model and the task, which is what the review gates are for. No public causal study measures AI's return for a mid-market IT consulting firm."
       },
       "cta": {
         "headline": "See where the firm's throughput is actually constrained.",
@@ -56,9 +65,18 @@
         "The weekly portfolio picture costs a day of delivery-management time to assemble and is stale by the time it is read."
       ],
       "workflows": [
-        { "name": "Build on What You Built", "line": "Prior solutions, reference architectures, and reviewed components surface on demand with provenance, so a project starts from the firm's best instead of from zero." },
-        { "name": "Project-to-Portfolio Signal", "line": "Burn against estimate, velocity, and risk synthesized from live delivery artifacts on one spine, drillable to source in one step." },
-        { "name": "Bench, Utilization & Margin", "line": "Roll-off dates read against the pipeline early enough to act on them, and margin by project visible while the project can still be corrected." }
+        {
+          "name": "Build on What You Built",
+          "line": "Prior solutions, reference architectures, and reviewed components surface on demand with provenance, so a project starts from the firm's best instead of from zero."
+        },
+        {
+          "name": "Project-to-Portfolio Signal",
+          "line": "Burn against estimate, velocity, and risk synthesized from live delivery artifacts on one spine, drillable to source in one step."
+        },
+        {
+          "name": "Bench, Utilization & Margin",
+          "line": "Roll-off dates read against the pipeline early enough to act on them, and margin by project visible while the project can still be corrected."
+        }
       ],
       "aiChanges": [
         "Assembly leaves the critical path: retrieval, documentation drafting, and status synthesis run on rails instead of on engineers.",
@@ -100,9 +118,18 @@
         "A client asked which parts of their solution were AI-assisted, and the answer varied by who was asked."
       ],
       "workflows": [
-        { "name": "Build on What You Built", "line": "Every design and document starts from the practice's reviewed patterns, with provenance, so the floor rises without the ceiling dropping." },
-        { "name": "Architecture & Code Review Gates", "line": "Work arrives at the gate marked, sourced, and with criteria visible, so senior scrutiny lands where the engineering risk actually is." },
-        { "name": "Pursuit-to-SOW", "line": "Solution outlines and estimates argued against the practice's own actuals, so what gets promised is what your team can build." }
+        {
+          "name": "Build on What You Built",
+          "line": "Every design and document starts from the practice's reviewed patterns, with provenance, so the floor rises without the ceiling dropping."
+        },
+        {
+          "name": "Architecture & Code Review Gates",
+          "line": "Work arrives at the gate marked, sourced, and with criteria visible, so senior scrutiny lands where the engineering risk actually is."
+        },
+        {
+          "name": "Pursuit-to-SOW",
+          "line": "Solution outlines and estimates argued against the practice's own actuals, so what gets promised is what your team can build."
+        }
       ],
       "aiChanges": [
         "First drafts of designs, runbooks, and handover documents are grounded in the practice's own delivered systems, so engineers edit instead of assemble.",
@@ -122,7 +149,7 @@
         "Defects caught at review gates versus in acceptance testing or production"
       ],
       "evidence": {
-        "text": "The same field experiment that measured large in-frontier gains found consultant quality fell when AI was applied to tasks outside its capability frontier.",
+        "text": "The same field experiment that reported in-frontier gains also reported consultant quality falling when AI was applied to tasks outside its capability frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Which tasks sit outside the frontier moves with the model, the stack, and the domain, and the study was run on consulting-style knowledge tasks rather than engineering work. Accountable senior review stays a standing requirement, independent of average productivity gains."
       },
@@ -143,9 +170,18 @@
         "Leadership wants AI across delivery and expects technology to make it safe after the fact."
       ],
       "workflows": [
-        { "name": "Build on What You Built", "line": "The reuse corpus becomes a governed asset: curated components, reference architectures, client walls, IP status, provenance, and an owner." },
-        { "name": "Client Environment Onboarding", "line": "Access, credentials, and each client's rules for AI in their environment settled at project start, provisioned and revoked with staffing." },
-        { "name": "Project-to-Portfolio Signal", "line": "Reporting synthesis with one source of record per metric, which is an architecture decision before it is a reporting one." }
+        {
+          "name": "Build on What You Built",
+          "line": "The reuse corpus becomes a governed asset: curated components, reference architectures, client walls, IP status, provenance, and an owner."
+        },
+        {
+          "name": "Client Environment Onboarding",
+          "line": "Access, credentials, and each client's rules for AI in their environment settled at project start, provisioned and revoked with staffing."
+        },
+        {
+          "name": "Project-to-Portfolio Signal",
+          "line": "Reporting synthesis with one source of record per metric, which is an architecture decision before it is a reporting one."
+        }
       ],
       "aiChanges": [
         "The sanctioned path becomes the fastest path, which is the only adoption strategy that has ever beaten shadow tooling.",
@@ -187,9 +223,18 @@
         "A client's security team, an insurer, or an acquirer asked about AI controls, and the answer was assembled overnight."
       ],
       "workflows": [
-        { "name": "Client Environment Onboarding", "line": "Access, credential handling, and each client's AI rules settled before the first assisted commit, not after the first incident." },
-        { "name": "Build on What You Built", "line": "Reuse inside client and contract walls with IP status recorded where the reuse happens, so the firm's memory never becomes another client's property leaving the building." },
-        { "name": "Architecture & Code Review Gates", "line": "A named senior engineer accountable for what merges, whoever or whatever produced it, with AI-assisted work marked at the gate." }
+        {
+          "name": "Client Environment Onboarding",
+          "line": "Access, credential handling, and each client's AI rules settled before the first assisted commit, not after the first incident."
+        },
+        {
+          "name": "Build on What You Built",
+          "line": "Reuse inside client and contract walls with IP status recorded where the reuse happens, so the firm's memory never becomes another client's property leaving the building."
+        },
+        {
+          "name": "Architecture & Code Review Gates",
+          "line": "A named senior engineer accountable for what merges, whoever or whatever produced it, with AI-assisted work marked at the gate."
+        }
       ],
       "aiChanges": [
         "What changes is assembly speed. What never changes is accountability: a named engineer answers for every consequential artifact.",
@@ -197,7 +242,7 @@
         "The firm's posture becomes one sentence you control, instead of a hundred improvisations you discover."
       ],
       "controls": [
-        "Per-project AI posture checked against that client's contract and security addendum, because they differ and some now speak to AI directly.",
+        "Per-project AI posture checked against that client's contract and security addendum, because they are not uniform and the addendum is usually where the binding constraint sits.",
         "Credentials and client secrets never in prompts or tool context, enforced technically rather than by policy.",
         "A provenance record for generated code written as the code is written, because it cannot be reconstructed later.",
         "Senior engineering review and a named approval before anything merges or reaches a client environment.",
@@ -231,9 +276,18 @@
         "The next planning cycle needs an AI line item and there is no defensible number to put on it."
       ],
       "workflows": [
-        { "name": "Pursuit-to-SOW", "line": "Cost of sale is mostly senior technical time, and estimate-to-actual variance is the number that says whether that time bought margin or bought rework." },
-        { "name": "Build on What You Built", "line": "The rebuilt-work share of delivery hours is the quiet margin leak this workflow exists to close." },
-        { "name": "Bench, Utilization & Margin", "line": "Margin by project visible during delivery and bench visible before it forms, while pricing and staffing can still respond." }
+        {
+          "name": "Pursuit-to-SOW",
+          "line": "Cost of sale is mostly senior technical time, and estimate-to-actual variance is the number that says whether that time bought margin or bought rework."
+        },
+        {
+          "name": "Build on What You Built",
+          "line": "The rebuilt-work share of delivery hours is the quiet margin leak this workflow exists to close."
+        },
+        {
+          "name": "Bench, Utilization & Margin",
+          "line": "Margin by project visible during delivery and bench visible before it forms, while pricing and staffing can still respond."
+        }
       ],
       "aiChanges": [
         "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
@@ -253,7 +307,7 @@
         "Bench time between assignments, and where freed hours actually landed"
       ],
       "evidence": {
-        "text": "The most recent professional-services benchmark put surveyed billable utilization at 66.4 percent, the lowest in that survey's history and below its 75 percent target, with EBITDA around 9.9 percent.",
+        "text": "Surveyed billable utilization across professional-services firms has been reported at its lowest level in that benchmark's history and below its own stated target, with EBITDA essentially flat year over year.",
         "source": "SPI Research, summarized by Deltek (2025 performance); sponsored benchmark",
         "caveat": "A vendor-sponsored voluntary survey across professional-services verticals, not a census, and its IT-consulting split is not public. Utilization and EBITDA definitions vary between firms, and none of this is caused by AI. There is no public causal study of AI's return for a mid-market IT consulting firm, and the effect of AI assistance on estimate accuracy is unmeasured, which is why the baseline is the evidence."
       },

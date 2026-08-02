@@ -57,18 +57,19 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. Three of the twelve posts carry a
-number and the rest stay qualitative, including the adoption-versus-scale
-pattern, which is carried as a pattern rather than as percentages because the
-safe set covers the pattern and not the underlying figures. The consulting
-field experiment always carries its elite-firm limit, and the support-agent
-study is always labeled a transfer hypothesis for service-desk-like work rather
-than proof for engineering delivery. Two gaps are stated rather than filled: there is no
-public causal study of AI's return for mid-market IT consulting firms, and the
-effect of AI assistance on estimate accuracy is unmeasured. No invented
-clients, results, or payback periods.
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Candidate and rejected claims do not appear at all.
+The section F "social safe set" in `data/evidence/priority_claims_list.md`
+predates the WS-19 validation pass and is no longer authoritative on its own.
+One of the twelve posts carries a number and the rest stay qualitative,
+including the adoption-versus-scale pattern, which is carried as a pattern
+rather than as percentages. The consulting field experiment stays directional
+and always carries its elite-firm limit. Two gaps are stated rather than
+filled: there is no public causal study of AI's return for mid-market IT
+consulting firms, and the effect of AI assistance on estimate accuracy is
+unmeasured. No invented clients, results, or payback periods.
 
 ---
 
@@ -107,7 +108,7 @@ solution outline, the estimate, the SOW language, the technical review before
 anything is promised. Most of those hours are not the estimate. They are
 assembly around the estimate.
 
-The drafting layer is where the causal evidence is strongest. In a preregistered
+The drafting layer is where the causal evidence actually sits. In a preregistered
 experiment with roughly 453 college-educated professionals, access to a general
 AI assistant cut time on mid-level professional writing tasks by about 40
 percent and raised evaluator-scored quality by about 18 percent (Noy and Zhang,
@@ -169,24 +170,23 @@ The most valuable asset in your firm is what your best engineer knows about
 every system the firm has delivered, and it walks out of the building every
 evening.
 
-The closest causal evidence for encoding that knowledge does not come from
-consulting at all. In a staggered deployment of a generative AI assistant
-across 5,179 customer-support agents, issues resolved per hour rose by about 14
-percent on average, and by about 34 percent for novice and lower-skilled
-workers, with minimal gains for the most skilled (Brynjolfsson, Li and Raymond,
-NBER w31161, 2023).
+I have no study to hand you here, and I am not going to borrow one from
+another industry to dress the point up. There is no public causal evidence for
+what encoding that knowledge is worth to a mid-market IT consulting firm. The
+gap is worth stating rather than filling with somebody else's number.
 
-Label that honestly. The setting is software customer-support chat, not project
-delivery. For service-desk-like and managed-services work inside an IT
-consulting firm it is a transfer hypothesis, never direct proof, and it says
-nothing about architecture or estimation.
+What I will argue is the shape of the problem, from the work rather than from
+a paper. The knowledge that matters is not written anywhere a new engineer can
+reach it: the sequencing that worked, the assumption that turned out wrong,
+the client system that behaves nothing like its documentation. It lives in one
+head, it is retrieved by asking that head, and the asking scales exactly as
+far as that person's calendar does.
 
-The shape of the result is what earns the second read, and what follows is my
-reading of it rather than a finding of the study. The workers who gained most
-were the ones with the least accumulated experience, which is what you would
-expect if the value sits in making hard-won knowledge available where the work
-actually happens. Read that way, it is a curation and documentation problem
-before it is an AI problem, and most firms have never done the first part.
+Read that way it is a curation and documentation problem before it is an AI
+problem, and most firms have never done the first part. Curate the patterns,
+put an owner and a review date on each one, and you have something worth
+pointing retrieval at. Skip that and assistance only makes an undocumented
+firm arrive at the wrong answer faster.
 
 *Soft CTA:* Build on What You Built, chapter 5 →
 https://jimiige.com/governed-ai-for-it-consulting.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_it-consulting&utm_content=post-05
@@ -219,14 +219,14 @@ The fear in every delivery leadership meeting about AI is the same fear,
 differently dressed: that speed gets bought with quality, and on a fixed bid the
 firm pays for it twice.
 
-The best field evidence says both halves of that fear are real. In a field
-experiment with 758 consultants at one elite firm, AI use on tasks inside its
-capability frontier meant 12.2 percent more tasks completed, 25.1 percent
-faster, at more than 40 percent higher judged quality than the control group,
-and quality fell when consultants relied on it outside that frontier (Dell'Acqua
-et al., 2023). The limits are part of the claim: one elite global firm,
-consulting-style knowledge tasks, task-level results, not engineering delivery
-and not mid-market ROI.
+Field evidence says both halves of that fear are real. In a field experiment
+at one elite global firm, AI use on tasks inside its capability frontier was
+reported to increase the volume and the speed of completed work at higher
+judged quality than a control group, and quality was reported to fall when
+consultants relied on it outside that frontier (Dell'Acqua et al., 2023). The
+limits are part of the claim: one elite global firm, consulting-style
+knowledge tasks, task-level results, not engineering delivery and not
+mid-market ROI.
 
 The design conclusion is neither enthusiasm nor prohibition. It is routing plus
 review.

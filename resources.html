@@ -246,7 +246,7 @@
               <div class="cgroup"><div class="cgroup-h">Your AI program, shared by every workflow</div>
             <div class="cin"><label>People you put on licenses</label><span class="hint">Everyone you give a seat. You pay for these once, whether one workflow runs on them or ten. <span class="eg">(e.g., the finance team you would license)</span></span><input id="users" type="number" value="12" min="1"></div>
             <div class="cin"><label>Blended hourly cost of the work (USD)</label><span class="hint">What an hour of this work costs you, blended across everyone who does it. Easiest to picture as a contractor's rate. For staff, use the average fully loaded cost, pay plus benefits and overhead. <span class="eg">(e.g., a contracted bookkeeper's hourly rate)</span></span><input id="loaded" type="number" value="75" min="0" step="1"></div>
-            <div class="cin"><label>Share who will really use it (percent)</label><span class="hint">Not who has a license, who really uses it weekly. Independent 2026 US data (Federal Reserve; Recon Analytics) puts real use near a third of the people who have access. <span class="eg">(e.g., be honest about your team)</span></span><input id="adopt" type="number" value="35" min="0" max="100"></div>
+            <div class="cin"><label>Share who will really use it (percent)</label><span class="hint">Not who has a license, who really uses it weekly. Treat this as a planning judgment rather than a benchmark: weekly use usually runs well below the share of people who have access, so set it honestly and low. No external adoption figure is published here, because none in the evidence ledger meets the standard. <span class="eg">(e.g., be honest about your team)</span></span><input id="adopt" type="number" value="35" min="0" max="100"></div>
             <div class="cin"><label>Weeks until most people use it</label><span class="hint">Most of the value shows up only after people pick it up, which is why day-one math misleads. <span class="eg">(e.g., a couple of months, not the first week)</span></span><input id="ramp" type="number" value="12" min="1" max="52"></div>
           </div>
 
@@ -257,7 +257,7 @@
           </div>
 
           <div class="cgroup"><div class="cgroup-h">Your workflows</div>
-            <p class="meta" style="color:#6f685d;line-height:1.5;margin:0 0 12px;">These share one set of licenses. Remove any to see the effect, or add your own; the setup and seats are paid once.</p>
+            <p class="meta" style="color:#6f685d;line-height:1.5;margin:0 0 12px;">These share one set of licenses. Remove any to see the effect, or add your own; the setup and seats are paid once. The three below are illustrative placeholders, not benchmarks and not evidence of what AI saves: time your own workflows both ways and replace every number before reading anything into the result.</p>
             <div id="wfs"></div>
             <button type="button" id="wfadd" class="wf-add">+ Add another workflow</button>
             </div>
@@ -391,7 +391,7 @@
     document.getElementById('defendlist').innerHTML=''+
       '<li><b>"One workflow looks underwater."</b> It often is, and that is the point. The setup and the seats are paid once for the whole program, so a single task rarely carries them. Add the other workflows these licenses already cover and watch the net climb.</li>'+
       '<li><b>"Saved hours are not free money."</b> If the work is contracted, or overtime, or a hire you would have made, the saved hours are real cash you stop spending. If it is salaried staff who stay, it is capacity you redirect to the bottom line or the mission. The number values the hours at your blended rate, then subtracts the compute.</li>'+
-      '<li><b>"Adoption will never hit that."</b> The default is 35%, about what independent 2026 US data finds for real weekly use of enterprise AI, and the range already prices in a weaker rollout. Drag it down and watch payback move.</li>'+
+      '<li><b>"Adoption will never hit that."</b> The 35% default is a deliberately conservative planning assumption rather than a published benchmark, and the range already prices in a weaker rollout. Drag it down and watch payback move.</li>'+
       '<li><b>"Why so much lower than the vendor?"</b> Day-one math ignores the rollout, the people who never pick it up, and the setup and seats you pay whether one workflow uses them or ten. This does not.</li>';
   }
 

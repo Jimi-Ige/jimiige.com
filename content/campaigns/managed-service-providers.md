@@ -58,13 +58,15 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. Everything else stays
-qualitative. The support-agent productivity study is always labeled a transfer
-hypothesis, never MSP proof. No MSP margin, utilization, or seat-economics
-benchmarks are cited anywhere, because no approved primary source exists;
-where the number would go, the gap is stated instead.
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Candidate and rejected claims do not appear at all.
+The section F "social safe set" in `data/evidence/priority_claims_list.md`
+predates the WS-19 validation pass and is no longer authoritative on its own.
+Everything else stays qualitative. No MSP margin, utilization, or
+seat-economics benchmarks are cited anywhere, because no approved primary
+source exists; where the number would go, the gap is stated instead.
 
 ---
 
@@ -95,23 +97,24 @@ https://jimiige.com/governed-ai-for-managed-service-providers.html?utm_source=li
 
 ### Post 02, Theme 1: Grow the client base without proportional engineering hires
 
-The best causal evidence for AI on ticket work comes from the closest setting
-anyone has studied properly: customer support.
+The honest position on AI and ticket work is that nobody has measured it on
+an MSP desk.
 
-In a staggered deployment across 5,179 support agents, a generative AI
-assistant raised issues resolved per hour by about 14 percent on average, and
-by about 34 percent for novice and lower-skilled agents, with minimal gains
-for the most experienced (Brynjolfsson, Li & Raymond, NBER working paper
-31161). The caveat matters as much as the number: that was single-tenant
-software support chat, agents could ignore the suggestions, and it is not
-proof of anything about multi-tenant MSP work with SLAs and privileged
-access. For an MSP it is a transfer hypothesis, not a result.
+There is causal research on AI assistance in adjacent settings, and there is
+a standing temptation to borrow it. I am going to decline. Single-tenant
+support chat is not multi-tenant managed services with SLAs, privileged
+access, and a fixed monthly fee, and a figure carried across that gap arrives
+looking like proof when it is at best a hypothesis. A leadership team that
+catches one borrowed number discounts everything else you put in front of it.
 
-But look at the shape of the finding. The assistant worked by making the
-accumulated knowledge of the best agents available to everyone else. That is
-exactly what an MSP runbook corpus is supposed to do, and mostly does not.
-The honest move is not to bank the 14 percent. It is to baseline your own
-desk and test whether the shape holds.
+What does survive the move is the shape of the problem, not the size of the
+prize. Ticket work rewards accumulated knowledge: the engineer who has seen
+this failure before resolves it in a fraction of the time, and everyone else
+rediscovers it from scratch. That is exactly what a runbook corpus is
+supposed to fix, and mostly does not. So the honest move is not to bank
+somebody else's result. It is to baseline your own desk, put the corpus in
+front of the people actually answering tickets, and read what happens to
+resolution.
 
 *Soft CTA:* The playbook treats this exactly that carefully →
 https://jimiige.com/governed-ai-for-managed-service-providers.html?utm_source=linkedin&utm_medium=campaign_post&utm_campaign=governed-ai-ops_managed-service-providers&utm_content=post-02
@@ -123,8 +126,8 @@ seat.
 
 Not because it would not be useful. Because I have never found a primary
 source for it that survives scrutiny: open methods, a stated sample, no
-vendor thumb on the scale. Most of the seat-economics benchmarks that
-circulate in this industry trace back to webinars and marketing decks, and a
+vendor thumb on the scale. The seat-economics benchmarks that circulate in
+this industry tend to arrive without published methods behind them, and a
 benchmark without methods is a rumor with confidence.
 
 What works instead is cheaper and more honest: price each agreement against
@@ -200,14 +203,14 @@ https://jimiige.com/governed-ai-for-managed-service-providers.html?utm_source=li
 
 ### Post 07, Theme 3: Improve delivery without loosening control
 
-The most useful AI finding for MSP leaders was not measured on engineers at
-all.
+One AI finding worth an MSP leader's attention was not measured on engineers
+at all.
 
-A field experiment with consultants at one elite firm found quality rose
-sharply when AI was used on tasks inside its capability frontier, and fell
-when people leaned on it for tasks outside that frontier (Dell'Acqua et al.,
-2023; elite-firm setting, task-level results, and the frontier moves with the
-model and the domain).
+A field experiment with consultants at one elite firm has been reported to
+show quality rising when AI was used on tasks inside its capability frontier,
+and falling when people leaned on it for tasks outside that frontier
+(Dell'Acqua et al., 2023; elite-firm setting, task-level results, and the
+frontier moves with the model and the domain).
 
 Now translate the failure mode to a service desk. Outside-frontier reliance
 in consulting produces a weak slide. Outside-frontier reliance on an MSP desk

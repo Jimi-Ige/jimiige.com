@@ -64,16 +64,21 @@ Post to playbook (or persona page for targeted shares) to the Workflow Leverage
 between seasons.
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. Three of the twelve posts carry
-one: the AICPA staffing ranking (post 01), the jagged-frontier quality finding
-(post 07), and the writing-productivity experiment (post 08). Everything else
-stays qualitative. Two gaps are stated and never filled: the realization impact
-of AI drafting is unmeasured, and no credible mid-market CPA-firm ROI figure
-exists in the public record. Predictions are always labeled as predictions,
-sponsored surveys carry that label, and nothing in any post is tax, accounting,
-or audit advice.
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Candidate and rejected claims do not appear at all.
+The section F "social safe set" in `data/evidence/priority_claims_list.md`
+predates the WS-19 validation pass and is no longer authoritative on its own.
+Two of the twelve posts carry a figure: the AICPA staffing ranking (post 01)
+and the writing-productivity experiment (post 08). The jagged-frontier quality
+finding (post 07) is carried directionally, with its source and caveat
+adjacent and no figure attached. Everything else stays qualitative. Two gaps
+are stated and never filled: the realization impact of AI drafting is
+unmeasured, and no credible mid-market CPA-firm ROI figure exists in the
+public record. Predictions are always labeled as predictions, sponsored
+surveys carry that label, and nothing in any post is tax, accounting, or audit
+advice.
 
 ---
 
@@ -234,12 +239,12 @@ https://jimiige.com/governed-ai-for-accounting-cpa-firms.html?utm_source=linkedi
 The fear in every partner meeting about AI is the same fear, differently
 dressed: that speed will be bought with the signature.
 
-The best field evidence says that fear deserves respect. In a field experiment
-with 758 consultants at one elite global firm, AI improved performance on tasks
-inside its capability frontier and reduced quality when professionals relied on
-it for tasks outside that frontier (Dell'Acqua et al., 2023; consulting tasks
-at one elite firm, task-level results, not accounting work, and where the
-frontier sits shifts with the model and the domain).
+Field evidence says that fear deserves respect. In a field experiment at one
+elite global firm, AI was reported to improve performance on tasks inside its
+capability frontier and to reduce quality when professionals relied on it for
+tasks outside that frontier (Dell'Acqua et al., 2023; consulting tasks at one
+elite firm, task-level results, not accounting work, and where the frontier
+sits shifts with the model and the domain).
 
 In a CPA firm, outside the frontier has a shape worth naming out loud: a
 technical position that reads well and has no authority behind it, and evidence

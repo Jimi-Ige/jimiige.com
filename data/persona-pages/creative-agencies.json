@@ -13,9 +13,18 @@
         "Retainers keep renewing at the same fee for visibly more scope, and revenue growth stops being visible in margin."
       ],
       "workflows": [
-        { "name": "Pitch-to-Brief", "line": "Win more of the right work without more unbilled senior evenings: the pitch or no-pitch call stays yours, assembly stops being founder work." },
-        { "name": "Brief-to-Concept Support", "line": "The search widens and the mechanical spread comes off creative desks, while the idea and the call stay exactly where your reputation needs them." },
-        { "name": "Production-to-Account Insight", "line": "One read of the roster you can run the agency on: status, burn, and scope health traceable to artifacts instead of to Monday's optimism." }
+        {
+          "name": "Pitch-to-Brief",
+          "line": "Win more of the right work without more unbilled senior evenings: the pitch or no-pitch call stays yours, assembly stops being founder work."
+        },
+        {
+          "name": "Brief-to-Concept Support",
+          "line": "The search widens and the mechanical spread comes off creative desks, while the idea and the call stay exactly where your reputation needs them."
+        },
+        {
+          "name": "Production-to-Account Insight",
+          "line": "One read of the roster you can run the agency on: status, burn, and scope health traceable to artifacts instead of to Monday's optimism."
+        }
       ],
       "aiChanges": [
         "Research, first drafts, versions, and status compilation leave senior creative desks, so the hours you cannot buy more of concentrate on the work and the client.",
@@ -56,9 +65,18 @@
         "The weekly work-in-progress review consumes a day of account and production time to assemble and is stale by the time it is read."
       ],
       "workflows": [
-        { "name": "Production-to-Account Insight", "line": "Status, burn, and revision counts synthesized from live production records, with every line drillable to the artifact behind it in one step." },
-        { "name": "Client Onboarding & Approvals", "line": "One feedback channel, one version log, one approver map, so the studio stops manufacturing revisions it was never scoped for." },
-        { "name": "Pitch-to-Brief", "line": "What was promised in the room arrives in the studio as a complete brief, so teams build what was sold instead of what was remembered." }
+        {
+          "name": "Production-to-Account Insight",
+          "line": "Status, burn, and revision counts synthesized from live production records, with every line drillable to the artifact behind it in one step."
+        },
+        {
+          "name": "Client Onboarding & Approvals",
+          "line": "One feedback channel, one version log, one approver map, so the studio stops manufacturing revisions it was never scoped for."
+        },
+        {
+          "name": "Pitch-to-Brief",
+          "line": "What was promised in the room arrives in the studio as a complete brief, so teams build what was sold instead of what was remembered."
+        }
       ],
       "aiChanges": [
         "Assembly leaves the critical path: research, first drafts, versions, and status synthesis run on rails instead of on people.",
@@ -100,9 +118,18 @@
         "A client asked how AI was used on their campaign, and the account team's answer did not match the studio's."
       ],
       "workflows": [
-        { "name": "Brief-to-Concept Support", "line": "Research, references, and variants assisted from governed libraries; the direction chosen and shaped by a creative director, a stage that keeps no automation column on purpose." },
-        { "name": "Creative Review & Brand Stewardship", "line": "Work arrives at review with sources, rights status, and the AI-assistance check already visible, so senior scrutiny lands on the work instead of on the archaeology." },
-        { "name": "Client Onboarding & Approvals", "line": "The brand captured properly at intake, guidelines, voice, mandatories, and the approver map, so the studio stops relearning the account on the client's time." }
+        {
+          "name": "Brief-to-Concept Support",
+          "line": "Research, references, and variants assisted from governed libraries; the direction chosen and shaped by a creative director, a stage that keeps no automation column on purpose."
+        },
+        {
+          "name": "Creative Review & Brand Stewardship",
+          "line": "Work arrives at review with sources, rights status, and the AI-assistance check already visible, so senior scrutiny lands on the work instead of on the archaeology."
+        },
+        {
+          "name": "Client Onboarding & Approvals",
+          "line": "The brand captured properly at intake, guidelines, voice, mandatories, and the approver map, so the studio stops relearning the account on the client's time."
+        }
       ],
       "aiChanges": [
         "Exploration widens, because surveying ten territories no longer costs what surveying three used to, and the team rejects from abundance rather than settling at 2am.",
@@ -123,7 +150,7 @@
         "Share of junior hours on judgment-building versus mechanical work"
       ],
       "evidence": {
-        "text": "The field experiment that measured large gains from AI inside its capability frontier also found professional quality fell when people relied on it for tasks outside that frontier, across 758 consultants at one elite consulting firm.",
+        "text": "The field experiment that reported gains from AI inside its capability frontier also reported professional quality falling when people relied on it for tasks outside that frontier, among consultants at one elite consulting firm.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Consulting tasks at one elite firm, so the transfer to creative work is an inference, and the frontier itself moves with the model and the domain. Nobody has credibly measured what AI does to the quality of an idea. That gap is exactly why the call stays human and the review gate stays where it is."
       },
@@ -144,9 +171,18 @@
         "Leadership wants AI moving and technology is expected to make it safe after the fact."
       ],
       "workflows": [
-        { "name": "Brief-to-Concept Support", "line": "Reference and asset libraries become governed assets: approved sources, rights status, account walls, provenance, and a named owner." },
-        { "name": "Creative Review & Brand Stewardship", "line": "The AI-assistance check and the provenance trail become platform features rather than habits that depend on who happens to be on the job." },
-        { "name": "Production-to-Account Insight", "line": "One source of record per number, which is an architecture decision long before it is a reporting one." }
+        {
+          "name": "Brief-to-Concept Support",
+          "line": "Reference and asset libraries become governed assets: approved sources, rights status, account walls, provenance, and a named owner."
+        },
+        {
+          "name": "Creative Review & Brand Stewardship",
+          "line": "The AI-assistance check and the provenance trail become platform features rather than habits that depend on who happens to be on the job."
+        },
+        {
+          "name": "Production-to-Account Insight",
+          "line": "One source of record per number, which is an architecture decision long before it is a reporting one."
+        }
       ],
       "aiChanges": [
         "The sanctioned path becomes the fastest path, which is the only strategy that has ever beaten shadow tooling in a creative studio.",
@@ -187,9 +223,18 @@
         "Three people from the same agency gave three different answers to one client's question about AI."
       ],
       "workflows": [
-        { "name": "Creative Review & Brand Stewardship", "line": "The gate where brand guidelines, rights status, and the AI-assistance check are enforced and recorded before anything goes external." },
-        { "name": "Brief-to-Concept Support", "line": "Exploration from governed libraries with rights status attached, so nothing derivative or unownable reaches a board and then a client." },
-        { "name": "Client Onboarding & Approvals", "line": "Intake that captures each client's actual AI terms and approver map, so the posture is set per contract instead of per meeting." }
+        {
+          "name": "Creative Review & Brand Stewardship",
+          "line": "The gate where brand guidelines, rights status, and the AI-assistance check are enforced and recorded before anything goes external."
+        },
+        {
+          "name": "Brief-to-Concept Support",
+          "line": "Exploration from governed libraries with rights status attached, so nothing derivative or unownable reaches a board and then a client."
+        },
+        {
+          "name": "Client Onboarding & Approvals",
+          "line": "Intake that captures each client's actual AI terms and approver map, so the posture is set per contract instead of per meeting."
+        }
       ],
       "aiChanges": [
         "What changes is assembly speed. What never changes is accountability: a named human owns every consequential output that leaves the agency.",
@@ -197,7 +242,7 @@
         "The agency's position becomes one sentence you control, instead of a hundred improvisations you discover afterwards."
       ],
       "controls": [
-        "Account-level data and retrieval boundaries checked against each client's actual contract, because contracts now differ on AI.",
+        "Account-level data and retrieval boundaries checked against each client's actual contract, because master agreements are not uniform and the terms that govern AI use are the ones that bind you.",
         "Internal creative review and a named approver before anything client-facing, with the check recorded rather than assumed.",
         "Human creative direction documented on every deliverable, kept with the job file.",
         "Retention rules for prompts, outputs, and reference sets, set deliberately at job close rather than defaulted by a tool.",
@@ -231,9 +276,18 @@
         "Next year's plan needs an AI line item and there is no defensible number to put on it."
       ],
       "workflows": [
-        { "name": "Utilization, Scope & Margin", "line": "Scope-versus-actual by job and margin by client and retainer, visible while pricing and staffing can still respond to them." },
-        { "name": "Production-to-Account Insight", "line": "Burn and revision counts against the scope mid-job, so the scope conversation happens as a negotiation instead of an apology." },
-        { "name": "Pitch-to-Brief", "line": "Pitch cost is mostly unbilled senior time; turnaround and win rate, read together, show whether that time is buying growth." }
+        {
+          "name": "Utilization, Scope & Margin",
+          "line": "Scope-versus-actual by job and margin by client and retainer, visible while pricing and staffing can still respond to them."
+        },
+        {
+          "name": "Production-to-Account Insight",
+          "line": "Burn and revision counts against the scope mid-job, so the scope conversation happens as a negotiation instead of an apology."
+        },
+        {
+          "name": "Pitch-to-Brief",
+          "line": "Pitch cost is mostly unbilled senior time; turnaround and win rate, read together, show whether that time is buying growth."
+        }
       ],
       "aiChanges": [
         "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",

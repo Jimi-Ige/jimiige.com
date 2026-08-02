@@ -122,7 +122,7 @@
         "Client communication cadence promised versus kept"
       ],
       "evidence": {
-        "text": "The field experiment that measured large AI gains on tasks inside its capability frontier also found professional quality fell when AI was relied on for tasks outside that frontier.",
+        "text": "The field experiment that reported AI gains on tasks inside its capability frontier also reported professional quality falling when AI was relied on for tasks outside that frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Consulting tasks at one elite firm, not legal work, and where the frontier sits shifts with the model and the domain. In a law practice the outside-frontier failure looks like a fabricated citation or a conclusion never checked against authority, which is why verification stays a written step with a name on it."
       },
@@ -252,9 +252,9 @@
         "Measured first-draft and pitch turnaround deltas against baseline"
       ],
       "evidence": {
-        "text": "In Thomson Reuters' 2024 Future of Professionals survey (N=2,205 across legal, tax and accounting, risk, and the C-suite), professionals predicted AI could save about four hours per week within a year and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
-        "source": "Thomson Reuters Future of Professionals, 2024",
-        "caveat": "Vendor-sponsored survey of predictions, not a time-motion study. In an hourly firm a predicted hour is doubly hypothetical: it may never be saved, and if saved it is not margin until the firm decides where it lands. Only a baseline and honest measurement can show what actually happened."
+        "text": "In McKinsey's 2025 State of AI survey (N=1,993), 64 percent of respondents said AI is enabling innovation while only 39 percent reported EBIT impact at the enterprise level.",
+        "source": "McKinsey / QuantumBlack, The State of AI, 2025",
+        "caveat": "Cross-industry, global, self-reported rather than audited, with large-organization bias and the publisher's own commercial interest in AI services; not a law-firm benchmark. In an hourly firm the gap is wider still, because a saved hour is not margin until the partnership decides where it lands. Only a baseline and honest measurement can show what happened in your firm."
       },
       "cta": {
         "headline": "Start with the baseline, not the invoice.",

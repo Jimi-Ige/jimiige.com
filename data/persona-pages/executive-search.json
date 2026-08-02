@@ -123,7 +123,7 @@
         "Placement stick rate after twelve months"
       ],
       "evidence": {
-        "text": "The field experiment that measured large gains from AI on tasks inside its capability frontier also found professional quality fell when consultants relied on it for tasks outside that frontier.",
+        "text": "The field experiment that reported gains from AI on tasks inside its capability frontier also reported professional quality falling when consultants relied on it for tasks outside that frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Task-level evidence from one elite consulting firm, not a search firm, and the frontier moves with the model and the domain. In search the clearest outside-frontier move is letting a model make reject decisions; the control is a human verdict on every cut, not prohibition."
       },
@@ -254,9 +254,9 @@
         "Revenue per consultant, the honest growth number"
       ],
       "evidence": {
-        "text": "Professionals surveyed in 2024 predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
-        "source": "Thomson Reuters Future of Professionals, 2024",
-        "caveat": "A vendor-sponsored global survey of predictions, none of it specific to search firms. Predicted hours may never convert to fees or margin; only a baseline and honest measurement can show whether they do."
+        "text": "No approved primary source establishes search-firm operating economics or an AI outcome in executive search. The number this case needs does not exist in public.",
+        "source": "Evidence gap G-05, research/evidence-gaps.md",
+        "caveat": "Vendor predictions of hours saved circulate widely and are expectations respondents reported, not observed savings; they are excluded here rather than reframed. Only a baseline drawn from your own desks and honest measurement can show what governed AI returns."
       },
       "cta": {
         "headline": "Start with the baseline your own desks produce, not the invoice.",

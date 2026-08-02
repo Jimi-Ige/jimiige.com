@@ -57,13 +57,16 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. The evidence ledger rejected
-every public creative-agency utilization and realization benchmark it
-reviewed, so no agency-economics numbers appear in this campaign; where the
-gap matters, the posts say so plainly. Everything else stays qualitative.
-Predictions are always labeled as predictions.
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never as an exact figure. Candidate and rejected claims do not appear at all.
+The section F "social safe set" in `data/evidence/priority_claims_list.md`
+predates the WS-19 validation pass and is no longer authoritative on its own.
+The evidence ledger rejected every public creative-agency utilization and
+realization benchmark it reviewed, so no agency-economics numbers appear in
+this campaign; where the gap matters, the posts say so plainly. Everything
+else stays qualitative. Predictions are always labeled as predictions.
 
 ---
 
@@ -192,7 +195,7 @@ https://jimiige.com/governed-ai-for-creative-agencies.html?utm_source=linkedin&u
 
 ### Post 07, Theme 3: Improve delivery without lowering quality
 
-The best causal evidence we have on AI and professional work is worth
+There is causal evidence on AI and professional work, and it is worth
 reading precisely, especially in a creative business.
 
 In a preregistered experiment published in Science, access to a general AI
@@ -212,9 +215,9 @@ https://jimiige.com/governed-ai-for-creative-agencies.html?utm_source=linkedin&u
 
 ### Post 08, Theme 3: Improve delivery without lowering quality
 
-The same field experiment that measured big gains from AI inside its
-capability frontier found something agencies should tattoo on the studio
-wall: quality fell when professionals leaned on it for tasks outside that
+The same field experiment that reported gains from AI inside its capability
+frontier reported something agencies should tattoo on the studio wall:
+quality declined when professionals leaned on it for tasks outside that
 frontier (Dell'Acqua et al., 2023). That was consulting tasks at one elite
 firm, so the transfer to creative work is an inference, and the frontier
 itself moves as models change. Which is exactly why the finding matters as a
@@ -257,8 +260,8 @@ https://jimiige.com/governed-ai-for-creative-agencies.html?utm_source=linkedin&u
 ### Post 10, Theme 4: Govern AI without slowing the firm down
 
 Who owns AI-assisted work is no longer a philosophical question. It is a
-contractual one, and agencies should know what the strongest primary
-guidance actually says.
+contractual one, and agencies should know what the primary guidance
+actually says.
 
 In January 2025 the US Copyright Office concluded that using AI tools to
 assist rather than replace human creativity does not, by itself, deny

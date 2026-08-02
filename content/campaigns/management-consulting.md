@@ -50,9 +50,13 @@ Post → playbook (or persona page for targeted shares) → Workflow Leverage &
 Trust Assessment → bounded pilot (two workflows, ninety days).
 
 **Evidence discipline.**
-Quantitative claims in posts come only from the social safe set in
-`data/evidence/priority_claims_list.md` (section F), quoted with the caveat
-language from `data/evidence/claim_cards.md`. Everything else stays
+Exact figures in posts come only from claims holding Approved status under
+`research/evidence-policy.md`. Verified claims may appear only as attributed
+directional statements, with the source name and its caveat adjacent, and
+never with a figure attached. Candidate and rejected claims do not appear at
+all. The section F "social safe set" in
+`data/evidence/priority_claims_list.md` predates the WS-19 validation pass
+and is no longer authoritative on its own. Everything else stays
 qualitative. Predictions are always labeled as predictions.
 
 ---
@@ -111,15 +115,16 @@ https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=link
 grown, and it quietly prices a bet: that utilization arrives before the
 payroll does.
 
-There is a version of capacity that does not require the bet. Most delivery
-hours in most firms contain a recoverable share: time spent recreating
-material the firm already produced, hunting for the person who did this
-before, assembling status from scattered sources. None of that is the
-judgment clients pay for. All of it competes with the judgment for the same
-calendar.
+There is a version of capacity that does not require the bet. Delivery hours
+are not all the same hour. Some of them are recoverable: time spent
+recreating material the firm already produced, hunting for the person who
+did this before, assembling status from scattered sources. None of that is
+the judgment clients pay for. All of it competes with the judgment for the
+same calendar.
 
-I am not going to tell you what that share is in your firm, because I have
-not measured your firm. That is the point: baseline two workflows for ninety
+I have not seen a credible public benchmark for how large that share runs,
+and I am not going to tell you what it is in your firm, because I have not
+measured your firm. That is the point: baseline two workflows for ninety
 days and let your own numbers make the argument.
 
 *Soft CTA:* The Workflow Leverage & Trust Assessment is the fixed-scope way in →
@@ -188,13 +193,12 @@ The fear in every partner meeting about AI is the same fear, differently
 dressed: that speed will be bought with quality, and the firm's name will
 pay for it.
 
-The best field evidence says both halves of that fear are real. In an
-experiment with 758 consultants at one elite firm, AI raised judged quality
-by more than 40 percent on tasks inside its capability frontier, and lowered
-quality when consultants leaned on it outside that frontier (Dell'Acqua et
-al., 2023; elite-firm setting, task-level results, not mid-market ROI). The
-design conclusion is not enthusiasm or prohibition. It is routing plus
-review.
+Field evidence says both halves of that fear are real. In an experiment at
+one elite consulting firm, AI was reported to raise judged quality on tasks
+inside its capability frontier, and to lower it when consultants leaned on
+the tool outside that frontier (Dell'Acqua et al., 2023; elite-firm setting,
+task-level results, not mid-market ROI). The design conclusion is not
+enthusiasm or prohibition. It is routing plus review.
 
 Here is the design answer. Nothing about review changes. The partner still
 reviews promise, price, and team on every proposal. The engagement lead

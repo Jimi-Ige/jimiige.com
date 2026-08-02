@@ -13,9 +13,18 @@
         "Clients have started asking, in pursuit meetings, how the firm uses AI on their work, and the answer changes with whichever partner is in the room."
       ],
       "workflows": [
-        { "name": "Proposal-to-Project", "line": "The pursuit decision stays a partner call and everything downstream of it stops being one. A faster no-bid is worth more to the pyramid than a faster proposal." },
-        { "name": "Knowledge-to-Delivery", "line": "The firm's methods stop living in senior heads, so junior hours start above zero and the leverage ratio can move without the work getting thinner." },
-        { "name": "Delivery-to-Executive Insight", "line": "Practice margin, utilization, and bench truth traceable to sources, so the partnership runs the firm on instruments rather than on Friday memory." }
+        {
+          "name": "Proposal-to-Project",
+          "line": "The pursuit decision stays a partner call and everything downstream of it stops being one. A faster no-bid is worth more to the pyramid than a faster proposal."
+        },
+        {
+          "name": "Knowledge-to-Delivery",
+          "line": "The firm's methods stop living in senior heads, so junior hours start above zero and the leverage ratio can move without the work getting thinner."
+        },
+        {
+          "name": "Delivery-to-Executive Insight",
+          "line": "Practice margin, utilization, and bench truth traceable to sources, so the partnership runs the firm on instruments rather than on Friday memory."
+        }
       ],
       "aiChanges": [
         "Assembly comes off senior desks, so partner hours go to the three calls that set the economics: whether to pursue, what to promise, and what to charge.",
@@ -56,9 +65,18 @@
         "The weekly operating picture consumes a day of senior time to assemble and is stale on arrival."
       ],
       "workflows": [
-        { "name": "Knowledge-to-Delivery", "line": "Prior work, experts, and research surface on demand with provenance, so delivery starts from the firm's best instead of from zero." },
-        { "name": "Delivery-to-Executive Insight", "line": "Status, capacity, and risk synthesized from live artifacts on one spine, drillable to source in one step." },
-        { "name": "Proposal-to-Project", "line": "The handoff is the control point: what was sold arrives in delivery as a structured record, so teams build what was promised instead of what was remembered." }
+        {
+          "name": "Knowledge-to-Delivery",
+          "line": "Prior work, experts, and research surface on demand with provenance, so delivery starts from the firm's best instead of from zero."
+        },
+        {
+          "name": "Delivery-to-Executive Insight",
+          "line": "Status, capacity, and risk synthesized from live artifacts on one spine, drillable to source in one step."
+        },
+        {
+          "name": "Proposal-to-Project",
+          "line": "The handoff is the control point: what was sold arrives in delivery as a structured record, so teams build what was promised instead of what was remembered."
+        }
       ],
       "aiChanges": [
         "Assembly work leaves the critical path: retrieval, drafting, and synthesis run on rails instead of on people.",
@@ -78,9 +96,9 @@
         "Realization and margin by engagement, visible during delivery"
       ],
       "evidence": {
-        "text": "In a field experiment with 758 consultants at one elite firm, AI use on tasks inside its capability frontier meant 12.2 percent more tasks completed, 25.1 percent faster, at more than 40 percent higher judged quality than the control group.",
+        "text": "In a field experiment at one elite consulting firm, consultants using AI on tasks inside its capability frontier were reported to complete more work, faster, and at higher judged quality than the control group.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
-        "caveat": "Task-level results at one elite firm; not proof for mid-market firms or firm-level margin. The same study found quality damage when AI was used outside the frontier, which is what the review gates are for."
+        "caveat": "Task-level results at one elite firm; not proof for mid-market firms or firm-level margin. The same study reported quality falling when AI was used outside the frontier, which is what the review gates are for."
       },
       "cta": {
         "headline": "Name the two workflows, then prove it.",
@@ -99,9 +117,18 @@
         "A client asked how the practice uses AI on their work, and the answer depended on who they asked."
       ],
       "workflows": [
-        { "name": "Knowledge-to-Delivery", "line": "Every deliverable starts from the practice's best precedent, with provenance, so the floor rises without the ceiling dropping." },
-        { "name": "Quality Review & Partner Judgment", "line": "Reviews arrive with sources attached and criteria visible, so senior scrutiny lands where it matters." },
-        { "name": "Client Onboarding & Communication", "line": "Updates drafted for review, decisions logged where both sides see them, and a cadence the client can rely on." }
+        {
+          "name": "Knowledge-to-Delivery",
+          "line": "Every deliverable starts from the practice's best precedent, with provenance, so the floor rises without the ceiling dropping."
+        },
+        {
+          "name": "Quality Review & Partner Judgment",
+          "line": "Reviews arrive with sources attached and criteria visible, so senior scrutiny lands where it matters."
+        },
+        {
+          "name": "Client Onboarding & Communication",
+          "line": "Updates drafted for review, decisions logged where both sides see them, and a cadence the client can rely on."
+        }
       ],
       "aiChanges": [
         "First drafts are grounded in the practice's own vetted material, so editing replaces assembling.",
@@ -121,7 +148,7 @@
         "Client communication cadence promised versus kept"
       ],
       "evidence": {
-        "text": "The same field experiment that measured large in-frontier gains found consultant quality fell when AI was applied to tasks outside its capability frontier.",
+        "text": "The same field experiment that reported in-frontier gains also reported consultant quality falling when AI was applied to tasks outside its capability frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Which tasks sit outside the frontier shifts with the model and the domain. Accountable human review remains a standing professional requirement, independent of average productivity gains."
       },
@@ -142,9 +169,18 @@
         "Leadership wants AI rolled out and IT is expected to make it safe after the fact."
       ],
       "workflows": [
-        { "name": "Knowledge-to-Delivery", "line": "The retrieval corpus becomes a governed asset: curated sources, engagement walls, provenance, and an owner." },
-        { "name": "Proposal-to-Project", "line": "Capability reuse runs on access controls that mirror engagement staffing, enforced by the platform rather than by memory." },
-        { "name": "Delivery-to-Executive Insight", "line": "Reporting synthesis with one source of record per metric, which is an architecture decision before it is a reporting one." }
+        {
+          "name": "Knowledge-to-Delivery",
+          "line": "The retrieval corpus becomes a governed asset: curated sources, engagement walls, provenance, and an owner."
+        },
+        {
+          "name": "Proposal-to-Project",
+          "line": "Capability reuse runs on access controls that mirror engagement staffing, enforced by the platform rather than by memory."
+        },
+        {
+          "name": "Delivery-to-Executive Insight",
+          "line": "Reporting synthesis with one source of record per metric, which is an architecture decision before it is a reporting one."
+        }
       ],
       "aiChanges": [
         "The sanctioned path becomes the fastest path, which is the only adoption strategy that has ever beaten shadow IT.",
@@ -185,9 +221,18 @@
         "A client's procurement questionnaire arrived mid-pursuit asking how AI touches the engagement, and the answer was assembled overnight by whoever was free."
       ],
       "workflows": [
-        { "name": "Knowledge-to-Delivery", "line": "Reuse walled by engagement and by conflict, so the firm's memory works for it without carrying one client's context into a rival's deliverable." },
-        { "name": "Proposal-to-Project", "line": "Capability reuse with provenance and review, so nothing in a pursuit document traces back to work the firm did for the client's competitor." },
-        { "name": "Client Onboarding & Communication", "line": "Client-facing drafting with a named human owner on every send, and a record both sides can rely on when a decision is questioned later." }
+        {
+          "name": "Knowledge-to-Delivery",
+          "line": "Reuse walled by engagement and by conflict, so the firm's memory works for it without carrying one client's context into a rival's deliverable."
+        },
+        {
+          "name": "Proposal-to-Project",
+          "line": "Capability reuse with provenance and review, so nothing in a pursuit document traces back to work the firm did for the client's competitor."
+        },
+        {
+          "name": "Client Onboarding & Communication",
+          "line": "Client-facing drafting with a named human owner on every send, and a record both sides can rely on when a decision is questioned later."
+        }
       ],
       "aiChanges": [
         "What changes is assembly speed. What never changes is accountability: a named human answers for every consequential output.",
@@ -195,7 +240,7 @@
         "The firm's posture becomes one sentence you control, given the same way in every pursuit, instead of a hundred improvisations you discover afterward."
       ],
       "controls": [
-        "AI boundaries set per engagement and checked against that client's MSA or engagement letter, because the clauses now differ from client to client.",
+        "AI boundaries set per engagement and checked against that client's MSA or engagement letter, because those terms are not uniform and the binding constraint is whatever this client signed.",
         "Corpus separation between clients who compete, enforced by the platform rather than by whoever remembers the conflict.",
         "Human review and named approval points ahead of every client-facing use, unchanged by how the draft was produced.",
         "An incident path with rehearsed client communication, because the plan you need is the one written before the miss.",
@@ -208,7 +253,7 @@
         "Turnaround on the AI section of a client or insurer questionnaire during a live pursuit"
       ],
       "evidence": {
-        "text": "Quality risk from misapplied AI is not hypothetical: causal field evidence shows professional performance degrades when AI is relied on for tasks outside its capability frontier.",
+        "text": "Quality risk from misapplied AI is not hypothetical: a field experiment reported professional performance degrading when AI was relied on for tasks outside its capability frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Frontier boundaries move as models and domains change. The control implication is task routing and accountable review, not prohibition; prohibition just relocates the risk to shadow tools."
       },
@@ -229,9 +274,18 @@
         "A vendor business case reached the partnership and did not survive ten minutes of questions."
       ],
       "workflows": [
-        { "name": "Proposal-to-Project", "line": "Pursuit cost is mostly senior time. Cost per pursuit against win rate by pursuit type shows whether that time is buying growth or subsidizing it." },
-        { "name": "Knowledge-to-Delivery", "line": "Recreated work is the write-off you book before the engagement has even slipped, and closing that gap is where fixed-fee margin actually lives." },
-        { "name": "Delivery-to-Executive Insight", "line": "Realization, leverage, and margin visible during delivery, while pricing and staffing can still respond to what they say." }
+        {
+          "name": "Proposal-to-Project",
+          "line": "Pursuit cost is mostly senior time. Cost per pursuit against win rate by pursuit type shows whether that time is buying growth or subsidizing it."
+        },
+        {
+          "name": "Knowledge-to-Delivery",
+          "line": "Recreated work is the write-off you book before the engagement has even slipped, and closing that gap is where fixed-fee margin actually lives."
+        },
+        {
+          "name": "Delivery-to-Executive Insight",
+          "line": "Realization, leverage, and margin visible during delivery, while pricing and staffing can still respond to what they say."
+        }
       ],
       "aiChanges": [
         "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
@@ -251,9 +305,9 @@
         "Revenue per professional against the leverage ratio, the pair the whole case answers to"
       ],
       "evidence": {
-        "text": "Professionals surveyed in 2024 predicted AI would save them about four hours per week in the near term and twelve within five years. Those figures are expectations respondents reported, not observed savings.",
-        "source": "Thomson Reuters Future of Professionals, 2024",
-        "caveat": "Vendor-sponsored global survey of predictions. Predicted hours may never convert to utilization, realization, or margin; only a baseline and honest measurement can show whether they do."
+        "text": "The hour-savings figures that circulate hardest in this market are respondent predictions from vendor-sponsored surveys, not savings measured against a baseline. No credible study of AI's return for a mid-market professional-services firm exists in the reviewed public record.",
+        "source": "Evidence gaps G-01 and G-02, research/evidence-gaps.md",
+        "caveat": "Predicted hours may never convert to utilization, realization, or margin; only a baseline and honest measurement can show whether they do. The gap is stated rather than filled, because a number invented to close it would not survive the first question."
       },
       "cta": {
         "headline": "Start with the baseline, not the invoice.",

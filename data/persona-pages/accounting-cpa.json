@@ -13,9 +13,18 @@
         "Clients have started asking how the firm uses AI on their engagement, sometimes in the engagement letter, and the answer depends on who they ask."
       ],
       "workflows": [
-        { "name": "Workpaper & Research Leverage", "line": "Preparation reaches a licensed reviewer faster, so growth stops being capped by how long it takes to assemble a file." },
-        { "name": "Client-to-Partner Insight", "line": "The whole book visible in season: deadlines, hours against budget, and realization while any of it can still be managed." },
-        { "name": "Season Capacity & Realization", "line": "More work through the peak without buying it back in overtime and write-downs the firm only sees afterward." }
+        {
+          "name": "Workpaper & Research Leverage",
+          "line": "Preparation reaches a licensed reviewer faster, so growth stops being capped by how long it takes to assemble a file."
+        },
+        {
+          "name": "Client-to-Partner Insight",
+          "line": "The whole book visible in season: deadlines, hours against budget, and realization while any of it can still be managed."
+        },
+        {
+          "name": "Season Capacity & Realization",
+          "line": "More work through the peak without buying it back in overtime and write-downs the firm only sees afterward."
+        }
       ],
       "aiChanges": [
         "Retrieval, rollforward, and first drafts come off licensed desks, so partner and manager hours concentrate on judgment, clients, and sign-off.",
@@ -56,9 +65,18 @@
         "Overtime absorbs the season's variance, and nobody can say which engagements caused it until the bills go out."
       ],
       "workflows": [
-        { "name": "Client Onboarding & PBC", "line": "The request list is complete at acceptance, built from the engagement type and the prior-year file, and intake status is a fact on a board instead of an inbox to excavate." },
-        { "name": "Workpaper & Research Leverage", "line": "Prior-year retrieval and first drafts, so preparers edit upward instead of assembling from a blank workpaper in the busiest weeks." },
-        { "name": "Season Capacity & Realization", "line": "Workload balance and hours against budget while the engagement is open, when staffing and scope can still respond." }
+        {
+          "name": "Client Onboarding & PBC",
+          "line": "The request list is complete at acceptance, built from the engagement type and the prior-year file, and intake status is a fact on a board instead of an inbox to excavate."
+        },
+        {
+          "name": "Workpaper & Research Leverage",
+          "line": "Prior-year retrieval and first drafts, so preparers edit upward instead of assembling from a blank workpaper in the busiest weeks."
+        },
+        {
+          "name": "Season Capacity & Realization",
+          "line": "Workload balance and hours against budget while the engagement is open, when staffing and scope can still respond."
+        }
       ],
       "aiChanges": [
         "Assembly and chasing leave the critical path: retrieval, drafting, intake tracking, and synthesis run on rails instead of on people's evenings.",
@@ -100,9 +118,18 @@
         "A client asked how the practice uses AI on their engagement, and the answer depended on who picked up the phone."
       ],
       "workflows": [
-        { "name": "Workpaper & Research Leverage", "line": "Every engagement starts from the practice's best prior-year work and approved research, with citations attached for a licensed professional to verify." },
-        { "name": "Review Hierarchy & Sign-off", "line": "Drafts arrive with sources visible and open questions flagged, so review notes address judgment instead of formatting." },
-        { "name": "Client Onboarding & PBC", "line": "The file is complete before the work starts, so senior attention goes to the engagement rather than to the chase." }
+        {
+          "name": "Workpaper & Research Leverage",
+          "line": "Every engagement starts from the practice's best prior-year work and approved research, with citations attached for a licensed professional to verify."
+        },
+        {
+          "name": "Review Hierarchy & Sign-off",
+          "line": "Drafts arrive with sources visible and open questions flagged, so review notes address judgment instead of formatting."
+        },
+        {
+          "name": "Client Onboarding & PBC",
+          "line": "The file is complete before the work starts, so senior attention goes to the engagement rather than to the chase."
+        }
       ],
       "aiChanges": [
         "First drafts are grounded in the practice's own vetted material, so preparers edit upward instead of assembling from zero.",
@@ -144,9 +171,18 @@
         "Attest engagements need a stricter posture than the rest of the firm, and the current estate cannot tell one from the other."
       ],
       "workflows": [
-        { "name": "Workpaper & Research Leverage", "line": "The template and prior-year corpus becomes a governed asset: curated sources, engagement walls, provenance, and an owner with a review date." },
-        { "name": "Client Onboarding & PBC", "line": "Document intake as a controlled flow, so client records arrive, live, and expire where the firm intended them to." },
-        { "name": "Client-to-Partner Insight", "line": "One source of record per number across the book, which is an architecture decision well before it is a reporting one." }
+        {
+          "name": "Workpaper & Research Leverage",
+          "line": "The template and prior-year corpus becomes a governed asset: curated sources, engagement walls, provenance, and an owner with a review date."
+        },
+        {
+          "name": "Client Onboarding & PBC",
+          "line": "Document intake as a controlled flow, so client records arrive, live, and expire where the firm intended them to."
+        },
+        {
+          "name": "Client-to-Partner Insight",
+          "line": "One source of record per number across the book, which is an architecture decision well before it is a reporting one."
+        }
       ],
       "aiChanges": [
         "The sanctioned path becomes the fastest path, the only adoption strategy that has ever beaten shadow IT, and in a CPA firm it has to be fastest in March.",
@@ -188,9 +224,18 @@
         "An insurer or a client questionnaire asked about AI controls, and the answer was assembled overnight."
       ],
       "workflows": [
-        { "name": "Review Hierarchy & Sign-off", "line": "The ladder written into the workflow instead of assumed around it: preparer, reviewer, partner, with AI-assisted drafts labeled at every step." },
-        { "name": "Workpaper & Research Leverage", "line": "Reuse inside engagement walls with provenance, and research citations verified by a person before anything in the file relies on them." },
-        { "name": "Client Onboarding & PBC", "line": "Client records arriving through a controlled intake, with a named owner on every client-facing message and a record of what was sent." }
+        {
+          "name": "Review Hierarchy & Sign-off",
+          "line": "The ladder written into the workflow instead of assumed around it: preparer, reviewer, partner, with AI-assisted drafts labeled at every step."
+        },
+        {
+          "name": "Workpaper & Research Leverage",
+          "line": "Reuse inside engagement walls with provenance, and research citations verified by a person before anything in the file relies on them."
+        },
+        {
+          "name": "Client Onboarding & PBC",
+          "line": "Client records arriving through a controlled intake, with a named owner on every client-facing message and a record of what was sent."
+        }
       ],
       "aiChanges": [
         "What changes is assembly speed. What never changes is accountability: a named licensed professional answers for every conclusion and every signature.",
@@ -198,7 +243,7 @@
         "The firm's posture becomes one sentence you control, consistent across engagement letters and questionnaires, instead of an improvisation per partner you discover afterward."
       ],
       "controls": [
-        "Engagement-level confidentiality boundaries checked against each engagement's own terms, because client agreements no longer say the same thing about AI.",
+        "Engagement-level confidentiality boundaries checked against each engagement's own terms, because engagement letters are not uniform and the ones that speak to AI are the ones that bind you.",
         "Independence considerations reviewed before any tool arrangement touches an attest engagement, with the strictest posture as the firm's default question.",
         "Licensed review and named sign-off ahead of anything client-facing or file-final, unchanged by how the draft was produced.",
         "Retention rules for prompts and outputs set deliberately against the firm's workpaper retention obligations rather than defaulted.",
@@ -211,7 +256,7 @@
         "Time to answer a client or insurer questionnaire on AI use"
       ],
       "evidence": {
-        "text": "The field experiment that measured large gains on tasks inside AI's capability frontier also found professional quality fell when people relied on it for tasks outside that frontier.",
+        "text": "The field experiment that reported gains on tasks inside AI's capability frontier also reported professional quality falling when people relied on it for tasks outside that frontier.",
         "source": "Dell'Acqua et al., 2023 (SSRN)",
         "caveat": "Consulting tasks at one elite global firm, not accounting work, and where the frontier sits shifts with the model and the domain. It is named here as the risk the review hierarchy exists to catch: in this profession, outside-frontier territory includes whether a technical position has authority behind it and whether the evidence in the file supports the conclusion. That is a control implication for the firm, not advice about any engagement."
       },
@@ -232,9 +277,18 @@
         "The next planning cycle needs an AI line item and there is no defensible number to put on it."
       ],
       "workflows": [
-        { "name": "Season Capacity & Realization", "line": "Realization by client and service line, and hours against budget while the engagement is open rather than at the bill." },
-        { "name": "Client-to-Partner Insight", "line": "Every number in the book traceable in one step to the file, time entry, or intake record behind it." },
-        { "name": "Workpaper & Research Leverage", "line": "Preparer-to-reviewer turnaround is the measurable leak, and the easiest piece of the case to baseline honestly." }
+        {
+          "name": "Season Capacity & Realization",
+          "line": "Realization by client and service line, and hours against budget while the engagement is open rather than at the bill."
+        },
+        {
+          "name": "Client-to-Partner Insight",
+          "line": "Every number in the book traceable in one step to the file, time entry, or intake record behind it."
+        },
+        {
+          "name": "Workpaper & Research Leverage",
+          "line": "Preparer-to-reviewer turnaround is the measurable leak, and the easiest piece of the case to baseline honestly."
+        }
       ],
       "aiChanges": [
         "The cost side consolidates: one program cost, counted once, with each workflow carrying only its marginal cost.",
@@ -255,9 +309,9 @@
         "Measured deltas against baseline on the piloted workflows, read across a full season"
       ],
       "evidence": {
-        "text": "In Thomson Reuters' 2024 Future of Professionals survey (N=2,205 across legal, tax and accounting, risk and compliance, and the C-suite), professionals predicted AI could save about four hours per week within a year and about twelve within five years. Those figures are expectations respondents reported, not observed savings.",
-        "source": "Thomson Reuters Future of Professionals, 2024",
-        "caveat": "A vendor-sponsored global survey of predictions, not a time-motion study. In a seasonal practice a predicted hour is doubly hypothetical: it may never be saved, and an hour saved in July is not the asset an hour saved in March is. The two numbers a partner group most wants do not exist in the public record either: the realization impact of AI drafting is unmeasured, and there is no credible mid-market CPA-firm ROI figure. Your own baseline is the only number that will ever be about your firm."
+        "text": "In McKinsey's 2025 State of AI survey (N=1,993), 64 percent of respondents said AI is enabling innovation while only 39 percent reported EBIT impact at the enterprise level.",
+        "source": "McKinsey / QuantumBlack, The State of AI, 2025",
+        "caveat": "A global cross-industry consultancy survey, self-reported perception rather than audited financials, with large-organization bias and the publisher's own commercial interest in AI services. It is not a CPA-firm benchmark. Read it as the reason value capture has to be measured in your firm rather than assumed from access, and in a seasonal practice the gap is wider still, because an hour returned in July is not the asset an hour returned in March is. The two numbers a partner group most wants do not exist in the public record: the realization impact of AI drafting is unmeasured, and there is no credible mid-market CPA-firm ROI figure. Your own baseline is the only number that will ever be about your firm."
       },
       "cta": {
         "headline": "Start with the baseline, not the invoice.",
