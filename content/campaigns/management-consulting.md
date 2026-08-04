@@ -136,9 +136,9 @@ Ask a partner where the firm's best proposal from last year is. Not the
 final PDF. The thinking: the pricing logic, the team structure, the win
 themes.
 
-In most firms the honest answer is "in the head of whoever wrote it," and
-that person may have left. So the next pursuit team rebuilds it, at senior
-rates, on a deadline, slightly worse.
+In the firms I have worked in, the honest answer is "in the head of whoever
+wrote it," and that person may have left. So the next pursuit team rebuilds
+it, at senior rates, on a deadline, slightly worse.
 
 A consulting firm's edge is what it has already learned. A firm that cannot
 retrieve its own best work is renting its memory from whoever happens to
@@ -214,10 +214,9 @@ https://jimiige.com/grow-delivery-capacity-with-governed-ai.html?utm_source=link
 
 ### Post 08, Theme 3: Improve delivery without lowering quality
 
-A steering committee is only as good as its ability to challenge a number,
-and most engagement status packs cannot survive the challenge. The figure
-was assembled by hand on Friday from memory and optimism. Ask where it came
-from and the room goes quiet.
+A steering committee is only as good as its ability to challenge a number.
+A pack assembled by hand on Friday from memory and optimism cannot survive
+that challenge. Ask where the figure came from and the room goes quiet.
 
 Synthesis helps, and synthesis is also the trap: a model summarizing status
 reports will smooth a slipping engagement into confident prose. The fix is
@@ -303,7 +302,7 @@ baseline, codify what worked into defaults, retire what did not, and brief
 the partnership on evidence.
 
 Ninety days later you know something true about your own firm, which is
-more than most AI strategies ever deliver. And if the test says stop, you
+what a strategy deck cannot give you. And if the test says stop, you
 learned that for the price of a pilot instead of a program.
 
 *Soft CTA:* The Workflow Leverage & Trust Assessment is how the test starts →
