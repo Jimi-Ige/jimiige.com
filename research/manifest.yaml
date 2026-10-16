@@ -3,7 +3,7 @@
 # pipeline of record. See README.md for the raw-versus-canonical split.
 
 version: "1.0"
-updated: "2026-08-02"
+updated: "2026-10-16"
 governing_spec: "Notion, Content Evidence & Production System"
 publication_standard: "research/evidence-policy.md"
 
@@ -33,11 +33,11 @@ present:
     description: Two-tier publication standard, Approved versus Verified.
   - file: source-bibliography.md
     status: current
-    description: All 30 sources grouped by tier, with claims and limits.
+    description: All 35 sources grouped by tier, with claims and limits (5 real estate sources added 2026-10-16, outside the raw package).
     generated_from: data/evidence/evidence_ledger.csv
   - file: evidence-gaps.md
     status: current
-    description: Ten open gaps, stated rather than filled.
+    description: Twelve open gaps, stated rather than filled.
   - file: README.md
     status: current
   - file: manifest.yaml
