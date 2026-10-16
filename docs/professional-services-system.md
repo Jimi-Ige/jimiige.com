@@ -43,6 +43,11 @@ outside this system: it uses the shared playbook assets but keeps its own
 chapter structure, is not in `data/professional-services.json`, and so is not
 covered by `scripts/validate.mjs`. It uses real estate's own terms ("lead",
 "home buyer") on purpose; its claims are ledger rows `RE-001` to `RE-008`.
+Its companion, `brokerage-sales-operations-diagnostic.html`, follows the
+Proposal-to-Project Diagnostic's pattern (no email wall, everything computed
+in the browser) and is likewise outside the validator. The diagnostic's
+recommendation weights (`WEIGHTS` in its script) are a heuristic encoding the
+playbook's guidance, not evidence; keep them out of any published claim.
 
 ## 3. Route inventory
 

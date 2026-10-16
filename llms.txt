@@ -32,6 +32,7 @@ Governed AI Operations for Professional Services: eight industry field playbooks
 - [Workflow Leverage & Trust Assessment](https://jimiige.com/workflow-leverage-assessment.html): The fixed-scope working session behind the library: workflows mapped and baselined, the constraint named, a governed 90-day pilot plan.
 
 ## Free tools
+- [Brokerage Sales Operations Diagnostic](https://jimiige.com/brokerage-sales-operations-diagnostic.html): For residential brokerages and real estate teams. One operating-model question, then 18 statements across lead response, nurturing, past clients, transactions, appointments, and controls; returns a scored profile, a recommended first workflow weighted by operating model, and a break-even model on the reader's own numbers. Nothing entered leaves the browser.
 - [AI Maturity Assessment](https://jimiige.com/maturity-assessment.html): An 18-point self-assessment of AI governance and risk maturity against the NIST AI Risk Management Framework (Govern, Map, Measure, Manage), mapped to ISO 42001. Returns a maturity tier and the gap by function.
 - [AI Readiness Assessment](https://jimiige.com/readiness-audit.html): A control-level instrument that scores AI governance, risk, and compliance readiness across ten domains, with a maturity scorecard, heatmap, and prioritized gap list.
 - [AI Compliance Readiness Scorecard](https://jimiige.com/audit-readiness.html): A red/amber/green readiness check against CMMC Level 2, NIST 800-171, SOC 2, ISO 27001, and/or ISO 42001, with the prioritized gap list to close before an assessor arrives.
