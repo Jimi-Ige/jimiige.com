@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Brokerage Sales Operations Diagnostic, Jimi Ige</title>
+<meta name="description" content="A free diagnostic for residential brokerages and real estate teams: your operating model, then eighteen statements across lead response, nurturing, past clients, transactions, appointments, and controls. Get a scored profile, a recommended first workflow, and break-even on your own numbers. Nothing you enter leaves your browser.">
+<link rel="canonical" href="https://jimiige.com/brokerage-sales-operations-diagnostic.html">
+<meta property="og:title" content="The Brokerage Sales Operations Diagnostic">
+<meta property="og:description" content="Eighteen statements across five brokerage workflows and their controls. A scored profile, a recommended first workflow, and break-even on your own numbers. No email wall.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jimiige.com/brokerage-sales-operations-diagnostic.html">
+<meta property="og:site_name" content="Jimi Ige">
+<meta property="og:image" content="https://jimiige.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Brokerage Sales Operations Diagnostic">
+<meta name="twitter:description" content="Eighteen statements across five brokerage workflows and their controls. Scored profile, a recommended first workflow, and break-even on your own numbers.">
+<meta name="twitter:image" content="https://jimiige.com/assets/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/ds/styles.css">
+<link rel="stylesheet" href="assets/ds/site.css">
+<script src="assets/ds/ds.js" defer></script>
+<style>
+  /* The diagnostic pattern from proposal-to-project-diagnostic.html, plus an
+     operating-model question, a recommended first workflow, and a break-even
+     model. Inputs follow the ROI calculator on resources.html. */
+  .dg-dim { border-top: 1px solid var(--rule-strong); padding-top: var(--space-4); margin-top: var(--space-5); }
+  .dg-dim:first-child { margin-top: var(--space-3); }
+  .dg-dim > .eyebrow { display: block; margin-bottom: var(--space-1); }
+  .dg-dim h3 { font-family: var(--font-serif); font-weight: var(--weight-regular);
+    font-size: var(--size-display-4); line-height: var(--lh-display); letter-spacing: var(--track-display);
+    color: var(--text-display); margin: 0 0 var(--space-3); }
+  .dg-q { border-top: var(--border-hairline); padding: var(--space-3) 0; }
+  .dg-q:first-of-type { border-top: none; }
+  .dg-q .stmt { font-family: var(--font-mono); font-size: var(--size-prose-sm);
+    line-height: var(--lh-prose); color: var(--text-body); display: block; margin-bottom: var(--space-2);
+    max-width: var(--measure-prose); }
+  .dg-scale { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dg-btn { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 1px;
+    cursor: pointer; border: var(--border-default); background: var(--surface-card);
+    color: var(--ink-800); border-radius: var(--radius-none); padding: 0 var(--space-3);
+    height: var(--control-height); }
+  .dg-btn:hover { border-color: var(--copper-600); color: var(--copper-700); }
+  .dg-btn[aria-pressed="true"] { background: var(--ink-900); border-color: var(--ink-900); color: var(--cream-200); }
+
+  .dg-panel { position: sticky; top: 84px; }
+  .dg-score { font-family: var(--font-serif); font-size: var(--size-display-1); line-height: 1;
+    letter-spacing: var(--track-display); color: var(--text-display); }
+  .dg-band { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: var(--track-label);
+    text-transform: uppercase; color: var(--copper-700); margin-top: var(--space-1); display: block; }
+  .dg-prog { font-family: var(--font-mono); font-size: var(--size-mono-xs); letter-spacing: var(--track-label);
+    text-transform: uppercase; color: var(--text-muted); margin-top: var(--space-1); display: block; }
+  .dg-bar { margin-top: var(--space-3); }
+  .dg-bar-row { display: flex; align-items: center; gap: var(--space-2); padding: 5px 0; }
+  .dg-bar-lbl { font-family: var(--font-mono); font-size: var(--size-mono-xs); letter-spacing: var(--track-label);
+    text-transform: uppercase; color: var(--text-muted); min-width: 118px; }
+  .dg-bar-track { flex: 1; height: 8px; background: var(--surface-sunken); }
+  .dg-bar-fill { display: block; height: 100%; background: var(--copper-600); width: 0;
+    transition: width var(--dur-base) var(--ease-standard); }
+  .dg-sec { margin-top: var(--space-4); border-top: var(--border-default); padding-top: var(--space-3); }
+  .dg-sec > .eyebrow { display: block; margin-bottom: var(--space-1); }
+  .dg-rec-name { font-family: var(--font-serif); font-size: var(--size-display-4); line-height: var(--lh-display);
+    letter-spacing: var(--track-display); color: var(--text-display); margin: 2px 0 var(--space-1); }
+  .dg-caution { margin-top: var(--space-3); padding: var(--space-2) var(--space-3);
+    border-left: 2px solid var(--copper-600); background: var(--surface-field); }
+  .dg-gap { font-family: var(--font-mono); font-size: var(--size-prose-sm); line-height: var(--lh-prose);
+    color: var(--text-body); padding: var(--space-2) 0 var(--space-2) 22px; position: relative;
+    border-top: var(--border-hairline); }
+  .dg-gap:first-of-type { border-top: none; }
+  .dg-gap:before { content: ""; position: absolute; left: 4px; top: 17px; width: 6px; height: 6px;
+    background: var(--copper-600); }
+  .dg-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--space-5); align-items: start; }
+  @media (max-width: 900px) { .dg-layout { grid-template-columns: 1fr; } .dg-panel { position: static; } }
+
+  /* break-even model */
+  .be-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: start; margin-top: var(--space-4); }
+  @media (max-width: 900px) { .be-grid { grid-template-columns: 1fr; } }
+  /* grid items must be allowed to shrink, or the results table widens the page */
+  .be-grid > *, .dg-layout > * { min-width: 0; }
+  .be-table .rowhead { min-width: 0; }
+  @media (max-width: 560px) { .be-table table.table th, .be-table table.table td { padding-left: 6px; padding-right: 6px; } }
+  .cin { margin-bottom: var(--space-3); }
+  .cin label { display: block; font-family: var(--font-mono); font-size: var(--size-mono-xs);
+    letter-spacing: var(--track-label); text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px; }
+  .cin .hint { display: block; font-family: var(--font-mono); font-size: var(--size-prose-sm);
+    line-height: var(--lh-prose); color: var(--text-body); margin-bottom: 6px; max-width: var(--measure-prose); }
+  .cin input { width: 100%; background: var(--surface-card); border: var(--border-default);
+    border-radius: var(--radius-none); height: var(--control-height); padding: 0 var(--space-2);
+    font-family: var(--font-mono); font-size: var(--size-mono); letter-spacing: 1px; color: var(--ink-800); }
+  .cin input:hover { border-color: var(--rule-strong); }
+  .crow2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-2); }
+  .be-out { font-family: var(--font-serif); font-size: var(--size-display-2); line-height: 1.05;
+    letter-spacing: var(--track-display); color: var(--text-display); margin: var(--space-1) 0; }
+  .be-math { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 0.5px;
+    color: var(--text-muted); line-height: 1.55; }
+  .be-table { margin-top: var(--space-3); }
+  table.table td.amt, table.table th.amt { text-align: right; }
+  table.table td.amt { white-space: nowrap; }
+  table.table td.amt { color: var(--text-display); }
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <nav class="sitenav">
+    <div class="sitenav-inner">
+      <a href="/#top" class="wordmark">
+        <span class="wordmark-name">Jimi Ige LLC</span>
+        <span class="wordmark-practice">AI Governance, Deployment &amp; Adoption</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#practice" class="nav-link">Practice</a>
+        <a href="/#evidence" class="nav-link">Track record</a>
+        <a href="/#speaking" class="nav-link">Instruments</a>
+        <a href="/#assessment" class="nav-link">Assessment</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Book a conversation</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-menu" id="nav-menu" data-open="false">
+      <a href="/#practice">Practice</a>
+      <a href="/#evidence">Track record</a>
+      <a href="/#speaking">Instruments</a>
+      <a href="/#assessment">Assessment</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://calendly.com/jimi-ige/connect" target="_blank" rel="noopener">Book a conversation</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="rail" aria-hidden="true">
+      <div class="rail-nums"></div>
+      <span class="rail-rule rail-rule--a"></span>
+      <span class="rail-rule rail-rule--b"></span>
+    </div>
+
+    <section class="band band--flush">
+      <div class="band-inner page-head">
+        <span class="eyebrow eyebrow--accent">Free diagnostic &middot; Residential brokerage</span>
+        <h1 class="display-1 ruled" style="max-width:22ch;">Where is your brokerage losing opportunities?</h1>
+        <p class="prose">One question about how your brokerage gets its business, then eighteen statements across the five workflows the <a href="real-estate-brokerage-sales-operations.html">brokerage playbook</a> ranks highest and the controls that keep them safe. Rate each one honestly and you get a scored profile, a recommended first workflow, and the gaps worth closing first. Then run break-even on your own numbers.</p>
+        <p class="prose-sm">No email wall. Nothing you enter leaves your browser. This is a self-assessment and a conversation starter, not an audit.</p>
+      </div>
+    </section>
+
+    <section class="band band--flush">
+      <div class="band-inner">
+        <div class="dg-layout">
+
+          <div>
+            <section class="dg-dim" style="border-top:none;padding-top:0;">
+              <span class="eyebrow eyebrow--accent">Start here</span>
+              <h3>How does the brokerage get most of its new business?</h3>
+              <div class="dg-scale" role="group" aria-label="How the brokerage gets most of its new business" id="dgModel">
+                <button type="button" class="dg-btn" data-model="leads" aria-pressed="false">Purchased or online leads</button>
+                <button type="button" class="dg-btn" data-model="mix" aria-pressed="false">A mix</button>
+                <button type="button" class="dg-btn" data-model="referral" aria-pressed="false">Repeat and referral</button>
+              </div>
+              <p class="prose-sm" style="margin-top:var(--space-2);color:var(--text-muted);">If you are not sure, the lead-source report in your CRM will usually settle it.</p>
+            </section>
+            <p class="mono-sm" style="margin-top:var(--space-5);">Rate each statement: <strong>No</strong> (not true of us), <strong>Partly</strong> (inconsistent or informal), <strong>Yes</strong> (true and reliable).</p>
+            <form id="dg" aria-label="Brokerage sales operations diagnostic"></form>
+          </div>
+
+          <aside class="card dg-panel">
+            <div class="card-body">
+              <span class="eyebrow eyebrow--accent">Your profile</span>
+              <div id="dgScore" class="dg-score">0<span style="font-size:0.4em;color:var(--text-muted);"> / 36</span></div>
+              <span id="dgBand" class="dg-band">Answer the statements to begin</span>
+              <span id="dgProg" class="dg-prog">0 of 18 answered</span>
+
+              <div class="dg-bar" id="dgBars"></div>
+
+              <div class="dg-sec">
+                <span class="eyebrow">Recommended first workflow</span>
+                <div id="dgRec"><p class="prose-sm" style="color:var(--text-muted);">Choose your operating model and answer the five workflow sections to see a recommendation.</p></div>
+              </div>
+
+              <div class="dg-sec">
+                <span class="eyebrow">Close these first</span>
+                <div id="dgGaps"><p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p></div>
+              </div>
+
+              <div class="stack-tight" style="margin-top:var(--space-4);">
+                <p class="prose-sm">The Brokerage Sales Operations Assessment identifies where your brokerage is losing opportunities, which workflows deserve investment, and what measurable improvements may be achievable. Bring this summary to the conversation.</p>
+                <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=panel" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Request the assessment</a>
+                <button id="dgCopy" class="btn btn--ghost btn--sm" type="button">Copy the summary</button>
+                <span id="dgCopied" class="mono-sm" style="display:none;color:var(--risk-low-text);">Copied</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="break-even">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">Break-even on your numbers</span></div>
+        <h2 class="display-2 ruled" style="max-width:24ch;">How much improvement does a workflow need to pay for itself?</h2>
+        <p class="prose">The model from Chapter 5 of the playbook. Before asking what a change might return, ask what improvement in lead-to-close conversion it needs to cover its own cost. The defaults are the playbook's illustrative figures, not benchmarks; replace every one with your own.</p>
+        <div class="be-grid">
+          <div>
+            <div class="cin"><label for="beLeads">Inbound leads per month</label><span class="hint">Inquiries from every source, referrals included. Use a recent monthly average.</span><input id="beLeads" type="number" min="0" step="1" value="200"></div>
+            <div class="cin"><label for="beContrib">Contribution per additional closing (USD)</label><span class="hint">What one more closing leaves the brokerage after agent splits and variable transaction costs.</span><input id="beContrib" type="number" min="0" step="100" value="3000"></div>
+            <div class="cin"><label for="beMonthly">Recurring monthly cost of the change (USD)</label><span class="hint">Software, services, and support attributable to this workflow, not the whole technology budget.</span><input id="beMonthly" type="number" min="0" step="50" value="1500"></div>
+            <div class="crow2">
+              <div class="cin"><label for="beSetup">One-time setup (USD)</label><input id="beSetup" type="number" min="0" step="500" value="6000"></div>
+              <div class="cin"><label for="beMonths">Months to spread it over</label><input id="beMonths" type="number" min="1" step="1" value="12"></div>
+            </div>
+          </div>
+          <div class="card"><div class="card-body">
+            <span class="eyebrow eyebrow--accent">Break-even improvement</span>
+            <div id="beOut" class="be-out">0.33 points</div>
+            <div id="beMath" class="be-math"></div>
+            <div class="table-wrap be-table"><table class="table"><thead><tr><th class="stmt">Improvement in lead-to-close conversion</th><th class="amt">Extra closings per month</th><th class="amt">Modeled net monthly benefit</th></tr></thead><tbody id="beRows"></tbody></table></div>
+            <p class="prose-sm" style="margin-top:var(--space-3);"><strong>These figures are hypothetical, not guaranteed results or industry benchmarks.</strong> No row is an expected result. Expected closings can be fractional in a forecast; real transactions are whole and arrive months later. The model assumes lead quality, agent capacity, transaction mix, and attribution stay stable.</p>
+          </div></div>
+        </div>
+        <p class="prose-sm" style="margin-top:var(--space-4);">Lead volume decides whether a small improvement matters. No credible published estimate exists of the closings these workflows add for a brokerage, so the honest use of this model is to set the bar a pilot has to clear, then measure against your own baseline.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">Reading your result</span></div>
+        <h2 class="display-2 ruled" style="max-width:24ch;">What the score does and does not mean.</h2>
+        <p class="prose">The score is a structured way to see which workflow is weakest, not a measurement of your brokerage. It has no benchmark behind it; the research behind the playbook found no credible published benchmark for brokerage sales operations at this level. The recommendation is a heuristic: the weakest workflow, weighted toward the ones your operating model leans on.</p>
+        <div class="grid-2" style="margin-top:var(--space-4);">
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Controls scoring lowest</span><p class="prose-sm">Fix this first, whatever else is weak. Automation scales whatever consent records, fair housing review, and human checking you already have, including the gaps.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Your main workflow scoring lowest</span><p class="prose-sm">The workflow your business depends on most is the one running on habit. This is the pattern the recommendation weighs most heavily, and usually the clearest place to start.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">The reporting statements answered No</span><p class="prose-sm">The third statement in the lead response, past-client, and appointment sections asks whether you can report the number. If you cannot, the first job is the baseline. Without it, no business case, including the one above, can be checked.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Answers that differ between people</span><p class="prose-sm">Run it separately with the broker-owner, a team leader, and the transaction coordinator. Where the answers diverge is usually where to look hardest.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <div class="band-head"><span class="eyebrow">The 45-day path</span></div>
+        <h2 class="display-2 ruled">From diagnostic to a controlled pilot.</h2>
+        <div class="register register--single" style="margin-top:var(--space-4);">
+          <div class="register-row"><span class="register-n">1.</span><span class="prose-sm"><strong>Days 1 to 10. Diagnose.</strong> Map the lead-to-close process, review CRM configuration, lead sources, permissions, and handoffs, and establish baseline metrics.</span></div>
+          <div class="register-row"><span class="register-n">2.</span><span class="prose-sm"><strong>Days 11 to 20. Redesign.</strong> Define the future-state workflow: business rules, ownership, exception handling, approval checkpoints, and the simplest architecture that meets them.</span></div>
+          <div class="register-row"><span class="register-n">3.</span><span class="prose-sm"><strong>Days 21 to 35. Implement.</strong> Configure integrations and automation rules, test the failure cases, including duplicates, opt-outs, and escalations, and train the people who use it.</span></div>
+          <div class="register-row"><span class="register-n">4.</span><span class="prose-sm"><strong>Days 36 to 45. Validate.</strong> Measure against the baseline, decide on evidence whether to expand, and keep watching closed transactions, which take longer than the pilot to show.</span></div>
+        </div>
+        <div class="row" style="margin-top:var(--space-5);">
+          <a href="real-estate-brokerage-sales-operations.html" class="btn btn--secondary">The brokerage playbook</a>
+          <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=path" target="_blank" rel="noopener" class="btn btn--primary">Request the assessment</a>
+        </div>
+        <p class="mono-sm" style="margin-top:var(--space-3);">Assessment scope, pricing, and availability provided upon inquiry. Nothing here is legal advice.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span class="row" style="gap:var(--space-4);">
+      <span class="foot-name">Jimi Ige</span>
+      <a href="https://www.linkedin.com/in/jimi-ige/" target="_blank" rel="noopener" class="foot-link">LinkedIn</a>
+    </span>
+    <span class="foot-meta">AI Governance, Deployment &amp; Adoption &middot; Washington, D.C. &middot; &copy; 2026 Jimi Ige LLC</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var PB = 'real-estate-brokerage-sales-operations.html';
+  // Workflow sections in the playbook's ranking order, then controls.
+  var DIMS = [
+    { key:'lead', name:'Lead response', title:'Lead response and routing', eyebrow:'Workflow 01', anchor:'#speed-to-lead',
+      blurb:'Whether every inquiry reaches the right agent, quickly, on the record.',
+      first:'Capture every lead source into the CRM, assign by written routing rules, alert on unassigned leads, and measure median response time by source. Deterministic automation first.',
+      qs:[
+        'Every inbound inquiry, from every lead source, lands in the CRM automatically.',
+        'Leads are assigned by written routing rules, and an unassigned lead triggers an alert.',
+        'We can report median response time by lead source from data, not estimates.'
+      ]},
+    { key:'nurture', name:'Nurturing', title:'Nurturing and reactivation', eyebrow:'Workflow 02', anchor:'#nurturing-and-reactivation',
+      blurb:'Whether opportunities already in the CRM get worked.',
+      first:'Give every open contact an owner and a next follow-up, review dormant contacts on a schedule, and route engaged contacts back to their agent. AI drafting is optional.',
+      qs:[
+        'Every open contact in the CRM has an owner and a scheduled next follow-up.',
+        'Dormant contacts are reviewed on a schedule, not only when an agent remembers them.',
+        'Engaged contacts are routed back to their assigned agent with the history attached.'
+      ]},
+    { key:'past', name:'Past clients', title:'Past clients and referrals', eyebrow:'Workflow 03', anchor:'#past-client-retention',
+      blurb:'Whether closed clients stay in a relationship that produces repeat business and referrals.',
+      first:'Name a relationship owner for every past client, schedule post-closing check-ins and milestones, and record the referral source on every new client. Keep relationship-sensitive outreach with the agent.',
+      qs:[
+        'Every past client has a named relationship owner after closing.',
+        'Post-closing check-ins and milestone contacts are scheduled, not left to memory.',
+        'We record the referral source on every new client and can report referral-to-close.'
+      ]},
+    { key:'txn', name:'Transactions', title:'Transactions and deadlines', eyebrow:'Workflow 04', anchor:'#transaction-coordination',
+      blurb:'Whether closings run on a system rather than on memory.',
+      first:'Run every transaction from one standard checklist, calculate deadlines from verified dates with reminders and escalation, and make missing items exceptions with an owner.',
+      qs:[
+        'Every transaction runs from a standard checklist in one system.',
+        'Contract deadlines are calculated from verified dates, with reminders and escalation.',
+        'Missing documents and missed milestones show up as exceptions with an owner.'
+      ]},
+    { key:'appt', name:'Appointments', title:'Appointment-to-client conversion', eyebrow:'Workflow 05', anchor:'#appointment-to-client',
+      blurb:'Whether consultations turn into signed representation.',
+      first:'Standardize consultation preparation, record every outcome with a follow-up task, and report conversion by agent and lead source. AI-drafted briefs are optional, with agent review.',
+      qs:[
+        'Agents prepare for consultations from a standard brief.',
+        'Every consultation outcome is recorded in the CRM with a follow-up task.',
+        'We can report consultation-to-signed-client conversion by agent and lead source.'
+      ]},
+    { key:'ctrl', name:'Controls', title:'Controls', eyebrow:'Controls', anchor:'#governance-and-controls',
+      blurb:'What makes automation safe to run on consumer contact and contract data.',
+      qs:[
+        'Automated calls, texts, and campaign email go only to contacts with recorded consent, and opt-outs stop them automatically.',
+        'Lead routing, ad targeting, and any automated recommendations are reviewed for fair housing risk.',
+        'Anything AI drafts or extracts, such as messages or contract dates, is checked by a person before it is sent or relied on.'
+      ]}
+  ];
+  // How much each workflow matters to each operating model. A heuristic that
+  // encodes the playbook's own guidance: lead buyers start with speed-to-lead,
+  // referral-driven teams with past clients. Not a benchmark.
+  var WEIGHTS = {
+    leads:    { lead:1.0,  nurture:0.9,  past:0.5,  txn:0.6, appt:0.8  },
+    mix:      { lead:0.85, nurture:0.85, past:0.85, txn:0.7, appt:0.75 },
+    referral: { lead:0.55, nurture:0.85, past:1.0,  txn:0.7, appt:0.75 }
+  };
+  var MODEL_LABEL = { leads:'Purchased or online leads', mix:'A mix', referral:'Repeat and referral' };
+  var LABELS = ['No','Partly','Yes'];
+  var answers = {}, model = null;
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  var form = document.getElementById('dg');
+  var html = '';
+  DIMS.forEach(function(d){
+    html += '<section class="dg-dim"><span class="eyebrow eyebrow--accent">'+d.eyebrow+'</span>'+
+            '<h3>'+esc(d.title)+'</h3><p class="prose-sm" style="margin:0 0 var(--space-3);color:var(--text-muted);">'+esc(d.blurb)+'</p>';
+    d.qs.forEach(function(q, qi){
+      var id = d.key+'-'+qi;
+      html += '<div class="dg-q"><span class="stmt">'+esc(q)+'</span><div class="dg-scale" role="group" aria-label="'+esc(q)+'">';
+      for (var v=0; v<3; v++){
+        html += '<button type="button" class="dg-btn" data-q="'+id+'" data-v="'+v+'" aria-pressed="false">'+LABELS[v]+'</button>';
+      }
+      html += '</div></div>';
+    });
+    html += '</section>';
+  });
+  form.innerHTML = html;
+
+  document.getElementById('dgBars').innerHTML = DIMS.map(function(d){
+    return '<div class="dg-bar-row"><span class="dg-bar-lbl">'+esc(d.name)+'</span>'+
+           '<span class="dg-bar-track"><i class="dg-bar-fill" id="bar-'+d.key+'"></i></span></div>';
+  }).join('');
+
+  var totalQs = DIMS.reduce(function(a,d){return a + d.qs.length;},0);
+  var maxTotal = totalQs*2;
+
+  function band(pct){
+    // a high total must not read as healthy while the controls are failing
+    if (pct >= 0.55 && controlsWeak()) return 'Workflows ahead of their controls.';
+    if (pct >= 0.8) return 'Strong. Instrument it and extend.';
+    if (pct >= 0.55) return 'Working, with named gaps.';
+    if (pct >= 0.3) return 'Informal. The leaks are structural.';
+    return 'Largely undesigned.';
+  }
+
+  function dimStats(d){
+    var got = 0, answered = 0;
+    d.qs.forEach(function(q, qi){ var v = answers[d.key+'-'+qi]; if (v !== undefined){ got += v; answered++; } });
+    return { got:got, max:d.qs.length*2, answered:answered, complete: answered === d.qs.length };
+  }
+
+  function recommend(){
+    if (!model) return null;
+    var best = null;
+    for (var i=0; i<DIMS.length; i++){
+      var d = DIMS[i];
+      if (d.key === 'ctrl') continue;
+      var s = dimStats(d);
+      if (!s.complete) return null;
+      var p = WEIGHTS[model][d.key] * (1 - s.got/s.max);
+      if (best === null || p > best.p) best = { d:d, p:p, s:s, n:i+1 };
+    }
+    return best;
+  }
+
+  function controlsWeak(){
+    var c = dimStats(DIMS[DIMS.length-1]);
+    return c.complete && c.got/c.max < 0.5;
+  }
+
+  function update(){
+    var total = 0, gaps = [];
+    DIMS.forEach(function(d){
+      var s = dimStats(d);
+      total += s.got;
+      d.qs.forEach(function(q, qi){ var v = answers[d.key+'-'+qi]; if (v === 0 || v === 1) gaps.push({d:d.name, q:q, v:v}); });
+      var fill = document.getElementById('bar-'+d.key);
+      if (fill) fill.style.width = (s.answered ? (s.got/s.max)*100 : 0) + '%';
+    });
+    var answeredAll = Object.keys(answers).length;
+    document.getElementById('dgScore').innerHTML = total + '<span style="font-size:0.4em;color:var(--text-muted);"> / '+maxTotal+'</span>';
+    document.getElementById('dgBand').textContent = answeredAll ? band(total/maxTotal) : 'Answer the statements to begin';
+    document.getElementById('dgProg').textContent = answeredAll + ' of ' + totalQs + ' answered' + (model ? ' · ' + MODEL_LABEL[model] : '');
+
+    var r = recommend(), rec = document.getElementById('dgRec');
+    if (!r) {
+      rec.innerHTML = '<p class="prose-sm" style="color:var(--text-muted);">Choose your operating model and answer the five workflow sections to see a recommendation.</p>';
+    } else if (r.p === 0) {
+      rec.innerHTML = '<p class="prose-sm">No clear first workflow: every workflow statement is answered Yes. Check the answers against CRM data with a colleague before trusting them.</p>';
+    } else {
+      rec.innerHTML = '<div class="dg-rec-name">'+esc(r.d.title)+'</div>'+
+        '<p class="prose-sm">'+esc(r.d.first)+'</p>'+
+        '<p class="mono-sm" style="margin-top:var(--space-1);">Weakest relative to how your brokerage gets its business. <a href="'+PB+r.d.anchor+'">Workflow '+r.n+' in the playbook</a></p>';
+    }
+    if (controlsWeak()) {
+      rec.innerHTML += '<div class="dg-caution"><p class="prose-sm"><strong>Before automating any outreach:</strong> your controls score is low. Put the consent gate, fair housing review, and human checking in place first, whatever workflow you start with. <a href="'+PB+'#governance-and-controls">Chapter 4</a></p></div>';
+    }
+
+    gaps.sort(function(a,b){return a.v - b.v;});
+    var g = gaps.slice(0,5);
+    document.getElementById('dgGaps').innerHTML = g.length
+      ? g.map(function(x){return '<div class="dg-gap"><strong>'+esc(x.d)+'.</strong> '+esc(x.q)+'</div>';}).join('')
+      : (answeredAll ? '<p class="prose-sm" style="color:var(--text-muted);">No weak answers recorded. Re-run it with a colleague and compare.</p>'
+                     : '<p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p>');
+  }
+
+  document.getElementById('dgModel').addEventListener('click', function(e){
+    var b = e.target.closest('.dg-btn');
+    if (!b) return;
+    model = b.getAttribute('data-model');
+    [].forEach.call(this.querySelectorAll('.dg-btn'), function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    update();
+  });
+
+  form.addEventListener('click', function(e){
+    var b = e.target.closest('.dg-btn');
+    if (!b) return;
+    var q = b.getAttribute('data-q');
+    answers[q] = parseInt(b.getAttribute('data-v'), 10);
+    [].forEach.call(form.querySelectorAll('.dg-btn[data-q="'+q+'"]'), function(x){
+      x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+    });
+    update();
+  });
+
+  // Break-even model -------------------------------------------------------
+  var MINUS = '−';
+  function num(id, min){ var v = parseFloat(document.getElementById(id).value); return isFinite(v) ? Math.max(min, v) : min; }
+  function usd(n){ var a = Math.round(Math.abs(n)); return (n < -0.5 ? MINUS : '') + '$' + a.toLocaleString('en-US'); }
+  function trim(n, dp){ return String(Math.round(n * Math.pow(10, dp)) / Math.pow(10, dp)); }
+  var LIFTS = [0.25, 0.5, 1, 2];
+  var be = null;
+
+  function calc(){
+    var L = num('beLeads', 0), M = num('beContrib', 0), R = num('beMonthly', 0), S = num('beSetup', 0), N = num('beMonths', 1);
+    var C = R + S / N;
+    var out = document.getElementById('beOut'), math = document.getElementById('beMath'), rows = document.getElementById('beRows');
+    if (L <= 0 || M <= 0) {
+      be = null;
+      out.textContent = 'Not computable';
+      math.textContent = 'Enter inbound leads and contribution per closing above zero.';
+      rows.innerHTML = '';
+      return;
+    }
+    var pp = C / (L * M) * 100;
+    be = { L:L, M:M, C:C, pp:pp };
+    out.textContent = pp > 100 ? 'Over 100 points' : trim(pp, 2) + ' points';
+    math.textContent = usd(C) + ' monthly cost (' + usd(R) + ' recurring + ' + usd(S) + ' over ' + trim(N, 1) + ' months) ' +
+      '÷ (' + trim(L, 0) + ' leads × ' + usd(M) + ') = ' + trim(pp, 2) + ' percentage points of lead-to-close conversion.';
+    rows.innerHTML = LIFTS.map(function(x){
+      var closings = L * x / 100, net = closings * M - C;
+      return '<tr><td><span class="rowhead">' + x + (x === 1 ? ' point' : ' points') + '</span></td><td class="amt">' + trim(closings, 2) + '</td><td class="amt">' + usd(net) + '</td></tr>';
+    }).join('');
+  }
+  ['beLeads','beContrib','beMonthly','beSetup','beMonths'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', calc);
+  });
+
+  // Summary ------------------------------------------------------------------
+  document.getElementById('dgCopy').addEventListener('click', function(){
+    var lines = ['Brokerage Sales Operations Diagnostic', ''];
+    lines.push('Operating model: ' + (model ? MODEL_LABEL[model] : 'not chosen'));
+    var total = 0;
+    DIMS.forEach(function(d){ var s = dimStats(d); total += s.got; lines.push(d.title + ': ' + s.got + ' / ' + s.max + (s.complete ? '' : ' (incomplete)')); });
+    lines.push('', 'Total: ' + total + ' / ' + maxTotal + (Object.keys(answers).length ? ', ' + band(total/maxTotal) : ''));
+    var r = recommend();
+    if (r && r.p > 0) lines.push('Recommended first workflow: ' + r.d.title);
+    if (controlsWeak()) lines.push('Caution: controls score is low; fix consent, fair housing review, and human checking before automating outreach.');
+    if (be) lines.push('', 'Break-even: ' + trim(be.pp, 2) + ' points of lead-to-close conversion (' + trim(be.L, 0) + ' leads a month, ' + usd(be.M) + ' per closing, ' + usd(be.C) + ' monthly cost). Hypothetical.');
+    lines.push('', 'A self-assessment, not a benchmark or an audit. Run from jimiige.com.');
+    var txt = lines.join('\n');
+    var c = document.getElementById('dgCopied');
+    function done(){ c.style.display='inline'; setTimeout(function(){ c.style.display='none'; }, 2200); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done); else done();
+  });
+
+  calc();
+  update();
+})();
+</script>
+</body></html>
