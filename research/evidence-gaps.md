@@ -114,6 +114,33 @@ multi-vertical blend without a public split.
 **What the content does instead:** states that the vertical split is not public
 rather than implying the blended figure describes IT consulting.
 
+### G-11. Incremental brokerage closings from sales-operations workflows
+
+**What is missing:** any credible causal estimate of the additional closed
+transactions a residential brokerage gains from speed-to-lead, nurturing,
+past-client, or transaction-coordination workflows, automated or not.
+
+**Why it matters:** it is the number a broker-owner most wants before buying, and
+the space is crowded with vendor claims and recycled cross-industry response-time
+statistics.
+
+**What the content does instead:** the brokerage playbook states the gap in its
+close, presents its business case as a hypothetical break-even model, and tells
+the reader to measure lift against the brokerage's own conversion data. The 2011
+HBR audit (RE-005) is used only as dated, cross-industry, associational framing.
+
+**Do not:** quote the "five-minute response" multipliers, a vendor case study, or
+a Zillow consumer finding as evidence that automation raises closings.
+
+### G-12. Implementation cost across brokerage technology environments
+
+**What is missing:** reliable published data on what it costs to configure or
+integrate these workflows across different CRM, transaction, and MLS stacks.
+
+**What the content does instead:** uses clearly labelled illustrative costs in the
+brokerage playbook's break-even model and says scope and pricing are set per
+engagement.
+
 ## Closed gaps
 
 None yet. When a gap closes, record the claim ID, the source, and the date, and

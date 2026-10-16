@@ -37,7 +37,12 @@ the public site.
 Playbooks are hand-authored HTML pages (one per industry, at the repo root)
 sharing `assets/ds/playbook.css` + `assets/ds/playbook.js`. The regulated
 playbook (`governing-ai-in-regulated-workflows.html`) predates this system,
-keeps its own inline styles, and is intentionally untouched.
+keeps its own inline styles, and is intentionally untouched. The real estate
+brokerage playbook (`real-estate-brokerage-sales-operations.html`) is also
+outside this system: it uses the shared playbook assets but keeps its own
+chapter structure, is not in `data/professional-services.json`, and so is not
+covered by `scripts/validate.mjs`. It uses real estate's own terms ("lead",
+"home buyer") on purpose; its claims are ledger rows `RE-001` to `RE-008`.
 
 ## 3. Route inventory
 

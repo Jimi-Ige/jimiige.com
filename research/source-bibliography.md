@@ -164,6 +164,30 @@ Evidence type: Normative (ethics case)
 Import status: approved  
 Limit: Hypothetical facts; not litigation holding; PE code not identical to architecture/other professions; open-source vs enterprise AI distinction is fact-dependent.
 
+**2026 Member Profile (Feature Sheet and press release)**  
+National Association of REALTORS June 2026  
+<https://www.nar.realtor/news/economists-outlook/the-feature-sheet-2026-member-profile>  
+Claims: RE-001  
+Evidence type: Descriptive (survey)  
+Added: 2026-10-16, verified from a search-index copy of the page; live page not opened  
+Limit: Self-reported medians for individual NAR members, low response rate; agent-level, not brokerage economics; excludes non-members. Directional use only.
+
+**2026 REALTORS Technology Report (press release)**  
+National Association of REALTORS September 2026  
+<https://www.nar.realtor/newsroom/realtors-adopt-technology-to-save-time-and-improve-the-client-experience-nar-report-finds>  
+Claims: RE-003  
+Evidence type: Descriptive (survey perception)  
+Added: 2026-10-16, verified from a search-index copy of the page; live page not opened  
+Limit: Self-reported attitudes of individual agents, very low response rate, sample size reported inconsistently across sources; not firm-level adoption or ROI. Directional use only.
+
+**2025 Profile of Real Estate Firms**  
+National Association of REALTORS November 2025  
+<https://cms.nar.realtor/sites/default/files/2025-11/2025-profile-of-real-estate-firms-11-19-2025.pdf>  
+Claims: RE-004  
+Evidence type: Descriptive (survey)  
+Added: 2026-10-16, verified from a search-index copy of the page; live page not opened  
+Limit: Self-reported survey of brokers of record; counts firms, not agents or transactions. Directional use only.
+
 ## Tier 2: Academic research and transparent working papers
 
 **Experimental evidence on the productivity effects of generative artificial intelligence**  
@@ -189,6 +213,14 @@ Claims: CONS-001, U-AI-003, U-AI-004
 Evidence type: Causal, Causal (field RCT)  
 Import status: approved  
 Limit: Single elite global firm (BCG) , limited generalizability to mid-market 20-200 employee firms; tasks designed for experiment; 'outside the frontier' tasks showed quality degradation when AI used inappropriately (jagged frontier); BCG/HBS collaboration; quality metric is study-defined. Causal within design.
+
+**The Short Life of Online Sales Leads**  
+James B. Oldroyd, Kristina McElheran, David Elkington, Harvard Business Review March 2011 (vol. 89, no. 3)  
+<https://hbr.org/2011/03/the-short-life-of-online-sales-leads>  
+Claims: RE-005  
+Evidence type: Correlational / descriptive (audit study)  
+Added: 2026-10-16, paywalled; summarized from index and faculty-page copies, not quoted  
+Limit: 2010-era data from general B2B and B2C firms, not real estate; associational, not causal. The widely repeated five-minute figures come from a separate study and must not be attributed to this article.
 
 ## Tier 5: Consultancy and vendor material (framing and hypotheses only)
 
@@ -255,3 +287,11 @@ Claims: U-ADOPT-001, U-ADOPT-002, U-ADOPT-003, U-MEAS-001
 Evidence type: Descriptive (survey perception), Descriptive (survey), Descriptive pattern (multi-survey)  
 Import status: approved, verified  
 Limit: Self-reported; cross-industry not PS-specific; large-org bias likely; McKinsey commercial interest in AI services; 'regular use in one function' ≠ value realization; global not U.S. SMB-specific.
+
+**2025 Consumer Housing Trends Report for Agents (press release)**  
+Zillow December 2025  
+<https://zillow.mediaroom.com/2025-12-30-Zillow-report-Online-research-now-shapes-how-most-agent-relationships-begin>  
+Claims: RE-002  
+Evidence type: Descriptive (survey)  
+Added: 2026-10-16, verified from a search-index copy of the page; live page not opened  
+Limit: Opt-in, weighted consumer panel survey by a company that sells advertising and lead products to agents; framing only, never proof that faster or automated response raises conversion. Claimed 2026 Zillow figures (RE-006 to RE-008) were not found in any published source and are rejected.
