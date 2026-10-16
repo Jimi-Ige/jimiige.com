@@ -68,6 +68,59 @@
   .pb-layer .it { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 0.5px;
     line-height: 1.55; color: var(--text-body); flex: 1; min-width: 200px; }
 
+
+  /* Workflow icons: one pictogram per workflow on a square tile, replacing the
+     2.N numeral; the kicker carries a nine-square position strip. */
+  .pb-wficon { float: left; width: 64px; height: 64px; margin: 2px var(--space-3) 0 0; display: flex;
+    align-items: center; justify-content: center; background: var(--surface-card); border: var(--border-default);
+    color: var(--copper-700); }
+  .pb-wficon svg { width: 34px; height: 34px; }
+  .pb-wfpos { display: inline-flex; gap: 3px; margin-left: var(--space-2); vertical-align: 1px; }
+  .pb-wfpos i { display: block; width: 7px; height: 7px; border: 1px solid var(--rule-strong); }
+  .pb-wfpos i.past { background: var(--ink-300); border-color: var(--ink-300); }
+  .pb-wfpos i.on { background: var(--copper-600); border-color: var(--copper-600); }
+  .pb-ch table.table a.pb-wfrow { display: flex; align-items: center; gap: var(--space-2); }
+  .pb-wfi-sm { width: 18px; height: 18px; flex: none; color: var(--copper-700); }
+  @media (max-width: 680px) { .pb-wficon { float: none; margin: 0 0 var(--space-2); } }
+
+  /* The revenue engine loop: a squared circuit on wide screens, a column on phones. */
+  .pb-loop { margin: var(--space-3) 0 var(--space-2); }
+  .pb-loop .st { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: var(--track-mono);
+    color: var(--text-display); background: var(--surface-card); border: var(--border-default);
+    padding: var(--space-2); text-align: center; display: flex; align-items: center; justify-content: center; }
+  .pb-loop .st--back { color: var(--copper-700); border: 1px solid var(--copper-600); background: var(--surface-field); }
+  .pb-loop .ar { font-family: var(--font-mono); font-size: var(--size-mono); color: var(--copper-600);
+    display: flex; align-items: center; justify-content: center; }
+  .pb-loop-lg { display: grid; grid-template-columns: 1fr 22px 1fr 22px 1fr 22px 1fr; grid-template-rows: auto 30px auto; }
+  .pb-loop-lg > :nth-child(-n+7) { grid-row: 1; }
+  .pb-loop-lg .ar.u { grid-row: 2; grid-column: 1; }
+  .pb-loop-lg .ar.d { grid-row: 2; grid-column: 7; }
+  .pb-loop-lg > :nth-child(n+10) { grid-row: 3; }
+  .pb-loop-sm { display: none; }
+  @media (max-width: 640px) {
+    .pb-loop-lg { display: none; }
+    .pb-loop-sm { display: flex; flex-direction: column; align-items: stretch; }
+    .pb-loop-sm .ar { height: 22px; }
+  }
+  .pb-ch .pb-figcap { font-size: var(--size-prose-sm); color: var(--text-muted); margin-top: var(--space-2); }
+
+  /* Speed-to-lead at three levels: cells tinted by who does the step. */
+  .pb-legend { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0 0 var(--space-2); }
+  .pb-legend .lv-key { font-family: var(--font-mono); font-size: var(--size-mono-sm); letter-spacing: 0.5px;
+    padding: 4px var(--space-2); border: var(--border-default); }
+  .pb-ch .lv { display: block; font-family: var(--font-mono); font-size: var(--size-mono-xs); letter-spacing: var(--track-label);
+    text-transform: uppercase; margin-bottom: 2px; color: var(--text-muted); }
+  .pb-ch table.pb-levels td { font-size: var(--size-mono-sm); }
+  .lv-rule, .pb-ch table.pb-levels tbody tr:hover td.lv-rule { background: var(--surface-card); }
+  .lv-ai, .pb-ch table.pb-levels tbody tr:hover td.lv-ai { background: rgba(139, 94, 60, 0.12); box-shadow: inset 2px 0 0 var(--copper-600); }
+  .lv-ai .lv { color: var(--copper-700); }
+  .lv-person, .pb-ch table.pb-levels tbody tr:hover td.lv-person { background: var(--ink-900); color: var(--cream-200); }
+  .pb-ch table.pb-levels td.lv-person { color: var(--cream-200); }
+  .lv-person .lv { color: var(--copper-400); }
+  .lv-gate, .pb-ch table.pb-levels tbody tr:hover td.lv-gate { background: var(--surface-field); box-shadow: inset 0 0 0 1.5px var(--copper-600); }
+  .lv-gate .lv { color: var(--copper-700); }
+  .pb-ch table.pb-levels td.lv-none { color: var(--text-muted); font-style: italic; }
+
   /* the three wide tables stack into labelled rows at phone width */
   @media (max-width: 560px) {
     .pb-ch table.pb-rt thead { display: none; }
@@ -121,6 +174,7 @@
     <span class="rail-rule rail-rule--b"></span>
   </div>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="wf-1" viewBox="0 0 24 24"><path d="M2 12h7M6 9l3 3-3 3M9 9h5v6H9zM14 12h3M17 6v12M17 6h5M17 18h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-2" viewBox="0 0 24 24"><path d="M4 11V7h14M15 4l3 3-3 3M20 13v4H6M9 14l-3 3 3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-3" viewBox="0 0 24 24"><path d="M2 14l4-3.5 4 3.5M3 13v7h6v-7M14 14l4-3.5 4 3.5M15 13v7h6v-7M6 7h12M15 4l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-4" viewBox="0 0 24 24"><path d="M5 4h14v17H5zM9 2h6v4H9zM8 11l1.5 1.5L12 10M14 11.5h2M8 16l1.5 1.5L12 15M14 16.5h2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-5" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM3 9h18M8 3v4M16 3v4M8 15l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-6" viewBox="0 0 24 24"><path d="M3 10h4l9-5v14l-9-5H3zM6 14l1 5h3l-1-5M19 9l2-1.5M19 12h3M19 15l2 1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-7" viewBox="0 0 24 24"><path d="M7 3h10v2l-4 7 4 7v2H7v-2l4-7-4-7zM10 19h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-8" viewBox="0 0 24 24"><path d="M3 21h4v-3h4v-3h4v-3h4M14 4h6v6M20 4l-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol><symbol id="wf-9" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v7l-4 2v-9zM7 7.5h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol></svg>
 <main id="pbTrack">
   <section class="pb-panel pb-cover pb-cover--ink" data-label="Cover">
     <span class="pb-cover-tab" aria-hidden="true"></span>
@@ -154,7 +208,7 @@
 
   <section class="pb-panel pb-ch" id="revenue-engine" data-label="Ch 1"><div class="pb-inner"><div class="kicker">Chapter 1</div><span class="pb-chnum" aria-hidden="true">01</span><h2>Understand the brokerage revenue engine</h2>
     <p>A residential brokerage creates value through a connected sequence of activities:</p>
-    <p class="pb-engine" aria-label="Attract, Convert, Advise, Transact, Close, Retain, Refer"><span class="st">Attract</span><span class="ar" aria-hidden="true">&rarr;</span><span class="st">Convert</span><span class="ar" aria-hidden="true">&rarr;</span><span class="st">Advise</span><span class="ar" aria-hidden="true">&rarr;</span><span class="st">Transact</span><span class="ar" aria-hidden="true">&rarr;</span><span class="st">Close</span><span class="ar" aria-hidden="true">&rarr;</span><span class="st">Retain</span><span class="ar" aria-hidden="true">&rarr;</span><span class="st">Refer</span></p>
+    <figure class="pb-loop" role="img" aria-label="The revenue engine as a loop: Attract, Convert, Advise, Transact, Close, Retain, and Refer, after which repeat and referral demand comes back in at the start."><div class="pb-loop-lg" aria-hidden="true"><span class="st">Attract</span><span class="ar r">&rarr;</span><span class="st">Convert</span><span class="ar r">&rarr;</span><span class="st">Advise</span><span class="ar r">&rarr;</span><span class="st">Transact</span><span class="ar u">&uarr;</span><span class="ar d">&darr;</span><span class="st st--back">Repeat and referral demand</span><span class="ar l">&larr;</span><span class="st">Refer</span><span class="ar l">&larr;</span><span class="st">Retain</span><span class="ar l">&larr;</span><span class="st">Close</span></div><div class="pb-loop-sm" aria-hidden="true"><span class="st">Attract</span><span class="ar d">&darr;</span><span class="st">Convert</span><span class="ar d">&darr;</span><span class="st">Advise</span><span class="ar d">&darr;</span><span class="st">Transact</span><span class="ar d">&darr;</span><span class="st">Close</span><span class="ar d">&darr;</span><span class="st">Retain</span><span class="ar d">&darr;</span><span class="st">Refer</span><span class="ar d">&darr;</span><span class="st st--back">Repeat and referral demand, back to Attract &uarr;</span></div></figure><p class="pb-figcap">The engine is a loop. Retained clients and the people they refer come back in as warm demand, which is why a referral-driven team may start with past-client retention rather than speed-to-lead.</p>
     <p>Each stage influences the next.</p>
     <p>Generating more leads produces limited value when response times are slow. Increasing appointments accomplishes little when agents fail to follow up. Faster transactions may not improve profitability if administrative costs rise proportionally.</p>
     <div class="pb-pull">The operating model should be measured as an integrated system, not a collection of disconnected activities.</div>
@@ -169,19 +223,19 @@
     <p style="margin-top:var(--space-3);">The right first workflow depends on how the brokerage acquires its business. A brokerage that buys large volumes of online leads would reasonably start with speed-to-lead. A referral-driven team would reasonably start with past-client retention. The lead-source mix already recorded in the CRM is where that decision starts.</p>
     <p>Each workflow is set out the same way: its business objective, the traditional baseline, the deterministic improvement, the AI-enabled improvement, the AI-native opportunity, the KPIs that show whether it worked, and a recommended starting point.</p>
     <div class="table-wrap"><table class="table"><thead><tr><th>#</th><th class="stmt">Workflow</th><th>Business objective</th></tr></thead><tbody>
-      <tr><td>1</td><td><a class="rowhead" href="#speed-to-lead">Speed-to-lead and lead routing</a></td><td>Convert more inbound inquiries into qualified conversations.</td></tr>
-      <tr><td>2</td><td><a class="rowhead" href="#nurturing-and-reactivation">Lead nurturing and reactivation</a></td><td>Recover opportunities already present in the CRM.</td></tr>
-      <tr><td>3</td><td><a class="rowhead" href="#past-client-retention">Past-client retention and referrals</a></td><td>Increase repeat business and referral generation.</td></tr>
-      <tr><td>4</td><td><a class="rowhead" href="#transaction-coordination">Transaction coordination</a></td><td>Reduce administrative effort and transaction delays.</td></tr>
-      <tr><td>5</td><td><a class="rowhead" href="#appointment-to-client">Appointment-to-client conversion</a></td><td>Improve conversion from initial consultation to signed representation.</td></tr>
-      <tr><td>6</td><td><a class="rowhead" href="#listing-marketing">Listing marketing operations</a></td><td>Launch listings efficiently and consistently.</td></tr>
-      <tr><td>7</td><td><a class="rowhead" href="#contract-and-deadlines">Contract and deadline monitoring</a></td><td>Reduce preventable transaction errors and missed obligations.</td></tr>
-      <tr><td>8</td><td><a class="rowhead" href="#onboarding-and-coaching">Agent onboarding and sales coaching</a></td><td>Reduce time to productivity for new agents.</td></tr>
-      <tr><td>9</td><td><a class="rowhead" href="#pipeline-and-commission">Pipeline and commission intelligence</a></td><td>Improve revenue visibility and management decisions.</td></tr>
+      <tr><td>1</td><td><a class="rowhead pb-wfrow" href="#speed-to-lead"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-1"/></svg>Speed-to-lead and lead routing</a></td><td>Convert more inbound inquiries into qualified conversations.</td></tr>
+      <tr><td>2</td><td><a class="rowhead pb-wfrow" href="#nurturing-and-reactivation"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-2"/></svg>Lead nurturing and reactivation</a></td><td>Recover opportunities already present in the CRM.</td></tr>
+      <tr><td>3</td><td><a class="rowhead pb-wfrow" href="#past-client-retention"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-3"/></svg>Past-client retention and referrals</a></td><td>Increase repeat business and referral generation.</td></tr>
+      <tr><td>4</td><td><a class="rowhead pb-wfrow" href="#transaction-coordination"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-4"/></svg>Transaction coordination</a></td><td>Reduce administrative effort and transaction delays.</td></tr>
+      <tr><td>5</td><td><a class="rowhead pb-wfrow" href="#appointment-to-client"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-5"/></svg>Appointment-to-client conversion</a></td><td>Improve conversion from initial consultation to signed representation.</td></tr>
+      <tr><td>6</td><td><a class="rowhead pb-wfrow" href="#listing-marketing"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-6"/></svg>Listing marketing operations</a></td><td>Launch listings efficiently and consistently.</td></tr>
+      <tr><td>7</td><td><a class="rowhead pb-wfrow" href="#contract-and-deadlines"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-7"/></svg>Contract and deadline monitoring</a></td><td>Reduce preventable transaction errors and missed obligations.</td></tr>
+      <tr><td>8</td><td><a class="rowhead pb-wfrow" href="#onboarding-and-coaching"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-8"/></svg>Agent onboarding and sales coaching</a></td><td>Reduce time to productivity for new agents.</td></tr>
+      <tr><td>9</td><td><a class="rowhead pb-wfrow" href="#pipeline-and-commission"><svg class="pb-wfi-sm" aria-hidden="true"><use href="#wf-9"/></svg>Pipeline and commission intelligence</a></td><td>Improve revenue visibility and management decisions.</td></tr>
     </tbody></table></div>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="speed-to-lead" data-label="Workflow 1"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 1 of 9</div><span class="pb-chnum" aria-hidden="true">2.1</span><h2>Speed-to-lead and lead routing</h2>
+  <section class="pb-panel pb-ch" id="speed-to-lead" data-label="Workflow 1"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 1 of 9<span class="pb-wfpos" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-1"/></svg></span><h2>Speed-to-lead and lead routing</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Convert more inbound inquiries into qualified conversations.</div>
     <h3>Traditional baseline</h3>
@@ -199,7 +253,7 @@
     <p>Deterministic automation.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="nurturing-and-reactivation" data-label="Workflow 2"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 2 of 9</div><span class="pb-chnum" aria-hidden="true">2.2</span><h2>Lead nurturing and reactivation</h2>
+  <section class="pb-panel pb-ch" id="nurturing-and-reactivation" data-label="Workflow 2"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 2 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-2"/></svg></span><h2>Lead nurturing and reactivation</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Recover opportunities already present in the CRM.</div>
     <h3>Traditional baseline</h3>
@@ -216,7 +270,7 @@
     <p>Deterministic automation with optional AI drafting.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="past-client-retention" data-label="Workflow 3"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 3 of 9</div><span class="pb-chnum" aria-hidden="true">2.3</span><h2>Past-client retention and referrals</h2>
+  <section class="pb-panel pb-ch" id="past-client-retention" data-label="Workflow 3"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 3 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-3"/></svg></span><h2>Past-client retention and referrals</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Increase repeat business and referral generation.</div>
     <h3>Traditional baseline</h3>
@@ -233,7 +287,7 @@
     <p>Deterministic lifecycle automation.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="transaction-coordination" data-label="Workflow 4"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 4 of 9</div><span class="pb-chnum" aria-hidden="true">2.4</span><h2>Transaction coordination</h2>
+  <section class="pb-panel pb-ch" id="transaction-coordination" data-label="Workflow 4"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 4 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="past"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-4"/></svg></span><h2>Transaction coordination</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Reduce administrative effort and transaction delays.</div>
     <h3>Traditional baseline</h3>
@@ -250,7 +304,7 @@
     <p>Deterministic milestone management with human-verified document extraction.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="appointment-to-client" data-label="Workflow 5"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 5 of 9</div><span class="pb-chnum" aria-hidden="true">2.5</span><h2>Appointment-to-client conversion</h2>
+  <section class="pb-panel pb-ch" id="appointment-to-client" data-label="Workflow 5"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 5 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-5"/></svg></span><h2>Appointment-to-client conversion</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Improve conversion from initial consultation to signed representation.</div>
     <h3>Traditional baseline</h3>
@@ -267,7 +321,7 @@
     <p>Deterministic automation with optional AI drafting of briefs and follow-ups for agent review.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="listing-marketing" data-label="Workflow 6"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 6 of 9</div><span class="pb-chnum" aria-hidden="true">2.6</span><h2>Listing marketing operations</h2>
+  <section class="pb-panel pb-ch" id="listing-marketing" data-label="Workflow 6"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 6 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-6"/></svg></span><h2>Listing marketing operations</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Launch listings efficiently and consistently.</div>
     <h3>Traditional baseline</h3>
@@ -284,7 +338,7 @@
     <p>Deterministic intake and approval tracking, with optional AI drafting checked against brokerage guidelines.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="contract-and-deadlines" data-label="Workflow 7"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 7 of 9</div><span class="pb-chnum" aria-hidden="true">2.7</span><h2>Contract and deadline monitoring</h2>
+  <section class="pb-panel pb-ch" id="contract-and-deadlines" data-label="Workflow 7"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 7 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="on"></i><i class=""></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-7"/></svg></span><h2>Contract and deadline monitoring</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Reduce preventable transaction errors and missed obligations.</div>
     <h3>Traditional baseline</h3>
@@ -301,7 +355,7 @@
     <p>Deterministic deadline rules built on verified dates, with AI extraction used only under licensed professional verification.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="onboarding-and-coaching" data-label="Workflow 8"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 8 of 9</div><span class="pb-chnum" aria-hidden="true">2.8</span><h2>Agent onboarding and sales coaching</h2>
+  <section class="pb-panel pb-ch" id="onboarding-and-coaching" data-label="Workflow 8"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 8 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="on"></i><i class=""></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-8"/></svg></span><h2>Agent onboarding and sales coaching</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Reduce time to productivity for new agents.</div>
     <h3>Traditional baseline</h3>
@@ -318,7 +372,7 @@
     <p>Deterministic onboarding sequences and milestone tracking.</p>
   </div></section>
 
-  <section class="pb-panel pb-ch" id="pipeline-and-commission" data-label="Workflow 9"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 9 of 9</div><span class="pb-chnum" aria-hidden="true">2.9</span><h2>Pipeline and commission intelligence</h2>
+  <section class="pb-panel pb-ch" id="pipeline-and-commission" data-label="Workflow 9"><div class="pb-inner"><div class="kicker">Chapter 2 &middot; Workflow 9 of 9<span class="pb-wfpos" aria-hidden="true"><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="past"></i><i class="on"></i></span></div><span class="pb-wficon" aria-hidden="true"><svg><use href="#wf-9"/></svg></span><h2>Pipeline and commission intelligence</h2>
     <h3>Business objective</h3>
     <div class="pb-pull">Improve revenue visibility and management decisions.</div>
     <h3>Traditional baseline</h3>
@@ -338,6 +392,7 @@
   <section class="pb-panel pb-ch" id="select-technology" data-label="Ch 3"><div class="pb-inner"><div class="kicker">Chapter 3</div><span class="pb-chnum" aria-hidden="true">03</span><h2>Select the right technology for each workflow</h2>
     <p>Not every workflow needs artificial intelligence. A predictable workflow should generally begin with deterministic automation.</p>
     <p>Use AI when the work requires interpretation of unstructured information, language generation, or contextual reasoning. Consider agentic systems only when dynamic planning and tool selection produce enough incremental value to justify additional cost, complexity, and risk.</p>
+    <h3>One workflow at three levels: speed-to-lead</h3><div class="pb-legend" aria-hidden="true"><span class="lv-key lv-rule"><span class="lv">Rule</span>Deterministic step</span><span class="lv-key lv-ai"><span class="lv">AI</span>Bounded AI step</span><span class="lv-key lv-person"><span class="lv">Person</span>Human owns it</span><span class="lv-key lv-gate"><span class="lv">Control</span>Never moves to AI</span></div><div class="table-wrap"><table class="table pb-rt pb-levels"><thead><tr><th class="stmt">Step</th><th>Deterministic</th><th>AI-enabled</th><th>AI-native</th></tr></thead><tbody><tr><td><span class="rowhead">Inquiry arrives</span></td><td class="lv-rule" data-th="Deterministic"><span class="lv">Rule</span>Captured into the CRM</td><td class="lv-rule" data-th="AI-enabled"><span class="lv">Rule</span>Captured into the CRM</td><td class="lv-rule" data-th="AI-native"><span class="lv">Rule</span>Captured into the CRM</td></tr><tr><td><span class="rowhead">Permission</span></td><td class="lv-gate" data-th="Deterministic"><span class="lv">Control</span>Consent check before any contact</td><td class="lv-gate" data-th="AI-enabled"><span class="lv">Control</span>Consent check before any contact</td><td class="lv-gate" data-th="AI-native"><span class="lv">Control</span>Consent check before any contact</td></tr><tr><td><span class="rowhead">Understand it</span></td><td class="lv-none" data-th="Deterministic">Not interpreted</td><td class="lv-ai" data-th="AI-enabled"><span class="lv">AI</span>Classifies intent</td><td class="lv-ai" data-th="AI-native"><span class="lv">AI</span>Interprets and summarizes</td></tr><tr><td><span class="rowhead">Assign it</span></td><td class="lv-gate" data-th="Deterministic"><span class="lv">Control</span>Routed by written rules</td><td class="lv-gate" data-th="AI-enabled"><span class="lv">Control</span>Routed by written rules</td><td class="lv-gate" data-th="AI-native"><span class="lv">Control</span>Routed by written rules</td></tr><tr><td><span class="rowhead">First response</span></td><td class="lv-rule" data-th="Deterministic"><span class="lv">Rule</span>Permitted acknowledgment</td><td class="lv-ai" data-th="AI-enabled"><span class="lv">AI</span>Drafts a reply</td><td class="lv-ai" data-th="AI-native"><span class="lv">AI</span>Offers times and books</td></tr><tr><td><span class="rowhead">Own it</span></td><td class="lv-person" data-th="Deterministic"><span class="lv">Person</span>Agent responds</td><td class="lv-person" data-th="AI-enabled"><span class="lv">Person</span>Agent reviews and sends</td><td class="lv-person" data-th="AI-native"><span class="lv">Person</span>Agent takes the handoff with a brief</td></tr><tr><td><span class="rowhead">If nothing happens</span></td><td class="lv-rule" data-th="Deterministic"><span class="lv">Rule</span>Escalates after a set time</td><td class="lv-rule" data-th="AI-enabled"><span class="lv">Rule</span>Escalates after a set time</td><td class="lv-rule" data-th="AI-native"><span class="lv">Rule</span>Escalates, and exceptions go to a queue</td></tr></tbody></table></div><p class="pb-figcap">The consent check and the routing rules stay the same at every level. What changes is who interprets, drafts, and schedules, and a person still owns the response. <a href="#speed-to-lead">Workflow 1</a> sets out each level in full.</p>
     <div class="table-wrap"><table class="table"><thead><tr><th class="stmt">Requirement</th><th>Preferred approach</th></tr></thead><tbody>
       <tr><td><span class="rowhead">Move information between systems</span></td><td>API integration</td></tr>
       <tr><td><span class="rowhead">Assign leads according to rules</span></td><td>Deterministic automation</td></tr>
