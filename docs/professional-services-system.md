@@ -51,8 +51,10 @@ with the summary filled in, and a Copy button covers readers without an email ap
 There is deliberately no form service, so no third party and no extra account. Its
 copy is plain language, about grade 5 to 6 on Flesch-Kincaid; keep it there. The
 playbook and diagnostic share the same plain terms: "safeguards" (not controls),
-"closing rate" (not lead-to-close conversion), "trial" (not pilot), and the
-roadmap phases Diagnose, Redesign, Build, Check. Section anchors such as
+"closing rate" (not lead-to-close conversion), "trial" (not pilot), "rules-based"
+(not deterministic), "AI-assisted" (not AI-enabled), "baseline" (kept, and defined
+once on each page as the numbers before any change), and the roadmap phases
+Diagnose, Redesign, Build, Check. Neither page states pricing. Section anchors such as
 `#governance-and-controls` keep their old names so links stay valid. The diagnostic's
 recommendation weights (`WEIGHTS` in its script) are a heuristic encoding the
 playbook's guidance, not evidence; keep them out of any published claim.
