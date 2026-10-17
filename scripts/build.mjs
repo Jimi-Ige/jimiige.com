@@ -34,7 +34,7 @@ const PUBLIC_PAGES = [
   { loc: '/', lastmod: '2026-06-28', changefreq: 'monthly', priority: '1.0' },
   { loc: '/governing-ai-in-regulated-workflows.html', lastmod: '2026-06-28', changefreq: 'monthly', priority: '0.9' },
   { loc: '/resources.html', lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.9' },
-  { loc: '/real-estate-brokerage-sales-operations.html', lastmod: '2026-10-16', changefreq: 'monthly', priority: '0.8' },
+  { loc: '/real-estate-brokerage-sales-operations.html', lastmod: '2026-10-17', changefreq: 'monthly', priority: '0.8' },
   { loc: '/brokerage-sales-operations-diagnostic.html', lastmod: '2026-10-17', changefreq: 'monthly', priority: '0.8' },
   { loc: '/outcomes.html', lastmod: '2026-08-01', changefreq: 'monthly', priority: '0.9' },
   { loc: '/outcome-proposal-to-project.html', lastmod: '2026-08-01', changefreq: 'monthly', priority: '0.9' },
