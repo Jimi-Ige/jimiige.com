@@ -3,10 +3,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Brokerage Sales Operations Diagnostic, Jimi Ige</title>
-<meta name="description" content="A free diagnostic for residential brokerages and real estate teams: your operating model, then eighteen statements across lead response, nurturing, past clients, transactions, appointments, and controls. Get a scored profile, a recommended first workflow, and break-even on your own numbers. Nothing you enter leaves your browser.">
+<meta name="description" content="A free diagnostic for residential brokerages and real estate teams. Rate 18 statements to see where you are losing business, what to fix first, and what a fix has to earn to pay for itself. Your answers stay in your browser unless you send them.">
 <link rel="canonical" href="https://jimiige.com/brokerage-sales-operations-diagnostic.html">
 <meta property="og:title" content="The Brokerage Sales Operations Diagnostic">
-<meta property="og:description" content="Eighteen statements across five brokerage workflows and their controls. A scored profile, a recommended first workflow, and break-even on your own numbers. No email wall.">
+<meta property="og:description" content="Rate 18 statements about how your brokerage handles leads, follow-up, past clients, transactions, and appointments. See what to fix first and what a fix has to earn to pay for itself. No sign-up.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jimiige.com/brokerage-sales-operations-diagnostic.html">
 <meta property="og:site_name" content="Jimi Ige">
@@ -15,7 +15,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Brokerage Sales Operations Diagnostic">
-<meta name="twitter:description" content="Eighteen statements across five brokerage workflows and their controls. Scored profile, a recommended first workflow, and break-even on your own numbers.">
+<meta name="twitter:description" content="Rate 18 statements about how your brokerage runs. See what to fix first and what a fix has to earn to pay for itself.">
 <meta name="twitter:image" content="https://jimiige.com/assets/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -143,9 +143,9 @@
     <section class="band band--flush">
       <div class="band-inner page-head">
         <span class="eyebrow eyebrow--accent">Free diagnostic &middot; Residential brokerage</span>
-        <h1 class="display-1 ruled" style="max-width:22ch;">Where is your brokerage losing opportunities?</h1>
-        <p class="prose">One question about how your brokerage gets its business, then eighteen statements across the five workflows the <a href="real-estate-brokerage-sales-operations.html">brokerage playbook</a> ranks highest and the controls that keep them safe. Rate each one honestly and you get a scored profile, a recommended first workflow, and the gaps worth closing first. Then run break-even on your own numbers.</p>
-        <p class="prose-sm">No email wall. Nothing you enter leaves your browser unless you choose to email me your summary. This is a self-assessment and a conversation starter, not an audit.</p>
+        <h1 class="display-1 ruled" style="max-width:22ch;">Where is your brokerage losing business?</h1>
+        <p class="prose">Answer one question about where your business comes from. Then rate 18 statements about how you handle new leads, follow-up, past clients, transactions, appointments, and safeguards. These are the five areas the <a href="real-estate-brokerage-sales-operations.html">brokerage playbook</a> ranks highest. You get a score, the area to fix first, and your biggest gaps. Then you can check what a fix has to earn to pay for itself.</p>
+        <p class="prose-sm">No sign-up. Your answers stay in your browser unless you choose to email them to me. It takes about five minutes. This is a self-check, not an audit.</p>
       </div>
     </section>
 
@@ -156,44 +156,44 @@
           <div>
             <section class="dg-dim" style="border-top:none;padding-top:0;">
               <span class="eyebrow eyebrow--accent">Start here</span>
-              <h3>How does the brokerage get most of its new business?</h3>
-              <div class="dg-scale" role="group" aria-label="How the brokerage gets most of its new business" id="dgModel">
-                <button type="button" class="dg-btn" data-model="leads" aria-pressed="false">Purchased or online leads</button>
+              <h3>Where does most of your new business come from?</h3>
+              <div class="dg-scale" role="group" aria-label="Where most of your new business comes from" id="dgModel">
+                <button type="button" class="dg-btn" data-model="leads" aria-pressed="false">Paid or online leads</button>
                 <button type="button" class="dg-btn" data-model="mix" aria-pressed="false">A mix</button>
-                <button type="button" class="dg-btn" data-model="referral" aria-pressed="false">Repeat and referral</button>
+                <button type="button" class="dg-btn" data-model="referral" aria-pressed="false">Repeat clients and referrals</button>
               </div>
-              <p class="prose-sm" style="margin-top:var(--space-2);color:var(--text-muted);">If you are not sure, the lead-source report in your CRM will usually settle it.</p>
+              <p class="prose-sm" style="margin-top:var(--space-2);color:var(--text-muted);">Not sure? The lead source report in your CRM will usually tell you.</p>
             </section>
-            <p class="mono-sm" style="margin-top:var(--space-5);">Rate each statement: <strong>No</strong> (not true of us), <strong>Partly</strong> (inconsistent or informal), <strong>Yes</strong> (true and reliable).</p>
+            <p class="mono-sm" style="margin-top:var(--space-5);">Rate each statement: <strong>No</strong> (not true for us), <strong>Partly</strong> (sometimes, or only informally), <strong>Yes</strong> (true, and we can count on it).</p>
             <form id="dg" aria-label="Brokerage sales operations diagnostic"></form>
           </div>
 
           <aside class="card dg-panel">
             <div class="card-body">
-              <span class="eyebrow eyebrow--accent">Your profile</span>
+              <span class="eyebrow eyebrow--accent">Your results</span>
               <div id="dgScore" class="dg-score">0<span style="font-size:0.4em;color:var(--text-muted);"> / 36</span></div>
-              <span id="dgBand" class="dg-band">Answer the statements to begin</span>
+              <span id="dgBand" class="dg-band">Start answering to see your results</span>
               <span id="dgProg" class="dg-prog">0 of 18 answered</span>
 
               <div class="dg-bar" id="dgBars"></div>
 
               <div class="dg-sec">
-                <span class="eyebrow">Recommended first workflow</span>
-                <div id="dgRec"><p class="prose-sm" style="color:var(--text-muted);">Choose your operating model and answer the five workflow sections to see a recommendation.</p></div>
+                <span class="eyebrow">Fix this first</span>
+                <div id="dgRec"><p class="prose-sm" style="color:var(--text-muted);">Answer the first question and the five workflow sections to see where to start.</p></div>
               </div>
 
               <div class="dg-sec">
-                <span class="eyebrow">Close these first</span>
-                <div id="dgGaps"><p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p></div>
+                <span class="eyebrow">Your weakest answers</span>
+                <div id="dgGaps"><p class="prose-sm" style="color:var(--text-muted);">They show up here as you go.</p></div>
               </div>
 
               <div class="stack-tight" style="margin-top:var(--space-4);">
-                <p class="prose-sm">Want a second read on your results? Send me your summary. It opens in your own email with your answers filled in, and nothing is sent until you send it.</p>
+                <p class="prose-sm">Want my take on your results? Email them to me. Your email opens with your answers filled in, and nothing is sent until you press send.</p>
                 <a id="dgMail" href="mailto:jimi@jimiige.com?subject=Brokerage%20diagnostic%20summary" class="btn btn--primary btn--sm">Send me your summary</a>
                 <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=panel" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">Book a conversation</a>
                 <button id="dgCopy" class="btn btn--ghost btn--sm" type="button">Copy the summary</button>
                 <span id="dgCopied" class="mono-sm" style="display:none;color:var(--risk-low-text);">Copied</span>
-                <p class="mono-sm">No email app? Copy the summary and send it to <a href="mailto:jimi@jimiige.com">jimi@jimiige.com</a>.</p>
+                <p class="mono-sm">Email did not open? Copy the summary and paste it into an email to <a href="mailto:jimi@jimiige.com">jimi@jimiige.com</a>.</p>
               </div>
             </div>
           </aside>
@@ -205,40 +205,40 @@
     <section class="band" id="break-even">
       <div class="band-inner">
         <div class="band-head"><span class="eyebrow">Break-even on your numbers</span></div>
-        <h2 class="display-2 ruled" style="max-width:24ch;">How much improvement does a workflow need to pay for itself?</h2>
-        <p class="prose">The model from Chapter 5 of the playbook. Before asking what a change might return, ask what improvement in lead-to-close conversion it needs to cover its own cost. The defaults are the playbook's illustrative figures, not benchmarks; replace every one with your own.</p>
+        <h2 class="display-2 ruled" style="max-width:24ch;">What does a fix have to earn to pay for itself?</h2>
+        <p class="prose">This is the model from Chapter 5 of the playbook. Your closing rate is the share of your leads that become closings. Before you ask what a change might earn, ask how much it must raise that rate to cover its cost. The starting numbers are examples, not industry figures. Replace each one with your own.</p>
         <div class="be-grid">
           <div>
-            <div class="cin"><label for="beLeads">Inbound leads per month</label><span class="hint">Inquiries from every source, referrals included. Use a recent monthly average.</span><input id="beLeads" type="number" min="0" step="1" value="200"></div>
-            <div class="cin"><label for="beContrib">Contribution per additional closing (USD)</label><span class="hint">What one more closing leaves the brokerage after agent splits and variable transaction costs.</span><input id="beContrib" type="number" min="0" step="100" value="3000"></div>
-            <div class="cin"><label for="beMonthly">Recurring monthly cost of the change (USD)</label><span class="hint">Software, services, and support attributable to this workflow, not the whole technology budget.</span><input id="beMonthly" type="number" min="0" step="50" value="1500"></div>
+            <div class="cin"><label for="beLeads">New leads per month</label><span class="hint">Count inquiries from every source, including referrals. Use a recent monthly average.</span><input id="beLeads" type="number" min="0" step="1" value="200"></div>
+            <div class="cin"><label for="beContrib">Brokerage income per extra closing (USD)</label><span class="hint">What the brokerage keeps from one more closing, after agent splits and per-deal costs.</span><input id="beContrib" type="number" min="0" step="100" value="3000"></div>
+            <div class="cin"><label for="beMonthly">Monthly cost of the change (USD)</label><span class="hint">Software, services, and support for this one workflow, not your whole tech budget.</span><input id="beMonthly" type="number" min="0" step="50" value="1500"></div>
             <div class="crow2">
-              <div class="cin"><label for="beSetup">One-time setup (USD)</label><input id="beSetup" type="number" min="0" step="500" value="6000"></div>
+              <div class="cin"><label for="beSetup">One-time setup cost (USD)</label><input id="beSetup" type="number" min="0" step="500" value="6000"></div>
               <div class="cin"><label for="beMonths">Months to spread it over</label><input id="beMonths" type="number" min="1" step="1" value="12"></div>
             </div>
           </div>
           <div class="card"><div class="card-body">
-            <span class="eyebrow eyebrow--accent">Break-even improvement</span>
+            <span class="eyebrow eyebrow--accent">Needed to break even</span>
             <div id="beOut" class="be-out">0.33 points</div>
             <div id="beMath" class="be-math"></div>
-            <div class="table-wrap be-table"><table class="table"><thead><tr><th class="stmt">Improvement in lead-to-close conversion</th><th class="amt">Extra closings per month</th><th class="amt">Modeled net monthly benefit</th></tr></thead><tbody id="beRows"></tbody></table></div>
-            <p class="prose-sm" style="margin-top:var(--space-3);"><strong>These figures are hypothetical, not guaranteed results or industry benchmarks.</strong> No row is an expected result. Expected closings can be fractional in a forecast; real transactions are whole and arrive months later. The model assumes lead quality, agent capacity, transaction mix, and attribution stay stable.</p>
+            <div class="table-wrap be-table"><table class="table"><thead><tr><th class="stmt">If your closing rate rises by</th><th class="amt">Extra closings per month</th><th class="amt">Net gain per month</th></tr></thead><tbody id="beRows"></tbody></table></div>
+            <p class="prose-sm" style="margin-top:var(--space-3);"><strong>These numbers are hypothetical. They are not promised results or industry benchmarks.</strong> No row is a prediction. Real closings come in whole numbers and take months to arrive. The model also assumes your lead quality, agent capacity, and mix of deals stay the same. And it assumes you can tell which closings the change produced.</p>
           </div></div>
         </div>
-        <p class="prose-sm" style="margin-top:var(--space-4);">Lead volume decides whether a small improvement matters. No credible published estimate exists of the closings these workflows add for a brokerage, so the honest use of this model is to set the bar a pilot has to clear, then measure against your own baseline.</p>
+        <p class="prose-sm" style="margin-top:var(--space-4);">The more leads you have, the more a small improvement is worth. No reliable study shows how many closings these changes add for a brokerage. So use this to set the bar a trial has to clear. Then measure the trial against your own starting numbers.</p>
       </div>
     </section>
 
     <section class="band">
       <div class="band-inner">
-        <div class="band-head"><span class="eyebrow">Reading your result</span></div>
+        <div class="band-head"><span class="eyebrow">Reading your results</span></div>
         <h2 class="display-2 ruled" style="max-width:24ch;">What the score does and does not mean.</h2>
-        <p class="prose">The score is a structured way to see which workflow is weakest, not a measurement of your brokerage. It has no benchmark behind it; the research behind the playbook found no credible published benchmark for brokerage sales operations at this level. The recommendation is a heuristic: the weakest workflow, weighted toward the ones your operating model leans on.</p>
+        <p class="prose">The score shows which workflow is weakest. It does not grade your brokerage against others. The research behind the playbook found no reliable published benchmark to compare against. The "fix this first" pick is a rule of thumb. It is your weakest workflow, weighted toward the ones your business depends on most.</p>
         <div class="grid-2" style="margin-top:var(--space-4);">
-          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Controls scoring lowest</span><p class="prose-sm">Fix this first, whatever else is weak. Automation scales whatever consent records, fair housing review, and human checking you already have, including the gaps.</p></div>
-          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Your main workflow scoring lowest</span><p class="prose-sm">The workflow your business depends on most is the one running on habit. This is the pattern the recommendation weighs most heavily, and usually the clearest place to start.</p></div>
-          <div class="stack-tight"><span class="eyebrow eyebrow--accent">The reporting statements answered No</span><p class="prose-sm">The third statement in the lead response, past-client, and appointment sections asks whether you can report the number. If you cannot, the first job is the baseline. Without it, no business case, including the one above, can be checked.</p></div>
-          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Answers that differ between people</span><p class="prose-sm">Run it separately with the broker-owner, a team leader, and the transaction coordinator. Where the answers diverge is usually where to look hardest.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Safeguards score lowest</span><p class="prose-sm">Fix these first, whatever else is weak. Automation repeats what you already do on a bigger scale, gaps included. That goes for consent records, fair housing checks, and human review.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">Your main workflow scores lowest</span><p class="prose-sm">The workflow your business depends on most is running on habit. The "fix this first" pick weighs this most heavily. It is usually the clearest place to start.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">No to the reporting statements</span><p class="prose-sm">The last statement in the new leads, past clients, and appointments sections asks if you can pull the numbers. If you cannot, start by measuring where you are today. Without that starting point, you cannot check any business case, including the one above.</p></div>
+          <div class="stack-tight"><span class="eyebrow eyebrow--accent">People give different answers</span><p class="prose-sm">Have the broker-owner, a team leader, and the transaction coordinator each take it on their own. Where their answers differ is usually where to look hardest.</p></div>
         </div>
       </div>
     </section>
@@ -246,18 +246,18 @@
     <section class="band">
       <div class="band-inner">
         <div class="band-head"><span class="eyebrow">The 45-day path</span></div>
-        <h2 class="display-2 ruled">From diagnostic to a controlled pilot.</h2>
+        <h2 class="display-2 ruled">From diagnostic to a first trial.</h2>
         <div class="register register--single" style="margin-top:var(--space-4);">
-          <div class="register-row"><span class="register-n">1.</span><span class="prose-sm"><strong>Days 1 to 10. Diagnose.</strong> Map the lead-to-close process, review CRM configuration, lead sources, permissions, and handoffs, and establish baseline metrics.</span></div>
-          <div class="register-row"><span class="register-n">2.</span><span class="prose-sm"><strong>Days 11 to 20. Redesign.</strong> Define the future-state workflow: business rules, ownership, exception handling, approval checkpoints, and the simplest architecture that meets them.</span></div>
-          <div class="register-row"><span class="register-n">3.</span><span class="prose-sm"><strong>Days 21 to 35. Implement.</strong> Configure integrations and automation rules, test the failure cases, including duplicates, opt-outs, and escalations, and train the people who use it.</span></div>
-          <div class="register-row"><span class="register-n">4.</span><span class="prose-sm"><strong>Days 36 to 45. Validate.</strong> Measure against the baseline, decide on evidence whether to expand, and keep watching closed transactions, which take longer than the pilot to show.</span></div>
+          <div class="register-row"><span class="register-n">1.</span><span class="prose-sm"><strong>Days 1 to 10. Diagnose.</strong> Map how a lead becomes a closing. Review your CRM setup, lead sources, access rights, and handoffs. Measure where you are today.</span></div>
+          <div class="register-row"><span class="register-n">2.</span><span class="prose-sm"><strong>Days 11 to 20. Redesign.</strong> Decide how the workflow should run: the rules, who owns each step, what happens when something goes wrong, and where a person signs off. Then pick the simplest setup that does all of that.</span></div>
+          <div class="register-row"><span class="register-n">3.</span><span class="prose-sm"><strong>Days 21 to 35. Build.</strong> Connect the tools and set up the automation. Test what happens with duplicates, opt-outs, and problems that need a manager. Train the people who will use it.</span></div>
+          <div class="register-row"><span class="register-n">4.</span><span class="prose-sm"><strong>Days 36 to 45. Check.</strong> Compare the results with your starting numbers, and decide on the evidence whether to expand. Keep watching closings, which take longer than 45 days to show up.</span></div>
         </div>
         <div class="row" style="margin-top:var(--space-5);">
           <a href="real-estate-brokerage-sales-operations.html" class="btn btn--secondary">The brokerage playbook</a>
           <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=path" target="_blank" rel="noopener" class="btn btn--primary">Book a conversation</a>
         </div>
-        <p class="mono-sm" style="margin-top:var(--space-3);">Assessment scope, pricing, and availability provided upon inquiry. Nothing here is legal advice.</p>
+        <p class="mono-sm" style="margin-top:var(--space-3);">Scope, pricing, and availability on request. Nothing here is legal advice.</p>
       </div>
     </section>
 
@@ -277,54 +277,54 @@
 <script>
 (function(){
   var PB = 'real-estate-brokerage-sales-operations.html';
-  // Workflow sections in the playbook's ranking order, then controls.
+  // Workflow sections in the playbook's ranking order, then the safeguards (controls).
   var DIMS = [
-    { key:'lead', name:'Lead response', title:'Lead response and routing', eyebrow:'Workflow 01', anchor:'#speed-to-lead',
-      blurb:'Whether every inquiry reaches the right agent, quickly, on the record.',
-      first:'Capture every lead source into the CRM, assign by written routing rules, alert on unassigned leads, and measure median response time by source. Deterministic automation first.',
+    { key:'lead', name:'New leads', title:'Responding to new leads', eyebrow:'Workflow 01', anchor:'#speed-to-lead',
+      blurb:'Does every new inquiry reach the right agent fast, with a record of it?',
+      first:'Get every lead source into the CRM. Assign leads by written rules, and alert someone when a lead sits unassigned. Track response time by source. Start with simple rule-based automation, not AI.',
       qs:[
-        'Every inbound inquiry, from every lead source, lands in the CRM automatically.',
-        'Leads are assigned by written routing rules, and an unassigned lead triggers an alert.',
-        'We can report median response time by lead source from data, not estimates.'
+        'Every new inquiry, from every lead source, goes into the CRM automatically.',
+        'Written rules decide which agent gets each lead. If a lead is not assigned, someone is alerted.',
+        'We can pull our typical response time for each lead source from real data, not guesses.'
       ]},
-    { key:'nurture', name:'Nurturing', title:'Nurturing and reactivation', eyebrow:'Workflow 02', anchor:'#nurturing-and-reactivation',
-      blurb:'Whether opportunities already in the CRM get worked.',
-      first:'Give every open contact an owner and a next follow-up, review dormant contacts on a schedule, and route engaged contacts back to their agent. AI drafting is optional.',
+    { key:'nurture', name:'Follow-up', title:'Following up with existing contacts', eyebrow:'Workflow 02', anchor:'#nurturing-and-reactivation',
+      blurb:'Do the people already in your CRM get followed up?',
+      first:'Give every active contact an owner and a next follow-up date. Review quiet contacts on a schedule. When one responds, send them back to their agent. AI-written drafts are optional.',
       qs:[
-        'Every open contact in the CRM has an owner and a scheduled next follow-up.',
-        'Dormant contacts are reviewed on a schedule, not only when an agent remembers them.',
-        'Engaged contacts are routed back to their assigned agent with the history attached.'
+        'Every active contact in the CRM has an owner and a next follow-up date.',
+        'Contacts who have gone quiet are reviewed on a schedule, not only when an agent remembers.',
+        'When a quiet contact replies or shows interest, they go back to their agent with the full history.'
       ]},
     { key:'past', name:'Past clients', title:'Past clients and referrals', eyebrow:'Workflow 03', anchor:'#past-client-retention',
-      blurb:'Whether closed clients stay in a relationship that produces repeat business and referrals.',
-      first:'Name a relationship owner for every past client, schedule post-closing check-ins and milestones, and record the referral source on every new client. Keep relationship-sensitive outreach with the agent.',
+      blurb:'Do past clients stay in touch and send you repeat business and referrals?',
+      first:'Name someone to stay in touch with every past client. Schedule check-ins after closing and on key dates. Record who referred each new client. Personal outreach stays with the agent.',
       qs:[
-        'Every past client has a named relationship owner after closing.',
-        'Post-closing check-ins and milestone contacts are scheduled, not left to memory.',
-        'We record the referral source on every new client and can report referral-to-close.'
+        'After closing, every client has a named person responsible for staying in touch.',
+        'Check-ins after closing, and on dates like home purchase anniversaries, are scheduled, not left to memory.',
+        'We record who referred each new client, and we can see how many referrals turn into closings.'
       ]},
     { key:'txn', name:'Transactions', title:'Transactions and deadlines', eyebrow:'Workflow 04', anchor:'#transaction-coordination',
-      blurb:'Whether closings run on a system rather than on memory.',
-      first:'Run every transaction from one standard checklist, calculate deadlines from verified dates with reminders and escalation, and make missing items exceptions with an owner.',
+      blurb:'Do closings run on a system, or on someone\'s memory?',
+      first:'Run every transaction from one standard checklist. Set deadlines from checked dates, with reminders and an alert to a manager. Flag missing items and give each one an owner.',
       qs:[
         'Every transaction runs from a standard checklist in one system.',
-        'Contract deadlines are calculated from verified dates, with reminders and escalation.',
-        'Missing documents and missed milestones show up as exceptions with an owner.'
+        'Contract deadlines are set from checked dates, with reminders, and a manager is alerted when one is at risk.',
+        'Missing documents and missed steps are flagged, and someone owns fixing each one.'
       ]},
-    { key:'appt', name:'Appointments', title:'Appointment-to-client conversion', eyebrow:'Workflow 05', anchor:'#appointment-to-client',
-      blurb:'Whether consultations turn into signed representation.',
-      first:'Standardize consultation preparation, record every outcome with a follow-up task, and report conversion by agent and lead source. AI-drafted briefs are optional, with agent review.',
+    { key:'appt', name:'Appointments', title:'Turning appointments into clients', eyebrow:'Workflow 05', anchor:'#appointment-to-client',
+      blurb:'Do buyer and listing appointments turn into signed clients?',
+      first:'Use one prep sheet for every appointment. Log every result with a follow-up task. Track how many appointments become clients, by agent and lead source. AI-drafted prep sheets are optional, and an agent reviews them.',
       qs:[
-        'Agents prepare for consultations from a standard brief.',
-        'Every consultation outcome is recorded in the CRM with a follow-up task.',
-        'We can report consultation-to-signed-client conversion by agent and lead source.'
+        'Agents prepare for every appointment using a standard prep sheet.',
+        'The result of every appointment is logged in the CRM, with a follow-up task.',
+        'We can see how many appointments turn into signed clients, by agent and by lead source.'
       ]},
-    { key:'ctrl', name:'Controls', title:'Controls', eyebrow:'Controls', anchor:'#governance-and-controls',
-      blurb:'What makes automation safe to run on consumer contact and contract data.',
+    { key:'ctrl', name:'Safeguards', title:'Safeguards', eyebrow:'Safeguards', anchor:'#governance-and-controls',
+      blurb:'What keeps automation safe when it touches client contacts and contracts?',
       qs:[
-        'Automated calls, texts, and campaign email go only to contacts with recorded consent, and opt-outs stop them automatically.',
-        'Lead routing, ad targeting, and any automated recommendations are reviewed for fair housing risk.',
-        'Anything AI drafts or extracts, such as messages or contract dates, is checked by a person before it is sent or relied on.'
+        'Automated calls, texts, and marketing emails go only to people whose consent we have on record. Opting out stops them right away.',
+        'We check lead routing, ad targeting, and any automated suggestions for fair housing risk.',
+        'A person checks anything AI writes or pulls out, like messages or contract dates, before it is sent or used.'
       ]}
   ];
   // How much each workflow matters to each operating model. A heuristic that
@@ -335,7 +335,7 @@
     mix:      { lead:0.85, nurture:0.85, past:0.85, txn:0.7, appt:0.75 },
     referral: { lead:0.55, nurture:0.85, past:1.0,  txn:0.7, appt:0.75 }
   };
-  var MODEL_LABEL = { leads:'Purchased or online leads', mix:'A mix', referral:'Repeat and referral' };
+  var MODEL_LABEL = { leads:'Paid or online leads', mix:'A mix', referral:'Repeat clients and referrals' };
   var LABELS = ['No','Partly','Yes'];
   var answers = {}, model = null;
 
@@ -368,11 +368,11 @@
 
   function band(pct){
     // a high total must not read as healthy while the controls are failing
-    if (pct >= 0.55 && controlsWeak()) return 'Workflows ahead of their controls.';
-    if (pct >= 0.8) return 'Strong. Instrument it and extend.';
-    if (pct >= 0.55) return 'Working, with named gaps.';
-    if (pct >= 0.3) return 'Informal. The leaks are structural.';
-    return 'Largely undesigned.';
+    if (pct >= 0.55 && controlsWeak()) return 'Strong workflows, weak safeguards.';
+    if (pct >= 0.8) return 'Strong. Measure it and build on it.';
+    if (pct >= 0.55) return 'Working, with some clear gaps.';
+    if (pct >= 0.3) return 'Mostly informal, so things slip through.';
+    return 'Mostly running on habit.';
   }
 
   function dimStats(d){
@@ -411,29 +411,29 @@
     });
     var answeredAll = Object.keys(answers).length;
     document.getElementById('dgScore').innerHTML = total + '<span style="font-size:0.4em;color:var(--text-muted);"> / '+maxTotal+'</span>';
-    document.getElementById('dgBand').textContent = answeredAll ? band(total/maxTotal) : 'Answer the statements to begin';
+    document.getElementById('dgBand').textContent = answeredAll ? band(total/maxTotal) : 'Start answering to see your results';
     document.getElementById('dgProg').textContent = answeredAll + ' of ' + totalQs + ' answered' + (model ? ' · ' + MODEL_LABEL[model] : '');
 
     var r = recommend(), rec = document.getElementById('dgRec');
     if (!r) {
-      rec.innerHTML = '<p class="prose-sm" style="color:var(--text-muted);">Choose your operating model and answer the five workflow sections to see a recommendation.</p>';
+      rec.innerHTML = '<p class="prose-sm" style="color:var(--text-muted);">Answer the first question and the five workflow sections to see where to start.</p>';
     } else if (r.p === 0) {
-      rec.innerHTML = '<p class="prose-sm">No clear first workflow: every workflow statement is answered Yes. Check the answers against CRM data with a colleague before trusting them.</p>';
+      rec.innerHTML = '<p class="prose-sm">You answered Yes to every workflow statement, so nothing stands out. Check your answers against your CRM data with a colleague before you rely on them.</p>';
     } else {
       rec.innerHTML = '<div class="dg-rec-name">'+esc(r.d.title)+'</div>'+
         '<p class="prose-sm">'+esc(r.d.first)+'</p>'+
-        '<p class="mono-sm" style="margin-top:var(--space-1);">Weakest relative to how your brokerage gets its business. <a href="'+PB+r.d.anchor+'">Workflow '+r.n+' in the playbook</a></p>';
+        '<p class="mono-sm" style="margin-top:var(--space-1);">Your weakest area, given where your business comes from. <a href="'+PB+r.d.anchor+'">Workflow '+r.n+' in the playbook</a></p>';
     }
     if (controlsWeak()) {
-      rec.innerHTML += '<div class="dg-caution"><p class="prose-sm"><strong>Before automating any outreach:</strong> your controls score is low. Put the consent gate, fair housing review, and human checking in place first, whatever workflow you start with. <a href="'+PB+'#governance-and-controls">Chapter 4</a></p></div>';
+      rec.innerHTML += '<div class="dg-caution"><p class="prose-sm"><strong>Before you automate any outreach:</strong> your safeguards score is low. First make sure you have consent on record, a fair housing check, and a person reviewing AI work. This comes first, whatever you fix. <a href="'+PB+'#governance-and-controls">Chapter 4</a></p></div>';
     }
 
     gaps.sort(function(a,b){return a.v - b.v;});
     var g = gaps.slice(0,5);
     document.getElementById('dgGaps').innerHTML = g.length
       ? g.map(function(x){return '<div class="dg-gap"><strong>'+esc(x.d)+'.</strong> '+esc(x.q)+'</div>';}).join('')
-      : (answeredAll ? '<p class="prose-sm" style="color:var(--text-muted);">No weak answers recorded. Re-run it with a colleague and compare.</p>'
-                     : '<p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p>');
+      : (answeredAll ? '<p class="prose-sm" style="color:var(--text-muted);">No weak answers yet. Try it again with a colleague and compare.</p>'
+                     : '<p class="prose-sm" style="color:var(--text-muted);">They show up here as you go.</p>');
     refreshMail();
   }
 
@@ -470,8 +470,8 @@
     var out = document.getElementById('beOut'), math = document.getElementById('beMath'), rows = document.getElementById('beRows');
     if (L <= 0 || M <= 0) {
       be = null;
-      out.textContent = 'Not computable';
-      math.textContent = 'Enter inbound leads and contribution per closing above zero.';
+      out.textContent = 'Cannot calculate';
+      math.textContent = 'Enter new leads and income per closing, both above zero.';
       rows.innerHTML = '';
       refreshMail();
       return;
@@ -479,8 +479,9 @@
     var pp = C / (L * M) * 100;
     be = { L:L, M:M, C:C, pp:pp };
     out.textContent = pp > 100 ? 'Over 100 points' : trim(pp, 2) + ' points';
-    math.textContent = usd(C) + ' monthly cost (' + usd(R) + ' recurring + ' + usd(S) + ' over ' + trim(N, 1) + ' months) ' +
-      '÷ (' + trim(L, 0) + ' leads × ' + usd(M) + ') = ' + trim(pp, 2) + ' percentage points of lead-to-close conversion.';
+    math.textContent = usd(C) + ' a month (' + usd(R) + ' monthly + ' + usd(S) + ' setup over ' + trim(N, 1) + ' months) ' +
+      '÷ (' + trim(L, 0) + ' leads × ' + usd(M) + ') = ' + trim(pp, 2) + ' percentage points on your closing rate. ' +
+      'That is about ' + trim(C / M, 2) + ' more closings a month.';
     rows.innerHTML = LIFTS.map(function(x){
       var closings = L * x / 100, net = closings * M - C;
       return '<tr><td><span class="rowhead">' + x + (x === 1 ? ' point' : ' points') + '</span></td><td class="amt">' + trim(closings, 2) + '</td><td class="amt">' + usd(net) + '</td></tr>';
@@ -494,19 +495,19 @@
   // Summary ------------------------------------------------------------------
   function summaryText(){
     var lines = ['Brokerage Sales Operations Diagnostic', ''];
-    lines.push('Operating model: ' + (model ? MODEL_LABEL[model] : 'not chosen'));
+    lines.push('Most new business from: ' + (model ? MODEL_LABEL[model] : 'not answered'));
     var total = 0;
     DIMS.forEach(function(d){ var s = dimStats(d); total += s.got; lines.push(d.title + ': ' + s.got + ' / ' + s.max + (s.complete ? '' : ' (incomplete)')); });
     lines.push('', 'Total: ' + total + ' / ' + maxTotal + (Object.keys(answers).length ? ', ' + band(total/maxTotal) : ''));
     var r = recommend();
-    if (r && r.p > 0) lines.push('Recommended first workflow: ' + r.d.title);
-    if (controlsWeak()) lines.push('Caution: controls score is low; fix consent, fair housing review, and human checking before automating outreach.');
-    if (be) lines.push('', 'Break-even: ' + trim(be.pp, 2) + ' points of lead-to-close conversion (' + trim(be.L, 0) + ' leads a month, ' + usd(be.M) + ' per closing, ' + usd(be.C) + ' monthly cost). Hypothetical.');
-    lines.push('', 'A self-assessment, not a benchmark or an audit. Run from jimiige.com.');
+    if (r && r.p > 0) lines.push('Fix this first: ' + r.d.title);
+    if (controlsWeak()) lines.push('Caution: the safeguards score is low. Put consent records, fair housing checks, and human review in place before automating outreach.');
+    if (be) lines.push('', 'Break-even: closing rate up ' + trim(be.pp, 2) + ' percentage points (' + trim(be.L, 0) + ' leads a month, ' + usd(be.M) + ' per closing, ' + usd(be.C) + ' a month in cost). Hypothetical.');
+    lines.push('', 'A self-check, not a benchmark or an audit. From jimiige.com.');
     return lines.join('\n');
   }
   function refreshMail(){
-    var body = 'Hi Jimi,\n\nHere is my Brokerage Sales Operations Diagnostic summary.\n\n' + summaryText();
+    var body = 'Hi Jimi,\n\nHere are my results from the brokerage diagnostic.\n\n' + summaryText();
     document.getElementById('dgMail').href = 'mailto:jimi@jimiige.com?subject=' +
       encodeURIComponent('Brokerage diagnostic summary') + '&body=' + encodeURIComponent(body);
   }
