@@ -46,8 +46,10 @@ covered by `scripts/validate.mjs`. It uses real estate's own terms ("lead",
 Its companion, `brokerage-sales-operations-diagnostic.html`, follows the
 Proposal-to-Project Diagnostic's pattern (no email wall, everything computed
 in the browser) and is likewise outside the validator. Results leave the browser
-only when the reader chooses: an email button (mailto) always, and a consented
-one-click send through Formspree once `FORM_ENDPOINT` in its script is set. The diagnostic's
+only when the reader chooses: an email button (mailto) opens the reader's own email
+with the summary filled in, and a Copy button covers readers without an email app.
+There is deliberately no form service, so no third party and no extra account. Its
+copy is plain language, about grade 5 to 6 on Flesch-Kincaid; keep it there. The diagnostic's
 recommendation weights (`WEIGHTS` in its script) are a heuristic encoding the
 playbook's guidance, not evidence; keep them out of any published claim.
 
