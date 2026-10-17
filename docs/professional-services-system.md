@@ -49,7 +49,11 @@ in the browser) and is likewise outside the validator. Results leave the browser
 only when the reader chooses: an email button (mailto) opens the reader's own email
 with the summary filled in, and a Copy button covers readers without an email app.
 There is deliberately no form service, so no third party and no extra account. Its
-copy is plain language, about grade 5 to 6 on Flesch-Kincaid; keep it there. The diagnostic's
+copy is plain language, about grade 5 to 6 on Flesch-Kincaid; keep it there. The
+playbook and diagnostic share the same plain terms: "safeguards" (not controls),
+"closing rate" (not lead-to-close conversion), "trial" (not pilot), and the
+roadmap phases Diagnose, Redesign, Build, Check. Section anchors such as
+`#governance-and-controls` keep their old names so links stay valid. The diagnostic's
 recommendation weights (`WEIGHTS` in its script) are a heuristic encoding the
 playbook's guidance, not evidence; keep them out of any published claim.
 
