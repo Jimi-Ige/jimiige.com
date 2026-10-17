@@ -75,6 +75,13 @@
   .dg-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--space-5); align-items: start; }
   @media (max-width: 900px) { .dg-layout { grid-template-columns: 1fr; } .dg-panel { position: static; } }
 
+  /* consented send form: only shown when FORM_ENDPOINT is set */
+  .dg-send { margin: var(--space-1) 0 var(--space-2); padding: var(--space-3); border: var(--border-default); background: var(--surface-field); }
+  .dg-send .cin { margin-bottom: var(--space-2); }
+  .dg-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  #sdStatus:empty { display: none; }
+  #sdStatus { margin-top: var(--space-2); }
+
   /* break-even model */
   .be-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: start; margin-top: var(--space-4); }
   @media (max-width: 900px) { .be-grid { grid-template-columns: 1fr; } }
@@ -145,7 +152,7 @@
         <span class="eyebrow eyebrow--accent">Free diagnostic &middot; Residential brokerage</span>
         <h1 class="display-1 ruled" style="max-width:22ch;">Where is your brokerage losing opportunities?</h1>
         <p class="prose">One question about how your brokerage gets its business, then eighteen statements across the five workflows the <a href="real-estate-brokerage-sales-operations.html">brokerage playbook</a> ranks highest and the controls that keep them safe. Rate each one honestly and you get a scored profile, a recommended first workflow, and the gaps worth closing first. Then run break-even on your own numbers.</p>
-        <p class="prose-sm">No email wall. Nothing you enter leaves your browser unless you choose to email me your summary. This is a self-assessment and a conversation starter, not an audit.</p>
+        <p class="prose-sm">No email wall. Nothing you enter leaves your browser unless you choose to send me your results. This is a self-assessment and a conversation starter, not an audit.</p>
       </div>
     </section>
 
@@ -188,7 +195,17 @@
               </div>
 
               <div class="stack-tight" style="margin-top:var(--space-4);">
-                <p class="prose-sm">Want a second read on your results? Send me your summary. It opens in your own email with your answers filled in, and nothing is sent until you send it.</p>
+                <p class="prose-sm" id="dgAskMail">Want a second read on your results? Send me your summary. It opens in your own email with your answers filled in, and nothing is sent until you send it.</p>
+                <p class="prose-sm" id="dgAskForm" hidden>Want a second read on your results? Send them to me.</p>
+                <form id="dgSend" class="dg-send" hidden novalidate>
+                  <div class="cin"><label for="sdName">Name (optional)</label><input id="sdName" type="text" autocomplete="name"></div>
+                  <div class="cin"><label for="sdEmail">Email, so I can reply (optional)</label><input id="sdEmail" type="email" autocomplete="email"></div>
+                  <div class="cin"><label for="sdOrg">Brokerage (optional)</label><input id="sdOrg" type="text" autocomplete="organization"></div>
+                  <div class="dg-hp" aria-hidden="true"><label for="sdHp">Leave this empty</label><input id="sdHp" type="text" tabindex="-1" autocomplete="off"></div>
+                  <button type="submit" id="sdBtn" class="btn btn--primary btn--sm">Send my results to Jimi</button>
+                  <p class="mono-sm" style="margin-top:var(--space-2);">Sends your answers, scores, recommendation, and break-even inputs, plus anything you type above, to Jimi Ige through Formspree, a form service. Used only to reply to you. Nothing is sent until you press Send.</p>
+                  <p id="sdStatus" class="prose-sm" role="status" aria-live="polite"></p>
+                </form>
                 <a id="dgMail" href="mailto:jimi@jimiige.com?subject=Brokerage%20diagnostic%20summary" class="btn btn--primary btn--sm">Send me your summary</a>
                 <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=panel" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">Book a conversation</a>
                 <button id="dgCopy" class="btn btn--ghost btn--sm" type="button">Copy the summary</button>
@@ -277,6 +294,9 @@
 <script>
 (function(){
   var PB = 'real-estate-brokerage-sales-operations.html';
+  // Formspree endpoint for the consented one-click send, e.g. 'https://formspree.io/f/abcdwxyz'.
+  // Empty keeps the email button as the only way to send results, so nothing changes until it is set.
+  var FORM_ENDPOINT = '';
   // Workflow sections in the playbook's ranking order, then controls.
   var DIMS = [
     { key:'lead', name:'Lead response', title:'Lead response and routing', eyebrow:'Workflow 01', anchor:'#speed-to-lead',
@@ -516,6 +536,43 @@
     function done(){ c.style.display='inline'; setTimeout(function(){ c.style.display='none'; }, 2200); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done); else done();
   });
+
+  // Consented send -----------------------------------------------------------
+  // Nothing leaves the browser until the reader presses Send; the fields are optional.
+  if (FORM_ENDPOINT) {
+    var sendForm = document.getElementById('dgSend'), mail = document.getElementById('dgMail');
+    sendForm.hidden = false;
+    document.getElementById('dgAskForm').hidden = false;
+    document.getElementById('dgAskMail').hidden = true;
+    mail.textContent = 'Or send it from your own email';
+    mail.className = 'btn btn--ghost btn--sm';
+    var status = document.getElementById('sdStatus'), btn = document.getElementById('sdBtn'), sending = false;
+    sendForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (sending) return;
+      var email = document.getElementById('sdEmail');
+      if (email.value && !email.checkValidity()) { status.textContent = 'That email address looks incomplete. Fix it or leave it blank.'; email.focus(); return; }
+      var name = document.getElementById('sdName').value.trim(), org = document.getElementById('sdOrg').value.trim();
+      var fd = new FormData();
+      fd.append('name', name);
+      fd.append('email', email.value.trim());
+      fd.append('brokerage', org);
+      fd.append('_subject', 'Brokerage diagnostic: ' + (org || name || 'new result'));
+      fd.append('message', summaryText());
+      fd.append('_gotcha', document.getElementById('sdHp').value);
+      sending = true; btn.disabled = true; status.textContent = 'Sending...';
+      fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
+        .then(function(r){
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          status.textContent = 'Sent. Thank you.';
+          btn.textContent = 'Sent';
+        })
+        .catch(function(){
+          sending = false; btn.disabled = false;
+          status.textContent = 'That did not go through. Use the email button below instead.';
+        });
+    });
+  }
 
   calc();
   update();
