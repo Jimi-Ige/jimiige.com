@@ -145,7 +145,7 @@
         <span class="eyebrow eyebrow--accent">Free diagnostic &middot; Residential brokerage</span>
         <h1 class="display-1 ruled" style="max-width:22ch;">Where is your brokerage losing opportunities?</h1>
         <p class="prose">One question about how your brokerage gets its business, then eighteen statements across the five workflows the <a href="real-estate-brokerage-sales-operations.html">brokerage playbook</a> ranks highest and the controls that keep them safe. Rate each one honestly and you get a scored profile, a recommended first workflow, and the gaps worth closing first. Then run break-even on your own numbers.</p>
-        <p class="prose-sm">No email wall. Nothing you enter leaves your browser. This is a self-assessment and a conversation starter, not an audit.</p>
+        <p class="prose-sm">No email wall. Nothing you enter leaves your browser unless you choose to email me your summary. This is a self-assessment and a conversation starter, not an audit.</p>
       </div>
     </section>
 
@@ -188,10 +188,12 @@
               </div>
 
               <div class="stack-tight" style="margin-top:var(--space-4);">
-                <p class="prose-sm">The Brokerage Sales Operations Assessment identifies where your brokerage is losing opportunities, which workflows deserve investment, and what measurable improvements may be achievable. Bring this summary to the conversation.</p>
-                <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=panel" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Request the assessment</a>
+                <p class="prose-sm">Want a second read on your results? Send me your summary. It opens in your own email with your answers filled in, and nothing is sent until you send it.</p>
+                <a id="dgMail" href="mailto:jimi@jimiige.com?subject=Brokerage%20diagnostic%20summary" class="btn btn--primary btn--sm">Send me your summary</a>
+                <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=panel" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">Book a conversation</a>
                 <button id="dgCopy" class="btn btn--ghost btn--sm" type="button">Copy the summary</button>
                 <span id="dgCopied" class="mono-sm" style="display:none;color:var(--risk-low-text);">Copied</span>
+                <p class="mono-sm">No email app? Copy the summary and send it to <a href="mailto:jimi@jimiige.com">jimi@jimiige.com</a>.</p>
               </div>
             </div>
           </aside>
@@ -253,7 +255,7 @@
         </div>
         <div class="row" style="margin-top:var(--space-5);">
           <a href="real-estate-brokerage-sales-operations.html" class="btn btn--secondary">The brokerage playbook</a>
-          <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=path" target="_blank" rel="noopener" class="btn btn--primary">Request the assessment</a>
+          <a href="https://calendly.com/jimi-ige/connect?utm_source=site&amp;utm_medium=diagnostic&amp;utm_campaign=brokerage-sales-ops&amp;utm_content=path" target="_blank" rel="noopener" class="btn btn--primary">Book a conversation</a>
         </div>
         <p class="mono-sm" style="margin-top:var(--space-3);">Assessment scope, pricing, and availability provided upon inquiry. Nothing here is legal advice.</p>
       </div>
@@ -432,6 +434,7 @@
       ? g.map(function(x){return '<div class="dg-gap"><strong>'+esc(x.d)+'.</strong> '+esc(x.q)+'</div>';}).join('')
       : (answeredAll ? '<p class="prose-sm" style="color:var(--text-muted);">No weak answers recorded. Re-run it with a colleague and compare.</p>'
                      : '<p class="prose-sm" style="color:var(--text-muted);">Your weakest answers will appear here as you go.</p>');
+    refreshMail();
   }
 
   document.getElementById('dgModel').addEventListener('click', function(e){
@@ -470,6 +473,7 @@
       out.textContent = 'Not computable';
       math.textContent = 'Enter inbound leads and contribution per closing above zero.';
       rows.innerHTML = '';
+      refreshMail();
       return;
     }
     var pp = C / (L * M) * 100;
@@ -481,13 +485,14 @@
       var closings = L * x / 100, net = closings * M - C;
       return '<tr><td><span class="rowhead">' + x + (x === 1 ? ' point' : ' points') + '</span></td><td class="amt">' + trim(closings, 2) + '</td><td class="amt">' + usd(net) + '</td></tr>';
     }).join('');
+    refreshMail();
   }
   ['beLeads','beContrib','beMonthly','beSetup','beMonths'].forEach(function(id){
     document.getElementById(id).addEventListener('input', calc);
   });
 
   // Summary ------------------------------------------------------------------
-  document.getElementById('dgCopy').addEventListener('click', function(){
+  function summaryText(){
     var lines = ['Brokerage Sales Operations Diagnostic', ''];
     lines.push('Operating model: ' + (model ? MODEL_LABEL[model] : 'not chosen'));
     var total = 0;
@@ -498,7 +503,15 @@
     if (controlsWeak()) lines.push('Caution: controls score is low; fix consent, fair housing review, and human checking before automating outreach.');
     if (be) lines.push('', 'Break-even: ' + trim(be.pp, 2) + ' points of lead-to-close conversion (' + trim(be.L, 0) + ' leads a month, ' + usd(be.M) + ' per closing, ' + usd(be.C) + ' monthly cost). Hypothetical.');
     lines.push('', 'A self-assessment, not a benchmark or an audit. Run from jimiige.com.');
-    var txt = lines.join('\n');
+    return lines.join('\n');
+  }
+  function refreshMail(){
+    var body = 'Hi Jimi,\n\nHere is my Brokerage Sales Operations Diagnostic summary.\n\n' + summaryText();
+    document.getElementById('dgMail').href = 'mailto:jimi@jimiige.com?subject=' +
+      encodeURIComponent('Brokerage diagnostic summary') + '&body=' + encodeURIComponent(body);
+  }
+  document.getElementById('dgCopy').addEventListener('click', function(){
+    var txt = summaryText();
     var c = document.getElementById('dgCopied');
     function done(){ c.style.display='inline'; setTimeout(function(){ c.style.display='none'; }, 2200); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done); else done();
